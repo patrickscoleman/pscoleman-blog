@@ -1,5 +1,5 @@
-const fs = require("fs");
-const globby = require("globby");
+const fs = import("fs");
+const globby = import("globby");
 
 function addPage(page) {
   const path = page.replace("pages", "").replace(".js", "").replace(".mdx", "");
@@ -7,6 +7,7 @@ function addPage(page) {
 
   return `  <url>
     <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
+    <changefreq>hourly</changefreq>
   </url>`;
 }
 
