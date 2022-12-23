@@ -1,3 +1,5 @@
+const EXTERNAL_DATA_URL = `${process.env.WEBSITE_URL}/posts`;
+
 function generateSiteMap(posts) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -9,7 +11,7 @@ function generateSiteMap(posts) {
        .map(({ id }) => {
          return `
        <url>
-           <loc>${`${process.env.WEBSITE_URL}/${id}`}</loc>
+           <loc>${`${EXTERNAL_DATA_URL}/${id}`}</loc>
        </url>
      `;
        })
