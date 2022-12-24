@@ -1,6 +1,7 @@
 ---
 title: "First Thoughts"
 date: "2022-12-19"
+description: "Patrick's first blog post."
 ---
 
 I, Patrick, have wanted to start a blog for a long time, so these aren't really my _first thoughts_. But here are some thoughts anyway.

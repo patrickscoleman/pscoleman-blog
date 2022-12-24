@@ -57,18 +57,13 @@ export async function getPostData(id) {
   const matterResult = matter(fileContents);
   const contents = matterResult.content;
 
-  // Get first sentence for description
-  const regex = /[.!?]\W*\s+\W*[A-Z]/; // end of first sentence
-  const firstSentence = contents.substring(0, contents.search(regex));
-
   // Use remark to convert markdown into HTML string
   const processedContent = await remark().use(html).process(contents);
   const contentHtml = processedContent.toString();
 
-  // Combine the data with the id, firstSentence and contentHtml
+  // Combine the data with the id and contentHtml
   return {
     id,
-    firstSentence,
     contentHtml,
     ...matterResult.data,
   };
