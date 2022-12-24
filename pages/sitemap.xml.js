@@ -1,11 +1,11 @@
 import { getAllPostIds } from "../utils/posts";
 
 function generateSiteMap(posts) {
+  // Manually set the static URLs then add all posts
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-     <!--Manually set the static URLs-->
      <url>
-       <loc>https://pscoleman.me</loc>
+       <loc>${process.env.WEBSITE_URL}</loc>
      </url>
      ${posts
        .map(({ params }) => {
