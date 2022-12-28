@@ -1,4 +1,5 @@
 import { getAllPostIds } from "../utils/posts";
+import { GetServerSideProps } from "next";
 
 function generateSiteMap(posts) {
   // Manually set the static URLs then add all posts
@@ -24,8 +25,8 @@ function SiteMap() {
   // getServerSideProps will do the heavy lifting
 }
 
-export async function getServerSideProps({ res }) {
-  const posts = await getAllPostIds();
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  const posts = getAllPostIds();
 
   // We generate the XML sitemap with the posts data
   const sitemap = generateSiteMap(posts);
@@ -38,6 +39,6 @@ export async function getServerSideProps({ res }) {
   return {
     props: {},
   };
-}
+};
 
 export default SiteMap;

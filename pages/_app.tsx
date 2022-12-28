@@ -1,9 +1,8 @@
-// Adds global CSS styles and analytics to every page in the app
-
 import "../styles/global.css";
 import { Analytics } from "@vercel/analytics/react";
+import { AppProps } from "next/app";
 
-function App({ Component, pageProps }) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Component {...pageProps} />
