@@ -1,7 +1,13 @@
 import { getAllPostIds } from "../utils/posts";
 import { GetServerSideProps } from "next";
 
-function generateSiteMap(posts) {
+function generateSiteMap(
+  posts: {
+    params: {
+      id: string;
+    };
+  }[]
+) {
   // Manually set the static URLs then add all posts
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
