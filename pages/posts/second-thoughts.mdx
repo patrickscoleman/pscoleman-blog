@@ -1,0 +1,23 @@
+---
+title: "Second thoughts - a continuation of first thoughts"
+date: "2022-12-21"
+description: "Patrick's second blog post."
+---
+
+import PostLayout from "../../components/postLayout";
+import Meta from "../../components/meta";
+import utilStyles from "../../styles/utils.module.css";
+import Date from "../../components/date";
+
+<Meta title={title} description={description} />
+
+# {title}
+
+<div className={utilStyles.lightText}>
+  <Date dateString={date} />
+</div>
+<br />
+
+I'm only writing this post because the [NextJS tutorial](https://nextjs.org/learn/basics/data-fetching/blog-data) wants me to have 2 posts. And well I also want to make sure that my blog template can handle more than just one page...
+
+export default ({ children }) => <PostLayout>{children}</PostLayout>;

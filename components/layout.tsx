@@ -3,10 +3,9 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
-import React from "react";
 
 const name = "Patrick Coleman";
-export const siteTitle = `${name} Online`;
+export const siteTitle = `${name}'s Web Presence`;
 
 export default function Layout({
   children,
@@ -14,7 +13,7 @@ export default function Layout({
 }: {
   children: React.ReactNode;
   home?: boolean;
-}) {
+}): JSX.Element {
   return (
     <div className={styles.container}>
       <Head>
