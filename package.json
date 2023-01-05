@@ -6,14 +6,20 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.0.0-rc.2",
+    "@mdx-js/react": "^2.0.0-rc.2",
+    "@next/mdx": "^13.1.1",
     "@vercel/analytics": "^0.1.6",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rehype-highlight": "^6.0.0",
     "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
+    "remark-frontmatter": "^4.0.1",
+    "remark-html": "^15.0.1",
+    "remark-mdx-frontmatter": "^2.1.1"
   },
   "devDependencies": {
     "@types/node": "18.11.18",
