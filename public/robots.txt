@@ -3,3 +3,4 @@
 # You are all welcome here
 User-agent: *
 Allow: /
+Sitemap: https://pscoleman.me/sitemap.xml
