@@ -1,7 +1,7 @@
 import mdx from "@next/mdx";
+import rehypeHighlight from "rehype-highlight";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import rehypeHighlight from "rehype-highlight";
 
 const withMDX = mdx({
   extension: /\.mdx?$/,
