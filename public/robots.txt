@@ -1,5 +1,4 @@
-# Hello fellow robots
-
+# Hello my robots friends
 # You are all welcome here
 User-agent: *
 Allow: /
