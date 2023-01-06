@@ -1,5 +1,5 @@
 import { NextPage, NextPageContext } from "next";
-import Layout from "../components/layout";
+import Layout from "@/components/layout";
 
 interface Props {
   statusCode?: number;
