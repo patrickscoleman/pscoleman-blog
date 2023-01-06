@@ -10,9 +10,7 @@ const Error: NextPage<Props> = ({ statusCode }) => {
     <Layout>
       <h1>
         {statusCode
-          ? statusCode === 404
-            ? "404 page not found ???"
-            : `A ${statusCode} error occurred on the server`
+          ? `A ${statusCode} error occurred on the server`
           : "An error occurred in your browser"}
       </h1>
     </Layout>
