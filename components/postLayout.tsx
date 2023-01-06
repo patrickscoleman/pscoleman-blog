@@ -1,6 +1,6 @@
 import React from "react";
-import utilStyles from "../styles/utils.module.css";
-import Layout from "./layout";
+import utilStyles from "@/styles/utils.module.css";
+import Layout from "@/components/layout";
 
 export default function PostLayout({
   children,
