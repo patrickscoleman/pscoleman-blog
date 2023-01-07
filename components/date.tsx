@@ -5,6 +5,11 @@ export default function Date({
 }: {
   dateString: string;
 }): JSX.Element {
-  const date = parseISO(dateString);
-  return <time dateTime={dateString}>{format(date, "LLLL d, yyyy")}</time>;
+  let date = undefined;
+  try {
+    date = format(parseISO(dateString), "LLLL d, yyyy");
+  } catch (e) {
+    console.log(e);
+  }
+  return date ? <time dateTime={dateString}>{date}</time> : <></>;
 }
