@@ -1,19 +1,10 @@
 import { Layout } from "@/components/layout";
 import { Meta } from "@/components/meta";
 import { PostList } from "@/components/postList";
-import { getSortedPostsData } from "@/utils/posts";
+import { PostData, getSortedPostsData } from "@/utils/getPosts";
 import { GetStaticProps } from "next";
 
-const Posts = ({
-  allPostsData,
-}: {
-  allPostsData: {
-    id: string;
-    date: string;
-    title: string;
-    description?: string;
-  }[];
-}): JSX.Element => {
+const Posts = ({ allPostsData }: { allPostsData: PostData[] }): JSX.Element => {
   return (
     <Layout>
       <Meta title={"Patrick Coleman's Blog Posts"} />

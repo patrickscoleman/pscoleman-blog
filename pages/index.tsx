@@ -2,19 +2,10 @@ import { Layout, siteTitle } from "@/components/layout";
 import { Meta } from "@/components/meta";
 import { PostList } from "@/components/postList";
 import utilStyles from "@/styles/utils.module.css";
-import { getSortedPostsData } from "@/utils/posts";
+import { PostData, getSortedPostsData } from "@/utils/getPosts";
 import { GetStaticProps } from "next";
 
-const Home = ({
-  allPostsData,
-}: {
-  allPostsData: {
-    id: string;
-    date: string;
-    title: string;
-    description?: string;
-  }[];
-}) => {
+const Home = ({ allPostsData }: { allPostsData: PostData[] }) => {
   return (
     <Layout home>
       <Meta title={siteTitle} />

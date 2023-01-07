@@ -4,7 +4,14 @@ import path from "path";
 
 const postsDirectory = path.join(process.cwd(), "pages", "posts");
 
-export function getSortedPostsData() {
+export interface PostData {
+  id: string;
+  date: string;
+  title: string;
+  description?: string;
+}
+
+export function getSortedPostsData(): PostData[] {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName: string) => {
