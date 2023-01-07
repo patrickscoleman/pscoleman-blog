@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node ./utils/generate-sitemap.mjs",
+    "postbuild": "node ./utils/generateSitemap.mjs",
     "start": "next start"
   },
   "dependencies": {
