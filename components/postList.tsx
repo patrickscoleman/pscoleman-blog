@@ -1,8 +1,8 @@
-import Date from "@/components/date";
+import { DateFormatted } from "@/components/dateFormatted";
 import utilStyles from "@/styles/utils.module.css";
 import Link from "next/link";
 
-export default function PostList({ allPostsData }) {
+const PostListComponent = ({ allPostsData }) => {
   return (
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
       <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -12,11 +12,13 @@ export default function PostList({ allPostsData }) {
             <Link href={`/posts/${id}`}>{title}</Link>
             <br />
             <small className={utilStyles.lightText}>
-              <Date dateString={date} />
+              <DateFormatted dateString={date} />
             </small>
           </li>
         ))}
       </ul>
     </section>
   );
-}
+};
+
+export const PostList = PostListComponent;

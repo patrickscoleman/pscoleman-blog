@@ -1,19 +1,19 @@
+import styles from "@/components/layout.module.css";
+import utilStyles from "@/styles/utils.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import utilStyles from "@/styles/utils.module.css";
-import styles from "@/components/layout.module.css";
 
 const name = "Patrick Coleman";
 export const siteTitle = `${name}'s Web Presence`;
 
-export default function Layout({
+const LayoutComponent = ({
   children,
   home,
 }: {
   children: React.ReactNode;
   home?: boolean;
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <div className={styles.container}>
       <Head>
@@ -72,4 +72,6 @@ export default function Layout({
       )}
     </div>
   );
-}
+};
+
+export const Layout = LayoutComponent;

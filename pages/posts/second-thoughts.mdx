@@ -4,17 +4,17 @@ date: "2022-12-21"
 description: "Patrick's second blog post."
 ---
 
-import PostLayout from "@/components/postLayout";
-import Meta from "@/components/meta";
+import { PostLayout } from "@/components/postLayout";
+import { Meta } from "@/components/meta";
 import utilStyles from "@/styles/utils.module.css";
-import Date from "@/components/date";
+import { DateFormatted } from "@/components/dateFormatted";
 
 <Meta title={title} description={description} />
 
 # {title}
 
 <div className={utilStyles.lightText}>
-  <Date dateString={date} />
+  <DateFormatted dateString={date} />
 </div>
 <br />
 

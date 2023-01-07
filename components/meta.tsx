@@ -1,12 +1,12 @@
 import Head from "next/head";
 
-export default function Meta({
+const MetaComponent = ({
   title,
   description,
 }: {
   title: string;
   description?: string;
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <Head>
       <title>{title}</title>
@@ -15,4 +15,6 @@ export default function Meta({
       )}
     </Head>
   );
-}
+};
+
+export const Meta = MetaComponent;

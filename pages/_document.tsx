@@ -3,7 +3,7 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import { ReactElement } from "react";
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
   render(): ReactElement {
     return (
       <Html lang="en">
@@ -16,3 +16,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default MyDocument;

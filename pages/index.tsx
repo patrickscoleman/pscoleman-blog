@@ -1,20 +1,11 @@
-import Layout, { siteTitle } from "@/components/layout";
-import Meta from "@/components/meta";
-import PostList from "@/components/postList";
+import { Layout, siteTitle } from "@/components/layout";
+import { Meta } from "@/components/meta";
+import { PostList } from "@/components/postList";
 import utilStyles from "@/styles/utils.module.css";
-import { getSortedPostsData } from "@/utils/posts";
+import { PostData, getSortedPostsData } from "@/utils/getPosts";
 import { GetStaticProps } from "next";
 
-export default function Home({
-  allPostsData,
-}: {
-  allPostsData: {
-    id: string;
-    date: string;
-    title: string;
-    description?: string;
-  }[];
-}) {
+const Home = ({ allPostsData }: { allPostsData: PostData[] }) => {
   return (
     <Layout home>
       <Meta title={siteTitle} />
@@ -24,7 +15,9 @@ export default function Home({
       <PostList allPostsData={allPostsData} />
     </Layout>
   );
-}
+};
+
+export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
