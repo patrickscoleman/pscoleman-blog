@@ -1,11 +1,10 @@
-import Layout, { siteTitle } from "@/components/layout";
+import Layout from "@/components/layout";
 import Meta from "@/components/meta";
 import PostList from "@/components/postList";
-import utilStyles from "@/styles/utils.module.css";
 import { getSortedPostsData } from "@/utils/posts";
 import { GetStaticProps } from "next";
 
-export default function Home({
+export default function Posts({
   allPostsData,
 }: {
   allPostsData: {
@@ -14,13 +13,10 @@ export default function Home({
     title: string;
     description?: string;
   }[];
-}) {
+}): JSX.Element {
   return (
     <Layout home>
-      <Meta title={siteTitle} />
-      <section className={utilStyles.headingMd}>
-        <p>Hi, I'm Patrick. I've just started this blog.</p>
-      </section>
+      <Meta title={"Patrick Coleman's Blog Posts"} />
       <PostList allPostsData={allPostsData} />
     </Layout>
   );
