@@ -1,12 +1,12 @@
 import React from "react";
 import utilStyles from "@/styles/utils.module.css";
-import Layout from "@/components/layout";
+import { Layout } from "@/components/layout";
 
-export default function PostLayout({
+const PostLayoutComponent = ({
   children,
 }: {
   children: React.ReactNode;
-}): JSX.Element {
+}): JSX.Element => {
   return (
     <Layout>
       <article>
@@ -14,4 +14,6 @@ export default function PostLayout({
       </article>
     </Layout>
   );
-}
+};
+
+export const PostLayout = PostLayoutComponent;

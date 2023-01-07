@@ -1,10 +1,10 @@
-import Layout from "@/components/layout";
-import Meta from "@/components/meta";
-import PostList from "@/components/postList";
+import { Layout } from "@/components/layout";
+import { Meta } from "@/components/meta";
+import { PostList } from "@/components/postList";
 import { getSortedPostsData } from "@/utils/posts";
 import { GetStaticProps } from "next";
 
-export default function Posts({
+const Posts = ({
   allPostsData,
 }: {
   allPostsData: {
@@ -13,14 +13,14 @@ export default function Posts({
     title: string;
     description?: string;
   }[];
-}): JSX.Element {
+}): JSX.Element => {
   return (
-    <Layout home>
+    <Layout>
       <Meta title={"Patrick Coleman's Blog Posts"} />
       <PostList allPostsData={allPostsData} />
     </Layout>
   );
-}
+};
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
@@ -28,3 +28,5 @@ export const getStaticProps: GetStaticProps = async () => {
     props: { allPostsData },
   };
 };
+
+export default Posts;

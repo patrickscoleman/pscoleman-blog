@@ -1,10 +1,10 @@
 import { format, parseISO } from "date-fns";
 
-export default function Date({
+const DateFormattedComponent = ({
   dateString,
 }: {
   dateString: string;
-}): JSX.Element {
+}): JSX.Element => {
   let date = undefined;
   try {
     date = format(parseISO(dateString), "LLLL d, yyyy");
@@ -12,4 +12,6 @@ export default function Date({
     console.log(e);
   }
   return date ? <time dateTime={dateString}>{date}</time> : <></>;
-}
+};
+
+export const DateFormatted = DateFormattedComponent;
