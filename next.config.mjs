@@ -8,6 +8,7 @@ const withMDX = mdx({
   options: {
     remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
     rehypePlugins: [rehypeHighlight],
+    providerImportSource: "@mdx-js/react",
   },
 });
 
