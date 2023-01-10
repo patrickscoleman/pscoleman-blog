@@ -7,13 +7,17 @@ const name = "Patrick Coleman";
 const LayoutComponent = ({
   children,
   home,
+  title,
+  description,
 }: {
   children: React.ReactNode;
   home?: boolean;
+  title?: string;
+  description?: string;
 }): JSX.Element => {
   return (
     <div className="">
-      <Meta />
+      <Meta title={title} description={description} />
       <header className="">
         {home ? (
           <>

@@ -13,7 +13,7 @@ const Home = ({ allPostsData }: { allPostsData: PostData[] }) => {
       </section>
       <PostList allPostsData={allPostsData} />
       <Link href="https://zombo.com" passHref rel="noopener" target="_blank">
-        <Button variant="contained">Click me!</Button>
+        <Button>Click me!</Button>
       </Link>
     </Layout>
   );

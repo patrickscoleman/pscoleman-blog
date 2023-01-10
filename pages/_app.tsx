@@ -1,5 +1,3 @@
-// Adds global styles, fonts, and analytics to the app
-
 import "@/styles/global.css";
 import "@fontsource/roboto/400.css";
 import { Analytics } from "@vercel/analytics/react";

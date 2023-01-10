@@ -5,11 +5,15 @@ import React from "react";
 
 const PostLayoutComponent = ({
   children,
+  title,
+  description,
 }: {
   children: React.ReactNode;
+  title: string;
+  description: string;
 }): JSX.Element => {
   return (
-    <Layout>
+    <Layout title={title} description={description}>
       <MDXProvider components={MdxComponents}>
         <article>
           <div className="">{children}</div>

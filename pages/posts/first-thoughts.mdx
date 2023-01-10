@@ -8,8 +8,6 @@ import { PostLayout } from "@/components/postLayout";
 import { Meta } from "@/components/meta";
 import { DateFormatted } from "@/components/dateFormatted";
 
-<Meta title={title} description={description} />
-
 # {title}
 
 <div className="">
@@ -25,4 +23,8 @@ I, Patrick, have wanted to start a blog for a long time, so these aren't really 
 
 Well, that's it for today. Cheers!
 
-export default ({ children }) => <PostLayout>{children}</PostLayout>;
+export default ({ children }) => (
+  <PostLayout title={title} description={description}>
+    {children}
+  </PostLayout>
+);
