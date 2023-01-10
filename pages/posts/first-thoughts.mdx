@@ -6,14 +6,13 @@ description: "Patrick's first blog post."
 
 import { PostLayout } from "@/components/postLayout";
 import { Meta } from "@/components/meta";
-import utilStyles from "@/styles/utils.module.css";
 import { DateFormatted } from "@/components/dateFormatted";
 
 <Meta title={title} description={description} />
 
 # {title}
 
-<div className={utilStyles.lightText}>
+<div className="">
   <DateFormatted dateString={date} />
 </div>
 <br />

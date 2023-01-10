@@ -1,4 +1,4 @@
-// Adds lang="en" to the default Next.js html template
+// Adds <html lang="en"> to the default Next.js html template
 
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import { ReactElement } from "react";
