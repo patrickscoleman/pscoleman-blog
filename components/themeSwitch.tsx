@@ -18,7 +18,7 @@ const ThemeSwitchComponent = () => {
     <div>
       <ToggleButtonGroup
         color="primary"
-        value={resolvedTheme}
+        value={resolvedTheme ? resolvedTheme : "dark"}
         exclusive
         onChange={toggleTheme}
         aria-label="toggle theme"
