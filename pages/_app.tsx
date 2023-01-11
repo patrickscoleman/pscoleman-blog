@@ -1,3 +1,4 @@
+import { PageProvider } from "@/components/pageProvider";
 import "@/styles/global.css";
 import "@fontsource/roboto/400.css";
 import { Analytics } from "@vercel/analytics/react";
@@ -8,9 +9,9 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <ThemeProvider attribute="class">
-        {/* <MuiThemeWrapper theme={lightTheme}> */}
-        <Component {...pageProps} />
-        {/* </MuiThemeWrapper> */}
+        <PageProvider>
+          <Component {...pageProps} />
+        </PageProvider>
       </ThemeProvider>
       <Analytics />
     </>

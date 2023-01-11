@@ -1,38 +1,30 @@
-import { ToggleButtonGroup, ToggleButton } from "@mui/material";
-import { useEffect, useState } from "react";
+import { darkTheme, lightTheme } from "@/styles/themes";
+import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useTheme } from "next-themes";
 
 const themeSwitchComponent = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
-  // useEffect only runs on the client, so now we can safely show the UI
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
+  const { resolvedTheme, setTheme } = useTheme();
 
   const toggleTheme = (
     _event: React.MouseEvent<HTMLElement>,
-    newTheme: string | null
+    newTheme: string
   ) => {
     setTheme(newTheme);
   };
+
+  const theme = resolvedTheme === "light" ? lightTheme : darkTheme;
 
   return (
     <div>
       <ToggleButtonGroup
         color="primary"
-        value={theme}
+        value={resolvedTheme}
         exclusive
         onChange={toggleTheme}
         aria-label="toggle theme"
+        className=""
       >
         <ToggleButton value="light">Light</ToggleButton>
-        <ToggleButton value="system">System</ToggleButton>
         <ToggleButton value="dark">Dark</ToggleButton>
       </ToggleButtonGroup>
     </div>
