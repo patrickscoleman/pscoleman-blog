@@ -1,13 +1,18 @@
-// Adds global styles and analytics to the app
-
-import { Analytics } from "@vercel/analytics/react";
-import { AppProps } from "next/app";
+import { PageProvider } from "@/components/pageProvider";
 import "@/styles/global.css";
+import "@fontsource/roboto/400.css";
+import { Analytics } from "@vercel/analytics/react";
+import { ThemeProvider } from "next-themes";
+import { AppProps } from "next/app";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <Component {...pageProps} />
+      <ThemeProvider attribute="class">
+        <PageProvider>
+          <Component {...pageProps} />
+        </PageProvider>
+      </ThemeProvider>
       <Analytics />
     </>
   );
