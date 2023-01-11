@@ -9,7 +9,7 @@ class MyDocument extends Document {
           <link rel="icon" href="/favicon.ico" />
           <meta property="og:image" content="/patrick.png" key="og:image" />
         </Head>
-        <body>
+        <body className="bg-gray-100 text-black dark:bg-slate-900 dark:text-slate-400">
           <Main />
           <NextScript />
         </body>
