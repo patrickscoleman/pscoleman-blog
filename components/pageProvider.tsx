@@ -6,10 +6,14 @@ import { ReactNode, useEffect, useState } from "react";
 interface PageProviderProps {
   children: ReactNode;
 }
+
+// PageProvider applies the theme to the MUI components
 const PageProviderComponent = ({ children }: PageProviderProps) => {
+  // resolvedTheme is undefined on the server
   const { resolvedTheme } = useTheme();
   const [currentTheme, setCurrentTheme] = useState(darkTheme);
 
+  // useEffect only runs after the client has mounted
   useEffect(() => {
     if (resolvedTheme === "dark") {
       setCurrentTheme(darkTheme);
