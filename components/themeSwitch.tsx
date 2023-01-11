@@ -2,7 +2,7 @@ import { darkTheme, lightTheme } from "@/styles/themes";
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useTheme } from "next-themes";
 
-const themeSwitchComponent = () => {
+const ThemeSwitchComponent = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   const toggleTheme = (
@@ -31,4 +31,4 @@ const themeSwitchComponent = () => {
   );
 };
 
-export const ThemeSwitch = themeSwitchComponent;
+export const ThemeSwitch = ThemeSwitchComponent;

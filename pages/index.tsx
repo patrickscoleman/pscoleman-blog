@@ -9,7 +9,7 @@ const Home = ({ allPostsData }: { allPostsData: PostData[] }) => {
   return (
     <Layout home>
       <section className="">
-        <p>Hi, I'm Patrick. I've just started this blog.</p>
+        <p>Hi, I&apos;m Patrick. I&apos;ve just started this blog.</p>
       </section>
       <PostList allPostsData={allPostsData} />
       <Link href="https://zombo.com" passHref rel="noopener" target="_blank">
