@@ -15,7 +15,7 @@ const PostLayoutComponent = ({
   return (
     <Layout title={title} description={description}>
       <MDXProvider components={MdxComponents}>
-        <article>
+        <article className="prose prose-stone dark:prose-invert dark:prose-headings:text-stone-50 dark:prose-a:text-stone-50 dark:prose-strong:text-stone-50">
           <div className="">{children}</div>
         </article>
       </MDXProvider>
