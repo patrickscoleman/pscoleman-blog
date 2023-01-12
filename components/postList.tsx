@@ -4,13 +4,13 @@ import Link from "next/link";
 const PostListComponent = ({ allPostsData }) => {
   return (
     <section className="">
-      <h2 className="">Blog</h2>
+      <h2 className="">Blog Posts</h2>
       <ul className="">
         {allPostsData.map(({ id, date, title }) => (
           <li className="" key={id}>
             <Link href={`/posts/${id}`}>{title}</Link>
             <br />
-            <small className="">
+            <small>
               <DateFormatted dateString={date} />
             </small>
           </li>

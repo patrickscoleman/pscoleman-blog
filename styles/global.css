@@ -4,12 +4,21 @@
 
 @layer base {
   h1 {
-    @apply text-4xl font-bold dark:text-slate-100;
+    @apply text-4xl my-8 font-bold dark:text-stone-50;
   }
   h2 {
-    @apply text-3xl font-bold dark:text-slate-100;
+    @apply text-3xl my-6 font-bold dark:text-stone-50;
+  }
+  p {
+    @apply my-4;
   }
   a {
-    @apply hover:underline;
+    @apply font-bold underline underline-offset-2 decoration-1 hover:decoration-2 dark:text-stone-50;
+  }
+  li {
+    @apply my-4;
+  }
+  small {
+    @apply text-base italic text-stone-500 dark:text-stone-400;
   }
 }
