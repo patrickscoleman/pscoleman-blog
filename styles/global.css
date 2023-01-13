@@ -30,6 +30,6 @@ html {
     @apply my-2;
   }
   small {
-    @apply text-sm italic text-text-lightfaint dark:text-text-darkfaint;
+    @apply text-base italic text-text-lightfaint dark:text-text-darkfaint;
   }
 }
