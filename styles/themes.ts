@@ -9,7 +9,7 @@ export const lightTheme = createTheme({
     mode: "light",
     primary: {
       // @ts-ignore
-      main: tailwindConfig.theme.colors.primary.light,
+      main: tailwindConfig.theme.colors.accent.light,
     },
   },
 });
@@ -19,7 +19,7 @@ export const darkTheme = createTheme({
     mode: "dark",
     primary: {
       // @ts-ignore
-      main: tailwindConfig.theme.colors.primary.dark,
+      main: tailwindConfig.theme.colors.accent.dark,
     },
   },
 });

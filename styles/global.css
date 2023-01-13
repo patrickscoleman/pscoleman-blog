@@ -4,21 +4,21 @@
 
 @layer base {
   h1 {
-    @apply text-4xl my-8 font-bold dark:text-stone-50;
+    @apply text-4xl my-8 font-bold dark:text-text-darkbold;
   }
   h2 {
-    @apply text-3xl my-6 font-bold dark:text-stone-50;
+    @apply text-3xl my-6 font-bold dark:text-text-darkbold;
   }
   p {
     @apply my-4;
   }
   a {
-    @apply font-bold underline underline-offset-2 decoration-1 hover:decoration-2 decoration-sky-600 dark:text-stone-50 dark:decoration-sky-400;
+    @apply font-bold underline underline-offset-2 decoration-1 hover:decoration-2 decoration-accent-light dark:text-text-darkbold dark:decoration-accent-dark;
   }
   li {
     @apply my-4;
   }
   small {
-    @apply text-base italic text-stone-500 dark:text-stone-400;
+    @apply text-sm italic text-text-lightfaint dark:text-text-darkfaint;
   }
 }
