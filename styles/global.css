@@ -2,23 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  /* sets the size of the whole app */
+  font-size: 16px;
+}
+
 @layer base {
   h1 {
-    @apply text-4xl my-8 font-bold dark:text-stone-50;
+    @apply text-4xl my-8 font-bold dark:text-text-darkbold;
   }
   h2 {
-    @apply text-3xl my-6 font-bold dark:text-stone-50;
+    @apply text-3xl my-6 font-bold dark:text-text-darkbold;
+  }
+  hr {
+    @apply h-0.5 border-0 bg-accent-light dark:bg-accent-dark;
   }
   p {
     @apply my-4;
   }
   a {
-    @apply font-bold underline underline-offset-2 decoration-1 hover:decoration-2 dark:text-stone-50;
+    @apply font-bold underline underline-offset-2 decoration-1 hover:decoration-2 decoration-accent-light dark:text-text-darkbold dark:decoration-accent-dark;
   }
-  li {
+  ul {
     @apply my-4;
   }
+  li {
+    @apply my-2;
+  }
   small {
-    @apply text-base italic text-stone-500 dark:text-stone-400;
+    @apply text-base italic text-text-lightfaint dark:text-text-darkfaint;
   }
 }

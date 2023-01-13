@@ -9,9 +9,9 @@ interface PageProviderProps {
 
 // PageProvider applies the theme to the MUI components
 const PageProviderComponent = ({ children }: PageProviderProps) => {
-  // resolvedTheme is undefined on the server
+  // resolvedTheme is undefined on the first render, so use light theme by default
   const { resolvedTheme } = useTheme();
-  const [currentTheme, setCurrentTheme] = useState(darkTheme);
+  const [currentTheme, setCurrentTheme] = useState(lightTheme);
 
   // useEffect only runs after the client has mounted
   useEffect(() => {
