@@ -73,7 +73,7 @@ const ThemeSwitchComponent = () => {
       <ThemeProvider theme={switchTheme}>
         <Switch
           // resolvedTheme will be undefined on the first render, so use light theme (checked)
-          checked={!mounted ? true : resolvedTheme === "light"}
+          checked={resolvedTheme === "light"}
           icon={<DarkModeIcon />}
           checkedIcon={<LightModeIcon />}
           onChange={handleChange}
