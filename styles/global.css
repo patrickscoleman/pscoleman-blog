@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  /* sets the size of the whole app */
+  font-size: 16px;
+}
+
 @layer base {
   h1 {
     @apply text-4xl my-8 font-bold dark:text-text-darkbold;
@@ -22,7 +27,7 @@
     @apply my-4;
   }
   li {
-    @apply my-4;
+    @apply my-2;
   }
   small {
     @apply text-sm italic text-text-lightfaint dark:text-text-darkfaint;

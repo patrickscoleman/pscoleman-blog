@@ -8,14 +8,14 @@ const PostListComponent = ({ allPostsData }) => {
       <hr />
       <ul className="mb-8 pl-1">
         {allPostsData.map(({ id, date, title, description }) => (
-          <li className="" key={id}>
-            <p className="mt-8 mb-2">
+          <li key={id}>
+            <p className="text-lg mt-6 mb-1">
               <Link href={`/posts/${id}`}>{title}</Link>
             </p>
             <small>
               <DateFormatted dateString={date} />
             </small>
-            <p className="my-2">{description}</p>
+            <p className="my-1">{description}</p>
           </li>
         ))}
       </ul>
