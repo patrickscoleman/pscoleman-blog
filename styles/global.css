@@ -13,7 +13,7 @@
     @apply my-4;
   }
   a {
-    @apply font-bold underline underline-offset-2 decoration-1 hover:decoration-2 dark:text-stone-50;
+    @apply font-bold underline underline-offset-2 decoration-1 hover:decoration-2 decoration-sky-600 dark:text-stone-50 dark:decoration-sky-400;
   }
   li {
     @apply my-4;
