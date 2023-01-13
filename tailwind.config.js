@@ -18,9 +18,12 @@ module.exports = {
         },
         accent: {
           light: "#0284c7", // sky-600
+          lighttext: "#fafaf9", // stone-50
           lighthover: "#0369a1", // sky-700
           dark: "#38bdf8", // sky-400
+          darktext: "#1c1917", // stone-900
           darkhover: "#7dd3fc", // sky-300
+          darktrack: "#0ea5e9", // sky-500
         },
       },
     },

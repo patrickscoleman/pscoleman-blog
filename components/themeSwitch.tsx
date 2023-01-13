@@ -1,7 +1,7 @@
 import tailwindConfigModule from "@/tailwind.config.js";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import { Skeleton, Switch } from "@mui/material";
+import { Switch } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -13,7 +13,7 @@ const ThemeSwitchComponent = () => {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  // useEffect only runs after the client has mounted
+  // useEffect only runs after the client has mounted, which triggers a page update
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -31,11 +31,11 @@ const ThemeSwitchComponent = () => {
       MuiSwitch: {
         styleOverrides: {
           switchBase: {
-            // Controls defaults (unchecked) settings for the thumb
+            // Controls default (unchecked) settings for the thumb, i.e. dark mode
             // @ts-ignore
-            backgroundColor: tailwindConfig.theme.colors.accent.light,
+            backgroundColor: tailwindConfig.theme.colors.accent.dark,
             // @ts-ignore
-            color: tailwindConfig.theme.colors.accent.lighttext,
+            color: tailwindConfig.theme.colors.accent.darktext,
             height: "2rem",
             width: "2rem",
             top: "50%",
@@ -43,19 +43,23 @@ const ThemeSwitchComponent = () => {
             marginLeft: ".2rem",
             "&:hover": {
               // @ts-ignore
-              backgroundColor: tailwindConfig.theme.colors.accent.lighthover,
+              backgroundColor: tailwindConfig.theme.colors.accent.darkhover,
+            },
+            "& + .MuiSwitch-track": {
+              // @ts-ignore
+              backgroundColor: tailwindConfig.theme.colors.accent.darktrack,
             },
           },
           colorPrimary: {
             "&.Mui-checked": {
-              // Controls checked settings for the thumb
+              // Controls active (checked) settings for the thumb, i.e. light mode
               // @ts-ignore
-              backgroundColor: tailwindConfig.theme.colors.accent.dark,
+              backgroundColor: tailwindConfig.theme.colors.accent.light,
               // @ts-ignore
-              color: tailwindConfig.theme.colors.accent.darktext,
+              color: tailwindConfig.theme.colors.accent.lighttext,
               "&:hover": {
                 // @ts-ignore
-                backgroundColor: tailwindConfig.theme.colors.accent.darkhover,
+                backgroundColor: tailwindConfig.theme.colors.accent.lighthover,
               },
             },
           },
@@ -68,10 +72,10 @@ const ThemeSwitchComponent = () => {
     <div className="flex items-center">
       <ThemeProvider theme={switchTheme}>
         <Switch
-          // resolvedTheme will be undefined on the first render, so use light theme by default
-          checked={!mounted ? false : resolvedTheme === "dark"}
-          icon={<LightModeIcon />}
-          checkedIcon={<DarkModeIcon />}
+          // resolvedTheme will be undefined on the first render, so use light theme (checked)
+          checked={!mounted ? true : resolvedTheme === "light"}
+          icon={<DarkModeIcon />}
+          checkedIcon={<LightModeIcon />}
           onChange={handleChange}
           aria-label="Switch theme"
         />
