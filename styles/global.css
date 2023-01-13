@@ -9,11 +9,17 @@
   h2 {
     @apply text-3xl my-6 font-bold dark:text-text-darkbold;
   }
+  hr {
+    @apply h-0.5 border-0 bg-accent-light dark:bg-accent-dark;
+  }
   p {
     @apply my-4;
   }
   a {
     @apply font-bold underline underline-offset-2 decoration-1 hover:decoration-2 decoration-accent-light dark:text-text-darkbold dark:decoration-accent-dark;
+  }
+  ul {
+    @apply my-4;
   }
   li {
     @apply my-4;

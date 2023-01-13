@@ -19,7 +19,9 @@ const Home = ({ allPostsData }: { allPostsData: PostData[] }) => {
         target="_blank"
         className="no-underline"
       >
-        <Button variant="outlined">Click me!</Button>
+        <Button variant="outlined" color="secondary">
+          Click me!
+        </Button>
       </Link>
     </Layout>
   );

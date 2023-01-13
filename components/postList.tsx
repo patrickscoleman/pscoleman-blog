@@ -4,10 +4,9 @@ import Link from "next/link";
 const PostListComponent = ({ allPostsData }) => {
   return (
     <section className="">
-      <Link href={"/posts"}>
-        <h2>Blog Posts</h2>
-      </Link>
-      <ul className="mb-8 pl-2">
+      <h2 className="mb-1">Blog Posts</h2>
+      <hr />
+      <ul className="mb-8 pl-1">
         {allPostsData.map(({ id, date, title, description }) => (
           <li className="" key={id}>
             <p className="mt-8 mb-2">
