@@ -1,6 +1,8 @@
+import { Menu } from "@/components/menu";
+import { ThemeSwitch } from "@/components/themeSwitch";
+import { Search } from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
-import { ThemeSwitch } from "@/components/themeSwitch";
 
 const HeaderComponent = ({ home }: { home: boolean }) => {
   return (
@@ -39,8 +41,8 @@ const HeaderComponent = ({ home }: { home: boolean }) => {
         )}
       </div>
       <div className="flex">
-        <p className="mr-2">PAGES</p>
-        <ThemeSwitch />
+        <Search />
+        <Menu />
       </div>
     </header>
   );

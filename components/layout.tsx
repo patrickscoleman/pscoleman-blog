@@ -1,6 +1,6 @@
+import { Header } from "@/components/header";
 import { Meta } from "@/components/meta";
 import Link from "next/link";
-import { Header } from "./header";
 
 const LayoutComponent = ({
   children,
