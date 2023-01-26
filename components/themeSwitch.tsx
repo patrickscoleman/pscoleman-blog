@@ -1,7 +1,14 @@
 import tailwindConfigModule from "@/tailwind.config.js";
+import { Palette } from "@mui/icons-material";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import { Switch } from "@mui/material";
+import {
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Switch,
+} from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -27,6 +34,9 @@ const ThemeSwitchComponent = () => {
   };
 
   const switchTheme = createTheme({
+    typography: {
+      fontSize: 12,
+    },
     components: {
       MuiSwitch: {
         styleOverrides: {
@@ -36,9 +46,9 @@ const ThemeSwitchComponent = () => {
             backgroundColor: tailwindConfig.theme.colors.accent.dark,
             // @ts-ignore
             color: tailwindConfig.theme.colors.accent.darktext,
-            height: "2rem",
-            width: "2rem",
-            top: "50%",
+            height: "1.8rem",
+            width: "1.8rem",
+            top: "55%",
             marginTop: "-1rem",
             marginLeft: ".2rem",
             "&:hover": {
@@ -69,18 +79,26 @@ const ThemeSwitchComponent = () => {
   });
 
   return (
-    <div className="flex items-center">
-      <ThemeProvider theme={switchTheme}>
-        <Switch
-          // resolvedTheme will be undefined on the first render, so use light theme (checked)
-          checked={resolvedTheme === "light"}
-          icon={<DarkModeIcon />}
-          checkedIcon={<LightModeIcon />}
-          onChange={handleChange}
-          aria-label="Switch theme"
-        />
-      </ThemeProvider>
-    </div>
+    <>
+      <ListItem disableGutters disablePadding>
+        <ListItemButton onClick={handleChange}>
+          <ListItemIcon>
+            <Palette />
+          </ListItemIcon>
+          <ListItemText primary="Theme" />
+          <ThemeProvider theme={switchTheme}>
+            <Switch
+              // resolvedTheme will be undefined on the first render, so use light theme (checked)
+              checked={resolvedTheme === "light"}
+              icon={<DarkModeIcon />}
+              checkedIcon={<LightModeIcon />}
+              onChange={handleChange}
+              aria-label="Switch theme"
+            />
+          </ThemeProvider>
+        </ListItemButton>
+      </ListItem>
+    </>
   );
 };
 

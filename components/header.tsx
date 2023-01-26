@@ -1,6 +1,4 @@
 import { Menu } from "@/components/menu";
-import { ThemeSwitch } from "@/components/themeSwitch";
-import { Search } from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -40,8 +38,7 @@ const HeaderComponent = ({ home }: { home: boolean }) => {
           </>
         )}
       </div>
-      <div className="flex">
-        <Search />
+      <div className="flex items-center">
         <Menu />
       </div>
     </header>
