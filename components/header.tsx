@@ -24,7 +24,7 @@ const Title = () => (
 const HeaderComponent = ({ home }: { home: boolean }) => {
   return (
     <header className="mt-4 mb-8">
-      <div className="flex w-full items-center justify-between">
+      <div className="flex w-full items-center justify-between mb-1">
         <>
           <Menu />
           {home ? (
@@ -36,8 +36,12 @@ const HeaderComponent = ({ home }: { home: boolean }) => {
           )}
           <Tooltip title="Search coming soon">
             <span>
-              <IconButton disabled className="p-0">
-                <Search />
+              <IconButton
+                disabled
+                // className="p-0 text-2xl text-text-light dark:text-text-darkbold"
+                className="p-0 text-2xl"
+              >
+                <Search fontSize="inherit" color="inherit" />
               </IconButton>
             </span>
           </Tooltip>
