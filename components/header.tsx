@@ -5,19 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Title = () => (
-  <div>
-    <h2 aria-label="pscoleman.me/" className="flex text-lg mx-1 my-0">
-      pscoleman
-      <Image
-        priority
-        src="/images/patrick.png"
-        className="rounded-full self-end mb-1.5"
-        height={7}
-        width={7}
-        alt="dot"
-      />
-      me/
-    </h2>
+  <div className="flex">
+    <Image
+      priority
+      src="/images/patrick.png"
+      className="rounded-full self-end mb-2 mr-1"
+      height={15}
+      width={15}
+      alt="Sketched portrait of Patrick Coleman"
+    />
+    <span className="text-lg">://</span>
+    <h2 className="text-lg m-0">pscoleman.me/</h2>
   </div>
 );
 
