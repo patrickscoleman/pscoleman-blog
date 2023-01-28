@@ -36,13 +36,14 @@ const HeaderComponent = ({ home }: { home: boolean }) => {
           )}
           <Tooltip title="Search coming soon">
             <span>
-              <IconButton disabled>
+              <IconButton disabled className="p-0">
                 <Search />
               </IconButton>
             </span>
           </Tooltip>
         </>
       </div>
+      <hr />
     </header>
   );
 };
