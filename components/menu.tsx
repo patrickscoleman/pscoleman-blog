@@ -59,19 +59,20 @@ const MenuComponent = () => {
           onKeyDown={toggleMenu(false)}
         >
           <List>
-            <ListItem>
-              <ListItemText
-                primary="Menu"
-                primaryTypographyProps={{ className: "text-xl font-black" }}
-              />
+            <ListItem className="mb-1 pb-0">
+              <ListItemText primary="Menu" />
               <IconButton onClick={toggleMenu(false)}>
                 <Close />
               </IconButton>
             </ListItem>
-            <hr />
+            <hr className="mx-3" />
             <ListItem disablePadding>
               <ListItemButton>
-                <Link href="/" className="flex no-underline items-center">
+                <Link
+                  href="/"
+                  passHref
+                  className="flex no-underline items-center"
+                >
                   <ListItemIcon>
                     <HomeIcon />
                   </ListItemIcon>
@@ -81,7 +82,11 @@ const MenuComponent = () => {
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton onClick={toggleMenu(false)}>
-                <Link href="/posts" className="flex no-underline items-center">
+                <Link
+                  href="/posts"
+                  passHref
+                  className="flex no-underline items-center"
+                >
                   <ListItemIcon>
                     <Article />
                   </ListItemIcon>
@@ -89,7 +94,7 @@ const MenuComponent = () => {
                 </Link>
               </ListItemButton>
             </ListItem>
-            <br />
+            <hr className="mx-3" />
             <ThemeSwitch />
           </List>
         </Box>
