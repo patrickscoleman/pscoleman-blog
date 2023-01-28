@@ -22,17 +22,6 @@ const Home = ({ allPostsData }: { allPostsData: PostData[] }) => {
         <p>Hi, I&apos;m Patrick. I&apos;ve just started this blog.</p>
       </section>
       <PostList allPostsData={allPostsData} />
-      <Link
-        href="https://zombo.com"
-        passHref
-        rel="noopener"
-        target="_blank"
-        className="no-underline"
-      >
-        <Button variant="outlined" color="secondary">
-          Click me!
-        </Button>
-      </Link>
     </Layout>
   );
 };

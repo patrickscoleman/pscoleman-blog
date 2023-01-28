@@ -1,6 +1,7 @@
 import { Header } from "@/components/header";
 import { Meta } from "@/components/meta";
 import Link from "next/link";
+import { Footer } from "@/components/footer";
 
 const LayoutComponent = ({
   children,
@@ -18,11 +19,7 @@ const LayoutComponent = ({
       <Meta title={title} description={description} />
       <Header home={home} />
       <main>{children}</main>
-      {!home && (
-        <div className="">
-          <Link href="/">← Back to home</Link>
-        </div>
-      )}
+      <Footer />
     </div>
   );
 };
