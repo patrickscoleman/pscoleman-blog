@@ -21,7 +21,7 @@ const Home = ({ allPostsData }: { allPostsData: PostData[] }) => {
       <section className="">
         <p>Hi, I&apos;m Patrick. I&apos;ve just started this blog.</p>
       </section>
-      <PostList allPostsData={allPostsData} />
+      <PostList allPostsData={allPostsData} section />
     </Layout>
   );
 };

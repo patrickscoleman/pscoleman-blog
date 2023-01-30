@@ -25,11 +25,10 @@ const IconHamburger = () => <MenuIcon fontSize="inherit" color="inherit" />;
 
 const MenuComponent = () => {
   const [open, setOpen] = React.useState(false);
-  const [hoverIcon, setHoverIcon] = React.useState(FoodHamburger);
+  const [hoverIcon, setHoverIcon] = React.useState(IconHamburger);
 
   const toggleMenu =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-      console.log(event);
       if (
         event &&
         event.type === "keydown" &&
