@@ -9,12 +9,11 @@ const Title = () => (
     <Image
       priority
       src="/images/patrick.png"
-      className="rounded-full self-end mb-2 mr-1"
-      height={15}
-      width={15}
+      className="rounded-full border-2 border-text-light dark:border-text-darkbold self-end mb-px mr-1"
+      height={25}
+      width={25}
       alt="Sketched portrait of Patrick Coleman"
     />
-    <span className="text-lg">://</span>
     <h2 className="text-lg m-0">pscoleman.me/</h2>
   </div>
 );
