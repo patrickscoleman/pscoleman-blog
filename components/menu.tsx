@@ -29,7 +29,6 @@ const MenuComponent = () => {
 
   const toggleMenu =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-      console.log(event);
       if (
         event &&
         event.type === "keydown" &&
