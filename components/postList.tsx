@@ -17,7 +17,7 @@ const PostListComponent = ({
         <h1 className="mb-1">Blog Posts</h1>
       )}
       <hr />
-      <ul className="mb-8 pl-1">
+      <ul className="mb-8">
         {allPostsData.map(({ id, date, title, description }) => (
           <li key={id}>
             <p className="text-lg mt-6 mb-1">
