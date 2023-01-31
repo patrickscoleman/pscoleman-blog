@@ -1,22 +1,14 @@
+import { MenuItem } from "@/components/menuItem";
 import { ThemeSwitch } from "@/components/themeSwitch";
-import {
-  Article,
-  Close,
-  Home as HomeIcon,
-  Menu as MenuIcon,
-  LunchDining,
-} from "@mui/icons-material";
+import { Close, LunchDining, Menu as MenuIcon } from "@mui/icons-material";
 import {
   Drawer,
   IconButton,
   List,
   ListItem,
-  ListItemButton,
-  ListItemIcon,
   ListItemText,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import Link from "next/link";
 import React from "react";
 
 const MENU_WIDTH = 220;
@@ -66,32 +58,10 @@ const MenuComponent = () => {
             </ListItem>
             <hr className="mx-3" />
             <ListItem disablePadding>
-              <ListItemButton>
-                <Link
-                  href="/"
-                  passHref
-                  className="flex no-underline items-center"
-                >
-                  <ListItemIcon>
-                    <HomeIcon />
-                  </ListItemIcon>
-                  <ListItemText primary="Home" />
-                </Link>
-              </ListItemButton>
+              <MenuItem path="/" name="Home" />
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton onClick={toggleMenu(false)}>
-                <Link
-                  href="/posts"
-                  passHref
-                  className="flex no-underline items-center"
-                >
-                  <ListItemIcon>
-                    <Article />
-                  </ListItemIcon>
-                  <ListItemText primary="Posts" />
-                </Link>
-              </ListItemButton>
+              <MenuItem path="/posts" />
             </ListItem>
             <hr className="mx-3" />
             <ThemeSwitch />
