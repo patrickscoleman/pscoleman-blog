@@ -15,6 +15,6 @@ const withMDX = mdx({
 export default withMDX({
   pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   images: {
-    domains: ["mirrors.creativecommons.org"],
+    domains: [], // Add domains for external images here
   },
 });
