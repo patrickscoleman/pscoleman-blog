@@ -9,7 +9,7 @@ const Title = () => (
     <Image
       priority
       src="/images/patrick.png"
-      className="rounded-full border-2 border-text-light dark:border-text-darkbold self-end mb-px mr-1"
+      className="rounded-full border-2 border-text-light dark:border-0 self-end mb-px mr-1"
       height={25}
       width={25}
       alt="Sketched portrait of Patrick Coleman"
