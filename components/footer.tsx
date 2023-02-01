@@ -1,5 +1,70 @@
-import Image from "next/image";
 import Link from "next/link";
+
+const SourceIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={16}
+    height={16}
+    className="mt-0.5"
+    viewBox="0 0 411 512.07"
+    xmlSpace="preserve"
+    {...props}
+  >
+    <path d="M410.93 485.29c0 7.44-3 14.1-7.85 18.94-4.83 4.83-11.5 7.84-18.82 7.84H26.79c-7.32 0-14.12-3.01-18.94-7.84C3 499.39 0 492.73 0 485.29V26.78c0-7.45 3-14.11 7.85-18.95C12.67 3 19.33 0 26.79 0h230.03c4.57 0 8.76 2.08 11.49 5.49l131.85 128.37c6.27 1.7 10.84 7.58 10.84 14.37 0 112.36-.07 224.65-.07 337.06zm-205.7-238.9c1.8-7.73 9.54-12.54 17.28-10.75 7.73 1.8 12.54 9.54 10.74 17.28l-31.19 133.54c-1.79 7.74-9.53 12.55-17.27 10.75-7.73-1.8-12.54-9.54-10.74-17.27l31.18-133.55zm68.26 128.66c-5.97 5.21-15.04 4.61-20.26-1.36-5.22-5.96-4.61-15.03 1.35-20.25l42.24-37.01-42.24-37.01c-5.96-5.22-6.57-14.29-1.35-20.26 5.22-5.96 14.29-6.57 20.26-1.35l54.46 47.72c.51.44 1 .92 1.46 1.45 5.21 5.96 4.61 15.03-1.36 20.25l-54.56 47.82zm-117.07-21.61c5.96 5.22 6.57 14.29 1.35 20.25-5.22 5.97-14.29 6.57-20.26 1.36l-54.56-47.82c-5.97-5.22-6.57-14.29-1.35-20.25.45-.53.94-1.01 1.45-1.45l54.46-47.72c5.97-5.22 15.04-4.61 20.26 1.35 5.22 5.97 4.61 15.04-1.35 20.26l-42.24 37.01 42.24 37.01zm224.66-187.3H256.82c-8.36 0-15.03-6.8-15.03-15.03V29.78H29.93v452.37h351.19c0-105.37-.04-210.65-.04-316.01zM271.72 52.39l89.5 83.82h-89.5V52.39z" />
+  </svg>
+);
+
+const GithubIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={15}
+    height={15}
+    viewBox="0 0 16 16"
+    xmlSpace="preserve"
+    {...props}
+  >
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+  </svg>
+);
+
+const MastodonIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={15}
+    height={15}
+    viewBox="0 0 74 79"
+    xmlSpace="preserve"
+    {...props}
+  >
+    <path d="M73.7014 17.9592C72.5616 9.62034 65.1774 3.04876 56.424 1.77536C54.9472 1.56019 49.3517 0.7771 36.3901 0.7771H36.2933C23.3281 0.7771 20.5465 1.56019 19.0697 1.77536C10.56 3.01348 2.78877 8.91838 0.903306 17.356C-0.00357857 21.5113 -0.100361 26.1181 0.068112 30.3439C0.308275 36.404 0.354874 42.4535 0.91406 48.489C1.30064 52.498 1.97502 56.4751 2.93215 60.3905C4.72441 67.6217 11.9795 73.6395 19.0876 76.0945C26.6979 78.6548 34.8821 79.0799 42.724 77.3221C43.5866 77.1245 44.4398 76.8953 45.2833 76.6342C47.1867 76.0381 49.4199 75.3714 51.0616 74.2003C51.0841 74.1839 51.1026 74.1627 51.1156 74.1382C51.1286 74.1138 51.1359 74.0868 51.1368 74.0592V68.2108C51.1364 68.185 51.1302 68.1596 51.1185 68.1365C51.1069 68.1134 51.0902 68.0932 51.0695 68.0773C51.0489 68.0614 51.0249 68.0503 50.9994 68.0447C50.9738 68.0391 50.9473 68.0392 50.9218 68.045C45.8976 69.226 40.7491 69.818 35.5836 69.8087C26.694 69.8087 24.3031 65.6569 23.6184 63.9285C23.0681 62.4347 22.7186 60.8764 22.5789 59.2934C22.5775 59.2669 22.5825 59.2403 22.5934 59.216C22.6043 59.1916 22.621 59.1702 22.6419 59.1533C22.6629 59.1365 22.6876 59.1248 22.714 59.1191C22.7404 59.1134 22.7678 59.1139 22.794 59.1206C27.7345 60.2936 32.799 60.8856 37.8813 60.8843C39.1036 60.8843 40.3223 60.8843 41.5447 60.8526C46.6562 60.7115 52.0437 60.454 57.0728 59.4874C57.1983 59.4628 57.3237 59.4416 57.4313 59.4098C65.3638 57.9107 72.9128 53.2051 73.6799 41.2895C73.7086 40.8204 73.7803 36.3758 73.7803 35.889C73.7839 34.2347 74.3216 24.1533 73.7014 17.9592ZM61.4925 47.6918H53.1514V27.5855C53.1514 23.3526 51.3591 21.1938 47.7136 21.1938C43.7061 21.1938 41.6988 23.7476 41.6988 28.7919V39.7974H33.4078V28.7919C33.4078 23.7476 31.3969 21.1938 27.3894 21.1938C23.7654 21.1938 21.9552 23.3526 21.9516 27.5855V47.6918H13.6176V26.9752C13.6176 22.7423 14.7157 19.3795 16.9118 16.8868C19.1772 14.4 22.1488 13.1231 25.8373 13.1231C30.1064 13.1231 33.3325 14.7386 35.4832 17.9662L37.5587 21.3949L39.6377 17.9662C41.7884 14.7386 45.0145 13.1231 49.2765 13.1231C52.9614 13.1231 55.9329 14.4 58.2055 16.8868C60.4017 19.3772 61.4997 22.74 61.4997 26.9752L61.4925 47.6918Z" />
+  </svg>
+);
+
+const TwitterIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={15}
+    height={15}
+    viewBox="0 0 24 24"
+    xmlSpace="preserve"
+    {...props}
+  >
+    <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" />
+  </svg>
+);
+
+const LinkedInIcon = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={15}
+    height={15}
+    viewBox="0 0 24 24"
+    xmlSpace="preserve"
+    {...props}
+  >
+    <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+  </svg>
+);
 
 const CcIcon = (props) => (
   <svg
@@ -30,9 +95,9 @@ const CcByIcon = (props) => (
 const FooterComponent = () => {
   return (
     <footer className="mt-8 mb-4">
-      <hr />
-      <div className="flex w-full items-center mt-1">
-        <p className="text-sm">
+      <hr className="mb-4" />
+      <div className="flex flex-wrap justify-between">
+        <p className="text-sm my-1">
           © 2023{" "}
           <Link
             href="/"
@@ -48,26 +113,85 @@ const FooterComponent = () => {
             property="cc:attributionName"
           >
             Patrick Coleman
-          </span>{" "}
-          is licensed under{" "}
+          </span>
+        </p>
+        <div className="flex items-center my-1">
+          <p className="text-sm my-0">Source code: </p>
           <Link
             target="_blank"
             rel="license noopener noreferrer"
-            href="http://creativecommons.org/licenses/by/4.0/"
+            className="ml-1 space-x-1 fill-text-light dark:fill-text-darkbold hover:fill-accent-light dark:hover:fill-accent-dark"
+            href="https://github.com/patrickscoleman/pscoleman-blog"
+            passHref
           >
-            CC BY 4.0
+            <SourceIcon />
           </Link>
-        </p>
-        <Link
-          target="_blank"
-          rel="license noopener noreferrer"
-          className="flex ml-1 space-x-1 fill-text-light dark:fill-text-darkbold hover:fill-accent-light dark:hover:fill-accent-dark"
-          href="http://creativecommons.org/licenses/by/4.0/"
-          passHref
-        >
-          <CcIcon />
-          <CcByIcon />
-        </Link>
+        </div>
+      </div>
+      <div className="flex flex-wrap justify-between">
+        <div className="flex items-center my-1">
+          <p className="text-sm my-0">
+            License:{" "}
+            <Link
+              target="_blank"
+              rel="license noopener noreferrer"
+              href="http://creativecommons.org/licenses/by/4.0/"
+            >
+              CC BY 4.0
+            </Link>
+          </p>
+          <Link
+            target="_blank"
+            rel="license noopener noreferrer"
+            className="flex items-center ml-1 space-x-1 fill-text-light dark:fill-text-darkbold hover:fill-accent-light dark:hover:fill-accent-dark"
+            href="http://creativecommons.org/licenses/by/4.0/"
+            passHref
+          >
+            <CcIcon />
+            <CcByIcon />
+          </Link>
+        </div>
+        <div className="flex items-center my-1">
+          <p className="text-sm my-0">Where else to find me: </p>
+          <span className="flex flex-wrap items-center">
+            <Link
+              target="_blank"
+              rel="license noopener noreferrer"
+              className="ml-1 space-x-1 fill-text-light dark:fill-text-darkbold hover:fill-accent-light dark:hover:fill-accent-dark"
+              href="https://github.com/patrickscoleman"
+              passHref
+            >
+              <GithubIcon />
+            </Link>
+            <Link
+              target="_blank"
+              rel="license noopener noreferrer"
+              className="ml-1 space-x-1 fill-text-light dark:fill-text-darkbold hover:fill-accent-light dark:hover:fill-accent-dark"
+              href="https://mstdn.social/@patrickscoleman"
+              passHref
+            >
+              <MastodonIcon />
+            </Link>
+            <Link
+              target="_blank"
+              rel="license noopener noreferrer"
+              className="ml-1 space-x-1 fill-text-light dark:fill-text-darkbold hover:fill-accent-light dark:hover:fill-accent-dark"
+              href="https://twitter.com/patrickscoleman"
+              passHref
+            >
+              <TwitterIcon />
+            </Link>
+            <Link
+              target="_blank"
+              rel="license noopener noreferrer"
+              className="ml-1 space-x-1 fill-text-light dark:fill-text-darkbold hover:fill-accent-light dark:hover:fill-accent-dark"
+              href="https://www.linkedin.com/in/patrickscoleman/"
+              passHref
+            >
+              <LinkedInIcon />
+            </Link>
+          </span>
+        </div>
       </div>
     </footer>
   );
