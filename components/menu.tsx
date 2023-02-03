@@ -39,7 +39,6 @@ const MenuComponent = () => {
     <>
       <IconButton
         onClick={toggleMenu(true)}
-        className="text-2xl text-text-light dark:text-text-darkbold"
         onMouseEnter={() => setHoverIcon(FoodHamburger)}
         onMouseLeave={() => setHoverIcon(IconHamburger)}
       >
