@@ -12,8 +12,10 @@ import { Box } from "@mui/system";
 import React from "react";
 
 const MENU_WIDTH = 220;
-const FoodHamburger = () => <LunchDining fontSize="inherit" color="inherit" />;
-const IconHamburger = () => <MenuIcon fontSize="inherit" color="inherit" />;
+// @ts-ignore
+const FoodHamburger = () => <LunchDining color="topmenu" />;
+// @ts-ignore
+const IconHamburger = () => <MenuIcon color="topmenu" />;
 
 const MenuComponent = () => {
   const [open, setOpen] = React.useState(false);
@@ -37,7 +39,6 @@ const MenuComponent = () => {
     <>
       <IconButton
         onClick={toggleMenu(true)}
-        className="text-2xl text-text-light dark:text-text-darkbold"
         onMouseEnter={() => setHoverIcon(FoodHamburger)}
         onMouseLeave={() => setHoverIcon(IconHamburger)}
       >
@@ -53,7 +54,8 @@ const MenuComponent = () => {
             <ListItem className="mb-1 pb-0">
               <ListItemText primary="Menu" />
               <IconButton onClick={toggleMenu(false)}>
-                <Close />
+                {/* @ts-ignore */}
+                <Close color="topmenu" />
               </IconButton>
             </ListItem>
             <hr className="mx-3" />

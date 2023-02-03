@@ -33,12 +33,9 @@ const HeaderComponent = ({ home }: { home: boolean }) => {
           )}
           <Tooltip title="Search coming soon">
             <span>
-              <IconButton
-                disabled
-                // className="p-0 text-2xl text-text-light dark:text-text-darkbold"
-                className="p-0 text-2xl"
-              >
-                <Search fontSize="inherit" color="inherit" />
+              <IconButton disabled className="p-0 text-2xl">
+                {/* @ts-ignore */}
+                <Search />
               </IconButton>
             </span>
           </Tooltip>
