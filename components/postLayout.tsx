@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout";
 import { MdxComponents } from "@/components/mdxComponents";
 import { MDXProvider } from "@mdx-js/react";
+import Link from "next/link";
 import React from "react";
 
 const PostLayoutComponent = ({
@@ -19,6 +20,28 @@ const PostLayoutComponent = ({
           <div className="">{children}</div>
         </article>
       </MDXProvider>
+      <hr className="mb-8" />
+      <div className="flex my-0 content-end items-center justify-around">
+        {/* TO-DO - add component for next/prev and function to find next/prev post */}
+        <Link
+          href="/"
+          className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
+        >
+          &lt; prev
+        </Link>
+        <Link
+          href="/posts"
+          className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
+        >
+          [ all ]
+        </Link>
+        <Link
+          href="/"
+          className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
+        >
+          next &gt;
+        </Link>
+      </div>
     </Layout>
   );
 };
