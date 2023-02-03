@@ -35,7 +35,7 @@ const HeaderComponent = ({ home }: { home: boolean }) => {
             <span>
               <IconButton disabled className="p-0 text-2xl">
                 {/* @ts-ignore */}
-                <Search color="menu" />
+                <Search />
               </IconButton>
             </span>
           </Tooltip>

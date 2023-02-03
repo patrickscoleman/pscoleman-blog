@@ -13,9 +13,9 @@ import React from "react";
 
 const MENU_WIDTH = 220;
 // @ts-ignore
-const FoodHamburger = () => <LunchDining color="menu" />;
+const FoodHamburger = () => <LunchDining color="topmenu" />;
 // @ts-ignore
-const IconHamburger = () => <MenuIcon color="menu" />;
+const IconHamburger = () => <MenuIcon color="topmenu" />;
 
 const MenuComponent = () => {
   const [open, setOpen] = React.useState(false);
@@ -54,7 +54,8 @@ const MenuComponent = () => {
             <ListItem className="mb-1 pb-0">
               <ListItemText primary="Menu" />
               <IconButton onClick={toggleMenu(false)}>
-                <Close />
+                {/* @ts-ignore */}
+                <Close color="topmenu" />
               </IconButton>
             </ListItem>
             <hr className="mx-3" />
