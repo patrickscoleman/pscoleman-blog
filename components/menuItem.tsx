@@ -1,5 +1,10 @@
 import { Article, Home, Place } from "@mui/icons-material";
-import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
+import {
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Tooltip,
+} from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -16,19 +21,22 @@ const MenuItemComponent = ({ path, name }: { path: Path; name?: string }) => {
   const router = useRouter();
   const currentPathname = router.pathname;
 
-  return (
-    <ListItemButton disabled={currentPathname === path}>
-      <Link href={path} passHref className="flex no-underline items-center">
-        <ListItemIcon>
-          {currentPathname === path ? (
+  return currentPathname === path ? (
+    <Tooltip title="You are here" placement="right">
+      <span>
+        <ListItemButton disabled>
+          <ListItemIcon>
             <Place />
-          ) : (
-            MENU_ITEM_ICONS[path] || <Article />
-          )}
-        </ListItemIcon>
-        <ListItemText
-          primary={`${name}${currentPathname === path ? " (here)" : ""}`}
-        />
+          </ListItemIcon>
+          <ListItemText primary={name} />
+        </ListItemButton>
+      </span>
+    </Tooltip>
+  ) : (
+    <ListItemButton>
+      <Link href={path} passHref className="flex no-underline items-center">
+        <ListItemIcon>{MENU_ITEM_ICONS[path] || <Article />}</ListItemIcon>
+        <ListItemText primary={name} />
       </Link>
     </ListItemButton>
   );
