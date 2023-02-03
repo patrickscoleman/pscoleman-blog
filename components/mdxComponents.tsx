@@ -9,6 +9,8 @@ export const MdxComponents = {
     <a
       {...props}
       className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
+      target="_blank"
+      rel="noopener noreferrer"
     ></a>
   ),
 };
