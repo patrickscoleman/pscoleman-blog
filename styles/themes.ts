@@ -11,6 +11,11 @@ export const lightTheme = createTheme({
       // @ts-ignore
       main: tailwindConfig.theme.colors.accent.light,
     },
+    // @ts-ignore
+    menu: {
+      // @ts-ignore
+      main: tailwindConfig.theme.colors.text.light,
+    },
   },
 });
 

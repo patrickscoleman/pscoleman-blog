@@ -12,8 +12,10 @@ import { Box } from "@mui/system";
 import React from "react";
 
 const MENU_WIDTH = 220;
-const FoodHamburger = () => <LunchDining fontSize="inherit" color="inherit" />;
-const IconHamburger = () => <MenuIcon fontSize="inherit" color="inherit" />;
+// @ts-ignore
+const FoodHamburger = () => <LunchDining color="menu" />;
+// @ts-ignore
+const IconHamburger = () => <MenuIcon color="menu" />;
 
 const MenuComponent = () => {
   const [open, setOpen] = React.useState(false);
