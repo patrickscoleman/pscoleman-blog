@@ -3,6 +3,7 @@ import { MdxComponents } from "@/components/mdxComponents";
 import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/router";
 
 const PostLayoutComponent = ({
   children,
@@ -13,6 +14,12 @@ const PostLayoutComponent = ({
   title: string;
   description: string;
 }): JSX.Element => {
+  const router = useRouter();
+  const pathname = router.pathname;
+  const articleId = pathname.slice(pathname.lastIndexOf("/") + 1);
+  // const prevPost = getPrevPost({ id: title });
+  // const nextPost = getNextPost({ id: title });
+
   return (
     <Layout title={title} description={description}>
       <MDXProvider components={MdxComponents}>

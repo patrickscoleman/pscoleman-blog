@@ -11,7 +11,7 @@ export interface PostData {
   description?: string;
 }
 
-export function getSortedPostsData(): PostData[] {
+export const getSortedPostsData = (): PostData[] => {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName: string) => {
@@ -44,4 +44,4 @@ export function getSortedPostsData(): PostData[] {
       return -1;
     }
   });
-}
+};
