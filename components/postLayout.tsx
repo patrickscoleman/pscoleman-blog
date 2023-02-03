@@ -4,6 +4,8 @@ import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/router";
+import { GetStaticProps } from "next";
+import { getSortedPostsData } from "@/utils/getPosts";
 
 const PostLayoutComponent = ({
   children,

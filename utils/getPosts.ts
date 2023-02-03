@@ -11,6 +11,8 @@ export interface PostData {
   description?: string;
 }
 
+type Path = `/${string}`;
+
 export const getSortedPostsData = (): PostData[] => {
   // Get file names under /posts
   const fileNames = fs.readdirSync(postsDirectory);
@@ -44,4 +46,36 @@ export const getSortedPostsData = (): PostData[] => {
       return -1;
     }
   });
+};
+
+export const getPrevPost = ({
+  id,
+  posts,
+}: {
+  id: string;
+  posts?: PostData[];
+}): Path | null => {
+  posts = posts || getSortedPostsData();
+  const index = posts.findIndex((post) => post.id === id);
+  if (index !== -1 && index !== 0) {
+    return `/${posts[index - 1].id}`;
+  } else {
+    return null;
+  }
+};
+
+export const getNextPost = ({
+  id,
+  posts,
+}: {
+  id: string;
+  posts?: PostData[];
+}): Path | null => {
+  posts = posts || getSortedPostsData();
+  const index = posts.findIndex((post) => post.id === id);
+  if (index !== -1 && index !== posts.length - 1) {
+    return `/${posts[index + 1].id}`;
+  } else {
+    return null;
+  }
 };
