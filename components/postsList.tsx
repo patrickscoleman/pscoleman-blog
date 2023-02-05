@@ -1,24 +1,18 @@
 import { DateFormatted } from "@/components/dateFormatted";
-import { PostData } from "@/utils/getPosts";
+import postsList from "@/data/postsList.json";
 import Link from "next/link";
 
-const PostListComponent = ({
-  allPostsData,
-  section,
-}: {
-  allPostsData: PostData[];
-  section?: boolean;
-}) => {
+const PostsListComponent = ({ page }: { page?: boolean }) => {
   return (
     <section className="">
-      {section ? (
-        <h2 className="mb-1">Blog Posts</h2>
-      ) : (
+      {page ? (
         <h1 className="mb-1">Blog Posts</h1>
+      ) : (
+        <h2 className="mb-1">Blog Posts</h2>
       )}
       <hr />
       <ul className="mb-8">
-        {allPostsData.map(({ id, date, title, description }) => (
+        {postsList.map(({ id, date, title, description }) => (
           <li key={id}>
             <p className="text-lg mt-6 mb-1">
               <Link href={`/posts/${id}`}>{title}</Link>
@@ -34,4 +28,4 @@ const PostListComponent = ({
   );
 };
 
-export const PostList = PostListComponent;
+export const PostsList = PostsListComponent;
