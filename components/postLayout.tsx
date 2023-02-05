@@ -4,8 +4,7 @@ import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/router";
-import { GetStaticProps } from "next";
-import { getSortedPostsData } from "@/utils/getPosts";
+import { getPrevPost, getNextPost } from "@/utils/getAdjacentPosts";
 
 const PostLayoutComponent = ({
   children,
@@ -18,9 +17,12 @@ const PostLayoutComponent = ({
 }): JSX.Element => {
   const router = useRouter();
   const pathname = router.pathname;
-  const articleId = pathname.slice(pathname.lastIndexOf("/") + 1);
-  // const prevPost = getPrevPost({ id: title });
-  // const nextPost = getNextPost({ id: title });
+  const id = pathname.slice(pathname.lastIndexOf("/") + 1);
+  const prevPost = getPrevPost(id);
+  const nextPost = getNextPost(id);
+
+  console.log("prevPost", prevPost);
+  console.log("nextPost", nextPost);
 
   return (
     <Layout title={title} description={description}>
@@ -31,7 +33,6 @@ const PostLayoutComponent = ({
       </MDXProvider>
       <hr className="mb-8" />
       <div className="flex my-0 content-end items-center justify-around">
-        {/* TO-DO - add component for next/prev and function to find next/prev post */}
         <Link
           href="/"
           className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
