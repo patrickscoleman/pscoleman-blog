@@ -21,9 +21,6 @@ const PostLayoutComponent = ({
   const prevPost = getPrevPost(id);
   const nextPost = getNextPost(id);
 
-  console.log("prevPost", prevPost);
-  console.log("nextPost", nextPost);
-
   return (
     <Layout title={title} description={description}>
       <MDXProvider components={MdxComponents}>
@@ -33,24 +30,36 @@ const PostLayoutComponent = ({
       </MDXProvider>
       <hr className="mb-8" />
       <div className="flex my-0 content-end items-center justify-around">
-        <Link
-          href="/"
-          className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
-        >
-          &lt; prev
-        </Link>
+        {prevPost ? (
+          <Link
+            href={prevPost}
+            className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
+          >
+            &lt; prev
+          </Link>
+        ) : (
+          <div className="text-text-lightfaint dark:text-text-darkfaint">
+            prev
+          </div>
+        )}
         <Link
           href="/posts"
           className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
         >
           [ all ]
         </Link>
-        <Link
-          href="/"
-          className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
-        >
-          next &gt;
-        </Link>
+        {nextPost ? (
+          <Link
+            href={nextPost}
+            className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
+          >
+            next &gt;
+          </Link>
+        ) : (
+          <div className="text-text-lightfaint dark:text-text-darkfaint">
+            next
+          </div>
+        )}
       </div>
     </Layout>
   );
