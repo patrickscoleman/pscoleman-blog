@@ -1,12 +1,8 @@
 import { Layout } from "@/components/layout";
-import { PostList } from "@/components/postList";
-import { getSortedPostsData, PostData } from "@/utils/getPosts";
-import Button from "@mui/material/Button";
-import { GetStaticProps } from "next";
-import Link from "next/link";
+import { PostsList } from "@/components/postsList";
 import Image from "next/image";
 
-const Home = ({ allPostsData }: { allPostsData: PostData[] }) => {
+const Home = () => {
   return (
     <Layout home>
       <h1>Patrick Coleman&apos;s Web Presence</h1>
@@ -21,16 +17,9 @@ const Home = ({ allPostsData }: { allPostsData: PostData[] }) => {
       <section className="">
         <p>Hi, I&apos;m Patrick. I&apos;ve just started this blog.</p>
       </section>
-      <PostList allPostsData={allPostsData} section />
+      <PostsList />
     </Layout>
   );
 };
 
 export default Home;
-
-export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: { allPostsData },
-  };
-};

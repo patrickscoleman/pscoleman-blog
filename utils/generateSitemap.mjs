@@ -2,7 +2,7 @@ import { writeFileSync } from "fs";
 import { globby } from "globby";
 import prettier from "prettier";
 
-async function generate() {
+const generateSitemap = async () => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
   const pages = await globby([
     "pages/*.tsx",
@@ -40,6 +40,6 @@ async function generate() {
 
   // eslint-disable-next-line no-sync
   writeFileSync("public/sitemap.xml", formatted);
-}
+};
 
-generate();
+generateSitemap();
