@@ -1,17 +1,15 @@
 import { SearchResults } from "@/components/searchResults";
-import { Search, Close } from "@mui/icons-material";
-import {
-  Box,
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
+import { Close, Search } from "@mui/icons-material";
+import { Box, Drawer, IconButton, List, ListItem } from "@mui/material";
 import algoliasearch from "algoliasearch/lite";
-import { KeyboardEvent, MouseEvent, useState } from "react";
-import { InstantSearch, SearchBox } from "react-instantsearch-hooks-web";
 import "instantsearch.css/themes/reset.css";
+import { KeyboardEvent, MouseEvent, useState } from "react";
+import {
+  InstantSearch,
+  PoweredBy,
+  SearchBox,
+} from "react-instantsearch-hooks-web";
+import { useTheme } from "next-themes";
 
 const MENU_WIDTH = 300;
 
@@ -22,6 +20,8 @@ const searchClient = algoliasearch(
 
 const SearchMenuComponent = () => {
   const [open, setOpen] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const theme = resolvedTheme === "dark" ? "dark" : "light";
 
   const toggleMenu = (open: boolean) => (event: KeyboardEvent | MouseEvent) => {
     if (
@@ -46,8 +46,9 @@ const SearchMenuComponent = () => {
           sx={{ width: MENU_WIDTH }}
           role="presentation"
           onKeyDown={toggleMenu(false)}
+          className="flex flex-col h-full justify-between"
         >
-          <List>
+          <List className="h-full">
             <ListItem className="flex justify-between mb-1 pb-0">
               <IconButton onClick={toggleMenu(false)}>
                 {/* @ts-ignore */}
@@ -65,7 +66,7 @@ const SearchMenuComponent = () => {
                   resetIconComponent={() => <></>}
                   classNames={{
                     input:
-                      "px-2 h-10 w-64 mx-1.5 bg-bg-lightinput dark:bg-bg-darkinput rounded-md focus:outline-accent-light dark:focus:outline-accent-dark",
+                      "px-2 h-10 w-64 mx-1.5 bg-bg-lightinput dark:bg-bg-darkinput rounded focus:outline-accent-light dark:focus:outline-accent-dark",
                   }}
                 />
               </ListItem>
@@ -75,6 +76,14 @@ const SearchMenuComponent = () => {
               </ListItem>
             </InstantSearch>
           </List>
+          <div className="flex bg-bg-lightinput dark:bg-bg-darkinput p-2 justify-end">
+            <PoweredBy
+              theme={theme}
+              classNames={{
+                link: "text-xs",
+              }}
+            />
+          </div>
         </Box>
       </Drawer>
     </>
