@@ -3,6 +3,9 @@ import fs from "fs";
 import { globby } from "globby";
 import matter from "gray-matter";
 import prettier from "prettier";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 const generateSitemap = async () => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
@@ -45,8 +48,8 @@ const generateSitemap = async () => {
 };
 
 const searchClient = algoliasearch(
-  process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
-  process.env.NEXT_PUBLIC_ALGOLIA_API_KEY
+  process.env.ALGOLIA_APP_ID,
+  process.env.ALGOLIA_API_KEY
 );
 
 const indexPostsForSearch = async () => {
@@ -64,6 +67,8 @@ const indexPostsForSearch = async () => {
       },
     };
   });
+
+  console.log(postObjects);
 
   const index = searchClient.initIndex("pscoleman-blog");
   index.saveObjects(postObjects, {
