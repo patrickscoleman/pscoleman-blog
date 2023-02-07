@@ -49,7 +49,7 @@ const generateSitemap = async () => {
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
-  process.env.NEXT_PUBLIC_ALGOLIA_API_KEY
+  process.env.ALGOLIA_ADMIN_API_KEY
 );
 
 const indexPostsForSearch = async () => {
@@ -73,11 +73,13 @@ const indexPostsForSearch = async () => {
   });
 
   const index = searchClient.initIndex("pscoleman-blog");
-  console.log("post objects", postObjects);
-  console.log("index", index);
-  // index.saveObjects(postObjects, {
-  //   autoGenerateObjectIDIfNotExist: true,
-  // });
+  try {
+    await index.saveObjects(postObjects, {
+      autoGenerateObjectIDIfNotExist: true,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 generateSitemap();
