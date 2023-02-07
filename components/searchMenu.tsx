@@ -58,10 +58,20 @@ const SearchMenuComponent = () => {
             <hr className="mx-3" />
             <InstantSearch searchClient={searchClient} indexName="blogposts">
               <ListItem>
-                <SearchBox autoFocus={true} />
+                <SearchBox
+                  autoFocus={true}
+                  submitIconComponent={() => <></>}
+                  resetIconComponent={() => <></>}
+                  classNames={{
+                    input:
+                      "px-2 h-10 w-64 mx-1.5 focus:outline-accent-light dark:focus:outline-accent-dark",
+                  }}
+                />
               </ListItem>
               <hr className="mx-3" />
-              <ListItem>{/* <SearchResults /> */}</ListItem>
+              <ListItem>
+                <SearchResults />
+              </ListItem>
             </InstantSearch>
           </List>
         </Box>
