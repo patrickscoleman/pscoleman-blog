@@ -58,6 +58,10 @@ const indexPostsForSearch = async () => {
   const postObjects = posts.map((post) => {
     const fileContents = fs.readFileSync(post, "utf8");
     const { data, content } = matter(fileContents);
+    // TO-DO: delete everything in content that looks like a component
+    // Above the h1 #, delete everything
+    // between tags <>, delete everything
+    // delete "export default" to the end
     const path = post.replace("pages", "").replace(".mdx", "");
     return {
       path,
@@ -68,12 +72,10 @@ const indexPostsForSearch = async () => {
     };
   });
 
-  console.log(postObjects);
-
   const index = searchClient.initIndex("pscoleman-blog");
-  index.saveObjects(postObjects, {
-    autoGenerateObjectIDIfNotExist: true,
-  });
+  // index.saveObjects(postObjects, {
+  //   autoGenerateObjectIDIfNotExist: true,
+  // });
 };
 
 generateSitemap();
