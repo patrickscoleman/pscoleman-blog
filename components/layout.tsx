@@ -15,7 +15,7 @@ const LayoutComponent = ({
   description?: string;
 }): JSX.Element => {
   return (
-    <div className="w-10/12 sm:9/12 md:w-8/12 lg:w-7/12 xl:w-6/12 2xl:5/12 mx-auto my-2">
+    <div className="max-w-3xl w-10/12 sm:9/12 md:w-8/12 mx-auto my-2">
       <Meta title={title} description={description} />
       <Header home={home} />
       <main>{children}</main>
