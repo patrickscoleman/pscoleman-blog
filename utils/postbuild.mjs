@@ -1,5 +1,7 @@
-import { writeFileSync } from "fs";
+import algoliasearch from "algoliasearch";
+import fs from "fs";
 import { globby } from "globby";
+import matter from "gray-matter";
 import prettier from "prettier";
 
 const generateSitemap = async () => {
@@ -39,7 +41,35 @@ const generateSitemap = async () => {
   });
 
   // eslint-disable-next-line no-sync
-  writeFileSync("public/sitemap.xml", formatted);
+  fs.writeFileSync("public/sitemap.xml", formatted);
+};
+
+const searchClient = algoliasearch(
+  process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
+  process.env.NEXT_PUBLIC_ALGOLIA_API_KEY
+);
+
+const indexPostsForSearch = async () => {
+  const posts = await globby(["pages/posts/*.mdx"]);
+
+  const postObjects = posts.map((post) => {
+    const fileContents = fs.readFileSync(post, "utf8");
+    const { data, content } = matter(fileContents);
+    const path = post.replace("pages", "").replace(".mdx", "");
+    return {
+      path,
+      content,
+      frontmatter: {
+        ...data,
+      },
+    };
+  });
+
+  const index = searchClient.initIndex("pscoleman-blog");
+  index.saveObjects(postObjects, {
+    autoGenerateObjectIDIfNotExist: true,
+  });
 };
 
 generateSitemap();
+indexPostsForSearch();
