@@ -1,3 +1,5 @@
+import { SearchResults } from "@/components/searchResults";
+import { Search } from "@mui/icons-material";
 import {
   Box,
   Drawer,
@@ -6,15 +8,9 @@ import {
   ListItem,
   ListItemText,
 } from "@mui/material";
-import { Search } from "@mui/icons-material";
 import algoliasearch from "algoliasearch/lite";
-import { useState, KeyboardEvent, MouseEvent } from "react";
-import {
-  connectStateResults,
-  Hits,
-  InstantSearch,
-  SearchBox,
-} from "react-instantsearch-dom";
+import { KeyboardEvent, MouseEvent, useState } from "react";
+import { InstantSearch, SearchBox } from "react-instantsearch-dom";
 
 const MENU_WIDTH = 300;
 
@@ -30,8 +26,7 @@ const SearchMenuComponent = () => {
     if (
       event &&
       event.type === "keydown" &&
-      ((event as KeyboardEvent).key === "Tab" ||
-        (event as KeyboardEvent).key === "Shift")
+      (event as KeyboardEvent).key !== "Escape"
     ) {
       return;
     }
@@ -54,6 +49,13 @@ const SearchMenuComponent = () => {
             <ListItem>
               <ListItemText primary="Search" />
             </ListItem>
+            <InstantSearch
+              searchClient={searchClient}
+              indexName="pscoleman-blog"
+            >
+              <SearchBox />
+              <SearchResults />
+            </InstantSearch>
           </List>
         </Box>
       </Drawer>
