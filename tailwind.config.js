@@ -14,7 +14,9 @@ module.exports = {
         },
         bg: {
           light: "#f5f5f4", // stone-100
+          lightinput: "#e5e7eb", // stone-200
           dark: "#1c1917", // stone-900
+          darkinput: "#292524", // stone-800
         },
         accent: {
           light: "#0284c7", // sky-600

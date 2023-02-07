@@ -65,7 +65,7 @@ const SearchMenuComponent = () => {
                   resetIconComponent={() => <></>}
                   classNames={{
                     input:
-                      "px-2 h-10 w-64 mx-1.5 bg-accent-lighttext dark:bg-accent-darktext rounded-md focus:outline-accent-light dark:focus:outline-accent-dark",
+                      "px-2 h-10 w-64 mx-1.5 bg-bg-lightinput dark:bg-bg-darkinput rounded-md focus:outline-accent-light dark:focus:outline-accent-dark",
                   }}
                 />
               </ListItem>

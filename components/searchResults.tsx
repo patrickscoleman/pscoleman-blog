@@ -10,7 +10,9 @@ const SearchResultsComponent = () => {
   if (!indexUiState.query) {
     return <div>Kindly awaiting your input...</div>;
   } else if (indexUiState.query && results.nbHits) {
-    return <Hits hitComponent={SearchResultItem} />;
+    return (
+      <Hits hitComponent={SearchResultItem} classNames={{ item: "mt-0" }} />
+    );
   } else if (indexUiState.query && !results.nbHits) {
     return <div>{NO_RESULTS_MESSAGE}</div>;
   } else {
