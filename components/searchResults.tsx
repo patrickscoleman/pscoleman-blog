@@ -1,6 +1,8 @@
 import { useInstantSearch, Hits } from "react-instantsearch-hooks-web";
 import { SearchResultItem } from "./searchResultItem";
 
+export const NO_RESULTS_MESSAGE = "...and returning empty-handed";
+
 const SearchResultsComponent = () => {
   const { indexUiState, results } = useInstantSearch();
 
@@ -10,7 +12,7 @@ const SearchResultsComponent = () => {
   } else if (indexUiState.query && results.nbHits) {
     return <Hits hitComponent={SearchResultItem} />;
   } else if (indexUiState.query && !results.nbHits) {
-    return <div>...and returning empty-handed</div>;
+    return <div>{NO_RESULTS_MESSAGE}</div>;
   } else {
     return <div>Search error</div>;
   }
