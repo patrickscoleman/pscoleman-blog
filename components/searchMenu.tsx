@@ -1,5 +1,5 @@
 import { SearchResults } from "@/components/searchResults";
-import { Search } from "@mui/icons-material";
+import { Search, Close } from "@mui/icons-material";
 import {
   Box,
   Drawer,
@@ -48,12 +48,27 @@ const SearchMenuComponent = () => {
           onKeyDown={toggleMenu(false)}
         >
           <List>
-            <ListItem>
-              <ListItemText primary="Search" />
+            <ListItem className="flex justify-between mb-1 pb-0">
+              <IconButton onClick={toggleMenu(false)}>
+                {/* @ts-ignore */}
+                <Close color="topmenu" />
+              </IconButton>
+              <ListItemText primary="Search" className="text-right" />
             </ListItem>
+            <hr className="mx-3" />
             <InstantSearch searchClient={searchClient} indexName="blogposts">
-              <SearchBox />
-              <SearchResults />
+              <ListItem>
+                <SearchBox
+                  autoFocus={true}
+                  translations={{ placeholder: "..." }}
+                  submit=""
+                  reset=""
+                />
+              </ListItem>
+              <hr className="mx-3" />
+              <ListItem>
+                <SearchResults />
+              </ListItem>
             </InstantSearch>
           </List>
         </Box>
