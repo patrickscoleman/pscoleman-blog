@@ -1,12 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "predev": "node ./utils/getAllPosts.mjs",
+    "predev": "node ./utils/prebuild.mjs",
     "dev": "next dev",
-    "postdev": "node ./utils/generateSitemap.mjs",
-    "prebuild": "node ./utils/getAllPosts.mjs",
+    "postdev": "node ./utils/postbuild.mjs",
+    "prebuild": "node ./utils/prebuild.mjs",
     "build": "next build",
-    "postbuild": "node ./utils/generateSitemap.mjs",
+    "postbuild": "node ./utils/postbuild.mjs",
     "start": "next start",
     "lint": "next lint"
   },

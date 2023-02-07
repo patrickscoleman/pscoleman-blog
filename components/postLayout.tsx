@@ -1,10 +1,10 @@
 import { Layout } from "@/components/layout";
 import { MdxComponents } from "@/components/mdxComponents";
+import { getNextPost, getPrevPost } from "@/utils/getPosts";
 import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
-import React from "react";
 import { useRouter } from "next/router";
-import { getPrevPost, getNextPost } from "@/utils/getAdjacentPosts";
+import React from "react";
 
 const PostLayoutComponent = ({
   children,
