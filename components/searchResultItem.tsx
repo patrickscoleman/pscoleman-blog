@@ -5,12 +5,26 @@ const SearchResultItemComponent = (props) => {
   const hlResult = props?.hit?._highlightResult;
   console.log("highlight results", hlResult);
 
-  const matchedContent = ["test", "test2"];
+  const matchedContent = hlResult.content
+    .map((c) => {
+      console.log("inner content", c);
+      const matchedHeadingAndContent = [];
+      if (c.heading?.matchLevel === "full") {
+        matchedHeadingAndContent.push(c.heading.value);
+      }
+      if (c.text?.matchLevel === "full") {
+        matchedHeadingAndContent.push(c.text.value);
+      }
+      return matchedHeadingAndContent;
+    })
+    .flat();
+
+  console.log("matched", matchedContent);
+
   const displayResult = {
     title: hlResult.frontmatter.title.value,
     matchedContent: matchedContent,
   };
-  console.log("title", displayResult.title);
 
   return props?.hit ? (
     <div className="">
@@ -21,7 +35,16 @@ const SearchResultItemComponent = (props) => {
           }}
         />
       </Link>
-      {/* <p>{props?.hit?._highlightResult ?? ""}</p> */}
+      {displayResult.matchedContent.map((result, key) => {
+        return (
+          <div
+            key={key}
+            dangerouslySetInnerHTML={{
+              __html: result,
+            }}
+          />
+        );
+      })}
     </div>
   ) : (
     <div>{NO_RESULTS_MESSAGE}</div>
