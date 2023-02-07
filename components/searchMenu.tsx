@@ -11,6 +11,7 @@ import {
 import algoliasearch from "algoliasearch/lite";
 import { KeyboardEvent, MouseEvent, useState } from "react";
 import { InstantSearch, SearchBox } from "react-instantsearch-dom";
+import "instantsearch.css/themes/reset.css";
 
 const MENU_WIDTH = 300;
 
