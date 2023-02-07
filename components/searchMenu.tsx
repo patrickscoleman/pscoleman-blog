@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import algoliasearch from "algoliasearch/lite";
 import { KeyboardEvent, MouseEvent, useState } from "react";
-import { InstantSearch, SearchBox } from "react-instantsearch-dom";
+import { InstantSearch, SearchBox } from "react-instantsearch-hooks-web";
 import "instantsearch.css/themes/reset.css";
 
 const MENU_WIDTH = 300;
@@ -58,17 +58,10 @@ const SearchMenuComponent = () => {
             <hr className="mx-3" />
             <InstantSearch searchClient={searchClient} indexName="blogposts">
               <ListItem>
-                <SearchBox
-                  autoFocus={true}
-                  translations={{ placeholder: "..." }}
-                  submit=""
-                  reset=""
-                />
+                <SearchBox autoFocus={true} />
               </ListItem>
               <hr className="mx-3" />
-              <ListItem>
-                <SearchResults />
-              </ListItem>
+              <ListItem>{/* <SearchResults /> */}</ListItem>
             </InstantSearch>
           </List>
         </Box>
