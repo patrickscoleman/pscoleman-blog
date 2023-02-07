@@ -4,6 +4,9 @@ import { globby } from "globby";
 import matter from "gray-matter";
 import prettier from "prettier";
 import * as dotenv from "dotenv";
+import { remark } from "remark";
+import remarkMdx from "remark-mdx";
+import remarkMdxSearchable from "remark-mdx-searchable";
 
 dotenv.config({ path: ".env.local" });
 
@@ -58,16 +61,18 @@ const indexPostsForSearch = async () => {
   const postObjects = posts.map((post) => {
     const fileContents = fs.readFileSync(post, "utf8");
     const { data, content } = matter(fileContents);
-    // TO-DO: delete everything in content that looks like a component
-    // Above the h1 #, delete everything
-    // between tags <>, delete everything
-    // delete "export default" to the end
+
+    const searchableContent = remark()
+      .use(remarkMdx)
+      .use(remarkMdxSearchable)
+      .processSync(content).data;
+
     const path = post.replace("pages", "").replace(".mdx", "");
     const id = path.slice(path.lastIndexOf("/") + 1);
     return {
       objectID: id,
       path,
-      content,
+      content: searchableContent,
       frontmatter: {
         ...data,
       },

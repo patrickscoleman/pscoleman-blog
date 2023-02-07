@@ -37,7 +37,8 @@ const SearchMenuComponent = () => {
   return (
     <>
       <IconButton onClick={toggleMenu(true)}>
-        <Search />
+        {/* @ts-ignore */}
+        <Search color="topmenu" />
       </IconButton>
       <Drawer anchor="right" open={open} onClose={toggleMenu(false)}>
         <Box

@@ -1,8 +1,8 @@
 const SearchResultItemComponent = (props) => {
   const content = props?.hit?.content ?? "";
-  const words = content.split(" ").length;
+  // const words = content.split(" ").length;
   return (
-    <a href={props.hit.slug}>
+    <a href={props.hit.path}>
       <div>
         <h3>{props?.hit?.frontmatter?.title ?? "no title"}</h3>
       </div>
