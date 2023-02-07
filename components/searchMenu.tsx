@@ -53,7 +53,7 @@ const SearchMenuComponent = () => {
                 {/* @ts-ignore */}
                 <Close color="topmenu" />
               </IconButton>
-              <ListItemText primary="Search" className="text-right" />
+              <h2 className="w-full my-0 text-lg text-right">Search</h2>
             </ListItem>
             <hr className="mx-3" />
             <InstantSearch searchClient={searchClient} indexName="blogposts">

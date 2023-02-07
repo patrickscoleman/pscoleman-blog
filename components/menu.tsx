@@ -51,7 +51,7 @@ const MenuComponent = () => {
         >
           <List>
             <ListItem className="mb-1 pb-0">
-              <ListItemText primary="Menu" />
+              <h2 className="w-full my-0 text-lg">Menu</h2>
               <IconButton onClick={toggleMenu(false)}>
                 {/* @ts-ignore */}
                 <Close color="topmenu" />

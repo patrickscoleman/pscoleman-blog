@@ -3,7 +3,6 @@ import { SearchResultItem } from "./searchResultItem";
 
 const SearchResultsComponent = () => {
   const { indexUiState, results } = useInstantSearch();
-  console.log("results", results);
 
   // fix the logic here, status is not working, try ui state
   if (!indexUiState.query) {
