@@ -63,7 +63,9 @@ const indexPostsForSearch = async () => {
     // between tags <>, delete everything
     // delete "export default" to the end
     const path = post.replace("pages", "").replace(".mdx", "");
+    const id = path.slice(path.lastIndexOf("/") + 1);
     return {
+      objectID: id,
       path,
       content,
       frontmatter: {
@@ -72,7 +74,7 @@ const indexPostsForSearch = async () => {
     };
   });
 
-  const index = searchClient.initIndex("pscoleman-blog");
+  const index = searchClient.initIndex("blogposts");
   try {
     await index.saveObjects(postObjects, {
       autoGenerateObjectIDIfNotExist: true,

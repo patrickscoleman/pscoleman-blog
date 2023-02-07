@@ -49,10 +49,7 @@ const SearchMenuComponent = () => {
             <ListItem>
               <ListItemText primary="Search" />
             </ListItem>
-            <InstantSearch
-              searchClient={searchClient}
-              indexName="pscoleman-blog"
-            >
+            <InstantSearch searchClient={searchClient} indexName="blogposts">
               <SearchBox />
               <SearchResults />
             </InstantSearch>
