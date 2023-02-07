@@ -9,7 +9,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
+import { useState, KeyboardEvent, MouseEvent } from "react";
 
 const MENU_WIDTH = 220;
 // @ts-ignore
@@ -18,22 +18,21 @@ const FoodHamburger = () => <LunchDining color="topmenu" />;
 const IconHamburger = () => <MenuIcon color="topmenu" />;
 
 const MenuComponent = () => {
-  const [open, setOpen] = React.useState(false);
-  const [hoverIcon, setHoverIcon] = React.useState(IconHamburger);
+  const [open, setOpen] = useState(false);
+  const [hoverIcon, setHoverIcon] = useState(IconHamburger);
 
-  const toggleMenu =
-    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event &&
-        event.type === "keydown" &&
-        ((event as React.KeyboardEvent).key === "Tab" ||
-          (event as React.KeyboardEvent).key === "Shift")
-      ) {
-        return;
-      }
+  const toggleMenu = (open: boolean) => (event: KeyboardEvent | MouseEvent) => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      ((event as KeyboardEvent).key === "Tab" ||
+        (event as KeyboardEvent).key === "Shift")
+    ) {
+      return;
+    }
 
-      setOpen(open);
-    };
+    setOpen(open);
+  };
 
   return (
     <>

@@ -3,6 +3,7 @@ import { Search } from "@mui/icons-material";
 import { IconButton, Tooltip } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import { SearchMenu } from "./searchMenu";
 
 const Title = () => (
   <div className="flex">
@@ -22,24 +23,15 @@ const HeaderComponent = ({ home }: { home: boolean }) => {
   return (
     <header className="mt-4 mb-8">
       <div className="flex w-full items-center justify-between mb-1">
-        <>
-          <Menu />
-          {home ? (
+        <Menu />
+        {home ? (
+          <Title />
+        ) : (
+          <Link href="/" className="no-underline">
             <Title />
-          ) : (
-            <Link href="/" className="no-underline">
-              <Title />
-            </Link>
-          )}
-          <Tooltip title="Search coming soon">
-            <span>
-              <IconButton disabled className="p-0 text-2xl">
-                {/* @ts-ignore */}
-                <Search />
-              </IconButton>
-            </span>
-          </Tooltip>
-        </>
+          </Link>
+        )}
+        <SearchMenu />
       </div>
       <hr />
     </header>
