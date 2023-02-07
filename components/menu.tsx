@@ -1,15 +1,9 @@
 import { MenuItem } from "@/components/menuItem";
 import { ThemeSwitch } from "@/components/themeSwitch";
 import { Close, LunchDining, Menu as MenuIcon } from "@mui/icons-material";
-import {
-  Drawer,
-  IconButton,
-  List,
-  ListItem,
-  ListItemText,
-} from "@mui/material";
+import { Drawer, IconButton, List, ListItem } from "@mui/material";
 import { Box } from "@mui/system";
-import { useState, KeyboardEvent, MouseEvent } from "react";
+import { KeyboardEvent, MouseEvent, useState } from "react";
 
 const MENU_WIDTH = 220;
 // @ts-ignore
