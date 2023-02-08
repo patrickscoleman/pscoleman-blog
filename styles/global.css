@@ -13,10 +13,10 @@ body {
 
 @layer base {
   h1 {
-    @apply text-4xl my-8 font-bold dark:text-text-darkbold;
+    @apply text-3xl md:text-4xl my-6 md:my-8 font-bold dark:text-text-darkbold;
   }
   h2 {
-    @apply text-3xl my-6 font-bold dark:text-text-darkbold;
+    @apply text-2xl md:text-3xl my-6 font-bold dark:text-text-darkbold;
   }
   hr {
     @apply h-0.5 border-0 bg-accent-light dark:bg-accent-dark;

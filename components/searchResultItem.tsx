@@ -4,21 +4,25 @@ import { NO_RESULTS_MESSAGE } from "./searchResults";
 const SearchResultItemComponent = (props) => {
   const hlResult = props?.hit?._highlightResult;
 
-  const matchedContent = hlResult.content
-    .map((c) => {
-      const matchedHeadingAndContent = [];
-      if (c.heading?.matchLevel !== "none") {
-        matchedHeadingAndContent.push(c.heading.value);
-      }
-      if (c.text?.matchLevel !== "none") {
-        matchedHeadingAndContent.push(c.text.value);
-      }
-      return matchedHeadingAndContent;
-    })
-    .flat();
+  const matchedDescription =
+    hlResult.frontmatter.description.matchLevel !== "none"
+      ? hlResult.frontmatter.description.value
+      : null;
+
+  const matchedContent = hlResult.content.map((c) => {
+    // ignore h1 title
+    if (c.text?.value === hlResult.frontmatter.title.value) {
+      return null;
+    } else if (c.text?.matchLevel !== "none") {
+      return c.text.value;
+    } else {
+      return null;
+    }
+  });
 
   const displayResult = {
     title: hlResult.frontmatter.title.value,
+    matchedDescription: matchedDescription,
     matchedContent: matchedContent,
   };
 
@@ -32,6 +36,14 @@ const SearchResultItemComponent = (props) => {
           className="mt-0 mb-2"
         />
       </Link>
+      {displayResult.matchedDescription && (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: displayResult.matchedDescription,
+          }}
+          className="mt-0 mb-2"
+        />
+      )}
       {displayResult.matchedContent.map((result, key) => {
         return (
           <div

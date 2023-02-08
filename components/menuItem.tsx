@@ -1,4 +1,4 @@
-import { Article, Home, Place } from "@mui/icons-material";
+import { Article, Home, Person, Place } from "@mui/icons-material";
 import {
   ListItemButton,
   ListItemIcon,
@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 
 const MENU_ITEM_ICONS = {
   "/": <Home />,
+  "/about": <Person />,
   "/posts": <Article />,
 };
 

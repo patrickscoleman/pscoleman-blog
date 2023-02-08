@@ -1,12 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "predev": "node ./utils/prebuild.mjs",
+    "predev": "node ./utils/preBuildDevAndProd.mjs",
     "dev": "next dev",
-    "postdev": "node ./utils/postbuild.mjs",
-    "prebuild": "node ./utils/prebuild.mjs",
+    "prebuild": "node ./utils/preBuildDevAndProd.mjs",
     "build": "next build",
-    "postbuild": "node ./utils/postbuild.mjs",
+    "postbuild": "node ./utils/postBuildProd.mjs",
     "start": "next start",
     "lint": "next lint"
   },

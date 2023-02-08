@@ -56,6 +56,9 @@ const MenuComponent = () => {
               <MenuItem path="/" name="Home" />
             </ListItem>
             <ListItem disablePadding>
+              <MenuItem path="/about" />
+            </ListItem>
+            <ListItem disablePadding>
               <MenuItem path="/posts" />
             </ListItem>
             <hr className="mx-3" />
