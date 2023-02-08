@@ -81,7 +81,7 @@ const indexPostsForSearch = async () => {
 
   const index = searchClient.initIndex("blogposts");
   try {
-    await index.saveObjects(postObjects, {
+    await index.replaceAllObjects(postObjects, {
       autoGenerateObjectIDIfNotExist: true,
     });
   } catch (error) {
