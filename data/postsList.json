@@ -1,14 +1,14 @@
 [
   {
     "id": "second-thoughts",
-    "title": "Second thoughts - a continuation of first thoughts",
-    "date": "2022-12-21",
-    "description": "Patrick's second blog post."
+    "title": "Second thoughts",
+    "date": "2023-02-07",
+    "description": "Patrick's second blog post, in which he revisits his first blog post and has second thoughts."
   },
   {
     "id": "first-thoughts",
     "title": "First Thoughts",
     "date": "2022-12-19",
-    "description": "Patrick's first blog post."
+    "description": "Patrick's first blog post, in which he lays out his goals and intentions for the blog."
   }
 ]
