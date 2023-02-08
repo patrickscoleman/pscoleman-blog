@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout";
 import { PostsList } from "@/components/postsList";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
       <Image
         priority
         src="/images/patrick.png"
-        className="rounded-full mx-auto"
+        className="rounded-full mx-auto mb-6 md:mb-8"
         height={150}
         width={150}
         alt="Patrick Coleman"
@@ -25,10 +26,10 @@ const Home = () => {
           travelogue, and just jot errant thoughts down as they come up.
         </p>
         <p>
-          And so you know that I&apos;m well qualified to share only the highest
-          quality thoughts, please head on over to my about page to see what
-          I&apos;ve been up to on my short time on this space rock that we call
-          Earth.
+          And so you know I&apos;m qualified to share high quality thoughts,
+          please head on over to <Link href="/about">my about page</Link> to see
+          what I&apos;ve been up to on my short time on this lovely space rock
+          that we call Earth.
         </p>
       </section>
       <PostsList />
