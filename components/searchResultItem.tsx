@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { NO_RESULTS_MESSAGE } from "./searchResults";
 
-const SEARCH_BEFORE_LENGTH = 10;
-const SEARCH_AFTER_LENGTH = 50;
+const MATCH_BEFORE_LENGTH = 10;
+const MATCH_AFTER_LENGTH = 75;
 
 const SearchResultItemComponent = (props) => {
   const hlResult = props?.hit?._highlightResult;
@@ -12,35 +12,53 @@ const SearchResultItemComponent = (props) => {
       ? hlResult.frontmatter.description.value
       : null;
 
-  const matchedContent = hlResult.content.map((c) => {
-    // ignore h1 title
-    if (c.text?.value === hlResult.frontmatter.title.value) {
-      return null;
-    } else if (c.text?.matchLevel !== "none") {
-      const searchStart = Math.max(
-        0,
-        c.text.value.indexOf("<mark>") - SEARCH_BEFORE_LENGTH
-      );
-      const searchEnd = Math.min(
-        c.text.value.length,
-        c.text.value.indexOf("</mark>") + "</mark>".length + SEARCH_AFTER_LENGTH
-      );
+  const matchedContent = hlResult.content
+    .map((c, index) => {
+      const heading = c.heading?.value ?? "";
+      const text = c.text?.value ?? "";
+      const result = [];
 
-      const resultSnippet =
-        (searchStart === 0 ? "" : "...") +
-        c.text.value.slice(searchStart, searchEnd) +
-        (searchEnd === c.text.value.length ? "" : "...");
+      // Don't show the title of the post more than once in the search results
+      if (text === hlResult.frontmatter.title.value) {
+        return null;
+      }
 
-      return resultSnippet;
-    } else {
-      return null;
-    }
-  });
+      if (c.heading?.matchLevel !== "none") {
+        result.push(heading);
+      }
+
+      if (c.text?.matchLevel !== "none") {
+        const matchStart = Math.max(
+          0,
+          text.indexOf("<mark>") - MATCH_BEFORE_LENGTH
+        );
+        const matchEnd = Math.min(
+          text.length,
+          text.indexOf("</mark>") + "</mark>".length + MATCH_AFTER_LENGTH
+        );
+
+        const matchedSnippet =
+          (matchStart === 0 ? "" : "...") +
+          text.slice(matchStart, matchEnd) +
+          (matchEnd === text.length ? "" : "...");
+
+        result.push(matchedSnippet);
+      }
+
+      if (result.length === 0) {
+        return null;
+      }
+
+      return result;
+    })
+    .flat();
+
+  const dedupedMatchedContent = [...new Set(matchedContent)] as string[];
 
   const displayResult = {
     title: hlResult.frontmatter.title.value,
     matchedDescription: matchedDescription,
-    matchedContent: matchedContent,
+    matchedContent: dedupedMatchedContent,
   };
 
   return props?.hit ? (
