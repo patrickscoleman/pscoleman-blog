@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { NO_RESULTS_MESSAGE } from "./searchResults";
 
-const MATCH_BEFORE_LENGTH = 10;
+const MATCH_BEFORE_LENGTH = 20;
 const MATCH_AFTER_LENGTH = 75;
 
 const SearchResultItemComponent = (props) => {
@@ -13,17 +13,15 @@ const SearchResultItemComponent = (props) => {
       : null;
 
   const matchedContent = hlResult.content
-    .map((c, index) => {
+    .map((c) => {
       const heading = c.heading?.value ?? "";
       const text = c.text?.value ?? "";
       const result = [];
 
-      // Don't show the title of the post more than once in the search results
-      if (text === hlResult.frontmatter.title.value) {
-        return null;
-      }
-
-      if (c.heading?.matchLevel !== "none") {
+      if (
+        c.heading?.matchLevel !== "none" &&
+        heading !== hlResult.frontmatter.title.value
+      ) {
         result.push(heading);
       }
 
