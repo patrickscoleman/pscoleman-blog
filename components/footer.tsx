@@ -171,7 +171,7 @@ const FooterComponent = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="ml-1 space-x-1 fill-text-light dark:fill-text-darkbold hover:fill-accent-light dark:hover:fill-accent-dark"
-              href={"mailto:"}
+              href={"mailto:patrick@THISDOMAIN"}
               passHref
             >
               <EmailIcon />
