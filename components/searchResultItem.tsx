@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { NO_RESULTS_MESSAGE } from "./searchResults";
 
+const SEARCH_BEFORE_LENGTH = 10;
+const SEARCH_AFTER_LENGTH = 50;
+
 const SearchResultItemComponent = (props) => {
   const hlResult = props?.hit?._highlightResult;
 
@@ -14,7 +17,21 @@ const SearchResultItemComponent = (props) => {
     if (c.text?.value === hlResult.frontmatter.title.value) {
       return null;
     } else if (c.text?.matchLevel !== "none") {
-      return c.text.value;
+      const searchStart = Math.max(
+        0,
+        c.text.value.indexOf("<mark>") - SEARCH_BEFORE_LENGTH
+      );
+      const searchEnd = Math.min(
+        c.text.value.length,
+        c.text.value.indexOf("</mark>") + "</mark>".length + SEARCH_AFTER_LENGTH
+      );
+
+      const resultSnippet =
+        (searchStart === 0 ? "" : "...") +
+        c.text.value.slice(searchStart, searchEnd) +
+        (searchEnd === c.text.value.length ? "" : "...");
+
+      return resultSnippet;
     } else {
       return null;
     }

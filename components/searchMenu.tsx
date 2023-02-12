@@ -48,7 +48,7 @@ const SearchMenuComponent = () => {
           onKeyDown={toggleMenu(false)}
           className="flex flex-col h-full justify-between"
         >
-          <List className="h-full">
+          <List>
             <ListItem className="flex justify-between mb-1 pb-0">
               <IconButton onClick={toggleMenu(false)}>
                 {/* @ts-ignore */}
