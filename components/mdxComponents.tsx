@@ -1,3 +1,6 @@
+import { OpenInNew } from "@mui/icons-material";
+import Link from "next/link";
+
 export const MdxComponents = {
   h1: (props) => (
     <>
@@ -6,11 +9,23 @@ export const MdxComponents = {
     </>
   ),
   a: (props) => (
-    <a
-      {...props}
-      className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
-      target="_blank"
-      rel="noopener noreferrer"
-    ></a>
+    <>
+      {props.href.startsWith("/") ? (
+        <Link
+          {...props}
+          className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
+        ></Link>
+      ) : (
+        <span className="inline-flex items-center">
+          <Link
+            {...props}
+            className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></Link>
+          <OpenInNew className="ml-1 text-sm" />
+        </span>
+      )}
+    </>
   ),
 };

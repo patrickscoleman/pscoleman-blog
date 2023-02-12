@@ -1,7 +1,13 @@
 [
   {
+    "id": "ai-artless-intuition",
+    "title": "A.I. Artless Intuition",
+    "date": "2023-02-10",
+    "description": "Some measured but sweeping generalizations on AI from a non-expert who's been having fun with some tools."
+  },
+  {
     "id": "second-thoughts",
-    "title": "Second thoughts",
+    "title": "Second Thoughts",
     "date": "2023-02-07",
     "description": "Patrick's second blog post, in which he revisits his first blog post and has some second thoughts."
   },

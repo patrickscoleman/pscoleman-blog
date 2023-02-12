@@ -17,19 +17,21 @@ const Home = () => {
       />
       <section className="">
         <p>
-          👋 Hello internet friend, I&apos;m Patrick. This is my blog, and in
-          it, you&apos;ll find my thoughts on things.
+          👋 Hello internet friend, I&apos;m Patrick, and this is my blog. In
+          it, you&apos;ll find:
         </p>
+        <ul className="list-disc pl-8">
+          <li>Pics of my dog Mara</li>
+          <li>Work/startup stuff</li>
+          <li>Amateur translations</li>
+          <li>&ldquo;Postcards&rdquo; from my travels</li>
+          <li>Errant thoughts, hastily jotted down</li>
+        </ul>
         <p>
-          It&apos;s too early to tell for sure, but I&apos;ll most likely write
-          about startups, maybe translate some haikus, share dog pics, keep a
-          travelogue, and just jot errant thoughts down as they come up.
-        </p>
-        <p>
-          And so you know I&apos;m qualified to share the highest quality
-          thoughts, please head on over to{" "}
-          <Link href="/about">my about page</Link> to see what I&apos;ve been up
-          to on my short time on this lovely space rock that we call Earth.
+          And so you know that I&apos;m qualified to share the highest quality
+          thoughts, please check out <Link href="/about">my about page</Link> to
+          see how I&apos;ve been spending my time on this lovely space rock that
+          we call Earth.
         </p>
       </section>
       <PostsList />
