@@ -23,7 +23,7 @@ export const MdxComponents = {
             target="_blank"
             rel="noopener noreferrer"
           ></Link>
-          <OpenInNew className="ml-1 text-sm" />
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />
         </span>
       )}
     </>
