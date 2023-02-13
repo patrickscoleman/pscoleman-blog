@@ -13,6 +13,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/noto-sans": "^4.5.11",
+    "@fontsource/noto-sans-jp": "^4.5.12",
     "@fontsource/roboto": "^4.5.8",
     "@mdx-js/loader": "^2.0.0-rc.2",
     "@mdx-js/react": "^2.0.0-rc.2",
