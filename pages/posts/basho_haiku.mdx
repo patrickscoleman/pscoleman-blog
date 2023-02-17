@@ -5,6 +5,7 @@ description: "Japanese-to-English translations of a handful of haiku by Matsuo B
 ---
 
 import { PostLayout } from "@/components/postLayout";
+import Image from "next/image";
 
 # Basho Haiku Translations
 
@@ -75,6 +76,22 @@ gallop, circling
   Culture](https://www.masterpiece-of-japanese-culture.com/literatures-and-poems/famous-haiku-poems-matsuo-basho).
   Translated by me.
 </small>
+
+## P.S.
+
+曙や 霧にうづまく 鐘の声
+
+At daybreak and the /
+fog sends things whirling about /
+a bell is sounding
+
+<Image
+  src="/images/mara/mara_230213.jpeg"
+  className="mx-auto"
+  alt="Mara the dog, walking into the fog"
+  width={500}
+  height={500}
+/>
 
 export default ({ children }) => (
   <PostLayout title={title} description={description}>
