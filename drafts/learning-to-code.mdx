@@ -1,0 +1,88 @@
+---
+title: "On Learning to Code as an Adult"
+date: "2023-02-21"
+description: "First-person testimony of a 30-something learning to code despite lots of advice not to. Plus how Replit reignited the coding passion in me."
+---
+
+import { PostLayout } from "@/components/postLayout";
+import Image from "next/image";
+
+# On Learning to Code as an Adult
+
+<small>
+  <time dateTime={date}>February 21st, 2023</time>
+</small>
+
+There's nothing in the world quite like feeding instructions into a computer and seeing what comes out. It always feels a bit like magic to me.
+
+[quote from hackers by steven levy]
+
+But first, a bit of an aside. It sucks to be bad at something as an adult. And I'm pretty meh at coding right now. Just want to get that out there to start.
+
+Now I've read ["Zen Mind, Beginner's Mind"](https://en.wikipedia.org/wiki/Zen_Mind,_Beginner%27s_Mind) and conceptually know that I can be comfortable in the haziness of not knowing. I am a bit wary even of "knowing too much" and how it can close doors to creative insight. I even have a bit of a soft spot for childish, DIY aesthetics, [naivism](https://en.wikipedia.org/wiki/Na%C3%AFve_art) if we want to get fancy about it. And I've also picked up a foreign language as an adult, so I've seen first-hand how years of slow, steady effort can finally pay off.
+
+But man, it's awkward and uncomfortable to have a vision in your head that you can't quite make real, that you set out to create, and then after hours of frustration followed by an eventual (joyful) breakthrough, still isn't quite what you wanted.
+
+I find solace in quotes from writers and artists who say that after decades they still struggle to express what they have in their heads. But that's some noble humility. And maybe I'll be lucky enough to feel that way too in a few years. But I'm not there yet.
+
+Enough whining.
+
+The other thing I want to say is that coding is fun. I totally lose myself in it. It's like playing videogames, but at the end of it all, I've brought something new into the world.
+
+...
+
+I talked about wanting to learn to code (to myself and others) for years, but it took a long time to actually get started. I don't think I was ready until I really set aside a lot of time (and took a break from full-time work) to dive into it.
+
+A friend told me, you're better off spending one day a week learning to code than 1 hour a day. I think that's true.
+
+I'm aware not everyone can do that, but I think if you're feeling called and are able to dedicate some time to this journey, it's great.
+
+...
+
+I've told a lot of people that I'm learning to code and gotten many different reactions, but they can be broadly characterized as:
+
+1. Oh neat
+2. Oh neat, but why?
+3. What language are you learning? Have you tried this? What do you think about that?
+
+I get the polite response 1 from folks who just don't care but want to be nice. I get response 3 from software engineers who want to geek out about their thing (and then the conversation loses a bit of steam when they realize how much of a beginner I am - also who wants to talk work all the time?).
+
+And then most everyone else gives me some version of response 2. Why? Why learn to code? You already have a marketable skill as a business guy? If you want to start a business, can't you just hire a developer? etc. etc.
+
+At first I tried to have a rational response. I think I want to be able to build the MVP of an app and then I can go hire developers. If I know some coding, I'll be able to talk to developers and hire better engineers. etc. etc. But it always felt a bit disingenuous.
+
+The real reason is, simply put, it's fun. I'm having fun.
+
+And not to be a hedonist or anything, but that feels pretty damn important and about as good a reason as any to do something.
+
+I think I also needed the experience of coding as a kid (and loving it) to know that this was something that I liked to get me through the doldrums of early learning. Which is why CS education is so important.
+
+But I should also note that it was awfully frustrating to have been better at coding as a high school senior than I was at the start of my 30s. Just had to get over it.
+
+Plus things move so fast in software, that all the bad habits I'd learned as a kid were obsolete. And it was time to learn new bad habits.
+
+I wouldn't have started on this journey if I hadn't worked at Replit.
+
+https://www.youtube.com/watch?v=MG9RYrae8ME
+
+https://blog.replit.com/everyoneprograms
+
+https://replit.com/@PatrickAtReplit/Ant-Killer-Game
+
+It just takes a spark to start a fire, and I'm very grateful for my time at Replit.
+
+At some point soon, I'll share some of the tech that's behind this blog (in case it's helpful for others just starting to learn too).
+
+<Image
+  src="/images/mara/mara_230221.jpeg"
+  className="mx-auto"
+  alt="Mara the dog, eating pinecone"
+  width={500}
+  height={500}
+/>
+
+export default ({ children }) => (
+  <PostLayout title={title} description={description}>
+    {children}
+  </PostLayout>
+);
