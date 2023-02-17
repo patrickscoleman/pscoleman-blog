@@ -1,0 +1,24 @@
+---
+title: "About Patrick Coleman"
+date: "2023-02-17"
+description: "Patrick's professional experience and résumé."
+---
+
+import { PostLayout } from "@/components/postLayout";
+import Image from "next/image";
+
+# About Patrick Coleman
+
+<small>
+  <time datetime={date}>Updated: February 17th, 2023</time>
+</small>
+
+Herein constitutes my professional experience and résumé.
+
+[a placeholder for an AI generated image of a tech worker on a latop at a construction site in the style of norman rockwell]
+
+export default ({ children }) => (
+  <PostLayout title={title} description={description}>
+    {children}
+  </PostLayout>
+);
