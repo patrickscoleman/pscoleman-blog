@@ -10,10 +10,12 @@ const PostLayoutComponent = ({
   children,
   title,
   description,
+  previewImage,
 }: {
   children: React.ReactNode;
   title: string;
   description: string;
+  previewImage?: string;
 }): JSX.Element => {
   const router = useRouter();
   const pathname = router.pathname;
@@ -22,7 +24,7 @@ const PostLayoutComponent = ({
   const nextPost = getNextPost(id);
 
   return (
-    <Layout title={title} description={description}>
+    <Layout title={title} description={description} previewImage={previewImage}>
       <MDXProvider components={MdxComponents}>
         <article className="prose max-w-none prose-stone dark:prose-invert dark:prose-headings:text-text-darkbold dark:prose-a:text-text-darkbold dark:prose-strong:text-text-darkbold">
           {children}

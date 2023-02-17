@@ -8,11 +8,13 @@ const LayoutComponent = ({
   home,
   title,
   description,
+  previewImage,
 }: {
   children: React.ReactNode;
   home?: boolean;
   title?: string;
   description?: string;
+  previewImage?: string;
 }): JSX.Element => {
   return (
     <div className="max-w-3xl w-10/12 sm:9/12 md:w-8/12 mx-auto my-2">
