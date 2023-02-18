@@ -34,7 +34,7 @@ const MetaComponent = ({
       ) : (
         <meta property="og:type" content="website" key="og:type" />
       )}
-      <meta property="og:title" content={description} key="og:title" />
+      <meta property="og:title" content={title} key="og:title" />
       <meta
         property="og:description"
         content={description}
@@ -59,7 +59,11 @@ const MetaComponent = ({
         content="Coleman"
         key="profile:last_name"
       />
-      {/* <meta name="twitter:card" content={description} key="twitter:card" /> */}
+      <meta
+        name="twitter:card"
+        content="summary_large_image"
+        key="twitter:card"
+      />
     </Head>
   );
 };
