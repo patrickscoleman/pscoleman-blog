@@ -90,7 +90,12 @@ I'm excited to see what people create with these new tools. And also for the ine
 If I had to call it, we'll live in a world where we enjoy a healthy mix of both human and AI works.
 
 export default ({ children }) => (
-  <PostLayout title={title} description={description}>
+  <PostLayout
+    title={title}
+    date={date}
+    description={description}
+    previewImage={previewImage}
+  >
     {children}
   </PostLayout>
 );

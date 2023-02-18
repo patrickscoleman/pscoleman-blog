@@ -38,7 +38,12 @@ I promise you a proper post next time. Until then 나중에 봐요！ (_see you 
 </figure>
 
 export default ({ children }) => (
-  <PostLayout title={title} description={description}>
+  <PostLayout
+    title={title}
+    date={date}
+    description={description}
+    previewImage={previewImage}
+  >
     {children}
   </PostLayout>
 );

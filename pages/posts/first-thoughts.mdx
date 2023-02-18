@@ -63,7 +63,12 @@ Ok apparently not that much of a minimum...
 Well, that's it for today. And lucky for you, [part 2](/posts/second-thoughts) is already up.
 
 export default ({ children }) => (
-  <PostLayout title={title} description={description}>
+  <PostLayout
+    title={title}
+    date={date}
+    description={description}
+    previewImage={previewImage}
+  >
     {children}
   </PostLayout>
 );

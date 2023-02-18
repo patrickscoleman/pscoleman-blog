@@ -95,7 +95,12 @@ a bell is sounding
 />
 
 export default ({ children }) => (
-  <PostLayout title={title} description={description}>
+  <PostLayout
+    title={title}
+    date={date}
+    description={description}
+    previewImage={previewImage}
+  >
     {children}
   </PostLayout>
 );
