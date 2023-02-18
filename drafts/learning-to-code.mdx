@@ -83,7 +83,12 @@ At some point soon, I'll share some of the tech that's behind this blog (in case
 />
 
 export default ({ children }) => (
-  <PostLayout title={title} description={description}>
+  <PostLayout
+    title={title}
+    date={date}
+    description={description}
+    previewImage={previewImage}
+  >
     {children}
   </PostLayout>
 );
