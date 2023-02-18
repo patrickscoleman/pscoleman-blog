@@ -3,24 +3,28 @@
     "id": "basho_haiku",
     "title": "Haiku by Basho",
     "date": "2023-02-13",
-    "description": "Japanese-to-English translations of a handful of haiku by Matsuo Basho (1644-1694)."
+    "description": "Japanese-to-English translations of a handful of haiku by Matsuo Basho (1644-1694).",
+    "previewImage": "/images/mara/mara_230213.jpeg"
   },
   {
     "id": "ai-an-intuition",
     "title": "A.I. An Intuition",
     "date": "2023-02-11",
-    "description": "Some measured but sweeping generalizations on AI from a non-expert who's been having fun with some tools."
+    "description": "Some measured but sweeping generalizations on AI from a non-expert who's been having fun with some tools.",
+    "previewImage": "/images/ai_spinach.jpeg"
   },
   {
     "id": "second-thoughts",
     "title": "Second Thoughts",
     "date": "2023-02-07",
-    "description": "Patrick's second blog post, in which he revisits his first blog post and has some second thoughts."
+    "description": "Patrick's second blog post, in which he revisits his first blog post and has some second thoughts.",
+    "previewImage": "/images/mara/mara_230207.jpeg"
   },
   {
     "id": "first-thoughts",
     "title": "First Thoughts",
     "date": "2022-12-19",
-    "description": "Patrick's first blog post, in which he decides to write a blog."
+    "description": "Patrick's first blog post, in which he decides to write a blog.",
+    "previewImage": "/images/mara/mara_221219.jpeg"
   }
 ]
