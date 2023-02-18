@@ -40,7 +40,15 @@ const MetaComponent = ({
         content={description}
         key="og:description"
       />
-      <meta property="og:image" content={previewImage} key="og:image" />
+      <meta
+        property="og:image"
+        content={
+          previewImage.startsWith("http")
+            ? previewImage
+            : "https://pscoleman.me" + previewImage
+        }
+        key="og:image"
+      />
       <meta
         property="profile:first_name"
         content="Patrick"

@@ -38,7 +38,7 @@ const PostLayoutComponent = ({
           {children}
         </article>
       </MDXProvider>
-      <hr className="mb-8" />
+      <hr className="my-8" />
       <div className="flex my-0 content-end items-center justify-around">
         {prevPost ? (
           <Link
