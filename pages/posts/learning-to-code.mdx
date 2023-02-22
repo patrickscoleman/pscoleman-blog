@@ -1,7 +1,7 @@
 ---
 title: "On Learning to Code as an Adult"
 date: "2023-02-22"
-description: "First-person testimony of a 30-something learning to code despite lots of advice not to. Plus how Replit reignited the coding passion in me."
+description: "A first-person report from a 30-something learning to code after years of false starts. Plus some of the things that carried me along the way."
 previewImage: "/images/mara/mara_230222.jpg"
 ---
 
@@ -14,23 +14,81 @@ import Image from "next/image";
   <time dateTime={date}>February 22nd, 2023</time>
 </small>
 
-There's nothing in the world quite like feeding instructions into a computer and seeing what comes out. It always feels a bit like magic to me.
+This is the year that I decided to get serious about learning to code. Specifically, I'm learning Javascript/web development for no better reason than because I want to share my stuff online.
 
-[quote from hackers by steven levy]
+My journey's been a long one, but what finally got me off my butt was working in dev tools/coding education at [Replit](https://replit.com/), which reignited my passion for coding, and then taking some time off of work, which has let me focus on learning.
 
-But first, a bit of an aside. It sucks to be bad at something as an adult. And I'm pretty meh at coding right now. Just want to get that out there to start.
+This'll be a long post. I'll share my journey and some of the things I've tried along the way (including some dead-ends/distractions). Hopefully some of these experiences are helpful for other learners. If you're at all feeling the pull, go for it!
 
-Now I've read ["Zen Mind, Beginner's Mind"](https://en.wikipedia.org/wiki/Zen_Mind,_Beginner%27s_Mind) and conceptually know that I can be comfortable in the haziness of not knowing. I am a bit wary even of "knowing too much" and how it can close doors to creative insight. I even have a bit of a soft spot for childish, DIY aesthetics, [naivism](https://en.wikipedia.org/wiki/Na%C3%AFve_art) if we want to get fancy about it. And I've also picked up a foreign language as an adult, so I've seen first-hand how years of slow, steady effort can finally pay off.
+([Click here](#learn) if you want to skip my back story and go straight to the learning.)
 
-But man, it's awkward and uncomfortable to have a vision in your head that you can't quite make real, that you set out to create, and then after hours of frustration followed by an eventual (joyful) breakthrough, still isn't quite what you wanted.
+There's nothing in the world quite like feeding instructions into a computer, futzing around, and trying to get something cool to come out. After years of dabbling, the magic still hasn't worn off. (Steven Levy's book [Hackers](https://en.wikipedia.org/wiki/Hackers:_Heroes_of_the_Computer_Revolution) really captures the feeling for me.)
 
-I find solace in quotes from writers and artists who say that after decades they still struggle to express what they have in their heads. But that's some noble humility. And maybe I'll be lucky enough to feel that way too in a few years. But I'm not there yet.
+Learning to code has of course been challenging and frustrating at times, especially when spending hours debugging [CommonJS/ES Modules](https://blog.logrocket.com/commonjs-vs-es-modules-node-js/). But most of the time it's fun. I feel like I'm playing. I lose track of time and sink hours into coding. And then I've got something (in)tangible to show for it!
 
-Enough whining.
+Who says [learning through play](https://learningthroughplay.com/explore-the-research/the-scientific-case-for-learning-through-play) is just for kids?
 
-The other thing I want to say is that coding is fun. I totally lose myself in it. It's like playing videogames, but at the end of it all, I've brought something new into the world.
+<figure align="center">
+  <Image
+    src="/images/mara/mara_230222.jpg"
+    className="mx-auto"
+    alt="Mara the dog, eating pinecone"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    What I would give to know what Mara's learning playing with this pinecone?
+  </figcaption>
+</figure>
 
-...
+## The very beginning
+
+My on-again off-again obsession with computers started (as I'm sure it did for many others) in the awkward years of middle school, when I joined the school's C++ club. My first program played increasingly loud and high-pitched beeps on the old computers in the lab. It was dumb, but my friends loved it. I was hooked.
+
+Of course the initial seeds had been planted a bit earlier. My dad was always tinkering on Mac computers after work. And I had a "cool" uncle, who played video games and paintball and worked as a computer programmer. Naturally, he taught me and my brother about fun kid things like [polymorphism](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/polymorphism).
+
+I was lucky to go to a science-and-tech magnet high school where I took as many computer science classes as I could. We learned Java, C, Assembly, and Ruby. I even got to take an AI class and learned about genetic algorithms and neural networks (this was before GPU's unlocked all the really cool stuff we're seeing today). We worked on Sun Microsystems computers running Linux, and the [Unix](https://en.wikipedia.org/wiki/Unix_philosophy) and [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) philosophies really grabbed me.
+
+One summer, inspired by all those great Flash games in the early 2000s, I made a game for our high school game website. (And many years later I uploaded [the semi-working code](https://replit.com/@PatrickAtReplit/Ant-Killer-Game) to Replit.)
+
+My senior year, I got really into agent-based simulations (especially loved [Growing Artificial Societies](https://mitpress.mit.edu/9780262550253/growing-artificial-societies/) and [The Evolution of Cooperation](https://en.wikipedia.org/wiki/The_Evolution_of_Cooperation)). You can find my old [senior project](https://www.tjhsst.edu/~rlatimer/techlab08/ColemanPosterQ3-08.pdf) online still.
+
+Then in college, I took a couple CS classes (Linux, Python, Microsoft VBA, and another class on agent-based simulations). But I was getting pulled in other directions. I wanted to go work in finance on Wall Street and make a lot of money (oh the follies of youth...)
+
+## Trying for years to get back to more of the computer stuff
+
+It wasn't long before I figured out I wasn't a good fit for Wall Street. I decided to try something in "tech" and next took a job at a mid-size data & analytics company in Chicago doing "strategy" and "ops." I loved the work but yearned for something with impact.
+
+My next job was at an [early stage ed-tech startup](https://www.peoplegrove.com/) in San Francisco. In the early days, I insisted on documenting bugs in Github and fixing typos by submitting untested PRs. I'd joke that I was flying blind like Luke Skywalker in the Death Star trench. But really I was making more work for the real engineers... :^/
+
+As the company grew, I got increasingly pulled into sales and finance work.
+
+When I was ready for my next gig, I came across Replit and loved the coding education angle, since coding had been so important to me growing up. At the start, I asked a few of the early engineers to teach me, and they graciously did. But again I kept getting pulled into sales, finance, and management work. (Maybe you can see the pattern ;))
+
+Luckily I got to do a bit of coding for some marketing projects (e.g. this questionably helpful [YouTube tutorial on web scraping](https://www.youtube.com/watch?v=MG9RYrae8ME)), to write about the joys of coding (e.g. this overly-long [blog post](https://blog.replit.com/everyoneprograms)), and to speak about coding education (e.g. this [panel on CS as a modern fluency](https://www.youtube.com/watch?v=zZVUZuDfhFY) at [ASU+GSV](https://www.asugsvsummit.com/), which was thinly attended vs. the standing-room-only [panel on web3](https://www.youtube.com/watch?v=2JcB7Q1gX1M) the next year – go figure...).
+
+The good times I had at Replit really reignited my passion for coding. It just takes a spark to start a fire!
+
+<a id="learn"></a>
+## Starting (to try) to learn (and struggling)
+
+<figure align="center">
+  <Image
+    src="/images/yoda_try.gif"
+    className="mx-auto"
+    alt="Yoda saying 'Do. Or do not. There is no try.'"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    Photo © 1980 Lucasfilm Ltd.
+    ([source](https://medium.com/thrive-global/8-powerful-quotes-from-yoda-the-og-wellness-guru-ce03db397749))
+  </figcaption>
+</figure>
+
+But I should also note that it was awfully frustrating to have been better at coding as a high school senior than I was at the start of my 30s. Just had to get over it.
+
+Plus things move so fast in software, that all the bad habits I'd learned as a kid were obsolete. And it was time to learn new bad habits.
 
 I talked about wanting to learn to code (to myself and others) for years, but it took a long time to actually get started. I don't think I was ready until I really set aside a lot of time (and took a break from full-time work) to dive into it.
 
@@ -38,7 +96,17 @@ A friend told me, you're better off spending one day a week learning to code tha
 
 I'm aware not everyone can do that, but I think if you're feeling called and are able to dedicate some time to this journey, it's great.
 
-...
+I spent a couple months getting unreasonably excited about Svelte, which does seem cool, and neovim (also cool but not beginner friendly) and watched way too many youtube videos which felt productive but was not. Settled on some more popular tools/frameworks and vs code with vim keybindings. It was the right call.
+
+## A real start! (picking a stack, shutting up, and shipping stuff)
+
+My journey at my stack
+
+using Javascript/Typescript with NextJS and React + TailwindCSS + MUI (UI components) + hosted on Vercel + firebase backend + github for version control + vscode + github copilot
+
+Why this stack? This is what my friend is using and we're working on a foreign language learning app together. And they're all pretty popular (and relatively beginner friendly) tools, so I can get started and there's lots of help/documentation available
+
+## "But why?" say my friends who don't get it
 
 I've told a lot of people that I'm learning to code and gotten many different reactions, but they can be broadly characterized as:
 
@@ -56,41 +124,29 @@ The real reason is, simply put, it's fun. I'm having fun.
 
 And not to be a hedonist or anything, but that feels pretty damn important and about as good a reason as any to do something.
 
+## Staying motivated through the doldrums
+
+Moby dick quote (link to emoji dick)
+
+But first, a bit of an aside. It sucks to be bad at something as an adult. And I'm pretty meh at coding right now. Just want to get that out there to start.
+
+Now I've read ["Zen Mind, Beginner's Mind"](https://en.wikipedia.org/wiki/Zen_Mind,_Beginner%27s_Mind) and conceptually know that I can be comfortable in the haziness of not knowing. I am a bit wary even of "knowing too much" and how it can close doors to creative insight. I even have a bit of a soft spot for childish, DIY aesthetics, [naivism](https://en.wikipedia.org/wiki/Na%C3%AFve_art) if we want to get fancy about it. And I've also picked up a foreign language as an adult, so I've seen first-hand how years of slow, steady effort can finally pay off.
+
+But man, it's awkward and uncomfortable to have a vision in your head that you can't quite make real, that you set out to create, and then after hours of frustration followed by an eventual (joyful) breakthrough, still isn't quite what you wanted.
+
+I find solace in quotes from writers and artists who say that after decades they still struggle to express what they have in their heads. But that's some noble humility. And maybe I'll be lucky enough to feel that way too in a few years. But I'm not there yet.
+
+Enough whining.
+
+I've been largely off of social media for the last couple months, which has been great for productivity, but I think you need some real world feedback to stay motivated. Get your stuff out there.
+
 I think I also needed the experience of coding as a kid (and loving it) to know that this was something that I liked to get me through the doldrums of early learning. Which is why CS education is so important.
 
-But I should also note that it was awfully frustrating to have been better at coding as a high school senior than I was at the start of my 30s. Just had to get over it.
+## What's next on this journey?
 
-Plus things move so fast in software, that all the bad habits I'd learned as a kid were obsolete. And it was time to learn new bad habits.
-
-I wouldn't have started on this journey if I hadn't worked at Replit.
-
-https://www.youtube.com/watch?v=MG9RYrae8ME
-
-https://blog.replit.com/everyoneprograms
-
-https://replit.com/@PatrickAtReplit/Ant-Killer-Game
-
-It just takes a spark to start a fire, and I'm very grateful for my time at Replit.
+Short answer: who knows?
 
 At some point soon, I'll share some of the tech that's behind this blog (in case it's helpful for others just starting to learn too).
-
-...
-
-My journey at my stack
-
-using Javascript/Typescript with NextJS and React + TailwindCSS + MUI (UI components) + hosted on Vercel + firebase backend + github for version control + vscode + github copilot
-
-Why this stack? This is what my friend is using and we're working on a foreign language learning app together. And they're all pretty popular (and relatively beginner friendly) tools, so I can get started and there's lots of help/documentation available
-
-I spent a couple months getting unreasonably excited about Svelte, which does seem cool, and neovim (also cool but not beginner friendly) and watched way too many youtube videos which felt productive but was not. Settled on some more popular tools/frameworks and vs code with vim keybindings. It was the right call.
-
-<Image
-  src="/images/mara/mara_230222.jpg"
-  className="mx-auto"
-  alt="Mara the dog, eating pinecone"
-  width={500}
-  height={500}
-/>
 
 export default ({ children }) => (
   <PostLayout

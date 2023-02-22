@@ -10,7 +10,7 @@ export const MdxComponents = {
   ),
   a: (props) => (
     <>
-      {props.href.startsWith("/") ? (
+      {props.href.startsWith("/") || props.href.startsWith("#") ? (
         <Link
           {...props}
           className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
