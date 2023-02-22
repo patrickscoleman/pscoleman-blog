@@ -1,13 +1,18 @@
 import { Layout } from "@/components/layout";
+import Image from "next/image";
 
 const Custom404 = () => {
   return (
     <Layout>
-      <h1>404 - Page Not Found - 404</h1>
-      <p>
-        [a placeholder for an AI generated image of a tech worker on a laptop
-        lost in the middle of a dense forest in the style of hayao miyazaki]
-      </p>
+      <h1 className="text-center">404 - PAGE NOT FOUND - 404</h1>
+      <Image
+        src="/images/frazzled_office_worker.png"
+        className="mx-auto"
+        height={500}
+        width={500}
+        alt="Frazzled Office Worker"
+      />
+      <p className="text-center">We seem to have misplaced your page...</p>
     </Layout>
   );
 };
