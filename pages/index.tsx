@@ -17,8 +17,8 @@ const Home = () => {
       />
       <section className="">
         <p>
-          👋 Hello internet friend, I&apos;m Patrick. I know very little about a
-          lot of things. And this is my blog. In it, you&apos;ll find:
+          👋 Hello internet friend, I&apos;m Patrick. I know dangerously little
+          about many things. And this is my blog. In it, you&apos;ll find:
         </p>
         <ul className="list-disc pl-8">
           <li>Pics of my dog Mara</li>
