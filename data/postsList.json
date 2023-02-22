@@ -1,5 +1,19 @@
 [
   {
+    "id": "what_am_i_up_to_2023",
+    "title": "What am I up to in 2023?",
+    "date": "2023-02-24",
+    "description": "This year I'm getting married, learning to code, working on a language learning app, and traveling to Europe and Asia.",
+    "previewImage": "/images/mara/mara_230224.jpeg"
+  },
+  {
+    "id": "learning-to-code",
+    "title": "On Learning to Code as an Adult",
+    "date": "2023-02-22",
+    "description": "First-person testimony of a 30-something learning to code despite lots of advice not to. Plus how Replit reignited the coding passion in me.",
+    "previewImage": "/images/mara/mara_230222.jpeg"
+  },
+  {
     "id": "basho_haiku",
     "title": "Haiku by Basho",
     "date": "2023-02-13",
