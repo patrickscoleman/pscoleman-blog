@@ -17,14 +17,12 @@ const Home = () => {
       />
       <section className="">
         <p>
-          👋 Hello internet friend, I&apos;m Patrick, and this is my blog. In
-          it, you&apos;ll find:
+          👋 Hello internet friend, I&apos;m Patrick. I know very little about a
+          lot of things. And this is my blog. In it, you&apos;ll find:
         </p>
         <ul className="list-disc pl-8">
           <li>Pics of my dog Mara</li>
           <li>Work/startup stuff</li>
-          <li>Amateur translations</li>
-          <li>&ldquo;Postcards&rdquo; from my travels</li>
           <li>Errant thoughts, hastily jotted down</li>
         </ul>
         <p>
