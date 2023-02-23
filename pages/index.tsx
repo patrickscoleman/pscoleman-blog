@@ -26,10 +26,10 @@ const Home = () => {
           <li>Errant thoughts, hastily jotted down</li>
         </ul>
         <p>
-          And so you know that I&apos;m qualified to share the highest quality
-          thoughts, please check out <Link href="/about">my about page</Link> to
-          see how I&apos;ve been spending my time on this lovely space rock that
-          we call Earth.
+          And so you know I&apos;m qualified to share high quality thoughts,
+          please check out <Link href="/about">my about page</Link> and see how
+          I&apos;ve been spending my time on this lovely space rock that we call
+          Earth.
         </p>
       </section>
       <PostsList />
