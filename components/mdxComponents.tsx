@@ -16,7 +16,7 @@ export const MdxComponents = {
           className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
         ></Link>
       ) : (
-        <span className="inline-flex items-center">
+        <span className="inline-flex items-center my-0">
           <Link
             {...props}
             className="decoration-1 decoration-accent-light dark:decoration-accent-dark"

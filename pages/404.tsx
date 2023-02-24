@@ -1,4 +1,5 @@
 import { Layout } from "@/components/layout";
+import { OpenInNew } from "@mui/icons-material";
 import Image from "next/image";
 
 const Custom404 = () => {
@@ -16,12 +17,14 @@ const Custom404 = () => {
         <figcaption className="text-sm text-text-lightfaint dark:text-text-darkfaint">
           Source:{" "}
           <a
+            className="text-text-light dark:text-text-darkbold font-bold"
             href="https://midjourney.com/"
             target="_blank"
             rel="noreferrer noopener"
           >
             Midjourney
           </a>
+          <OpenInNew className="ml-0.5" sx={{ fontSize: "1rem" }} />
         </figcaption>
       </figure>
       <p className="text-center">We seem to have misplaced your page...</p>
