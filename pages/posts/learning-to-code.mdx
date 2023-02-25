@@ -1,0 +1,273 @@
+---
+title: "On Learning to Code as an Adult"
+date: "2023-02-24"
+description: "A first-person report from a 30-something learning to code after years of false starts. Plus some of the things that carried me along the way."
+previewImage: "/images/mara/mara_230224.jpg"
+---
+
+import { PostLayout } from "@/components/postLayout";
+import Image from "next/image";
+
+# On Learning to Code as an Adult
+
+<small>
+  <time dateTime={date}>February 24th, 2023</time>
+</small>
+
+This is the year that I decided to get serious about learning to code. Specifically, I'm learning Javascript/web development for no better reason than because I want to share my stuff online.
+
+My journey's been a long one, but what finally got me off my butt was working in dev tools/coding education at [Replit](https://replit.com/), which reignited my passion for coding, and then taking some time off of work, which has given me the time to focus on learning.
+
+This'll be a long post. I'll share my journey and some of the things I've tried along the way (including some dead-ends/distractions). Hopefully some of these experiences are helpful for other learners. If you're at all feeling the pull, go for it!
+
+([Click here](#learn) if you want to skip my back story and go straight to the learning.)
+
+There's nothing in the world quite like feeding instructions into a computer, futzing around, and trying to get something cool to come out. After years of dabbling, the magic still hasn't worn off.
+
+Learning to code has of course been challenging and frustrating at times, especially when spending hours debugging [CommonJS/ES Modules](https://blog.logrocket.com/commonjs-vs-es-modules-node-js/) at the start and now trying to wrap my head around [RxJS](https://www.learnrxjs.io/). But most of the time it's fun. I feel like I'm playing. I lose track of time and sink hours into coding. And then I've got something (in)tangible to show for it!
+
+Who says [learning through play](https://learningthroughplay.com/explore-the-research/the-scientific-case-for-learning-through-play) is just for kids?
+
+<figure align="center">
+  <Image
+    src="/images/mara/mara_230224.jpg"
+    className="mx-auto"
+    alt="Mara the dog, eating pinecone"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    What I wouldn't give to learn through playing with pinecones...
+  </figcaption>
+</figure>
+
+## The very beginning
+
+My on-again off-again obsession with computers started (as I'm sure it did for many others) in the awkward years of middle school, when I joined the school's C++ club. My first program played increasingly loud and high-pitched beeps on the old computers in the lab. It was dumb, but my friends loved it. I was hooked.
+
+Of course the initial seeds had been planted a bit earlier. My dad was always tinkering on Mac computers after work. And I had a "cool" uncle, who played video games and paintball and worked as a computer programmer. Naturally, he taught me and my brother about fun kid things like [polymorphism](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/polymorphism).
+
+I was lucky to go to a science-and-tech magnet high school where I took as many computer science classes as I could. We learned Java, C, Assembly, and Ruby. I even got to take an AI class and learned about genetic algorithms and neural networks (this was before GPU's unlocked all the really cool stuff we're seeing today). We worked on Sun Microsystems computers running Linux, and the [Unix](https://en.wikipedia.org/wiki/Unix_philosophy) and [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software) philosophies really grabbed me.
+
+One summer, inspired by all those great Flash games in the early 2000s, I made a game for our high school game website. (And many years later I uploaded [the semi-functional code](https://replit.com/@PatrickAtReplit/Ant-Killer-Game) to Replit.)
+
+My senior year, I got really into agent-based simulations (especially loved [Growing Artificial Societies](https://mitpress.mit.edu/9780262550253/growing-artificial-societies/) and [The Evolution of Cooperation](https://en.wikipedia.org/wiki/The_Evolution_of_Cooperation)). You can find my old [senior project](https://www.tjhsst.edu/~rlatimer/techlab08/ColemanPosterQ3-08.pdf) online still.
+
+Then in college, I took a couple CS classes (Linux, Python, Microsoft VBA, and another class on agent-based simulations). But I was getting pulled in other directions. I wanted to go work in finance on Wall Street and make a lot of money (oh the follies of youth...)
+
+## Trying for years to get back to more of the computer stuff
+
+It wasn't long before I figured out I wasn't a good fit for Wall Street. I decided to try something in "tech" and next took a job at a mid-size data & analytics company in Chicago doing "strategy" and "ops." I loved the work but yearned for something with impact.
+
+My next job was at an [early stage ed-tech startup](https://www.peoplegrove.com/) in San Francisco. In the early days, I insisted on documenting bugs in Github and fixing typos by submitting untested PRs. I'd joke that I was flying blind like Luke Skywalker in the Death Star trench. But really I was making more work for the real engineers... :^/
+
+As the company grew, I got increasingly pulled into sales and finance work.
+
+When I was ready for my next gig, I came across Replit and loved the coding education angle, since coding had been so important to me growing up. At the start, I asked a few of the early engineers to teach me, and they graciously did. But again I kept getting pulled into sales, finance, and management work. (Maybe you can see the pattern ;^))
+
+Luckily I got to do a bit of coding for some marketing projects (e.g. this questionably helpful [YouTube tutorial on web scraping](https://www.youtube.com/watch?v=MG9RYrae8ME)). And I also got to write about the joys of coding (e.g. this overly-long [blog post](https://blog.replit.com/everyoneprograms)) and to speak about coding education (e.g. this [panel on CS as a modern fluency](https://www.youtube.com/watch?v=zZVUZuDfhFY) at [ASU+GSV](https://www.asugsvsummit.com/), which was thinly attended vs. the following year's standing-room-only [panel on web3](https://www.youtube.com/watch?v=2JcB7Q1gX1M) – go figure...).
+
+I also read a handful of books about programming and software business history. [Hackers by Steven Levy](https://en.wikipedia.org/wiki/Hackers:_Heroes_of_the_Computer_Revolution) and [The Friendly Orange Glow by Brian Dear](http://friendlyorangeglow.com/) were highlights.
+
+The good times I had at Replit certainly reignited my passion for coding. It just takes a spark to start a fire!
+
+<a id="learn"></a>
+## Starting (to try) to learn (and struggling)
+
+<figure align="center">
+  <Image
+    src="/images/yoda_try.gif"
+    className="mx-auto"
+    alt="Yoda saying 'Do. Or do not. There is no try.'"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    Photo © 1980 Lucasfilm Ltd.
+    ([source](https://medium.com/thrive-global/8-powerful-quotes-from-yoda-the-og-wellness-guru-ce03db397749))
+  </figcaption>
+</figure>
+
+So obviously I'd already learned a bit of coding in my younger years and wasn't starting completely from scratch. But I'd pretty much forgotten everything outside of a few very high level concepts. And let me tell you, it's sure frustrating to know that your high school self was better at something than you are now.
+
+On top of that it seems that best practices have changed a lot. What happened to Java and OOP? I suppose it's a blessing and a curse that things move so fast in software. I would have had to forget all my old bad habits anyway. Now's the time to get over my wounded pride and start learning some new bad habits!
+
+I started my learning journey with some online tutorials. I am fairly self-motivated and tend to overestimate how quickly I'll be able to learn things... so I wanted to avoid the time and money cost of classes, bootcamps and MOOCs. Although maybe in retrospect...
+
+I tried [Scrimba](https://scrimba.com/), [FreeCodeCamp](https://www.freecodecamp.org/), and [The Odin Project](https://www.theodinproject.com/). (Replit's since put out some [great first-party beginner content](https://replit.com/learn/100-days-of-python) too.) I can't speak highly enough about these resources and their communities. But I fell into a trap that I'm betting a lot of self learners fall into – I didn't code. More often than not I was skimming tutorials and videos rather than coding along, which of course is a big no no.
+
+I did this on and off for a couple years while working. I'd code a couple hours here, watch a video there, and then months would go by with no progress before I was back at it.
+
+A friend recently told me, you're better off spending one day a week learning to code than even one hour a day. You have to get deep into it, get stuck, and then get yourself unstuck. I think that's true for sure. I wasn't carving out the "right" amount of time.
+
+I suppose I was passively picking up knowledge along the way, but I think it was actually a bit dangerous. I found myself overestimating how quickly I'd be to go from "knowledge" of concepts only to being able to build real things.
+
+Then when I left my job last summer, I decided to dive in again.
+
+## Still struggling... (and whose fault but my own?)
+
+Now let me take a second to talk about my planned setup this time around. I wanted to code on an iPad (_beginners, don't do it_) because I wanted to make things harder for myself. So I found some actually very helpful [YouTube videos](https://www.youtube.com/watch?v=A3qn1nqw-Gw) to get set up with a Raspberry Pi and iPad.
+
+Then I decided I would go through that old [SICP textbook](https://web.mit.edu/6.001/6.037/sicp.pdf) because again I wanted to make things harder for myself. I couldn't get MIT Scheme working easily on the latest version of Ubuntu running on the Pi (I eventually found [Racket](https://pkgs.racket-lang.org/package/sicp)), but I was procrastinating on going through the book anyway. I never finished chapter 1.
+
+Then one day, when I was coding on a train, I smelled something funny. My overclocked Raspberry Pi started smoking, so I immediately unplugged everything and waited until my heart rate slowed down.
+
+Finally calm, I set up a [Digital Ocean Droplet](https://www.digitalocean.com/products/droplets) and SSH'd in from my iPad and kept coding there. I went through some [DO tutorials](https://www.digitalocean.com/community/tutorials), which are also great btw, and set up a little nginx server, plus learned some SQL. But I still hadn't built any "real" projects...
+
+The whole iPad thing was a "brief" distraction of 2-3 months and then I caved and bought a laptop and got back to the tutorials. And real progress was made. (I also picked up some other short-term work during this time.)
+
+With respect to the Odin Project tutorials, where I was mostly focused this time around, I was also learning older material (even just 5+ years old) that was already somewhat out-of-date. Now that's not a huge problem since the old stuff still works and critical programs are of course still running on decades' old technology (see [floppy disks in aviation](https://interestingengineering.com/transportation/airlines-still-order-floppy-disks-the-last-man-standing-in-the-business-explains-why)).
+
+But as a beginner (overly) reliant on copy/pasting code from [Stack Overflow](https://stackoverflow.com/) until I got something to work and then trying to understand why it worked, I was running into old answers that didn't always "just work, out of the box." And it made things tough(er than necessary)!
+
+I underestimated the importance of being at least on the periphery of an active and up-to-date community of professional engineers.
+
+Which leads me to my next blunder...
+
+After spending hours and hours browsing programming education videos on YouTube and taking extensive notes about which things I'd **eventually** go learn once I started building real stuff, I settled on using [Neovim](https://neovim.io/) as my editor (hardcore! _groan_...) and [Svelte](https://svelte.dev/) as my framework (cutting edge! _groan_...). Seriously the [videos](https://www.youtube.com/results?search_query=neovim) are [endless](https://www.youtube.com/results?search_query=svelte). _Quick aside: I'd switched from [gedit](https://wiki.gnome.org/Apps/Gedit) to [vim](https://www.vim.org/) back in high school and remembered some of the keybindings, so foolishly this felt reasonable to me._
+
+With the hard work of picking which tools to use complete **/s** I started trying to build. And... I spent way more time working on my .vimrc file than writing any programs. I sunk hours into getting nvim to look and act like [VS Code](https://code.visualstudio.com/) because for some reason I didn't want to just use VS Code...
+
+My short-term work came to an end, I still hadn't made much progress, and I was finally over myself enough to ask for help. So I asked a close friend who's a software engineer what I should do to learn. And finally, I listened.
+
+(If there's a moral in all of this, it's to actually write code, to ask for help, and to get started with popular tools. But it's hard for me to totally discourage others from taking a meandering path like I did. At the end of the day, it was a lot of fun!)
+
+## A real start (picking a stack, shutting up, and shipping!)
+
+<figure align="center">
+  <Image
+    src="/images/computer_sailboat.png"
+    className="mx-auto"
+    alt="A sailboat that looks kinda like a computer, or a computer that looks kinda like a sailboat."
+    width={300}
+    height={300}
+  />
+  <figcaption>
+    "Shipping!" Source: [Midjourney](https://midjourney.com/)
+  </figcaption>
+</figure>
+
+So what did my friend tell me?
+
+- Learn [React](https://reactjs.org/).
+- Then learn [NextJS](https://nextjs.org/).
+- And if you care at all about making progress, please please switch to VS Code.
+
+So I did. (Except stubbornly I kept the [vim keybindings](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) on in VS Code. Jury's out if it's making me faster or slower.)
+
+Which brings us to about the middle of December 2022. And within a week, I had a blog with no content on it hosted on my own domain and available to anyone online. I held off on sharing it because the first versions were so bad, so of course "anyone" actually means "noone."
+
+Over the next couple months (up until now), I made incremental improvements to the blog and wrote some posts too. It's only marginally better now. But I'm happy with it. I'm making real progress. And I'm starting to share it with people.
+
+Feeling limited by what I could learn on my own, I also asked my friend to pair code with me a few times a week on a side project we'd work on together. We're both learning foreign languages and were craving a better learning tool that didn't already exist, so we had our idea. (More to come on this soon.)
+
+Getting to play around inside of a talented engineer's codebase, to get unblocked within a couple days when I'm totally stuck, and to see how someone else debugs/solve problems has been unbelievably helpful. I feel like my rate of progress is, no joke, **100x** what it was before.
+
+In another month or so, we'll release the MVP of the language learning app. My friend has done most of the real work, but I've been able to contribute a lot on the frontend/UI/UX stuff (and have gotten to mess around a bit with an NLP algorithm).
+
+As someone who's worked in startups for a long time but never as a software engineer and never during the pre-product-market-fit days, I have a whole new appreciation for what it takes to create something new. (_I'm intimately familiar with the challenges of selling and scaling..._) And I gotta say, I'm loving it.
+
+## Our stack
+
+For those who are curious, here are the languages, frameworks, and tools we're using (links to docs/tutorials for each):
+
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) + [Typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- [React](https://beta.reactjs.org/learn)
+- [NextJS](https://nextjs.org/learn/foundations/about-nextjs) (serverless framework) (**highly recommend this tutorial**)
+- [TailwindCSS](https://tailwindcss.com/docs/installation) (styling)
+- [MUI](https://mui.com/material-ui/getting-started/overview/) (buttons, forms, etc.)
+- [Vercel](https://vercel.com/docs/concepts/get-started) (hosting/deployment)
+- [Firebase](https://firebase.google.com/docs/web/setup) (cloud functions, database, auth, etc.)
+- [Github](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources) (version control)
+- [VS Code](https://code.visualstudio.com/learn) (editor)
+- [Github Copilot](https://docs.github.com/en/copilot/quickstart) (AI code completion) (_I was a doubter at first, but am now a real fan_)
+
+Why this stack? Why not some other stack?
+
+Well my friend recommended it, he's helping me, and it's all pretty popular stuff. There are lots of other languages, frameworks, and tools out there. Some are better for other types of projects (e.g. Python for data science, AI/ML). But I think the most important thing is to work on a real project (ideally with someone else who knows more than you). If you have to pick something, ask someone you trust, and then just get started!
+
+## "Yeah but why?" ask the people who don't really get it
+
+As someone who's already many years into a career in tech on the business side, I've gotten mixed responses when I tell people that I'm learning to code. The responses typically fall into one of four buckets:
+
+1. **"Oh that's interesting," changes subject** – This the polite response, mostly from family who love me, friends who tolerate me, and acquaintances who don't really care.
+2. **"Yeah but why?"** — I get this a lot from friends. They don't get why I wouldn't just keep doing sales/finance/etc.
+3. **"You've been talking about this for years, that makes a lot of sense"** - This one always warms my heart a bit.
+4. **"Super cool! What language are you learning?"** - This one always comes from software engineers (and then after we nerd out for a few minutes :^), they'll shift into one of the other buckets.)
+
+I'd like to take a moment to address #2, the "yeah but why?" crowd. Why learn to code as an adult who already has a career?
+
+At first I tried to have a rational response. I think I want to be able to build the MVP of an app and then I can go hire developers. If I know some coding, I'll be able to talk to engineers and make better hires. etc. etc. But it always felt like a shadow of the truth.
+
+The real reason is, simply put, **it's fun!** I'm having fun. Hours disappear into the computer. It's like the best video game out there (but better).
+
+And not to be a hedonist or anything, but doing what you enjoy feels pretty damn important and about as good a reason as any to do anything.
+
+I know this feeling may not last forever (and I've already hit some slumps), but I want to chase it while it's there.
+
+## Staying motivated through the doldrums
+
+There's a slog in the middle of Moby Dick, which itself is both a masterpiece of a novel and quite a slog. It starts when they enter [the doldrums](https://oceanservice.noaa.gov/facts/doldrums.html), windless waters where ships get stuck.
+
+> There you stand, lost in the infinite series of the sea... The tranced ship indolently rolls; the drowsy trade winds blow; everything resolves you into languor.
+
+_– Herman Melville_
+
+Whenever I'm learning something new, while it's usually fun and rewarding, it's always challening. And I've found the toughest bit is when you enter the doldrums. When you feel like you've lost all momentum and start to question why you even set out in the first place.
+
+I'll say it. It sucks to be bad at something as an adult. And honestly I'm pretty meh at coding right now.
+
+You can get off of social media to hide for awhile from everyone else's successes (real and feigned). You can think of other things you've learned and remember how years of slow, steady effort pays off. You can read books like ["Zen Mind, Beginner's Mind"](https://en.wikipedia.org/wiki/Zen_Mind,_Beginner%27s_Mind) and intellectually know it's good to be a beginner. You can always root for [the underdogs](https://www.imdb.com/title/tt0364725/). You can even have a soft spot for [childish/DIY aesthetics](https://www.youtube.com/watch?v=NhE2nw2oqQg) and [naivist](https://en.wikipedia.org/wiki/List_of_Na%C3%AFve_art_artists) [art](https://news.artnet.com/art-world/botched-restoration-of-jesus-fresco-miraculously-saves-spanish-town-197057).
+
+But man, it's demoralizing to have a vision in your head and struggle for hours and days and still not be able to make it real.
+
+So we read motivational quotes.
+
+> Sometimes you have to go on when you don't feel like it, and sometimes you're doing good work when it feels like all you're managing is to shovel shit from a sitting position.
+
+_– Stephen King, "On Writing: A Memoir of the Craft"_
+
+<figure align="center">
+  <Image
+    src="/images/dory_keep_swimming.gif"
+    className="mx-auto"
+    alt="Dory saying 'Just keep swimming'"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    Photo © 2003 Walt Disney Pictures, Pixar Animation Studio
+    ([source](https://zao.is/blog/2017/02/22/things-i-wish-someone-told-me-when-i-learned-to-code/))
+  </figcaption>
+</figure>
+
+We draw on memories of fun times we've had learning in the past. (_This, I think, is the most lasting benefit of great childhood teachers. And why I'd love to see [CS education for all](https://www.csforall.org/)._)
+
+And we press on.
+
+And then sometimes we just gotta take a break and do something fun with the people we love 🏖️
+
+So if you find yourself in the doldrums, remember the wind picks up again.
+
+## So what's next on my coding journey?
+
+Short answer: who knows?
+
+I'm going to keep working on this blog and adding new features (i.e. bloat). At some point, I'll write a blog post about some of the tech I've used (in case it's helpful for others just starting to learn too). In the meantime, feel free to check out the [source code](https://github.com/patrickscoleman/pscoleman-blog).
+
+In a month or so, my friend and I will launch the language learning app. Stay tuned!
+
+And I'll keep building and learning and see where it takes me. If you want to get in touch, my email and socials are in the footer.
+
+If you're a fellow learner, good luck on your own journey. It's tough at times but doable by anyone, anywhere. Happy coding!
+
+export default ({ children }) => (
+  <PostLayout
+    title={title}
+    date={date}
+    description={description}
+    previewImage={previewImage}
+  >
+    {children}
+  </PostLayout>
+);

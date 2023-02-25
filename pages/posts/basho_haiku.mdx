@@ -2,6 +2,7 @@
 title: "Haiku by Basho"
 date: "2023-02-13"
 description: "Japanese-to-English translations of a handful of haiku by Matsuo Basho (1644-1694)."
+previewImage: "/images/mara/mara_230213.jpeg"
 ---
 
 import { PostLayout } from "@/components/postLayout";
@@ -87,14 +88,19 @@ a bell is sounding
 
 <Image
   src="/images/mara/mara_230213.jpeg"
-  className="mx-auto mb-8"
+  className="mx-auto"
   alt="Mara the dog, walking into the fog"
   width={500}
   height={500}
 />
 
 export default ({ children }) => (
-  <PostLayout title={title} description={description}>
+  <PostLayout
+    title={title}
+    date={date}
+    description={description}
+    previewImage={previewImage}
+  >
     {children}
   </PostLayout>
 );
