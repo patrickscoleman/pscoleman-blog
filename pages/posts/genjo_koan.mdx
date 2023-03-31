@@ -1,7 +1,7 @@
 ---
 title: "Genjo Koan by Dogen"
 date: "2023-03-29"
-description: "Japanese-to-English translation of Dogen's Genjo Koan (1252)."
+description: "Japanese-to-English translation of Dogen's Genjo Koan (1233)."
 previewImage: "/images/mara/mara_230329.jpeg"
 ---
 
@@ -18,11 +18,9 @@ import { ButtonGroup, Button } from "@mui/material";
 
 ## Personal Note
 
-Over the years, I keep reading and rereading the Genjo Koan. In translating it, I've found new meaning, nuance, and poetry in the text. If you're reading it for the first time, enjoy it and take it in. If you've read it before, I hope you find something new in my translation. May you be happy and free.
+Over the years, I keep reading and rereading the Genjo Koan (written by Dogen in 1233). In translating it, I've found new meaning, nuance, and poetry in the text. If you're reading it for the first time, enjoy it and take it in. If you've read it before, I hope you find something new in my translation. May you be happy and free.
 
 ## Genjo Koan
-
-_(Choose which languages to display at the top of the page.)_
 
 <GenjoKoan />
 
@@ -74,9 +72,44 @@ In the past, I've also read [Dogen's Genjo Koan: Three Commentaries](https://www
 </figure>
 
 export const GenjoKoan = function () {
+  const [jpn, setJpn] = useState(true);
+  const [eng, setEng] = useState(true);
   return (
     <>
-      <br />
+      <style>
+        {`
+          #jpn {
+            ${jpn ? "display: block;" : "display: none;"}
+          }
+          #eng {
+            ${eng ? "display: block;" : "display: none;"}
+          }
+          br {
+            ${jpn || eng ? "display: block;" : "display: none;"}
+          }
+       `}
+      </style>
+      <div style={{ marginBottom: "2rem", marginTop: "2rem" }}>
+        <span>Choose which languages to display: </span>
+        <ButtonGroup variant="text">
+          <Button
+            variant={jpn ? "outlined" : "text"}
+            onClick={function () {
+              setJpn(!jpn);
+            }}
+          >
+            Japanese
+          </Button>
+          <Button
+            variant={eng ? "outlined" : "text"}
+            onClick={function () {
+              setEng(!eng);
+            }}
+          >
+            English
+          </Button>
+        </ButtonGroup>
+      </div>
       <h3 id="jpn">現成公案</h3>
       <h3 id="eng">Genjo Koan (statement on becoming the present)</h3>
       <br />
@@ -558,52 +591,13 @@ export const GenjoKoan = function () {
   );
 };
 
-export default ({ children }) => {
-  const [jpn, setJpn] = useState(true);
-  const [eng, setEng] = useState(true);
-  return (
-    <>
-      <style>
-        {`
-          #jpn {
-            ${jpn ? "display: block;" : "display: none;"}
-          }
-          #eng {
-            ${eng ? "display: block;" : "display: none;"}
-          }
-          br {
-            ${jpn || eng ? "display: block;" : "display: none;"}
-          }
-       `}
-      </style>
-      <PostLayout
-        title={title}
-        date={date}
-        description={description}
-        previewImage={previewImage}
-      >
-        <div align="center" style={{ marginBottom: "2rem" }}>
-          <ButtonGroup variant="text">
-            <Button
-              variant={jpn ? "outlined" : "text"}
-              onClick={function () {
-                setJpn(!jpn);
-              }}
-            >
-              Japanese
-            </Button>
-            <Button
-              variant={eng ? "outlined" : "text"}
-              onClick={function () {
-                setEng(!eng);
-              }}
-            >
-              English
-            </Button>
-          </ButtonGroup>
-        </div>
-        {children}
-      </PostLayout>
-    </>
-  );
-};
+export default ({ children }) => (
+  <PostLayout
+    title={title}
+    date={date}
+    description={description}
+    previewImage={previewImage}
+  >
+    {children}
+  </PostLayout>
+);

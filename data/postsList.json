@@ -1,5 +1,12 @@
 [
   {
+    "id": "genjo_koan",
+    "title": "Genjo Koan by Dogen",
+    "date": "2023-03-29",
+    "description": "Japanese-to-English translation of Dogen's Genjo Koan (1252).",
+    "previewImage": "/images/mara/mara_230329.jpeg"
+  },
+  {
     "id": "what_am_i_up_to_2023",
     "title": "What am I up to in 2023?",
     "date": "2023-02-27",
