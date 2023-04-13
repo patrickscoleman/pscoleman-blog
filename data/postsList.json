@@ -1,9 +1,16 @@
 [
   {
+    "id": "axolotl",
+    "title": "Axolotl by Julio Cortázar",
+    "date": "2023-04-13",
+    "description": "Spanish-to-English translation of Axolotl, short story by Julio Cortázar (1956).",
+    "previewImage": "/images/posts/mara_axolotl.png"
+  },
+  {
     "id": "genjo_koan",
     "title": "Genjo Koan by Dogen",
     "date": "2023-03-29",
-    "description": "Japanese-to-English translation of Dogen's Genjo Koan (1252).",
+    "description": "Japanese-to-English translation of Dogen's Genjo Koan (1233).",
     "previewImage": "/images/mara/mara_230329.jpeg"
   },
   {
