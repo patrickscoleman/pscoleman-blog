@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout";
 import { PostsList } from "@/components/postsList";
+import { OpenInNew } from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -16,21 +17,49 @@ const Home = () => {
         alt="Patrick Coleman"
       />
       <section className="">
+        <p>👋 Hello internet friend, I&apos;m Patrick! :^)</p>
         <p>
-          👋 Hello internet friend, I&apos;m Patrick. Over the years I&apos;ve
-          done some things and learned some stuff.
+          I&apos;m a husband, dog/plant dad, and startup business guy. I{" "}
+          <Link
+            href="https://github.com/patrickscoleman/pscoleman-blog"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            built this blog
+          </Link>
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} /> and{" "}
+          <Link href="/posts">wrote these posts</Link>. And I too live on this
+          lovely space rock called Earth.
         </p>
-        <p>In my blog, you&apos;ll find:</p>
-        <ul className="list-disc pl-8">
-          <li>Pics of my dog Mara</li>
-          <li>Work/startup stuff</li>
-          <li>Errant thoughts, hastily jotted down</li>
-        </ul>
         <p>
-          And so you know I&apos;m qualified to share the highest quality
-          thoughts, please check out <Link href="/about">my about page</Link> to
-          see how I&apos;ve been spending my time on this lovely space rock that
-          we call Earth.
+          These days, I&apos;m building{" "}
+          <Link
+            href="https://www.yaya.press/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Yaya
+          </Link>
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, a language
+          learning app, and advising startups on ops/growth. In the past, I was
+          an early leader at{" "}
+          <Link
+            href="https://replit.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Replit
+          </Link>
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} /> and{" "}
+          <Link
+            href="https://www.peoplegrove.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            PeopleGrove
+          </Link>
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />. Check out{" "}
+          <Link href="/about">my about page</Link> for more.
         </p>
       </section>
       <PostsList />
