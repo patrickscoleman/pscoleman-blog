@@ -32,7 +32,10 @@ const Home = () => {
           lovely space rock called Earth.
         </p>
         <p>
-          These days, I&apos;m building{" "}
+          These days, I&apos;m traveling around the world on an extended
+          honeymoon with my wife Courtney (and also trying to learn Korean). And
+          for a couple hours here and there, I&apos;m advising startups on
+          ops/growth, notably{" "}
           <Link
             href="https://www.yaya.press/"
             target="_blank"
@@ -40,23 +43,15 @@ const Home = () => {
           >
             Yaya
           </Link>
-          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, a language
-          learning app, and advising startups on ops/growth. In the past, I was
-          an early leader at{" "}
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, an AI
+          language learning app that I helped build. In the past, I was an early
+          leader at{" "}
           <Link
             href="https://replit.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             Replit
-          </Link>
-          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} /> and{" "}
-          <Link
-            href="https://www.peoplegrove.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            PeopleGrove
           </Link>
           <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />. Check out{" "}
           <Link href="/about">my about page</Link> for more.
