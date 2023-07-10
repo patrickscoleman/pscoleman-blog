@@ -7,14 +7,14 @@ import Link from "next/link";
 const Home = () => {
   return (
     <Layout home>
-      <h1>Patrick Coleman&apos;s Web Presence</h1>
+      <h1 className="mb-1">Patrick Coleman&apos;s Website</h1>
+      <hr className="mb-8" />
       <Image
-        priority
-        src="/images/patrick.png"
-        className="rounded-full border-4 border-text-light dark:border-0 mx-auto mb-6 md:mb-8"
-        height={150}
-        width={150}
-        alt="Patrick Coleman"
+        src="/images/patrick-photo.png"
+        className="rounded-full mx-auto mb-6 md:mb-8"
+        alt="Photo of Patrick"
+        width={250}
+        height={250}
       />
       <section className="">
         <p>👋 Hello, I&apos;m Patrick! :^)</p>
