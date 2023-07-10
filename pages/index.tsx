@@ -17,7 +17,7 @@ const Home = () => {
         alt="Patrick Coleman"
       />
       <section className="">
-        <p>👋 Hello internet friend, I&apos;m Patrick! :^)</p>
+        <p>👋 Hello, I&apos;m Patrick! :^)</p>
         <p>
           I&apos;m a husband, dog/plant dad, and startup business guy. I{" "}
           <Link
@@ -33,9 +33,9 @@ const Home = () => {
         </p>
         <p>
           These days, I&apos;m traveling around the world on an extended
-          honeymoon with my wife Courtney (and also trying to learn Korean). And
-          for a couple hours here and there, I&apos;m advising startups on
-          ops/growth, notably{" "}
+          honeymoon with my wife Courtney. And for a couple hours here and
+          there, I&apos;m learning Korean and advising startups on ops/growth,
+          notably{" "}
           <Link
             href="https://www.yaya.press/"
             target="_blank"
@@ -44,8 +44,10 @@ const Home = () => {
             Yaya
           </Link>
           <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, an AI
-          language learning app that I helped build. In the past, I was an early
-          leader at{" "}
+          language learning app that I helped build.
+        </p>
+        <p>
+          In the past, I was an early leader at{" "}
           <Link
             href="https://replit.com/"
             target="_blank"
