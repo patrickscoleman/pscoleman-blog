@@ -34,7 +34,8 @@ const Home = () => {
         <p>
           These days, I&apos;m traveling around the world on an extended
           honeymoon with my wife Courtney. And for a couple hours here and
-          there, I&apos;m learning Korean. Until recently I was working on{" "}
+          there, I&apos;m learning Korean. Until recently I was working with a
+          friend on{" "}
           <Link
             href="https://www.yaya.press/"
             target="_blank"
@@ -42,9 +43,9 @@ const Home = () => {
           >
             Yaya
           </Link>
-          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, an AI
-          language learning app focused on reading compelling AND comprehensible
-          input.
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, a language
+          learning app wth infinite AI-generated reading content (that&apos;s
+          compelling <em>and</em> comprehensible).
         </p>
         <p>
           In the past, I was an early leader at{" "}
