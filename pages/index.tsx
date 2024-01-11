@@ -56,6 +56,14 @@ const Home = () => {
           >
             Replit
           </Link>
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} /> and
+          <Link
+            href="https://www.peoplegrove.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            PeopleGrove
+          </Link>
           <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />. Check out{" "}
           <Link href="/about">my about page</Link> for more.
         </p>
