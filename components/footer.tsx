@@ -111,7 +111,7 @@ const FooterComponent = () => {
       <hr className="mb-4" />
       <div className="flex flex-wrap justify-between">
         <p className="text-sm my-1">
-          © 2022-2023{" "}
+          © 2022-2024{" "}
           <Link
             href="/"
             {...{ "xmlns:dct": "http://purl.org/dc/terms/" }}
