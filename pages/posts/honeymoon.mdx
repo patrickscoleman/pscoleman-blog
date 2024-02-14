@@ -1,0 +1,83 @@
+---
+title: "A Seven-month-long Honeymoon"
+date: "2024-02-14"
+description: "Courtney's and Patrick's postnuptial adventures in Asia, South America, and around the US of A."
+previewImage: "/images/mara/mara_230213.jpeg"
+---
+
+import { PostLayout } from "@/components/postLayout";
+import Image from "next/image";
+
+# A Seven-month-long Honeymoon
+
+<small>
+  <time dateTime={date}>February 14th, 2024</time>
+</small>
+
+Life is good. I’m at the tail-end of a 7-month-long honeymoon and currently sitting in an Airbnb on the other side of the highway in sunny Santa Barbara, CA. My wife, Courtney, and our dog, Mara, (plus some dog hair and sand – sorry host!) are sitting on the bed next to me as I type.
+
+<figure align="center">
+  <Image
+    src="/images/honeymoon/snoozing.jpg"
+    className="mx-auto"
+    alt="Patrick and Mara snoozing on the bed"
+    width={500}
+    height={500}
+  />
+  <figcaption>jk not actually typing, just snoozing with Mara</figcaption>
+</figure>
+
+Since getting married last April, we’ve worked, quit our jobs, and traveled to Asia, South America, and around the US of A.
+
+I want to get some impressions down while they’re still fresh. This is mostly for the mems, but I want to share some of our joy with others too. It’d be impossible to capture everything that we’ve done, seen, and felt these past seven months, so instead I’ll go for the highlights. Surprising moments, exciting moments, maybe some challenges, and of course plenty of photos.
+
+I’ll start with now. I’m feeling a good mix of emotions: awe, happiness, love, relaxation, boredom, exhaustion, anxiety, curiosity, connection, etc. Mostly I just can’t believe I was able to run around the world for so long with the person I love. I know this is a rare and special thing to do. For that I’m endlessly grateful.
+
+But as anyone who’s traveled a lot can tell you, after a long time away, it’s real nice to settle back into your little slice of life at home. We certainly can’t wait!
+
+Now let’s go to the beginning.
+
+## August: Hawaii and Alaska
+
+Sentence or two about Hawaii and Alaska.
+
+## September: Korea
+
+Sentence or two about Korea.
+
+## October: Japan
+
+Sentence or two about Japan.
+
+## November and December: Singapore, Thailand, and Vietnam
+
+Sentence or two about Singapore, Thailand, and Vietnam.
+
+## Holidays: DC and SF Suburbs
+
+Sentence or two about DC and SF Suburbs.
+
+## January: Patagonia
+
+Sentence or two about Patagonia.
+
+## February: SoCal
+
+Sentence or two about SoCal.
+
+## March and Beyond: Home, San Francisco, California
+
+And finally a return to the bay. Who knows what the future has in store? But I do know who I’ll have by my side. And I do know where I’ll be living.
+
+To the ups and the downs and whatever comes next!
+
+export default ({ children }) => (
+  <PostLayout
+    title={title}
+    date={date}
+    description={description}
+    previewImage={previewImage}
+  >
+    {children}
+  </PostLayout>
+);
