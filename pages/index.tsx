@@ -7,7 +7,7 @@ import Link from "next/link";
 const Home = () => {
   return (
     <Layout home>
-      <h1 className="mb-1">Patrick Coleman&apos;s Website</h1>
+      <h1 className="mb-1">Patrick Coleman&apos;s Personal Website</h1>
       <hr className="mb-8" />
       <Image
         src="/images/patrick-photo.png"
@@ -17,7 +17,7 @@ const Home = () => {
         height={250}
       />
       <section className="">
-        <p>👋 Hello, I&apos;m Patrick! :^)</p>
+        <p>Hi, I&apos;m Patrick! 👋</p>
         <p>
           I&apos;m a husband, dog/plant dad, and startup business guy. I{" "}
           <Link
@@ -32,12 +32,15 @@ const Home = () => {
           lovely space rock called Earth.
         </p>
         <p>
-          These days, I&apos;m traveling around the world on an extended
-          honeymoon with my wife Courtney. And for a couple hours here and
-          there, I&apos;m learning Korean.
+          These days, I&apos;m looking for my next gig. I think I can offer the
+          most to early product-market fit startups working on language
+          learning, edtech, devtools, or AI. But I&apos;m open to anything with
+          an inspiring team and mission.
         </p>
         <p>
-          Until recently I was working with a friend on{" "}
+          Until recently I was traveling around the world on an extended
+          honeymoon with my wife Courtney (and trying to keep up on my Korean
+          learning). Before that I was working with a friend on{" "}
           <Link
             href="https://www.yaya.press/"
             target="_blank"
