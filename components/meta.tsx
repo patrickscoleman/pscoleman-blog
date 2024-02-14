@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 const MetaComponent = ({
-  title = "Patrick Coleman's Web Presence",
+  title = "Patrick Coleman",
   date,
   description = "Patrick Coleman's personal site and blog",
   previewImage = "/images/patrick.png",
