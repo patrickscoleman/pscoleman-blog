@@ -48,10 +48,8 @@ const Home = () => {
           >
             Yaya
           </Link>
-          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, a language
-          learning app wth infinite AI-generated reading content (that&apos;s
-          compelling <em>and</em> comprehensible). In the past, I was an early
-          leader at{" "}
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, an AI
+          language learning app. I was also an early leader at{" "}
           <Link
             href="https://replit.com/"
             target="_blank"
