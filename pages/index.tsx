@@ -32,10 +32,12 @@ const Home = () => {
           lovely space rock called Earth.
         </p>
         <p>
-          These days, I&apos;m looking for my next gig. I think I can offer the
-          most to early product-market fit startups working on language
-          learning, edtech, devtools, or AI. But I&apos;m open to anything with
-          an inspiring team and mission.
+          These days, I&apos;m looking for my next gig. I focus on startup
+          go-to-market (sales, marketing, growth, etc.) and operations
+          (management, finance, legal, HR, recruiting, etc.). I think I can
+          offer the most to early-/mid-stage foreign language learning startups.
+          But I&apos;m open to anything with an inspiring team and mission
+          (especially in edtech, devetools, or AI).
         </p>
         <p>
           Until recently I was traveling around the world on an extended
