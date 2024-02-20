@@ -34,15 +34,15 @@ export const MdxComponents = {
           className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
         ></Link>
       ) : (
-        <span className="inline-flex items-center my-0">
-          <Link
-            {...props}
-            className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></Link>
+        <Link
+          {...props}
+          className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {props.children}
           <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />
-        </span>
+        </Link>
       )}
     </>
   ),
