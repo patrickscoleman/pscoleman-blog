@@ -37,7 +37,7 @@ const Home = () => {
           (management, finance, legal, HR, recruiting, etc.). I think I can
           offer the most to early-/mid-stage foreign language learning startups.
           But I&apos;m open to anything with an inspiring team and mission
-          (especially in edtech, devetools, or AI).
+          (especially in edtech, devtools, or AI).
         </p>
         <p>
           Until recently I was traveling around the world on an extended
