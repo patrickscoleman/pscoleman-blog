@@ -32,10 +32,13 @@ const Home = () => {
           lovely space rock called Earth.
         </p>
         <p>
-          These days, I&apos;m looking for my next gig. I think I can offer the
-          most to early product-market fit startups working on language
-          learning, edtech, devtools, or AI. But I&apos;m open to anything with
-          an inspiring team and mission.
+          These days, I&apos;m looking for my next gig. I&apos;m a business
+          generalist, which means I focus on go-to-market (sales, marketing,
+          growth, etc.) and operations (management, finance, legal, HR,
+          recruiting, etc.), plus I code a little. I think I can offer the most
+          to early-/mid-stage startups working on language learning, devtools,
+          AI, or edtech. But I&apos;m open to anything with an inspiring team
+          and mission.
         </p>
         <p>
           Until recently I was traveling around the world on an extended
@@ -49,7 +52,7 @@ const Home = () => {
             Yaya
           </Link>
           <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, an AI
-          language learning app. I was also an early leader at{" "}
+          foreign language learning app. I was also an early leader at{" "}
           <Link
             href="https://replit.com/"
             target="_blank"
