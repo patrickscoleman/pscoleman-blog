@@ -5,7 +5,7 @@ import path from "path";
 const postsDirectory = path.join(process.cwd(), "pages", "posts");
 const postsListFile = "./data/postsList.json";
 // Posts data
-// { id, date, title, description? }
+// { id, date, title, description?, hidden? }
 
 export const getAllPosts = async () => {
   const fileNames = fs.readdirSync(postsDirectory);
@@ -18,19 +18,24 @@ export const getAllPosts = async () => {
     // Parse the post metadata section
     const matterResult = matter(fileContents);
 
-    return {
-      id,
-      ...matterResult.data,
-    };
+    // Hidden posts are not included in the list
+    return matterResult.data?.hidden === true
+      ? null
+      : {
+          id,
+          ...matterResult.data,
+        };
   });
 
-  const sortedData = allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  const sortedData = allPostsData
+    .filter((i) => i !== null)
+    .sort((a, b) => {
+      if (a.date < b.date) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
 
   fs.writeFileSync(postsListFile, JSON.stringify(sortedData, null, 2));
 };

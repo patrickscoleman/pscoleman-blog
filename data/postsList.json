@@ -4,62 +4,47 @@
     "title": "A Seven-month-long Honeymoon",
     "date": "2024-02-18",
     "description": "Courtney's and Patrick's postnuptial adventures in Asia, South America, and around the US of A.",
-    "previewImage": "/images/honeymoon/roadtrip.jpeg"
+    "previewImage": "/images/honeymoon/roadtrip.jpeg",
+    "hidden": false
   },
   {
     "id": "axolotl",
     "title": "Axolotl by Julio Cortázar",
     "date": "2023-04-13",
     "description": "Spanish-to-English translation of Axolotl, short story by Julio Cortázar (1956).",
-    "previewImage": "/images/posts/mara_axolotl.png"
-  },
-  {
-    "id": "genjo_koan",
-    "title": "Genjo Koan by Dogen",
-    "date": "2023-03-29",
-    "description": "Japanese-to-English translation of Dogen's Genjo Koan (1233).",
-    "previewImage": "/images/mara/mara_230329.jpeg"
+    "previewImage": "/images/posts/mara_axolotl.png",
+    "hidden": false
   },
   {
     "id": "what_am_i_up_to_2023",
     "title": "What am I up to in 2023?",
     "date": "2023-02-27",
     "description": "This year I'm getting married, learning to code, working on a language learning app, and traveling to Europe and Asia.",
-    "previewImage": "/images/mara/mara_230227.jpeg"
+    "previewImage": "/images/mara/mara_230227.jpeg",
+    "hidden": false
   },
   {
     "id": "relearning-to-code",
     "title": "On Relearning to Code as an Adult",
     "date": "2023-02-24",
     "description": "A first-person report from a 30-something (re)learning to code after years of false starts. Plus some of the things that helped me along the way.",
-    "previewImage": "/images/mara/mara_230224.jpg"
+    "previewImage": "/images/mara/mara_230224.jpg",
+    "hidden": false
   },
   {
     "id": "basho_haiku",
     "title": "Haiku by Basho",
     "date": "2023-02-13",
     "description": "Japanese-to-English translations of a handful of haiku by Matsuo Basho (1644-1694).",
-    "previewImage": "/images/mara/mara_230213.jpeg"
+    "previewImage": "/images/mara/mara_230213.jpeg",
+    "hidden": false
   },
   {
     "id": "ai-assistive-intuition",
     "title": "A.I. Assistive Intuition",
     "date": "2023-02-11",
     "description": "Some measured but sweeping generalizations on AI from a non-expert who's been having fun with some tools.",
-    "previewImage": "/images/posts/ai_spinach.jpeg"
-  },
-  {
-    "id": "second-thoughts",
-    "title": "Second Thoughts",
-    "date": "2023-02-07",
-    "description": "Patrick's second blog post, in which he revisits his first blog post and has some second thoughts.",
-    "previewImage": "/images/mara/mara_230207.jpeg"
-  },
-  {
-    "id": "first-thoughts",
-    "title": "First Thoughts",
-    "date": "2022-12-19",
-    "description": "Patrick's first blog post, in which he decides to write a blog.",
-    "previewImage": "/images/mara/mara_221219.jpeg"
+    "previewImage": "/images/posts/ai_spinach.jpeg",
+    "hidden": false
   }
 ]
