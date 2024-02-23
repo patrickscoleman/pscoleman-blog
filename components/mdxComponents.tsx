@@ -9,17 +9,21 @@ export const MdxComponents = {
     </>
   ),
   h2: (props) => {
-    const uriChildren = encodeURI(props.children);
+    const h2Text = props.children;
+    const h2ReplaceSpecialCharsWithDash = h2Text
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9]+/g, "-");
+    const uri = encodeURI(h2ReplaceSpecialCharsWithDash);
     return (
       <>
-        <a id={uriChildren}></a>
+        <a id={uri}></a>
         <div className="flex items-center -ml-8 mt-12">
-          <a href={`#${uriChildren}`} className="no-underline w-8">
+          <a href={`#${uri}`} className="no-underline w-8">
             <span className="text-lg my-0">
               <LinkIcon />
             </span>
           </a>
-          <a href={`#${uriChildren}`} className="no-underline hover:underline">
+          <a href={`#${uri}`} className="no-underline hover:underline">
             <h2 {...props} className="my-0"></h2>
           </a>
         </div>
