@@ -36,9 +36,9 @@ const Home = () => {
           generalist, which means I focus on go-to-market (sales, marketing,
           growth, etc.) and operations (management, finance, legal, HR,
           recruiting, etc.), plus I code a little. I think I can offer the most
-          to early-/mid-stage startups working on language learning, devtools,
-          AI, or edtech. But I&apos;m open to anything with an inspiring team
-          and mission.
+          to early-/mid-stage startups working on language learning, AI,
+          devtools, or edtech. But I&apos;m open to anything with an inspiring
+          team and mission.
         </p>
         <p>
           Until recently I was traveling around the world on an extended
