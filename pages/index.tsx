@@ -33,17 +33,20 @@ const Home = () => {
         </p>
         <p>
           These days, I&apos;m looking for my next gig. I&apos;m a business
-          generalist, which means I focus on go-to-market (sales, marketing,
-          growth, etc.) and operations (management, finance, legal, HR,
-          recruiting, etc.), plus I code a little. I think I can offer the most
-          to early-/mid-stage startups working on language learning, AI,
-          devtools, or edtech. But I&apos;m open to anything with an inspiring
-          team and mission.
+          generalist, which means I focus on go-to-market (sales and marketing),
+          growth (product), and operations (management, finance, legal, HR,
+          recruiting, etc.). Plus I code a little.
         </p>
         <p>
-          Until recently I was traveling around the world on an extended
-          honeymoon with my wife Courtney (and trying to keep up on my Korean
-          learning). Before that I was working with a friend on{" "}
+          I think I can offer the most to early-/mid-stage startups working on
+          AI, devtools, edtech or language learning. But I&apos;m open to
+          anything with an inspiring team and mission.
+        </p>
+        <p>
+          Until recently I was traveling around the world on an{" "}
+          <Link href="/posts/honeymoon">extended honeymoon</Link> with my wife
+          Courtney (and trying to keep up on my Korean learning). Before that I
+          was working with a friend on{" "}
           <Link
             href="https://www.yaya.press/"
             target="_blank"
@@ -52,7 +55,9 @@ const Home = () => {
             Yaya
           </Link>
           <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, an AI
-          foreign language learning app. I was also an early leader at{" "}
+          foreign language learning app (
+          <Link href="/posts/yaya">lessons learned</Link>). I was also an early
+          leader at{" "}
           <Link
             href="https://replit.com/"
             target="_blank"
