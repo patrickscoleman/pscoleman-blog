@@ -73,8 +73,10 @@ const Home = () => {
           >
             PeopleGrove
           </Link>
-          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />. Check out{" "}
-          <Link href="/about">my about page</Link> for more.
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />.
+        </p>
+        <p>
+          Check out <Link href="/about">my about page</Link> for more.
         </p>
       </section>
       <PostsList />
