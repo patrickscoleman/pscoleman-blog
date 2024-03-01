@@ -80,7 +80,7 @@ In truth, I was fantasizing about Yaya turning into a wildly successful business
 
 The first version of Yaya matched and interlaced text in two languages. It let you upload the text of a story, novel, or any content in another language plus text for the translation, and it would give you sentence by sentence mappings.
 
-David and another friend built the proof of concept as a weekend project using sentence embeddings, a matching algorithm, and a simple web interface. I started testing it with Murakami short stories in the Japanese original and English translation. It was a bit clunky and didn't always get the mapping right, but it was enough to get started. It was really interesting seeing the techniques of the different translators too.
+David and another friend built the proof of concept as a weekend project using sentence embeddings, a matching algorithm ([beam search](https://en.wikipedia.org/wiki/Beam_search)), and a simple web interface. I started testing it with Murakami short stories in the Japanese original and English translation. It was a bit clunky and didn't always get the mapping right, but it was enough to get started. It was really interesting seeing the techniques of the different translators too.
 
 I plugged away on updates to the web interface (on my own and in pair programming sessions with David), and he added more features like an option to use Google Translate instead of the uploaded translation and an ePub export, so you could read on an eReader or app. We took turns tweaking the matching algorithm and got improvements, but with neither of us having PhDs in this stuff, we were only able to get so far.
 
@@ -90,19 +90,19 @@ Before too long, we realized this wasn't going to be useful outside of a tiny an
 
 Next (for a short time), we pivoted to public domain classics that we could pre-upload in a variety of languages. The main issue here was that while we solved the problem of uploading content for the user, we didn't solve any of the other problems, namely that only a tiny audience (of mostly experts) wants to read classics in the original.
 
-At this point we'd kept working and improving the interface. We had a solid app for reading foreign language content, but alas, no good content.
+At this point we'd kept plugging away and improving the interface. We had a working app for reading foreign language content, but alas, no good content.
 
 **v0.3**
 
-So then we tried chatGPT-generated stories. I pushed back at first, because who wants to read the hallucinations of a soulless algorithm? Although the [Blake Lemoine](https://news.ycombinator.com/item?id=32198214) types may take issue with calling it “soulless”. That said, I quickly found that the AI-generated content was as good (or at least sufficiently good for learning) as a lot of the human-written bilingual graded readers out there. And it had something else going for it. Like the [library of babel](https://libraryofbabel.info/), it was infinite. And infinitely customizable.
+So then we tried chatGPT-generated stories. I pushed back at first, because who wants to read the hallucinations of a soulless algorithm? Although the [Blake Lemoine](https://news.ycombinator.com/item?id=32198214) types may take issue with calling it “soulless”. That said, I quickly found that the AI-generated content was as good (or at least sufficiently good for learning) as a lot of the human-written bilingual graded readers out there. And it had something else going for it. Like the [library of babel](https://libraryofbabel.info/), it was infinite. And infinitely customizable (read space operas with cats to your heart's content).
 
-At this point we had a "big" app that could do a lot of things, which made it a lot more complicated than it needed to be. David did a huge refactor and we cut nearly all the features
+At this point we had a "big" (i.e. bloated) app that could do a lot of things, which made it a lot more complicated than it needed to be. David did a huge refactor and we cut nearly all the features, except the core reader and AI content generation.
 
 **v0.4**
 
 From here on, we started getting the product in front of more users (who were not us) and making iterative improvements. We did a ton of "high tech" [prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering) to get better quality and variety. Some of the big feature additions were: [spaced-repetition](https://en.wikipedia.org/wiki/Spaced_repetition) vocabulary to include in generated content, flashcards, audio, and clickable definitions + grammar explanations for any word or phrase (also AI-generated). We also ironed out some kinks with poor performance in some languages (starting with AI-generated English content and then translating for those languages).
 
-We had a good product at this point, but we struggled to get people to use it, which after all, is what counts. More on this [below](#what-i-learned).
+By now we had built a good product, but we struggled to get people to use it, which after all, is what counts. More on this [below](#what-i-learned).
 
 ## How we built it
 
