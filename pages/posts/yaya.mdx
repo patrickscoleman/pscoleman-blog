@@ -76,7 +76,7 @@ In truth, I was fantasizing about Yaya turning into a wildly successful business
 
 ## Early iterations and missteps
 
-**v0.1**
+### v0.1
 
 The first version of Yaya matched and interlaced text in two languages. It let you upload the text of a story, novel, or any content in another language plus text for the translation, and it would give you sentence by sentence mappings.
 
@@ -86,19 +86,19 @@ I plugged away on updates to the web interface (on my own and in pair programmin
 
 Before too long, we realized this wasn't going to be useful outside of a tiny and committed audience. It was a ton of work to get or find DRM-free content with translations. Most readers of literature in other languages are already able to read original texts or will only need a tool like this for a short period of time as intermediate learners (unless maybe your job is writing/comparing translations, e.g. in classical or religious studies). And we wouldn't want to ask people to deal with (or build the interface to fix) an imperfect matching algorithm.
 
-**v0.2**
+### v0.2
 
 Next (for a short time), we pivoted to public domain classics that we could pre-upload in a variety of languages. The main issue here was that while we solved the problem of uploading content for the user, we didn't solve any of the other problems, namely that only a tiny audience (of mostly experts) wants to read classics in the original.
 
 At this point we'd kept plugging away and improving the interface. We had a working app for reading foreign language content, but alas, no good content.
 
-**v0.3**
+### v0.3
 
 So then we tried chatGPT-generated stories. I pushed back at first, because who wants to read the hallucinations of a soulless algorithm? Although the [Blake Lemoine](https://news.ycombinator.com/item?id=32198214) types may take issue with calling it “soulless”. That said, I quickly found that the AI-generated content was as good (or at least sufficiently good for learning) as a lot of the human-written bilingual graded readers out there. And it had something else going for it. Like the [library of babel](https://libraryofbabel.info/), it was infinite. And infinitely customizable (read space operas with cats to your heart's content).
 
 At this point we had a "big" (i.e. bloated) app that could do a lot of things, which made it a lot more complicated than it needed to be. David did a huge refactor and we cut nearly all the features, except the core reader and AI content generation.
 
-**v0.4**
+### v0.4
 
 From here on, we started getting the product in front of more users (who were not us) and making iterative improvements. We did a ton of "high tech" [prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering) to get better quality and variety. Some of the big feature additions were: [spaced-repetition](https://en.wikipedia.org/wiki/Spaced_repetition) vocabulary to include in generated content, flashcards, audio, and clickable definitions + grammar explanations for any word or phrase (also AI-generated). We also ironed out some kinks with poor performance in some languages (starting with AI-generated English content and then translating for those languages).
 
@@ -112,53 +112,53 @@ Here are the tools we used. Since I was a beginner and learning to code, I'll al
 
 We used [OpenAI's ChatGPT API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis) (GPT-3.5) to generate the reading content as well as the definitions/grammar explanations. We did a lot of prompt engineering to get consistently good output. We were curious about [tools for testing prompts](https://community.openai.com/t/tools-for-testing-prompts/305309) to improve stability and consistency but had other priorities at the time. The quality was generally solid in popular languages (English, Spanish, etc.) but trailed off in less common languages, putting out weird grammar patterns or even gibberish. We were eagerly awaiting access to the GPT-4 API.
 
-**Google Translate API**
+### Google Translate API
 
 We used the [Google Translate API](https://cloud.google.com/translate) to translate the generated content into other languages. It wasn't perfect, but it was good enough for language learning purposes. We were planning to pass in more context to improve the translation quality but also had other priorities. As I mentioned above, we also used Google Translate as a workaround for languages where ChatGPT was weak.
 
-**React**
+### React
 
-**NextJS**
+### NextJS
 
-**MUI**
+### MUI
 
-**TailwindCSS**
+### TailwindCSS
 
-**Vercel**
+### Vercel
 
-**Firebase**
+### Firebase
 
-**Google Domains**
+### Google Domains
 
-**Github**
+### Github
 
-**VSCode**
+### VSCode
 
 [VSCode](https://code.visualstudio.com/) is the code editor that most professional engineers use. It's solid and extensible. We used it too.
 
-**Mac Laptop**
+### Mac Laptop
 
 Switching to a [Mac laptop](https://www.apple.com/mac/) after years of running Linux on the desktop was a little bit of an adjustment (ergonomically and ideologically :P), but I got a lot faster at building (not just the coding, but the collaboration and other work too) when I did. There's a reason why so many developers use Macs. ([more on my stubbornness and eventual transition](/posts/relearning-to-code))
 
 Quick plug for [Rentangle](https://rectangleapp.com/) a nice little window manager for macOS. Definitely improved my quality of life.
 
-**iTerm**
+### iTerm
 
 [iTerm](https://iterm2.com/) is a great terminal emulator for macOS. The default app works fine, but iTerm just makes everything a bit more comfortable. I got a bit carried away with mostly unnecessary but fun customizations (like [ZSH](https://ohmyz.sh/) and [powerlevel10k](https://github.com/romkatv/powerlevel10k)). It took me back to the days of playing with [Compiz Fusion](https://www.youtube.com/watch?v=E4Fbk52Mk1w) in high school.
 
-**Figma**
+### Figma
 
 We didn't use it much, but for a handful of complicated page mockups and brainstorming, [Figma](https://www.figma.com/) was pretty essential. It's a great product design tool that scales up and down.
 
-**Google Docs**
+### Google Docs
 
 Perhaps surprisingly, I mostly used [Google Docs](https://www.google.com/docs/about/) to keep track of work, burning through new docs almost as fast as stickie notes. David used [Roam](https://roamresearch.com/) and other tools. I'm a big fan of [Asana](https://asana.com/) (and project management software generally - very curious about [Linear](https://linear.app/)) in a professional setting, but with just two people in pretty constant communication, we opted to keep it simple. Use the right tool for the job and all.
 
-**Tuple**
+### Tuple
 
 We used [Tuple](https://tuple.app/) for pair programming. It's seriously great.
 
-**WhatsApp**
+### WhatsApp
 
 And we used [WhatsApp](https://www.whatsapp.com/) to chat on and off asynchronously. You definitely don't need [Slack](https://slack.com/) for two people.
 
