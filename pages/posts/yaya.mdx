@@ -43,6 +43,7 @@ Note: This video captures Yaya largely as it was when I stopped working on it in
 - [Prologue](#prologue)
 - [Early iterations and missteps](#early-iterations-and-missteps)
 - [How we built it](#how-we-built-it)
+- [What I worked on](#what-i-worked-on)
 - [What I learned](#what-i-learned)
 - [What's next](#whats-next)
 
@@ -69,7 +70,7 @@ I have an early memory of learning the French colors sitting cross-legged on the
 
 First it was Spanish. I studied all through high school and college, picking up a minor in Spanish literature (talk to me about writers like Jorge Luis Borges or Roberto Bolaño anytime). Then in my middle-ish-not quite-late-twenties, I started learning Japanese and spent two months living in Tokyo just before COVID. My goal (recently accomplished) was to comfortably read a Haruki Murakami novel in Japanese. A few years ago, I started dating a Korean American (now married) and learning Korean too.
 
-Then in the fall of 2022 (well into my early thirties), I was cutting back on some consulting hours and thinking about a new project. I wanted to learn to code and still wanted to tackle that Murakami novel. David and I had a catch up call, and I shared an idea I'd been thinking of to interlace foreign texts with professional, i.e. human, translations (inspired by [Read Real Japanese](https://www.tofugu.com/reviews/read-real-japanese/) and similar books).
+Then in the fall of 2022 (well into my early thirties), I was cutting back on some consulting hours and thinking about a new project. I wanted to learn to code (my background is on the business side of startups) and still wanted to tackle that Murakami novel. David and I had a catch up call, and I shared an idea I'd been thinking of to interlace foreign texts with professional, i.e. human, translations (inspired by [Read Real Japanese](https://www.tofugu.com/reviews/read-real-japanese/) and similar books).
 
 It turns out David had been using Harry Potter to learn Chinese with his wife before bedtime and had already built a simple prototype using Google Translate for the translations. I asked David to teach me how to code, and in the first few days of 2023 we started working on Yaya together.
 
@@ -77,15 +78,58 @@ In truth, I was fantasizing about Yaya turning into a wildly successful business
 
 ## Early iterations and missteps
 
-[coming soon]
+The goal for the first version
+
+We both wanted interlinear/sentence by sentence translations (e.g. a sentence in Spanish immediately followed by a skimmable English translation to check for comprehension). It lets you read fast. And we were unhappy with existing implementations of the idea.
+
+David and another friend first built a proof of concept/product for advanced learners to read contemporary fiction in other languages. I liked it and used it for a while to read Haruki Murakami in Japanese, but it was quite niche and hard to use.
+
+Next we experimented with public domain classics that we could pre-upload in a variety of languages. There were a few issues: too much content, old/difficult language, classic literature in the original is even more niche.
+
+We had a solid interface to read foreign language content, but alas, no good content. So we tried chatGPT generated stories. I pushed back at first, because who wants to read the hallucinations of a soulless algorithm? (Blake Lemoine may take issue with “soulless”.) But I quickly found that it was actually better than a lot of the human-written bilingual content I’d read while learning Spanish and Japanese. And, like the library of babel, it was infinite.
+
+https://news.ycombinator.com/item?id=32198214
+
+https://libraryofbabel.info/
+
+In Spanish, I can read literature (so testing all the levels). Western languages are much better right now. Korean is good enough that I can study but sometimes it's kooky :confused: or way too hard :confounded:
+
+Chinese and Japanese perform a little better. And my partner has done a lot of testing with French, which is almost as good as Spanish (or English!). Unfortunately, there's a host of languages (most notably Arabic family languages other than Arabic, Indian subcontinent languages including Hindi, and Hebrew) that are pretty shaky with the ChatGPT3.5 API.
 
 ## How we built it
+
+[coming soon]
+
+## What I worked on
 
 [coming soon]
 
 ## What I learned
 
 [coming soon]
+
+Be clear on what you want
+
+Get something in front of real users faster
+The conventional wisdom is to ship faster and get feedback from real users, but I feel pretty good about our timeline. David and I were both juggling other work, life events (I got married!), learning (me) and teaching (David) how to code, and just having fun. Plus we’ve been using (and loving) the buggy unfinished versions of the app for our own studies this whole time.
+
+Killing your darlings
+
+AI art is still not quite there
+candy house - “stockblock”, generating stories with gpt
+We've been trying alternative ways of generating content, i.e. generating in English first then translating or generating with the source text and translation simultaneously. This has let us get something usable for the long tail languages, but as you're seeing, it's not perfect! ChatGPT4 is much better than 3.5 and we're excited to upgrade when we get API access. And very excited to see what's possible with 5 and beyond whenever that comes :rocket:
+
+People don’t understand yaya - the chat metaphor is already the default expectation for something to be “AI” - Courtney’s mom thought we wrote the stories -
+
+Overestimated my ability to learn to code quickly
+Business vs computer science = trust the self that got you to where you are
+Learn c++ in 10 years
+
+focused too much on reading
+most people want to speak and watch video
+https://sdkrashen.com/content/articles/krashen_sla.pdf (compelling input)
+duolingo is synonymous with language learning (people didn’t understand how our app was different from duolingo - which likely means we lost them before they generated multiple stories)
+have to make language learning (which is hard), easy and approachable to get people in the door
 
 ## What's next
 
