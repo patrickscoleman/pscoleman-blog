@@ -1,7 +1,7 @@
 ---
 title: "What I learned building an AI language learning app"
 date: "2024-03-01"
-description: "Reflections on building Yaya (using ChatGPT and NextJS) with my friend David Gaynor."
+description: "Reflections on building Yaya (using ChatGPT and NextJS) with my friend David Gaynor for a little over half a year."
 previewImage: "/images/mara/mara_230227.jpeg"
 hidden: true
 ---
@@ -17,7 +17,11 @@ import Image from "next/image";
   <time dateTime={date}>March 1st, 2024</time>
 </small>
 
-Here's a quick preview of the app (largely as it was when I stopped working on it in summer 2023):
+First off, what even is [Yaya](https://www.yaya.press/)?
+
+Yaya is a language learning app that I was building with my friend [David Gaynor](http://freedavid.co/) for the first half of 2023. It uses AI to generate reading content at an appropriate learning level in (almost) any language. We built it using OpenAI's ChatGPT and NextJS (more on that [below](#how-we-built-it)).
+
+So you can get a better idea of how it works, here's a short video overview of the app.
 
 <figure align="center">
   <iframe
@@ -33,7 +37,17 @@ Here's a quick preview of the app (largely as it was when I stopped working on i
   <figcaption>Quick preview of Yaya</figcaption>
 </figure>
 
-And here's a deeper dive into the app's features and some of our design decisions:
+Note: This video captures Yaya largely as it was when I stopped working on it in summer 2023. David's continued building since then and will be releasing a major update/overhaul in March 2024.
+
+**目次**
+
+- [Prologue](#prologue)
+- [Early iterations and missteps](#early-iterations-and-missteps)
+- [How we built it](#how-we-built-it)
+- [What I learned](#what-i-learned)
+- [What's next](#whats-next)
+
+If you'd like to go a little deeper, just keep reading, [try it out yourself](https://www.yaya.press/generate_doc), or watch this 11-minute deep dive video.
 
 <figure align="center">
   <iframe
@@ -48,6 +62,40 @@ And here's a deeper dive into the app's features and some of our design decision
   ></iframe>
   <figcaption>Deep dive into Yaya</figcaption>
 </figure>
+
+## Prologue
+
+The seeds for Yaya were planted a long time ago. Let's briefly go back to the beginning.
+
+I have an early memory of learning the French colors sitting cross-legged on the floor of a classroom way back in the mid 90s. But my interest didn't really take off until an "introduction to foreign languages" class in middle school in the early aughts.
+
+First it was Spanish. I studied all through high school and college, picking up a minor in Spanish literature (talk to me about writers like Jorge Luis Borges or Roberto Bolaño anytime). Then in my middle-ish-not quite-late-twenties, I started learning Japanese and spent two months living in Tokyo just before COVID. My goal (recently accomplished) was to comfortably read a Haruki Murakami novel in Japanese. A few years ago, I started dating a Korean American (now married) and learning Korean too.
+
+Then in the fall of 2022 (well into my early thirties), I was cutting back on some consulting hours and thinking about a new project. I wanted to learn to code and still wanted to tackle that Murakami novel. David and I had a catch up call, and I shared an idea I'd been thinking of to interlace foreign texts with professional, i.e. human, translations (inspired by [Read Real Japanese](https://www.tofugu.com/reviews/read-real-japanese/) and similar books).
+
+It turns out David had been using Harry Potter to learn Chinese with his wife before bedtime and had already built a simple prototype using Google Translate for the translations. I asked David to teach me how to code, and in the first few days of 2023 we started working on Yaya together.
+
+In truth, I was fantasizing about Yaya turning into a wildly successful business this whole time, while also telling myself it'd be fine if this was all just "educational."
+
+## Early iterations and missteps
+
+[coming soon]
+
+## How we built it
+
+[coming soon]
+
+## What I learned
+
+[coming soon]
+
+## What's next
+
+As for Yaya, David will keep working on it, using the features we built as a foundation. He's building an amazing tool for students and language tutors to use together and individually. Stay tuned for more.
+
+As for me, I'm looking for work again (startup go-to-market, growth, and ops). Last summer I chose to [travel around the world with my wife for seven months](/posts/honeymoon) before settling down again. This meant pausing professional work and drawing down savings. David wants to bootstrap Yaya. And right now I need a steady salary. As you may know, life in San Francisco is a little expensive. But I love it here, it's close to family, and I can't imagine living anywhere else. So I'm happy to let David run with Yaya, while I turn the page to the next chapter.
+
+All that said, I had too much fun hacking on this project. I'm sure I'll be buiding something from scratch again someday.
 
 export default ({ children }) => (
   <PostLayout
