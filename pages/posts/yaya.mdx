@@ -116,21 +116,51 @@ We used [OpenAI's ChatGPT API](https://openai.com/blog/introducing-chatgpt-and-w
 
 We used the [Google Translate API](https://cloud.google.com/translate) to translate the generated content into other languages. It wasn't perfect, but it was good enough for language learning purposes. We were planning to pass in more context to improve the translation quality but also had other priorities. As I mentioned above, we also used Google Translate as a workaround for languages where ChatGPT was weak.
 
+### Javascript
+
+It's pretty basic, but we wrote the app in [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript). If you're a total beginner and want to work on web apps, learn Javascript.
+
 ### React
 
-### NextJS
+We used [React](https://reactjs.org/) to build the front end. It's the most popular front end framework for a reason.
+
+[Svelte](https://svelte.dev/) and other hot frameworks look cool, and the nerd in me wants to try them out, but you better have a good reason if you're not gonna stick with the defaults, especially if you're working on a team. (and React still hasn't become [an old dinosaur](https://www.forbes.com/sites/duenablomstrom1/2018/11/30/nobody-gets-fired-for-buying-ibm-but-they-should/) yet)
 
 ### MUI
 
+We used [MUI](https://mui.com/) for the UI components (buttons, drop downs, menus, etc.). Pick a customizable and widely-used component library and save yourself a lot of time.
+
 ### TailwindCSS
+
+We used [TailwindCSS](https://tailwindcss.com/) for the CSS styles (colors, sizes, layout, etc.). It's a great way to get a good-looking and consistent app without needing to be a designer. [Utility classes](https://en.wikipedia.org/wiki/Tailwind_CSS) are just one way to do things, but I found it pretty easy and intuitive. It's worth spending time [customizing themes and colors](https://tailwindcss.com/docs/configuration) to make your life easier. Occasionally Tailwind didn't play nice with MUI (and vice versa)
+
+### NextJS
+
+[NextJS](https://nextjs.org/) is a great framework for building React web apps that comes with a lot of built-in features that make development much easier. It's also great for SEO and performance. It was created by Vercel, so works best when you deploy there (more below).
 
 ### Vercel
 
+We used [Vercel](https://vercel.com/) to host the app. It's a great platform for hosting NextJS apps (and other serverless apps). It's easy to use, has great performance (see [SSR/SSG](https://vercel.com/blog/nextjs-server-side-rendering-vs-static-generation) and [Edge](https://vercel.com/docs/edge-network/overview)), and is free for small projects. Deploying is as easy as pushing to Github (more below) and the [basic analytics](https://vercel.com/docs/analytics) are solid too.
+
 ### Firebase
+
+We used [Firebase](https://firebase.google.com/) for the back end, e.g. user authentication, serverless functions, and data storage in a NoSQL DB (among other things). It's a good complement for serverless apps. It was a bit of a learning curve for me, but it's pretty easy to work with the data in Javascript, the web GUI is convenient at times, and it's popular so there's a ton of [learning content](https://www.youtube.com/results?search_query=firebase) out there. David also had a lot of experience with it (and training junior developers on it) from other projects.
+
+For an open source alternative, I've heard good things about [Supabase](https://supabase.io/).
 
 ### Google Domains
 
+[This](https://domains.google/) is where we bought our domains. Google doesn't offer this service anymore, but there are tons of alternatives. It's a commodity, so don't overthink it.
+
+### Google Analytics
+
+[Google analytics](https://marketingplatform.google.com/about/analytics/) is probably the most popular web analytics tool (although I've used privacy-focused alternatives like [Plausible](https://plausible.io/) in the past as well). We used it to track traffic to the site/app and user activity. When you're using Firebase, it's good to stick in the Google ecosystem.
+
+If we were a little further along and had the budget, tools like [Amplitude](https://amplitude.com/) and [FullStory](https://www.fullstory.com/) would have been great for understanding user behavior and getting feedback. We did a lot of user testing and feedback collection manually.
+
 ### Github
+
+We used [Github](https://github.com/) for version control and as a code repository. I learned the basics of [git](https://www.w3schools.com/git/), some [best practices](https://gist.github.com/mattlewissf/9958704), how to do [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests), and some collaboration etiquette from David. Github is ubiquitous and great. It also has a really nice [integration with Vercel](https://vercel.com/docs/deployments/git/vercel-for-github). Seriously nice.
 
 ### VSCode
 
@@ -162,9 +192,17 @@ We used [Tuple](https://tuple.app/) for pair programming. It's seriously great.
 
 And we used [WhatsApp](https://www.whatsapp.com/) to chat on and off asynchronously. You definitely don't need [Slack](https://slack.com/) for two people.
 
+### AI Assistants
+
+And finally, I also used [ChatGPT](https://chat.openai.com/) as a "coding tutor." If you haven't already, try asking ChatGPT questions and pasting in code snippets to get help with tricky problems and debugging. It's not perfect, but often it saves a lot of time vs. Google searching for blogs or digging through docs or StackOverflow. [Copilot](https://github.com/features/copilot) is also great for getting tips without breaking flow.
+
+And if you're new, I can't say enough good stuff about [Replit's AI features](https://replit.com/ai) (dislaimer: I used to work there).
+
 ## What I worked on
 
 [coming soon]
+
+Observables ???
 
 ## What I learned
 
