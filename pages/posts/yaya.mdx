@@ -78,23 +78,33 @@ In truth, I was fantasizing about Yaya turning into a wildly successful business
 
 ## Early iterations and missteps
 
-The goal for the first version
+**v0.1**
 
-We both wanted interlinear/sentence by sentence translations (e.g. a sentence in Spanish immediately followed by a skimmable English translation to check for comprehension). It lets you read fast. And we were unhappy with existing implementations of the idea.
+The first version of Yaya matched and interlaced text in two languages. It let you upload the text of a story, novel, or any content in another language plus text for the translation, and it would give you sentence by sentence mappings.
 
-David and another friend first built a proof of concept/product for advanced learners to read contemporary fiction in other languages. I liked it and used it for a while to read Haruki Murakami in Japanese, but it was quite niche and hard to use.
+David and another friend built the proof of concept as a weekend project using sentence embeddings, a matching algorithm, and a simple web interface. I started testing it with Murakami short stories in the Japanese original and English translation. It was a bit clunky and didn't always get the mapping right, but it was enough to get started. It was really interesting seeing the techniques of the different translators too.
 
-Next we experimented with public domain classics that we could pre-upload in a variety of languages. There were a few issues: too much content, old/difficult language, classic literature in the original is even more niche.
+I plugged away on updates to the web interface (on my own and in pair programming sessions with David), and he added more features like an option to use Google Translate instead of the uploaded translation and an ePub export, so you could read on an eReader or app. We took turns tweaking the matching algorithm and got improvements, but with neither of us having PhDs in this stuff, we were only able to get so far.
 
-We had a solid interface to read foreign language content, but alas, no good content. So we tried chatGPT generated stories. I pushed back at first, because who wants to read the hallucinations of a soulless algorithm? (Blake Lemoine may take issue with “soulless”.) But I quickly found that it was actually better than a lot of the human-written bilingual content I’d read while learning Spanish and Japanese. And, like the library of babel, it was infinite.
+Before too long, we realized this wasn't going to be useful outside of a tiny and committed audience. It was a ton of work to get or find DRM-free content with translations. Most readers of literature in other languages are already able to read original texts or will only need a tool like this for a short period of time as intermediate learners (unless maybe your job is writing/comparing translations, e.g. in classical or religious studies). And we wouldn't want to ask people to deal with (or build the interface to fix) an imperfect matching algorithm.
 
-https://news.ycombinator.com/item?id=32198214
+**v0.2**
 
-https://libraryofbabel.info/
+Next (for a short time), we pivoted to public domain classics that we could pre-upload in a variety of languages. The main issue here was that while we solved the problem of uploading content for the user, we didn't solve any of the other problems, namely that only a tiny audience (of mostly experts) wants to read classics in the original.
 
-In Spanish, I can read literature (so testing all the levels). Western languages are much better right now. Korean is good enough that I can study but sometimes it's kooky :confused: or way too hard :confounded:
+At this point we'd kept working and improving the interface. We had a solid app for reading foreign language content, but alas, no good content.
 
-Chinese and Japanese perform a little better. And my partner has done a lot of testing with French, which is almost as good as Spanish (or English!). Unfortunately, there's a host of languages (most notably Arabic family languages other than Arabic, Indian subcontinent languages including Hindi, and Hebrew) that are pretty shaky with the ChatGPT3.5 API.
+**v0.3**
+
+So then we tried chatGPT-generated stories. I pushed back at first, because who wants to read the hallucinations of a soulless algorithm? Although the [Blake Lemoine](https://news.ycombinator.com/item?id=32198214) types may take issue with calling it “soulless”. That said, I quickly found that the AI-generated content was as good (or at least sufficiently good for learning) as a lot of the human-written bilingual graded readers out there. And it had something else going for it. Like the [library of babel](https://libraryofbabel.info/), it was infinite. And infinitely customizable.
+
+At this point we had a "big" app that could do a lot of things, which made it a lot more complicated than it needed to be. David did a huge refactor and we cut nearly all the features
+
+**v0.4**
+
+From here on, we started getting the product in front of more users (who were not us) and making iterative improvements. We did a ton of "high tech" [prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering) to get better quality and variety. Some of the big feature additions were: [spaced-repetition](https://en.wikipedia.org/wiki/Spaced_repetition) vocabulary to include in generated content, flashcards, audio, and clickable definitions + grammar explanations for any word or phrase (also AI-generated). We also ironed out some kinks with poor performance in some languages (starting with AI-generated English content and then translating for those languages).
+
+We had a good product at this point, but we struggled to get people to use it, which after all, is what counts. More on this [below](#what-i-learned).
 
 ## How we built it
 
