@@ -12,14 +12,16 @@ import Image from "next/image";
 # What I learned building an AI language learning app
 
 <small>
-  <time dateTime={date}>March 1st, 2024</time>
+  <time dateTime={date}>March 11th, 2024</time>
 </small>
 
 First off, what even is [Yaya](https://www.yaya.press/)?
 
-Yaya is a language learning app that I (a startup business guy) was building with my friend [David Gaynor](http://freedavid.co/) (an experienced engineer/founder) for the first half of 2023. It uses AI to generate reading content at an appropriate learning level in (almost) any language. We built it using OpenAI's ChatGPT and NextJS (more on that [below](#how-we-built-it)).
+Yaya is an AI foreign language learning app. Let me walk you through versions 1.0 and 2.0.
 
-So you can get a better idea of how it works, here's a short video overview of the app.
+**v1.0**: I, Patrick Coleman (a startup business guy), was building the first version of Yaya with my friend, [David Gaynor](http://freedavid.co/) (an experienced engineer/founder), during the first half of 2023. It used AI to generate reading content at an appropriate learning level in (almost) any language. We built it using OpenAI's ChatGPT and NextJS (more on that [below](#how-we-built-it)). This blog post is about that version.
+
+So you can get a better idea of how v1.0 worked, here's a short video overview of the app.
 
 <figure align="center">
   <iframe
@@ -31,10 +33,12 @@ So you can get a better idea of how it works, here's a short video overview of t
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowFullScreen
   ></iframe>
-  <figcaption>Quick preview of Yaya</figcaption>
+  <figcaption>Quick preview of Yaya circa summer 2023</figcaption>
 </figure>
 
-Note: This video captures Yaya largely as it was when I stopped working on it in summer 2023. David's continued building since then and will be releasing a major update/overhaul in March 2024.
+If you want to play around, [try Yaya v1.0 here](https://demo.yaya.press/). If you prefer video and want to see more, I also made an [11-minute deep dive video](https://www.youtube-nocookie.com/embed/rWw079aEzw8?si=XxL9aA6GuOsbQYs1) for Yaya v1.0.
+
+**v2.0**: I stepped away from Yaya last summer (to travel the world), but David's continued building Yaya since then. He just released a massive update. The new version focuses on students working with language tutors. It's got a ton of features for language learners and tutors to use together during sessions and individually to study or prep. [Check out Yaya v2.0](https://www.yaya.press/)!
 
 This post's another long one, so here's a quick table of contents. Go ahead and skip around.
 
@@ -48,34 +52,21 @@ This post's another long one, so here's a quick table of contents. Go ahead and 
 - [What I learned](#what-i-learned) (plus some advice for other founders, builders, dreamers)
 - [What's next](#whats-next) (for Yaya and me)
 
-If you'd like to go a little deeper, just keep reading, [try it out yourself](https://www.yaya.press/generate_doc), or watch this 11-minute deep dive video.
-
-<figure align="center">
-  <iframe
-    width={560}
-    height={315}
-    className="mx-auto border-none md:w-0 w-full"
-    src="https://www.youtube-nocookie.com/embed/rWw079aEzw8?si=XxL9aA6GuOsbQYs1"
-    title="YouTube video player: Yaya deep dive"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowFullScreen
-  ></iframe>
-  <figcaption>Deep dive into Yaya</figcaption>
-</figure>
+And lastly before diving in, I want to give a huge shoutout to David. He's been a great friend and mentor to me. I've learned so much from him, and we had a ton of fun building Yaya together. Even though I'm no longer involved on a day-to-day basis (and am currently looking for my next gig), I'm so excited to see where he takes Yaya next!
 
 ## Prologue
 
-The seeds for Yaya were planted a long time ago. Let's briefly go back to the beginning. ([or skip ahead](#early-iterations-and-missteps))
+The seeds for Yaya were planted a long time ago. Let's briefly go back to the very beginning. ([or skip ahead](#early-iterations-and-missteps))
 
 I have an early memory of learning the French colors sitting cross-legged on the floor of a classroom way back in the mid 90s. But my interest didn't really take off until an "introduction to foreign languages" class in middle school in the early aughts.
 
-First it was Spanish. I studied all through high school and college, picking up a minor in Spanish literature (talk to me about writers like Jorge Luis Borges or Roberto Bolaño anytime). Then in my middle-ish-not quite-late-twenties, I started learning Japanese and spent two months living in Tokyo just before COVID. My goal (recently accomplished) was to comfortably read a Haruki Murakami novel in Japanese. A few years ago, I started dating a Korean American (now married) and learning Korean too.
+First it was Spanish. I studied all through high school and college, picking up a minor in Spanish literature (talk to me about writers like Jorge Luis Borges or Roberto Bolaño anytime). Then in my middle-ish-not-quite-late-twenties, I started learning Japanese and spent two months living in Tokyo just before COVID. My goal (recently accomplished) was to comfortably read a Haruki Murakami novel in Japanese. A few years ago, I started dating a Korean American (now married) and learning Korean too.
 
 Then in the fall of 2022 (well into my early thirties), I was cutting back on some consulting hours and thinking about a new project. I wanted to learn to code and still wanted to tackle that Murakami novel. David and I had a catch up call, and I shared an idea I'd been thinking of to interlace foreign texts with professional, i.e. human, translations (inspired by [Read Real Japanese](https://www.tofugu.com/reviews/read-real-japanese/) and similar books).
 
 It turns out David had been using Harry Potter to learn Chinese with his wife before bedtime and had already built a simple prototype using Google Translate for the translations. I asked David to teach me how to code, and in the first few days of 2023 we started working on Yaya together.
 
-In truth, I was fantasizing about Yaya turning into a wildly successful business this whole time, while also telling myself it'd be fine if this was all just "educational."
+I was also fantasizing about Yaya turning into a wildly successful business, while telling myself (cautiously pessimistically) that it'd be fine if this was all just a good learning experience. Spoiler: We didn't get rich overnight, but we brought something new into the world and don't regret a thing.
 
 [^ to ToC](#toc)
 
@@ -85,7 +76,7 @@ In truth, I was fantasizing about Yaya turning into a wildly successful business
 
 The first version of Yaya matched and interlaced text in two languages. It let you upload the text of a story, novel, or any content in another language plus text for the translation, and it would give you sentence by sentence mappings.
 
-David and another friend built the proof of concept as a weekend project using sentence embeddings, a matching algorithm ([beam search](https://en.wikipedia.org/wiki/Beam_search)), and a simple web interface. I started testing it with Murakami short stories in the Japanese original and English translation. It was a bit clunky and didn't always get the mapping right, but it was enough to get started. It was really interesting seeing the techniques of the different translators too.
+David and another friend built the proof of concept as a weekend project using sentence embeddings, a matching algorithm ([beam search](https://en.wikipedia.org/wiki/Beam_search) with vector difference from the embeddings), and a simple web interface. I started testing it with Japanese short stories and English translations. It was a bit clunky and didn't always get the matching right, but it was enough to get started. It was really interesting seeing the techniques of different translators too.
 
 I plugged away on updates to the web interface (on my own and in pair programming sessions with David), and he added more features like an option to use Google Translate instead of the uploaded translation and an ePub export, so you could read on an eReader or app. We took turns tweaking the matching algorithm and got improvements, but with neither of us having PhDs in this stuff, we were only able to get so far.
 
@@ -113,93 +104,101 @@ By now we had built a good product, but we struggled to get people to use it, wh
 
 ## How we built it
 
-Here are the tools we used. Since I was a beginner and learning to code, I'll also mention some basic tools that experienced developers might take for granted.
+Here are the [key tools](#key-tools) we used. Since I was a beginner and learning to code, I'll also mention some [basic tools](#basic-tools) that experienced developers might take for granted.
 
-### ChatGPT API
+<a id="key-tools"></a>
+### Key Tools
+
+#### ChatGPT API
 
 We used [OpenAI's ChatGPT API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis) (GPT-3.5) to generate the reading content as well as the definitions/grammar explanations. We did a lot of prompt engineering to get consistently good output. We were curious about [tools for testing prompts](https://community.openai.com/t/tools-for-testing-prompts/305309) to improve stability and consistency but had other priorities at the time. The quality was generally solid in popular languages (English, Spanish, etc.) but trailed off in less common languages, putting out weird grammar patterns or even gibberish. We were eagerly awaiting access to the GPT-4 API.
 
-### Google Translate API
+#### Google Translate API
 
 We used the [Google Translate API](https://cloud.google.com/translate) to translate the generated content into other languages. It wasn't perfect, but it was good enough for language learning purposes. We were planning to pass in more context to improve the translation quality but also had other priorities. As I mentioned above, we also used Google Translate as a workaround for languages where ChatGPT was weak.
 
-### Javascript
-
-It's pretty basic, but we wrote the app in [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript). If you're a total beginner and want to work on web apps, learn Javascript.
-
-### React
-
-We used [React](https://reactjs.org/) to build the front end. It's the most popular front end framework for a reason.
-
-[Svelte](https://svelte.dev/) and other hot frameworks look cool, and the nerd in me wants to try them out, but you better have a good reason if you're not gonna stick with the defaults, especially if you're working on a team. (and React still hasn't become [an old dinosaur](https://www.forbes.com/sites/duenablomstrom1/2018/11/30/nobody-gets-fired-for-buying-ibm-but-they-should/) yet)
-
-### MUI
-
-We used [MUI](https://mui.com/) for the UI components (buttons, drop downs, menus, etc.). Pick a customizable and widely-used component library and save yourself a lot of time.
-
-### TailwindCSS
-
-We used [TailwindCSS](https://tailwindcss.com/) for the CSS styles (colors, sizes, layout, etc.). It's a great way to get a good-looking and consistent app without needing to be a designer. [Utility classes](https://en.wikipedia.org/wiki/Tailwind_CSS) are just one way to do things, but I found it pretty easy and intuitive. It's worth spending time [customizing themes and colors](https://tailwindcss.com/docs/configuration) to make your life easier. Occasionally Tailwind didn't play nice with MUI (and vice versa) but it was mostly smooth sailing.
-
-### NextJS
+#### NextJS
 
 [NextJS](https://nextjs.org/) is a great framework for building React web apps that comes with a lot of built-in features that make development much easier. It's also great for SEO and performance (see [SSR/SSG](https://vercel.com/blog/nextjs-server-side-rendering-vs-static-generation), etc.). It was created by Vercel, so works best when you deploy there (more below).
 
-### Vercel
+#### Vercel
 
 We used [Vercel](https://vercel.com/) to host the app. It's a great platform for hosting NextJS apps (and other serverless apps). It's easy to use, has great performance (see their [Edge Network](https://vercel.com/docs/edge-network/overview), etc.), and is free for small projects. Deploying is as easy as pushing to Github (more below) and the [basic analytics](https://vercel.com/docs/analytics) are solid too.
 
-### Firebase
+#### Firebase
 
 We used [Firebase](https://firebase.google.com/) for the back end, e.g. user authentication, serverless functions, and data storage in a NoSQL DB (among other things). It's a good complement for serverless apps. It was a bit of a learning curve for me, but it's pretty easy to work with the data in Javascript, the web GUI is convenient at times, and it's popular so there's a ton of [learning content](https://www.youtube.com/results?search_query=firebase) out there. David also had a lot of experience with it (and training junior developers on it) from other projects.
 
 For an open source alternative, I've heard good things about [Supabase](https://supabase.io/).
 
-### Google Domains
+<a id="basic-tools"></a>
+### Basic Tools
+
+([skip to the next section](#what-i-worked-on) if you're already familiar with the basics)
+
+#### Javascript
+
+It's pretty basic, but we wrote the app in [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript). If you're a total beginner and want to work on web apps, learn Javascript.
+
+#### React
+
+We used [React](https://reactjs.org/) to build the front end. It's the most popular front end framework for a reason.
+
+[Svelte](https://svelte.dev/) and other hot frameworks look cool, and the nerd in me wants to try them out, but you better have a good reason if you're not gonna stick with the defaults, especially if you're working on a team. (and React still hasn't become [an old dinosaur](https://www.forbes.com/sites/duenablomstrom1/2018/11/30/nobody-gets-fired-for-buying-ibm-but-they-should/) yet)
+
+#### MUI
+
+We used [MUI](https://mui.com/) for the UI components (buttons, drop downs, menus, etc.). Pick a customizable and widely-used component library and save yourself a lot of time.
+
+#### TailwindCSS
+
+We used [TailwindCSS](https://tailwindcss.com/) for the CSS styles (colors, sizes, layout, etc.). It's a great way to get a good-looking and consistent app without needing to be a designer. [Utility classes](https://en.wikipedia.org/wiki/Tailwind_CSS) are just one way to do things, but I found it pretty easy and intuitive. It's worth spending time [customizing themes and colors](https://tailwindcss.com/docs/configuration) to make your life easier. Occasionally Tailwind didn't play nice with MUI (and vice versa) but it was mostly smooth sailing.
+
+#### Google Domains
 
 [This](https://domains.google/) is where we bought our domains. Google doesn't offer this service anymore, but there are tons of alternatives. It's a commodity, so don't overthink it.
 
-### Google Analytics
+#### Google Analytics
 
 [Google analytics](https://marketingplatform.google.com/about/analytics/) is probably the most popular web analytics tool (although I've used privacy-focused alternatives like [Plausible](https://plausible.io/) in the past as well). We used it to track traffic to the site/app and user activity. When you're using Firebase, it's good to stick in the Google ecosystem.
 
 If we were a little further along and had the budget, tools like [Amplitude](https://amplitude.com/) and [FullStory](https://www.fullstory.com/) would have been great for understanding user behavior and getting feedback. We did a lot of user testing and feedback collection manually.
 
-### Github
+#### Github
 
 We used [Github](https://github.com/) for version control and as a code repository. I learned the basics of [git](https://www.w3schools.com/git/), some [best practices](https://gist.github.com/mattlewissf/9958704), how to do [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests), and some collaboration etiquette from David. Github is ubiquitous and great. It also has a really nice [integration with Vercel](https://vercel.com/docs/deployments/git/vercel-for-github). Seriously nice.
 
-### VSCode
+#### VSCode
 
 [VSCode](https://code.visualstudio.com/) is the code editor that most professional engineers use. It's solid and extensible. We used it too.
 
-### Mac Laptop
+#### Mac Laptop
 
 Switching to a [Mac laptop](https://www.apple.com/mac/) after years of running Linux on the desktop was a little bit of an adjustment (ergonomically and ideologically :P), but I got a lot faster at building (not just the coding, but the collaboration and other work too) when I did. There's a reason why so many developers use Macs. ([more on my stubbornness and eventual transition](/posts/relearning-to-code))
 
 Quick plug for [Rectangle](https://rectangleapp.com/) a nice little window manager for macOS. Definitely improved my quality of life.
 
-### iTerm
+#### iTerm
 
-[iTerm](https://iterm2.com/) is a great terminal emulator for macOS. The default app works fine, but iTerm just makes everything a bit more comfortable. I got a bit carried away with mostly unnecessary but fun customizations (like [ZSH](https://ohmyz.sh/) and [powerlevel10k](https://github.com/romkatv/powerlevel10k)). It took me back to the days of playing with [Compiz Fusion](https://www.youtube.com/watch?v=E4Fbk52Mk1w) in high school.
+[iTerm](https://iterm2.com/) is a great terminal emulator for macOS. The default app works fine, but iTerm just makes everything a bit more comfortable. I got a bit carried away with mostly unnecessary but fun customizations (like [ZSH](https://ohmyz.sh/) and [powerlevel10k](https://github.com/romkatv/powerlevel10k)). It took me back to the days of playing with my linux config and [Compiz Fusion](https://www.youtube.com/watch?v=E4Fbk52Mk1w) in high school.
 
-### Figma
+#### Figma
 
 We didn't use it much, but for a handful of complicated page mockups and brainstorming, [Figma](https://www.figma.com/) was pretty essential. It's a great product design tool that scales up and down.
 
-### Google Docs
+#### Google Docs
 
 Perhaps surprisingly, I mostly used [Google Docs](https://www.google.com/docs/about/) to keep track of work, burning through new docs almost as fast as stickie notes. David used [Roam](https://roamresearch.com/) and other tools. I'm a big fan of [Asana](https://asana.com/) (and project management software generally - very curious about [Linear](https://linear.app/)) in a professional setting, but with just two people in pretty constant communication, we opted to keep it simple. Use the right tool for the job and all.
 
-### Tuple
+#### Tuple
 
 We used [Tuple](https://tuple.app/) for pair programming. It's seriously great.
 
-### WhatsApp
+#### WhatsApp
 
 And we used [WhatsApp](https://www.whatsapp.com/) to chat on and off asynchronously. You definitely don't need [Slack](https://slack.com/) for two people.
 
-### AI Assistants
+#### AI Assistants
 
 And finally, I also used [ChatGPT](https://chat.openai.com/) as a "coding tutor." If you haven't already, try asking ChatGPT questions and pasting in code snippets to get help with tricky problems and debugging. It's not perfect, but often it saves a lot of time vs. Google searching for blogs or digging through docs or StackOverflow. [Copilot](https://github.com/features/copilot) is also great for getting tips without breaking flow. Of course, these are both far from perfect, and you'll still run into lots of bugs when coding...
 
@@ -209,19 +208,19 @@ And if you're new, I can't say enough good stuff about [Replit's AI features](ht
 
 ## What I worked on
 
-Since this was my first time coding anything substantial (I'd taken a fair amount of computer science classes in school, wrote some VBA macros for Excel and PowerPoint early in my career, fixed some website typos directly in Github, and created some marketing content in my startup life), needless to say, I leaned on David a lot. He got the initial app built and hosted, and I worked in his codebase/system. That in itself was some great learning.
+Since this was my first time coding anything substantial (I'd taken a fair amount of computer science classes in school, wrote some VBA macros for Excel and PowerPoint early in my career, fixed some website typos (directly in text fields in Github, which felt like [flying blind](https://www.youtube.com/watch?v=89AaqbrqcHI)), and created some devtools marketing content in my startup life), needless to say, I leaned on David a lot. He got the initial app built and hosted, and I worked in his codebase/system. That in itself was some great learning.
 
-At the start, I did frontend work (building out the UI and adding features) and some data/algorithm manipulation. Firebase was tricky at times and [RXJS Observables](https://rxjs.dev/guide/observable) consistently confounded me, but I kept plugging away with David's (and ChatGPT's) help.
+At the start, I did frontend work (building out the UI and adding features) and some data/algorithm manipulation. It was seriously fun banging my head against the beam search algorithm. Firebase was tricky at times and [RXJS Observables](https://rxjs.dev/guide/observable) consistently confounded me, but I kept plugging away with David's (and ChatGPT's) help.
 
 As things progressed, I got a bit more comfortable. I kept working on the frontend and got more confident on my own. From time to time, I'd also work with the data, but as we started getting a few users and wanted things to stay stable, this was mostly just in pair sessions with David. I also spent an inordinate amount of time on prompt engineering and testing.
 
-And in the midst of all of this I got married :)
+And in the midst of all of this I got married and decided to take some time off to travel the world :)
 
-The big feature that I worked on before wrapping up work and leaving on my honeymoon was adding audio to the app. It was challenging and David had to do a pretty big refactor (haha), but it felt good shipping a tangible and meaningful feature.
+The big feature that I worked on before wrapping up work and leaving on a long honeymoon was adding audio to the app. It was challenging and David had to do a pretty big refactor (haha), but it felt good shipping a tangible and meaningful feature.
 
-Of course I also did various non-engineering work on building Yaya, like design, user interviews, copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage (more below).
+Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends and family), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more below](#what-i-learned)).
 
-In the end, I asked and David said he'd hire me as a junior engineer, which felt good and validated the effort. But it was all a lot of fun too! That said I'm still passionate about the business stuff too and think that's where I'll focus for the time being.
+In the end, I asked how much software engineering I'd really learned. David said he'd hire me as a junior engineer, which felt good and validated the effort. That said I'm still passionate about the business stuff too and think that's where I'll focus for the time being. Hopefully I'll find something that marries these interests.
 
 ## What I learned
 
@@ -308,11 +307,13 @@ this certainly applies to startups and to language learning
 
 ## What's next
 
-As for Yaya, David will keep working on it, using the features we built as a foundation. He's building an amazing tool for students and language tutors to use together and individually. Stay tuned for more.
+As for [Yaya](https://yaya.press/), David will keep working on it, using the features we built as a foundation. I'm excited to see it grow and evolve. I'll be using it to study Korean, and I hope you'll give it a try too!
 
-As for me, I'm looking for work again (startup go-to-market, growth, and ops). Last summer I chose to [travel around the world with my wife for seven months](/posts/honeymoon) before settling down again. This meant pausing professional work and drawing down savings. David wants to bootstrap Yaya. And right now I need a steady salary. As you may know, life in San Francisco is a little expensive. But I love it here, it's close to family, and I can't imagine living anywhere else. So I'm happy to let David run with Yaya, while I turn the page to the next chapter.
+As for me (and as I mentioned above), I'm looking for work again (startup go-to-market, growth, and ops). Last summer I chose to [travel around the world](/posts/honeymoon) for seven months with my wife before settling down again. This meant pausing professional work and drawing down savings. David wants to bootstrap Yaya. And right now I need a steady salary. As you may know, life in San Francisco is a little expensive. But I love it here, it's close to family, and I can't imagine living anywhere else. So I'm happy to let David run with Yaya, while I turn the page to the next chapter.
 
 All that said, I had too much fun hacking on this project. I'm sure I'll be buiding something from scratch again someday.
+
+Thank you so much for reading!
 
 [^ to ToC](#toc)
 
