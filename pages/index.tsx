@@ -39,8 +39,8 @@ const Home = () => {
         </p>
         <p>
           I think I can offer the most to early-/mid-stage startups working on
-          AI, devtools, edtech or language learning. But I&apos;m open to
-          anything with an inspiring team and mission.
+          AI, edtech or dev tools. But I&apos;m open to anything with an
+          inspiring team and mission.
         </p>
         <p>
           Until recently I was traveling around the world on an{" "}
