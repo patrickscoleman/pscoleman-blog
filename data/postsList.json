@@ -1,13 +1,5 @@
 [
   {
-    "id": "yaya",
-    "title": "What I learned building an AI language learning app",
-    "date": "2024-03-01",
-    "description": "Reflections on building Yaya (using ChatGPT and NextJS) with my friend David Gaynor for a little over half a year.",
-    "previewImage": "/images/posts/yaya-preview.png",
-    "hidden": false
-  },
-  {
     "id": "honeymoon",
     "title": "A Seven-month-long Honeymoon",
     "date": "2024-02-18",
