@@ -47,11 +47,11 @@ This post's another long one, so here's a quick table of contents. Go ahead and 
 <a id="toc"></a>
 **目次**
 
-- [Prologue](#prologue) (my personal backstory)
+- [Prologue](#prologue) (my skippable personal backstory)
+- [What I learned](#what-i-learned) (plus some advice for other software builders)
 - [Early iterations and missteps](#early-iterations-and-missteps) (the past lives of Yaya)
 - [How we built it](#how-we-built-it) (the software and tools we used)
 - [What I worked on](#what-i-worked-on) (my share of the contributions)
-- [What I learned](#what-i-learned) (plus some advice for other software builders)
 - [What's next](#whats-next) (for Yaya and me)
 
 And lastly before diving in, I want to give a huge thanks to David. He's been a great friend and mentor to me. I've learned so much from him, and we had a ton of fun building Yaya together. Even though I'm no longer involved on a day-to-day basis (and am currently looking for my next gig), I'm so excited to see where he takes Yaya next!
@@ -73,6 +73,135 @@ Then finally in the fall of 2022 (well into my early thirties), I was cutting ba
 It turns out David had been using Harry Potter to learn Chinese with his wife before bedtime and had already built a simple prototype using Google Translate for the translations. I asked David to teach me how to code, and in the first few days of 2023 we started working on Yaya together.
 
 I was fantasizing about Yaya turning into a wildly successful business, while also telling myself that it'd be fine if this was all just a good learning experience. Spoiler: We didn't get rich overnight. But we did bring something new into the world. I don't regret a thing.
+
+[^ to ToC](#toc)
+
+## What I learned
+
+I learned a lot building Yaya. I got a lot right and a lot wrong. I'm writing all this down to get some clarity for myself, but I'm sharing it in the hopes that it will help others working on software startups (or just software projects) too.
+
+### Be clear on what you want
+
+I spent a lot of time wanting Yaya to be a high-growth venture-backable business that I could work on full-time while living comfortably in San Francisco. I also really wanted to do (a meaningful portion of) the coding myself in order to learn. And I wanted to build a niche language-learning product that I would love to use myself. Sometimes these goals were at odds with each other. And Yaya went through a few incarnations (pivots if you will) while my wants evolved.
+
+If I'd been a little clearer with myself and with David about what it was I wanted, I would have made some different decisions, perhaps skipping the incorporation and not worrying too much about the name or business model potential. But hindsight is 20/20, as they say, and I can't imagine walking any straight-line path to get to where I am today. I learned a lot and had a lot of fun.
+
+### Get something in front of real users ASAP
+
+We spent weeks and months building features and tweaking the product before getting it in front of real users. Then when we finally started asking people to try Yaya, we watched as the initial excitement morphed into confusion or polite disinterest. Of course, we listened to all the feedback and kept iterating and going back for more feedback. And while we did get a small number of repeat users, we struggled to get the audience we really wanted with Yaya v1.0.
+
+This is a bit downstream of being clear on what you want. If you want to build a venture-backable business, you need to get something in front of real users as soon as you have a [minimum viable product (MVP)](https://theleanstartup.com/) (or even just a landing page + waitlist) and you need to [build something people want](https://www.ycombinator.com/library/4D-yc-s-essential-startup-advice). If you're building a niche product for yourself and others like you, you can take your time and lean heavily on your own preferences. And if you're doing something in the middle, like a bootstrapped business for supplemental income, find the right balance. It's always helpful though to get outside feedback early.
+
+While the conventional wisdom is to ship fast fast fast, I still feel ok about our timeline. David and I were both juggling other work (more for him than me), life events (I got married!), learning (me) and teaching (David), and just having fun. Plus we were using Yaya for our own language learning the whole time.
+
+### Give your users what they want
+
+I want to draw on [Clay Christensen's famous business advice](https://hbswk.hbs.edu/item/clay-christensens-milkshake-marketing) here. When people decide to use a product, in a sense, they're "hiring" it because they have a "job to be done." He tells a story of a fast-food restaurant that noticed people were buying milkshakes in the morning. After some research they found that people were "hiring" the milkshake as a snack on their long commutes. So they made the milkshake thicker to last longer. People loved it.
+
+So what was Yaya's "job-to-be-done"?
+
+On a certain level, it was obvious: "to learn a foreign language." But there are a lot of options out there to learn a language, from apps like [Duolingo](https://www.duolingo.com/) to private tutors on sites like [Preply](https://preply.com/) or [italki](https://www.italki.com/) to immersive programs like the [Middlebury Language Schools](https://www.middlebury.edu/language-schools). And the big players claim to do it all. So we'd have to be different.
+
+(Note: People are not just trying to learn a language. They're also trying to stay motivated while they learn. Check out [this great blogpost](https://www.reachcapital.com/2023/06/15/product-lessons-from-duolingos-former-chief-product-officer-jorge-mazal/) from the former CPO at Duolingo on jobs-to-be-done.)
+
+As a **small** team (just two people, one of whom had never coded anything substantial before), we knew we had to focus. And as longtime language learners ourselves, we knew that do-it-all solutions typically sound better than they actually are. The reality is that most language learners who reach proficiency or fluency actually use a lot of different tools and combine them in creative ways. So for Yaya v1.0 we decided to build a single tool that would fit into learners' toolbelts (like some of these [other](https://apps.ankiweb.net/) [great](https://www.satorireader.com/) [tools](https://www.wanikani.com/)).
+
+[Comprehensible input](https://en.wikipedia.org/wiki/Input_hypothesis) (content in your target language that's just barely above your current level) is the fastest way to learn a language, and ["compelling input"](https://sdkrashen.com/content/articles/krashen_sla.pdf) (content that's so good you forget you're consuming it in another language) is the best way to stay motivated. Hat tip to [Arun Prasad](https://learnsanskrit.org/) for the previous link.
+
+There's a lot of comprehensible and compelling content out there from books to TV, movies, music, and games, but we decided to take a stab at making reading great foreign language content easier. We figured we could do better (or at least more engaging) than the many [graded readers](https://en.wikipedia.org/wiki/Graded_reader) out there. And we decided to offer it in any language, so we could reach as many people as possible.
+
+Even though Yaya v1.0 didn't take off, I still think this was a solid focus for the first version of the product.
+
+In summary: give your users thick milkshakes 🥛🍦
+
+### Understand your users' "priors"
+
+bayesian priors
+focused too much on reading
+most people want to speak and watch video
+[Krashen thing](https://sdkrashen.com/content/articles/krashen_sla.pdf) (compelling input)
+i've been leaning more towards immersion learning and speaking practice recently and avoiding translation to/from English
+based on the [fluent forever](https://fluent-forever.com/book) method
+
+Yaya was also too hard for beginners
+
+This also gets back to being clear on what you want. You should always think about the new user experience, but niche products (or products for experts/professionals) can offer a more challenging experience. If you want to reach a large audience, you need to make things easy, begginer-friendly and approachable.
+
+People don’t understand yaya - the chat metaphor is already the default expectation for something to be “AI” - Courtney’s mom thought we wrote the stories -
+bayesian priors
+
+duolingo is synonymous with language learning (people didn’t understand how our app was different from duolingo - which likely means we lost them before they generated multiple stories)
+have to make language learning (which is hard), easy and approachable to get people in the door
+
+duolingo blog post from reach - product is providing entire learning experience
+
+### Be better than your substitutes
+
+Gotta be better than general purpose tools like just using ChatGPT. They will always have more money and resources
+
+<a id="prioritize"></a>
+### Ruthlessly prioritize your time
+
+This is the about page that I rewrote about a thousand times. The only people that cared were my parents (and in-laws). If it's not obvious from this blog, I like to write. So if you're like me, fight that impulse. If you build something people love, you'll get a chance to tell your story. Focus first on building a rock solid onboarding journey and making those first users keep coming back.
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya-about.png"
+    className="mx-auto"
+    alt="Yaya about page"
+    width={500}
+    height={500}
+  />
+  <figcaption>Yaya's about page (draft one thousand and one)</figcaption>
+</figure>
+
+And here are some of the other things I spent too much time on: generating and regenerating images on midjourney (especially useless when it's for a [404 page](https://www.yaya.press/error) nobody will see); changing the company name a few times (although to be fair the first name was the near unpronounceable "yayayomu"); buying domain names for the different company names; tweaking and retweaking the visual and logo designs; etc.; etc.
+
+In short: Focus on what's life or death for your startup (or project). In the very beginning, that's 100% product.
+
+<a id="darlings"></a>
+### Move fast and kill your darlings
+
+The most important thing when building a new software product is to **move fast**. This is especially true if you're smaller than your competition. I learned this time and again at [Replit](https://replit.com/) and [PeopleGrove](https://www.peoplegrove.com/). So think about what's critically important for your users, build that and only that, ship it, and get feedback. If it doesn't work, kill it. If it does, improve it and/or move on.
+
+(Note: Of course this doesn't apply when lives or safety are on the line. Then you should absolutely measure twice (or more) before you cut. More generally, if a decision is reversible, move fast, if not, move slow.)
+
+You won't always build the right thing. And you can't always know if people will want something until you've built it. That's why it's important to move fast. If you get it right, amazing! But if you fail fast, you can pick yourself right back up again and make changes. On the other hand, if you fail slow, you've lost a lot of time and it's much tougher emotionally to move on.
+
+One "fail" for us was building the complex feature to match foreign language text to existing translations. I had a high tolerance for this difficult-to-use feature because it was "my" thing and I was using it daily to study. But it became obvious quickly that we would never get many people using it. We had to kill our darling.
+
+Admittedly David got there a little bit faster than I did, and I argued to find away to keep this feature in new versions of the product. But it just didn't make sense. After recognizing this, we made a decision to delete the old code and move on within a week. I think this is one of the things we actually did well.
+
+Corollary for further along the startup road: [give away your legos](https://review.firstround.com/give-away-your-legos-and-other-commandments-for-scaling-startups/).
+
+### AI "art" is not quite there yet
+
+candy house - “stockblock”, generating stories with gpt
+We've been trying alternative ways of generating content, i.e. generating in English first then translating or generating with the source text and translation simultaneously. This has let us get something usable for the long tail languages, but as you're seeing, it's not perfect! ChatGPT4 is much better than 3.5 and we're excited to upgrade when we get API access. And very excited to see what's possible with 5 and beyond whenever that comes :rocket:
+
+### Know your limits (patience please)
+
+If you spend any time in Silicon Valley circles, you'll hear a lot about "hypergrowth" and moving fast ([see above even](#darlings) :P). You'll see people achieve astronomical financial success in a short amount of time (and sometimes lose it just as fast). While moving fast is great practical advice for building a certain type of business (but definitely not all types), some things just take time.
+
+Learning is one of these things. This is not [the Matrix](https://www.youtube.com/watch?v=OrzgxUhnYjY). The human brain and body take time to acquire new skills. And even with these wonderful new AI tools, we're still limited by our biology. In tech, you'll often hear the phrase: "humans grow linearly, companies grow exponentially" (source: [Khalid Halim](https://review.firstround.com/hypergrowth-and-the-law-of-startup-physics/)).
+
+At some level, I internalized the learn-to-code-in-X-time rhetoric and the techie-exceptionalism, and I figured that within a few months I'd be able to code a fully-featured and compelling product entirely on my own. I was wrong. It takes a lot of time and hard work to learn to code.
+
+After all people dedicate their lives and careers to this thing. Why not [learn programming in 10 years](https://norvig.com/21-days.html) instead? Why not [get to the bottom of things](https://www-cs-faculty.stanford.edu/~knuth/email.html) instead of trying to stay on top of everything?
+
+But I wasn't completely wrong though. _In collaboration_ with a partner, I _was_ able to build something meaningful. And I did get better and better every day every day that I sat down and wrote code and debugged.
+
+(Note to beginners: Don't let all that discourage you from getting started. The payoff is great and the journey is fun. Plus there's more help available than ever. One option is [freeCodeCamp](https://www.freecodecamp.org/). It's got great learning resources and a great community. Stick to it but have patience!)
+
+### Have fun
+
+This should be obvious but it may not be.
+
+Building anything great is hard. It'll require a lot of time and a lot of effort. And it'll be tough as nails at times. So find what fills you with energy on the up days and also on the down days. Having fun is the only way you'll stick to it.
+
+As for me, one of my biggest learnings from Yaya was that I don't want to spend all my time coding. I enjoy programming computers and I'm so grateful to David for teaching me, but I have more fun and get more energy when I'm focused on the business side of things. And I have the most fun when I'm doing this in service of a mission I believe in. There's a reason after all why I've gravitated to business roles in my career. Someone wise once told me, "trust the self that got you to where you are today."
+
+Ofc having fun is just as applicable for language learning as it is for startups!
 
 [^ to ToC](#toc)
 
@@ -235,135 +364,6 @@ The big feature that I worked on before wrapping up work and leaving on a long h
 Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends and family), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more below](#prioritize)).
 
 In the end, I asked David how much software engineering I'd really learned. And he said he'd hire me as a junior engineer, which felt good and validated all the effort. That said I'm a little more passionate about the business stuff, so that's where I'll focus for the time being. Hopefully I can find something that marries these interests.
-
-## What I learned
-
-I learned a lot building Yaya. I got a lot right and a lot wrong. I'm writing all this down to get some clarity for myself, but I'm sharing it in the hopes that it will help others working on software startups (or just software projects) too.
-
-### Be clear on what you want
-
-I spent a lot of time wanting Yaya to be a high-growth venture-backable business that I could work on full-time while living comfortably in San Francisco. I also really wanted to do (a meaningful portion of) the coding myself in order to learn. And I wanted to build a niche language-learning product that I would love to use myself. Sometimes these goals were at odds with each other. And Yaya went through a few incarnations (pivots if you will) while my wants evolved.
-
-If I'd been a little clearer with myself and with David about what it was I wanted, I would have made some different decisions, perhaps skipping the incorporation and not worrying too much about the name or business model potential. But hindsight is 20/20, as they say, and I can't imagine walking any straight-line path to get to where I am today. I learned a lot and had a lot of fun.
-
-### Get something in front of real users ASAP
-
-We spent weeks and months building features and tweaking the product before getting it in front of real users. Then when we finally started asking people to try Yaya, we watched as the initial excitement morphed into confusion or polite disinterest. Of course, we listened to all the feedback and kept iterating and going back for more feedback. And while we did get a small number of repeat users, we struggled to get the audience we really wanted with Yaya v1.0.
-
-This is a bit downstream of being clear on what you want. If you want to build a venture-backable business, you need to get something in front of real users as soon as you have a [minimum viable product (MVP)](https://theleanstartup.com/) (or even just a landing page + waitlist) and you need to [build something people want](https://www.ycombinator.com/library/4D-yc-s-essential-startup-advice). If you're building a niche product for yourself and others like you, you can take your time and lean heavily on your own preferences. And if you're doing something in the middle, like a bootstrapped business for supplemental income, find the right balance. It's always helpful though to get outside feedback early.
-
-While the conventional wisdom is to ship fast fast fast, I still feel ok about our timeline. David and I were both juggling other work (more for him than me), life events (I got married!), learning (me) and teaching (David), and just having fun. Plus we were using Yaya for our own language learning the whole time.
-
-### Give your users what they want
-
-I want to draw on [Clay Christensen's famous business advice](https://hbswk.hbs.edu/item/clay-christensens-milkshake-marketing) here. When people decide to use a product, in a sense, they're "hiring" it because they have a "job to be done." He tells a story of a fast-food restaurant that noticed people were buying milkshakes in the morning. After some research they found that people were "hiring" the milkshake as a snack on their long commutes. So they made the milkshake thicker to last longer. People loved it.
-
-So what was Yaya's "job-to-be-done"?
-
-On a certain level, it was obvious: "to learn a foreign language." But there are a lot of options out there to learn a language, from apps like [Duolingo](https://www.duolingo.com/) to private tutors on sites like [Preply](https://preply.com/) or [italki](https://www.italki.com/) to immersive programs like the [Middlebury Language Schools](https://www.middlebury.edu/language-schools). And the big players claim to do it all. So we'd have to be different.
-
-(Note: People are not just trying to learn a language. They're also trying to stay motivated while they learn. Check out [this great blogpost](https://www.reachcapital.com/2023/06/15/product-lessons-from-duolingos-former-chief-product-officer-jorge-mazal/) from the former CPO at Duolingo on jobs-to-be-done.)
-
-As a **small** team (just two people, one of whom had never coded anything substantial before), we knew we had to focus. And as longtime language learners ourselves, we knew that do-it-all solutions typically sound better than they actually are. The reality is that most language learners who reach proficiency or fluency actually use a lot of different tools and combine them in creative ways. So for Yaya v1.0 we decided to build a single tool that would fit into learners' toolbelts (like some of these [other](https://apps.ankiweb.net/) [great](https://www.satorireader.com/) [tools](https://www.wanikani.com/)).
-
-[Comprehensible input](https://en.wikipedia.org/wiki/Input_hypothesis) (content in your target language that's just barely above your current level) is the fastest way to learn a language, and ["compelling input"](https://sdkrashen.com/content/articles/krashen_sla.pdf) (content that's so good you forget you're consuming it in another language) is the best way to stay motivated. Hat tip to [Arun Prasad](https://learnsanskrit.org/) for the previous link.
-
-There's a lot of comprehensible and compelling content out there from books to TV, movies, music, and games, but we decided to take a stab at making reading great foreign language content easier. We figured we could do better (or at least more engaging) than the many [graded readers](https://en.wikipedia.org/wiki/Graded_reader) out there. And we decided to offer it in any language, so we could reach as many people as possible.
-
-Even though Yaya v1.0 didn't take off, I still think this was a solid focus for the first version of the product.
-
-In summary: give your users thick milkshakes 🥛🍦
-
-### Understand your users' "priors"
-
-bayesian priors
-focused too much on reading
-most people want to speak and watch video
-[Krashen thing](https://sdkrashen.com/content/articles/krashen_sla.pdf) (compelling input)
-i've been leaning more towards immersion learning and speaking practice recently and avoiding translation to/from English
-based on the [fluent forever](https://fluent-forever.com/book) method
-
-Yaya was also too hard for beginners
-
-This also gets back to being clear on what you want. You should always think about the new user experience, but niche products (or products for experts/professionals) can offer a more challenging experience. If you want to reach a large audience, you need to make things easy, begginer-friendly and approachable.
-
-People don’t understand yaya - the chat metaphor is already the default expectation for something to be “AI” - Courtney’s mom thought we wrote the stories -
-bayesian priors
-
-duolingo is synonymous with language learning (people didn’t understand how our app was different from duolingo - which likely means we lost them before they generated multiple stories)
-have to make language learning (which is hard), easy and approachable to get people in the door
-
-duolingo blog post from reach - product is providing entire learning experience
-
-### Be better than your substitutes
-
-Gotta be better than general purpose tools like just using ChatGPT. They will always have more money and resources
-
-<a id="prioritize"></a>
-### Ruthlessly prioritize your time
-
-This is the about page that I rewrote about a thousand times. The only people that cared were my parents (and in-laws). If it's not obvious from this blog, I like to write. So if you're like me, fight that impulse. If you build something people love, you'll get a chance to tell your story. Focus first on building a rock solid onboarding journey and making those first users keep coming back.
-
-<figure align="center">
-  <Image
-    src="/images/posts/yaya-about.png"
-    className="mx-auto"
-    alt="Yaya about page"
-    width={500}
-    height={500}
-  />
-  <figcaption>Yaya's about page (draft one thousand and one)</figcaption>
-</figure>
-
-And here are some of the other things I spent too much time on: generating and regenerating images on midjourney (especially useless when it's for a [404 page](https://www.yaya.press/error) nobody will see); changing the company name a few times (although to be fair the first name was the near unpronounceable "yayayomu"); buying domain names for the different company names; tweaking and retweaking the visual and logo designs; etc.; etc.
-
-In short: Focus on what's life or death for your startup (or project). In the very beginning, that's 100% product.
-
-<a id="darlings"></a>
-### Move fast and kill your darlings
-
-The most important thing when building a new software product is to **move fast**. This is especially true if you're smaller than your competition. I learned this time and again at [Replit](https://replit.com/) and [PeopleGrove](https://www.peoplegrove.com/). So think about what's critically important for your users, build that and only that, ship it, and get feedback. If it doesn't work, kill it. If it does, improve it and/or move on.
-
-(Note: Of course this doesn't apply when lives or safety are on the line. Then you should absolutely measure twice (or more) before you cut. More generally, if a decision is reversible, move fast, if not, move slow.)
-
-You won't always build the right thing. And you can't always know if people will want something until you've built it. That's why it's important to move fast. If you get it right, amazing! But if you fail fast, you can pick yourself right back up again and make changes. On the other hand, if you fail slow, you've lost a lot of time and it's much tougher emotionally to move on.
-
-One "fail" for us was building the complex feature to match foreign language text to existing translations. I had a high tolerance for this difficult-to-use feature because it was "my" thing and I was using it daily to study. But it became obvious quickly that we would never get many people using it. We had to kill our darling.
-
-Admittedly David got there a little bit faster than I did, and I argued to find away to keep this feature in new versions of the product. But it just didn't make sense. After recognizing this, we made a decision to delete the old code and move on within a week. I think this is one of the things we actually did well.
-
-Corollary for further along the startup road: [give away your legos](https://review.firstround.com/give-away-your-legos-and-other-commandments-for-scaling-startups/).
-
-### AI "art" is not quite there yet
-
-candy house - “stockblock”, generating stories with gpt
-We've been trying alternative ways of generating content, i.e. generating in English first then translating or generating with the source text and translation simultaneously. This has let us get something usable for the long tail languages, but as you're seeing, it's not perfect! ChatGPT4 is much better than 3.5 and we're excited to upgrade when we get API access. And very excited to see what's possible with 5 and beyond whenever that comes :rocket:
-
-### Know your limits (patience please)
-
-If you spend any time in Silicon Valley circles, you'll hear a lot about "hypergrowth" and moving fast ([see above even](#darlings) :P). You'll see people achieve astronomical financial success in a short amount of time (and sometimes lose it just as fast). While moving fast is great practical advice for building a certain type of business (but definitely not all types), some things just take time.
-
-Learning is one of these things. This is not [the Matrix](https://www.youtube.com/watch?v=OrzgxUhnYjY). The human brain and body take time to acquire new skills. And even with these wonderful new AI tools, we're still limited by our biology. In tech, you'll often hear the phrase: "humans grow linearly, companies grow exponentially" (source: [Khalid Halim](https://review.firstround.com/hypergrowth-and-the-law-of-startup-physics/)).
-
-At some level, I internalized the learn-to-code-in-X-time rhetoric and the techie-exceptionalism, and I figured that within a few months I'd be able to code a fully-featured and compelling product entirely on my own. I was wrong. It takes a lot of time and hard work to learn to code.
-
-After all people dedicate their lives and careers to this thing. Why not [learn programming in 10 years](https://norvig.com/21-days.html) instead? Why not [get to the bottom of things](https://www-cs-faculty.stanford.edu/~knuth/email.html) instead of trying to stay on top of everything?
-
-But I wasn't completely wrong though. _In collaboration_ with a partner, I _was_ able to build something meaningful. And I did get better and better every day every day that I sat down and wrote code and debugged.
-
-(Note to beginners: Don't let all that discourage you from getting started. The payoff is great and the journey is fun. Plus there's more help available than ever. One option is [freeCodeCamp](https://www.freecodecamp.org/). It's got great learning resources and a great community. Stick to it but have patience!)
-
-### Have fun
-
-This should be obvious but it may not be.
-
-Building anything great is hard. It'll require a lot of time and a lot of effort. And it'll be tough as nails at times. So find what fills you with energy on the up days and also on the down days. Having fun is the only way you'll stick to it.
-
-As for me, one of my biggest learnings from Yaya was that I don't want to spend all my time coding. I enjoy programming computers and I'm so grateful to David for teaching me, but I have more fun and get more energy when I'm focused on the business side of things. And I have the most fun when I'm doing this in service of a mission I believe in. There's a reason after all why I've gravitated to business roles in my career. Someone wise once told me, "trust the self that got you to where you are today."
-
-Ofc having fun is just as applicable for language learning as it is for startups!
-
-[^ to ToC](#toc)
 
 ## What's next
 
