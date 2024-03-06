@@ -212,14 +212,25 @@ Corollary for further along the startup road: [give away your legos](https://rev
 
 ### AI "art" is not quite there yet
 
-candy house - “stockblock”, generating stories with gpt
-We've been trying alternative ways of generating content, i.e. generating in English first then translating or generating with the source text and translation simultaneously. This has let us get something usable for the long tail languages, but as you're seeing, it's not perfect! ChatGPT4 is much better than 3.5 and we're excited to upgrade when we get API access. And very excited to see what's possible with 5 and beyond whenever that comes :rocket:
+What even is art? Who knows? People have [opinions](https://www.youtube.com/watch?v=VcidL9uXw6A). We've all got [wide-ranging](https://www.youtube.com/watch?v=nfWlot6h_JM) [tastes](https://www.youtube.com/watch?v=ntbNRUycbD4). But as they say, you know it when you see it.
+
+And unfortunately AI art is just not quite there yet. It's technically good but... kinda boring. I mean take a look at the cheesy images I generated for this blogpost. I'm sure we'll get there someday and this technology truly does feel magical, but for now I think you still need a human artist, writer, creative, etc. in the loop if you really want to hook your audience.
+
+With Yaya, we spent a lot of time fine-tuning our prompts to try to get the AI-generated content, particularly the short stories, good enough. At the peak level of complexity, we used ChatGPT to generate story outlines with a variety of premises, lengths, genres, story structures, narrative points of view, sources of conflict, authorial styles, etc. These lists of possibilities were also generated in ChatGPT (ahead of time). And then we passed in the character names and previous chapter summaries (for better continuity) and asked ChatGPT to write each chapter.
+
+The stories were ok... They were good for learning, but you didn't lose yourself in them. The plots were a bit formulaic, repetitive, and internally inconsistent. And we had [Chekhov's guns](https://en.wikipedia.org/wiki/Chekhov%27s_gun) all over the place that never got fired. This was particularly true when the AI tried to work in a vocab word due for SRS review that didn't fit the story (e.g. the word "sewer" in a story about a princess).
+
+Ultimately we realized that we never finished reading Yaya's multi-chapter stories, so we ditched the outline generation, used a simpler prompt, and switched to infinitely generating new content as the user scrolled (until they got bored and wanted something fresh). This improved the user experience, generated stories faster, and simplified the code.
+
+For a talented writer's take on all this, check out [Jennifer Egan's](https://jenniferegan.com/) latest novel, Candy House. In it she parodies generated stories built with standardized ["stockblocks"](https://theconversation.com/in-the-candy-house-jennifer-egan-delivers-an-inventive-novel-for-a-digital-age-181151) to great comedic and storytelling effect (among many other ideas and threads).
+
+May the technological tinkerers keep pushing us forward with amazingly efficient machines, and may the artists keep tearing it all down and [keeping us human](https://www.goodreads.com/quotes/11429950-one-opposite-of-imagination-is-efficiency). I think the world will be better for it.
 
 ### Know your limits (patience please)
 
 If you spend any time in Silicon Valley circles, you'll hear a lot about "hypergrowth" and moving fast ([see above even](#darlings) :P). You'll see people achieve astronomical financial success in a short amount of time (and sometimes lose it just as fast). While moving fast is great practical advice for building a certain type of business (but definitely not all types), some things just take time.
 
-Learning is one of these things. This is not [the Matrix](https://www.youtube.com/watch?v=OrzgxUhnYjY). The human brain and body take time to acquire new skills. And even with these wonderful new AI tools, we're still limited by our biology. In tech, you'll often hear the phrase: "humans grow linearly, companies grow exponentially" (source: [Khalid Halim](https://review.firstround.com/hypergrowth-and-the-law-of-startup-physics/)).
+Learning is one of these things. This is not [the Matrix](https://www.youtube.com/watch?v=OrzgxUhnYjY). The human [brain](https://www.anilseth.com/being-you/) and body take time to acquire new skills. And even with these wonderful new AI tools, we're still limited by our biology. In tech, you'll often hear the phrase: "humans grow linearly, companies grow exponentially" (source: [Khalid Halim](https://review.firstround.com/hypergrowth-and-the-law-of-startup-physics/)).
 
 At some level, I internalized the learn-to-code-in-X-time rhetoric and the techie-exceptionalism, and I figured that within a few months I'd be able to code a fully-featured and compelling product entirely on my own. I was wrong. It takes a lot of time and hard work to learn to code.
 
