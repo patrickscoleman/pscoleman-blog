@@ -17,13 +17,17 @@ import Image from "next/image";
   <time dateTime={date}>March 18th, 2024</time>
 </small>
 
-So what is [Yaya](https://www.yaya.press/)? In short, it's an AI foreign language learning app.
+> Reader: So what is [Yaya](https://www.yaya.press)?"
+>
+> "Author: An AI foreign language learning app that generates dialogs, stories, and more.
 
-This blog post will be about the first version of Yaya, which never saw the growth we wanted. The new version just launched, and we're very hopeful!
+You hear a lot about the big startup successes. This won't be one of those stories. I'll share an inside look at when things don't quite work out.
 
-**v1.0**: During the first half of 2023, I, Patrick Coleman (a startup business guy), and my friend, [David Gaynor](http://freedavid.co/) (an experienced engineer/founder), built the first version of Yaya. It used AI to generate reading content at an appropriate learning level in (almost) any language. We built it using ChatGPT, NextJS, and Firebase ([more on that below](#how-we-built-it)).
+The first version of Yaya never saw the growth we wanted. And personal priorities changed. So I moved on and my business partner kept going at a more relaxed pace. He just released a big update on March 15th. And we're very optimistic about the new version. [Check it out!](https://www.yaya.press/)
 
-So you can get a better idea of how v1.0 worked, here's a short video overview of the app.
+**Yaya v1.0**: During the first half of 2023, I, Patrick Coleman (a startup business guy), and my friend, [David Gaynor](http://freedavid.co/) (an experienced engineer/founder), built the first version of Yaya. It used AI to generate reading content at an appropriate learning level in (almost) any language. We built it using ChatGPT, NextJS, and Firebase ([more on that below](#how-we-built-it)).
+
+So you can get a better idea of how v1.0 worked, first watch this short video overview of the app.
 
 <figure align="center">
   <iframe
@@ -38,9 +42,11 @@ So you can get a better idea of how v1.0 worked, here's a short video overview o
   <figcaption>Quick preview of Yaya circa summer 2023</figcaption>
 </figure>
 
-If you want to play around, [try Yaya v1.0 here](https://www.yaya.press/). If you prefer video and want to see more, I also made an [11-minute deep dive](https://www.youtube-nocookie.com/embed/rWw079aEzw8?si=XxL9aA6GuOsbQYs1).
+Want to go deeper before reading on? [Try Yaya v1.0](https://www.yaya.press/) for yourself. Or if you prefer video, watch this [11-minute deep dive](https://www.youtube-nocookie.com/embed/rWw079aEzw8?si=XxL9aA6GuOsbQYs1).
 
-**v2.0**: I stepped away from Yaya last summer (to travel the world), but David continued building. On March 15th, 2024 he released a massive update. The new version focuses on students working with language tutors. It's got a ton of features for language learners and tutors to use together during sessions and individually to study or prep. [Check out Yaya v2.0](https://www.yaya.press/)!
+I stepped away from Yaya last summer for two major reasons. I wanted to travel the world with my new wife. And after some reflection, I realized that I enjoyed working on the business side of startups (go-to-market, growth, and ops) more than I enjoyed spending my days coding. David wanted to keep Yaya small, so it didn't make sense to do that for Yaya.
+
+**Yaya v2.0**: David's newly updated version focuses on students working with language tutors. It's got a ton of features for language learners and tutors to use together during sessions and individually to study or prep.
 
 This post's another long one, so here's a quick table of contents. Go ahead and skip around.
 
@@ -79,13 +85,13 @@ First it was Spanish. I studied all through high school and college, picking up 
 
 Also in high school, I started taking compsci classes, placing directly into AP CS and going on to take classes in AI and computer architecture (a lot has changed since 2007...). I was lucky to go to a science and tech school and got absorbed in coding. But then I studied finance in college.
 
-Later as my professional career shifted from Wall Street to software startups, I kept toying with the idea of finally learning to code properly. I considered taking a bootcamp or going back to school, but I didn't think it'd be the right fit. My background knowledge was all over the place, I've typically prefered self-directed learning as an adult, and many institutions are teaching outdated curriculum. As part of a consulting project, I looked at the tech stacks of startups over the past decade and saw a big shift to [serverless architectures](https://docs.aws.amazon.com/serverless/latest/devguide/serverless-shift-mindset.html).
+Later as my professional career shifted from Wall Street to software startups, I kept toying with the idea of finally learning to code properly. I considered doing a bootcamp or going back to school, but I didn't think it'd be the right fit. My background knowledge was all over the place, I've typically prefered self-directed learning [with tutors](https://en.wikipedia.org/wiki/Bloom%27s_2_sigma_problem) as an adult, and many institutions are teaching outdated curriculum. As part of a consulting project, I looked at the tech stacks of startups over the past decade and saw a big shift to [serverless architectures](https://docs.aws.amazon.com/serverless/latest/devguide/serverless-shift-mindset.html), which isn't taught as widely.
 
 Then finally in the fall of 2022 (well into my early thirties), I was cutting back on some consulting hours and thinking about a new project. I wanted to learn to code and still wanted to tackle that Murakami novel. David and I had a catch up call, and I shared an idea I'd been thinking of to interlace foreign texts with professional, i.e. human, translations (inspired by [Read Real Japanese](https://www.tofugu.com/reviews/read-real-japanese/) and similar books).
 
 It turns out David had been using Harry Potter to learn Chinese with his wife before bedtime and had already built a simple prototype using Google Translate for the translations. I asked David to teach me how to code, and in the first few days of 2023 we started working on Yaya together.
 
-I was fantasizing about Yaya turning into a wildly successful business, while also telling myself that it'd be fine if this was all just a good learning experience. Spoiler: We didn't get rich overnight. But we did bring something new into the world. I don't regret a thing.
+I was fantasizing about Yaya turning into a wildly successful business, while also telling myself that it'd be fine if this was all just a good learning experience. Spoiler: We didn't get rich overnight. But we did bring something new into the world. We don't regret a thing.
 
 [^ to ToC](#toc)
 
@@ -108,7 +114,7 @@ I learned a lot building Yaya. I got a lot right and a lot wrong. I'm writing al
 
 I spent a lot of time wanting Yaya to be a high-growth venture-backable business that I could work on full-time while living comfortably in San Francisco. I also really wanted to do (a meaningful portion of) the coding myself in order to learn. And I wanted to build a niche language-learning product that I would love to use myself. Sometimes these goals were at odds with each other. And Yaya went through a few incarnations (pivots if you will) while my wants evolved.
 
-If I'd been a little clearer with myself and with David about what it was I wanted, I would have made some different decisions, perhaps skipping the incorporation and not worrying too much about the name or business model potential. But hindsight is 20/20, as they say, and I can't imagine walking any straight-line path to get to where I am today. I learned a lot and had a lot of fun.
+If I'd been a little clearer with myself and with David about what it was I wanted, I would have made some different decisions, perhaps skipping the legal incorporation and not worrying too much about the name or business model potential. But hindsight is 20/20, as they say, and I can't imagine walking any straight-line path to get to where I am today. I learned a lot and had a lot of fun.
 
 ### Get something in front of real users ASAP
 
@@ -159,11 +165,13 @@ have to make language learning (which is hard), easy and approachable to get peo
 
 duolingo blog post from reach - product is providing entire learning experience
 
+corrolary to give users what they want, but beware users that want a faster horse
+
 ### Be better than your substitutes
 
 While there are a lot of direct competitors in the language learning space, we were also competing with general-purpose AI tools like [ChatGPT](https://openai.com/gpt-3/) or [Claude](https://claude.ai/). We had to be better than these well-funded substitutes to get people to use Yaya.
 
-You can use these AI tools to generate reading content in a lot of languages, but we figured we had a few key advantages: 1. fine-tuned learning levels; 2. built-in spaced repetition; and 3. clickable definitions and grammar explanations. We saved our users a ton of time and gave them a consistent experience, so they wouldn't waste study time on wrangling with the AI.
+You can use these AI tools to generate reading content in a lot of languages (and now audio too), but we figured we had a few key advantages: 1. fine-tuned learning levels; 2. built-in spaced repetition; and 3. clickable definitions and grammar explanations. We saved our users a ton of time and gave them a consistent experience, so they wouldn't waste study time on wrangling with the AI.
 
 It's worth thinking through your positioning not just for the obvious competitors but also for the less obvious alternatives. This includes other pastimes or hobbies (or even just watching Netflix).
 
@@ -183,9 +191,9 @@ This is the about page that I rewrote about a thousand times. The only people th
   <figcaption>Yaya's about page (draft one thousand and one)</figcaption>
 </figure>
 
-And here are some of the other things I spent too much time on: generating and regenerating images on midjourney (especially useless when it's for a [404 page](https://www.yaya.press/error) nobody will see); changing the company name a few times (although to be fair the first name was the near unpronounceable "yayayomu"); buying domain names for the different company names; tweaking and retweaking the visual and logo designs; etc.; etc.
+And here are some of the other things I spent too much time on: generating and regenerating images on midjourney (especially useless when it's for a [404 page](https://www.yaya.press/error) nobody will see); changing the company name a few times (although to be fair the first name was the near unpronounceable "yomuya"); buying domain names for the different company names; tweaking and retweaking the visual and logo designs; etc.; etc.
 
-In short: Focus on what's life or death for your startup (or project). In the very beginning, that's 100% product.
+In short: Focus on what's life or death for your startup (or project). In the very beginning, that's typically all product.
 
 <a id="darlings"></a>
 ### Move fast and kill your darlings
@@ -219,7 +227,7 @@ After all people dedicate their lives and careers to this thing. Why not [learn 
 
 But I wasn't completely wrong though. _In collaboration_ with a partner, I _was_ able to build something meaningful. And I did get better and better every day every day that I sat down and wrote code and debugged.
 
-(Note to beginners: Don't let all that discourage you from getting started. The payoff is great and the journey is fun. Plus there's more help available than ever. Considering using [Replit](https://replit.com/) and [freeCodeCamp](https://www.freecodecamp.org/). They've got great learning resources and great communities. Disclaimer: I used to work at Replit. Stick to it but have patience!)
+(Note to beginners: Don't let all that discourage you from getting started. The payoff is great and the journey is fun, whether you code professionally or not. Plus there's more help available than ever. Considering using [Replit](https://replit.com/) and [freeCodeCamp](https://www.freecodecamp.org/). They've got great learning resources and great communities. Disclaimer: I used to work at Replit. Stick to it but have patience!)
 
 ### Have fun
 
@@ -252,7 +260,7 @@ Now on to the earliest failures and learnings.
 
 The very first version of Yaya matched and interlaced text in two languages. It let you upload the text of a story, novel, or any content in another language plus text for the translation, and it would give you sentence by sentence mappings.
 
-David and another friend built the proof of concept as a weekend project using sentence embeddings, a matching algorithm ([beam search](https://en.wikipedia.org/wiki/Beam_search) with vector difference from the embeddings), and a simple web interface. I started testing it with Japanese short stories and English translations. It was a bit clunky and didn't always get the matching right, but it was enough to get started. It was really interesting seeing the techniques of different translators too.
+David and another friend built the proof of concept as a weekend project using sentence embeddings, a matching algorithm ([beam search](https://en.wikipedia.org/wiki/Beam_search) with vector difference), and a simple web interface. I started testing it with Japanese short stories and English translations. It was a bit clunky and didn't always get the matching right, but it was enough to get started. It was really interesting seeing the techniques of different translators too.
 
 I plugged away on updates to the web interface (on my own and in pair programming sessions with David), and he added more features like an option to use Google Translate, instead of an uploaded translation, and an ePub export, so you could read on an eReader or app. We took turns tweaking the matching algorithm and got improvements, but with neither of us having PhDs in this stuff, we were only able to get so far.
 
@@ -367,7 +375,7 @@ We used [Github](https://github.com/) for version control and as a code reposito
 
 #### Mac
 
-If you're using Windows now and don't have a good professional reason for that, switch. Mac has a great ecosystem for developers, and coding on a unix-based OS is a better experience. If cost is a factor, buy used.
+If you're using Windows now and don't have a good professional reason for that (e.g. working in finance), switch. Mac has a great ecosystem for developers, and coding on a unix-based OS is a better experience. If cost is a factor, buy used.
 
 As for me, switching to a [Mac laptop](https://www.apple.com/mac/) after years of running Linux on the desktop was a little bit of an adjustment (ergonomically and ideologically :P), but I got a lot faster at building (not just the coding, but the collaboration and other work too) when I did. There's a reason why so many developers use Macs. ([more on my stubbornness and eventual transition](/posts/relearning-to-code))
 
@@ -397,7 +405,7 @@ And we used [WhatsApp](https://www.whatsapp.com/) to chat on and off asynchronou
 
 And finally, I also used [ChatGPT](https://chat.openai.com/) as a "coding tutor." If you haven't already, try asking ChatGPT questions and pasting in code snippets to get help with tricky problems and debugging. It's not perfect, but often it saves a lot of time vs. Google searching for blogs or digging through docs or StackOverflow. [Copilot](https://github.com/features/copilot) is also great for getting tips without breaking flow. Of course, these are both gonna get it wrong a lot of the time, and you'll still run into lots of bugs when coding... but debugging is half the fun, right?
 
-And if you're new, I can't say enough good stuff about [Replit's AI features](https://replit.com/ai).
+And if you're new (or experienced and building smaller projects), I can't say enough good stuff about [Replit's AI features](https://replit.com/ai).
 
 [^ to ToC](#toc)
 
@@ -414,7 +422,7 @@ And if you're new, I can't say enough good stuff about [Replit's AI features](ht
   <figcaption>Slaying the dragon with a little help</figcaption>
 </figure>
 
-Since this was my first time coding anything substantial (I'd taken a fair amount of computer science classes in school, wrote some VBA macros for Excel and PowerPoint early in my career, fixed some website typos (directly in text fields in Github, which felt like [flying blind](https://www.youtube.com/watch?v=89AaqbrqcHI)), and created some devtools marketing content in my startup life), needless to say, I leaned on David a lot. He got the initial app built and hosted, and I worked in his codebase/system. That in itself was some great learning.
+Since this was my first time coding anything substantial, needless to say, I leaned on David a lot. Before this I'd taken a fair amount of computer science classes in school, wrote some VBA macros for Excel and PowerPoint early in my career, fixed some website typos (directly in text fields in Github, which felt like [flying blind](https://www.youtube.com/watch?v=89AaqbrqcHI)), and created some devtools marketing content while working at startups. So David built the initial app and set up hosting. Then I worked in his codebase/system. That in itself was some great learning.
 
 At the start, I did frontend work (building out the UI and adding features) and some data/algorithm manipulation. It was seriously fun banging my head against the beam search algorithm. Firebase was tricky at times and [RXJS Observables](https://rxjs.dev/guide/observable) consistently confounded me, but I kept plugging away with David's (and ChatGPT's) help.
 
@@ -424,9 +432,9 @@ And in the midst of all of this I got married and decided to take some time off 
 
 The big feature that I worked on before wrapping up work and leaving on a long honeymoon was adding audio to the app. It was challenging and David had to do a pretty big refactor (haha), but it felt good shipping a tangible and meaningful feature.
 
-Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends and family), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more below](#prioritize)).
+Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends and family), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more above if you missed it](#prioritize)).
 
-In the end, I asked David how much software engineering I'd really learned. And he said he'd hire me as a junior engineer, which felt good and validated all the effort. That said I'm a little more passionate about the business stuff, so that's where I'll focus for the time being. Hopefully I can find something that marries these interests.
+In the end, I asked David how much software engineering I'd really learned. And he said he'd hire me as a junior engineer, which felt good and validated all the effort. As mentioned though, I'm more passionate about the business stuff, so that's where I'll focus for now. Hopefully I'll find something that marries these interests.
 
 ## What's next
 
