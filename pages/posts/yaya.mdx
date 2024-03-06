@@ -8,6 +8,7 @@ hidden: true
 
 import { PostLayout } from "@/components/postLayout";
 import Image from "next/image";
+import Link from "next/link";
 
 # What I learned building an AI language learning app
 
@@ -110,6 +111,7 @@ I was fantasizing about Yaya turning into a wildly successful business, while al
 
 I learned a lot building Yaya. I got a lot right and a lot wrong. I'm writing all this down to get some clarity for myself, but I'm sharing it too in the hopes that it will help others working on software startups (or just software projects).
 
+<a id="get-clarity"></a>
 ### Be clear on what you want
 
 I spent a lot of time wanting Yaya to be a high-growth venture-backable business that I could work on full-time while living comfortably in San Francisco. I also really wanted to do (a meaningful portion of) the coding myself in order to learn. And I wanted to build a niche language-learning product that I would love to use myself. Sometimes these goals were at odds with each other. And Yaya went through a few incarnations (pivots if you will) while my wants evolved.
@@ -144,28 +146,50 @@ Even though Yaya v1.0 didn't take off, I still think this was a solid focus for 
 
 In summary: give your users thick milkshakes 🥛🍦
 
-### Understand your users' "priors"
+### Meet your users where they're at
 
-bayesian priors
-focused too much on reading
-most people want to speak and watch video
-[Krashen thing](https://sdkrashen.com/content/articles/krashen_sla.pdf) (compelling input)
-i've been leaning more towards immersion learning and speaking practice recently and avoiding translation to/from English
-based on the [fluent forever](https://fluent-forever.com/book) method
+One thing we struggled with was getting the average person to understand Yaya. They came in with a lot of [prior expectations](https://en.wikipedia.org/wiki/Bayesian_probability), and we didn't meet them there.
 
-Yaya was also too hard for beginners
+Some expectations of language learners and what that meant for us:
 
-This also gets back to being clear on what you want. You should always think about the new user experience, but niche products (or products for experts/professionals) can offer a more challenging experience. If you want to reach a large audience, you need to make things easy, begginer-friendly and approachable.
+- Most people interested in learning a language haven't started yet or are beginners. We really struggled to make the "newbie" reading level on Yaya easy enough for beginners. And what easy means varies somewhat from language to language. Getting this right turned out to be more work than we initially expected.
+- These days everyone (whether you've used it or not) knows of [Duolingo.](https://www.duolingo.com/) Their users love the gamified quizzes and clear progression. We didn't spend enough time specifically differentiating ourselves vs. them. And we didn't do a good job making users feel like they were learning and progressing.
+- Most language learners want to speak and communicate in a foreign language, not read literature, news, etc. It's harder to get people to try a new hobby than it is to get them to try a new product.
+- Chat is the dominant interface metaphor in AI right now. Some people were confused by how Yaya used AI (and even thought that we wrote the stories ourselves). People also wanted to customize the content after the initial generation, which we didn't allow. (This level of customization did make it into David's v2.0)
+- Many people (especially the younger generations ("ok boomer...")) prefer video to text, largely hanging out on TikTok and YouTube. We could market there, but it's tough to get users off platform.
+- Learners have an expectation that their learning content will be correct. It varied a lot by language, but the AI-generated content included occasional grammatical mistakes and awkward phrasing. Beginners (who we struggled to reach) wouldn't know, but more experienced learners (who we thought we were targeting) would be turned off.
+- Serious learners typically use flashcards with spaced-repetition to supplement other tools (check out the [Fluent Forever book](https://fluent-forever.com/book) for great [Anki](https://apps.ankiweb.net/) tips). We thought SRS vocabulary in the context of a story would be more fun/effective. We didn't communicate that well enough to know if it resonated.
+- Most people are casual learners, looking to spend say just 15-minutes a day studying. This further limited our audience and meant we'd have to find serious learners where they hung out (e.g. [subreddits](https://www.reddit.com/r/LearnJapanese/), [forums](https://japanese.stackexchange.com/), etc.). These communities are typically averse to self-promotion.
+- Some very serious learners want complete immersion in their target language. It was possible to use Yaya without translations but that wasn't our emphasis. These people are also likely to graduate off of learning tools within 6 months to a couple years, which could limit customer lifetime value (LTV) unless we reengaged them to come back and learn another new language.
 
-People don’t understand yaya - the chat metaphor is already the default expectation for something to be “AI” - Courtney’s mom thought we wrote the stories -
-bayesian priors
+As we learned more, our niche kept growing smaller and smaller. And for Yaya v1.0, we didn't find product-market fit.
 
-duolingo is synonymous with language learning (people didn’t understand how our app was different from duolingo - which likely means we lost them before they generated multiple stories)
-have to make language learning (which is hard), easy and approachable to get people in the door
+I also think that before overbuilding, we could have spent more of our time getting feedback from the market (while being careful not to give people [faster horses](https://hbr.org/2011/08/henry-ford-never-said-the-fast)). Instead I was spending a lot of my time coding unused features ([see above](#get-clarity)) and creatively procrastinating ([see below](#prioritize)). There are only so many hours in the day and it's easy to fall into these traps, so it's good to specialize. I think that's why the best teams include a mix of product builders (engineers, designers, PMs, etc.) and business growers (sales, marketing, ops, etc.).
 
-duolingo blog post from reach - product is providing entire learning experience
+Get out there and talk to tons of folks. Know your audience well!
 
-corrolary to give users what they want, but beware users that want a faster horse
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/kane.jpg"
+    className="mx-auto"
+    alt="Orson Welles clapping"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    <em>
+      <Link
+        href="https://knowyourmeme.com/memes/citizen-kane-clapping"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        a solitary clapper
+      </Link>
+    </em>
+  </figcaption>
+</figure>
+
+This search for an "ideal customer profile" (ICP) and the iterative tweaking of positioning (how you describe the product) and outreach (how you find customers) is a huge part of any early stage startup's life-or-death search for product-market fit. And it's one of the things I focus on professionally. It's a creative challenge.
 
 ### Be better than your substitutes
 
@@ -193,7 +217,7 @@ This is the about page that I rewrote about a thousand times. The only people th
 
 And here are some of the other things I spent too much time on: generating and regenerating images on midjourney (especially useless when it's for a [404 page](https://www.yaya.press/error) nobody will see); changing the company name a few times (although to be fair the first name was the near unpronounceable "yomuya"); buying domain names for the different company names; tweaking and retweaking the visual and logo designs; etc.; etc.
 
-In short: Focus on what's life or death for your startup (or project). In the very beginning, that's typically all product.
+In short: Focus on what's life or death for your startup (or project). In the very beginning, that's typically building product and talking to users.
 
 <a id="darlings"></a>
 ### Move fast and kill your darlings
@@ -222,7 +246,7 @@ The stories were ok... They were good for learning, but you didn't lose yourself
 
 Ultimately we realized that we never finished reading Yaya's multi-chapter stories, so we ditched the outline generation, used a simpler prompt, and switched to infinitely generating new content as the user scrolled (until they got bored and wanted something fresh). This improved the user experience, generated stories faster, and simplified the code.
 
-For a talented writer's take on all this, check out [Jennifer Egan's](https://jenniferegan.com/) latest novel, Candy House. In it she parodies generated stories built with standardized ["stockblocks"](https://theconversation.com/in-the-candy-house-jennifer-egan-delivers-an-inventive-novel-for-a-digital-age-181151) to great comedic and storytelling effect (among many other ideas and threads).
+For a talented writer's take on all this, check out [Jennifer Egan's](https://jenniferegan.com/) latest novel, Candy House. In it she parodies generated stories (and so much else) built with standardized ["stockblocks"](https://theconversation.com/in-the-candy-house-jennifer-egan-delivers-an-inventive-novel-for-a-digital-age-181151) to great comedic and storytelling effect.
 
 May the technological tinkerers keep pushing us forward with amazingly efficient machines, and may the artists keep tearing it all down and [keeping us human](https://www.goodreads.com/quotes/11429950-one-opposite-of-imagination-is-efficiency). I think the world will be better for it.
 
