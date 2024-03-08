@@ -145,7 +145,9 @@ I learned a lot building Yaya. I got a lot right and a lot wrong. I've written a
     width={500}
     height={500}
   />
-  <figcaption>The narrator reflects on knowledge gained</figcaption>
+  <figcaption>
+    The narrator reflects on knowledge gained <em>(image credit: DALL-E)</em>
+  </figcaption>
 </figure>
 
 This one's long so here's a ToC (feel free to jump around):
@@ -374,10 +376,12 @@ Thanks for reading! I'll be back next week with the backstory of Yaya. Here are 
   <time dateTime={date}>April 1st, 2024</time>
 </small>
 
-April fools joke
+News update: This morning, we got an unsolicited 7-figure acquisition offer for Yaya from a huge public tech co! April fools ;)
+
+Welcome back again! If you're just joining us now, I recommend [starting at the beginning](/posts/yaya). In this post, I'll share some of the history of Yaya and my work contributions. Read on.
 
 - [Prologue](#prologue) (my skippable personal backstory)
-- [What I worked on](#what-i-worked-on) (my share of the contributions)
+- [What I worked on](#what-i-worked-on) (my share of things)
 - [Early iterations and missteps](#early-iterations-and-missteps) (the past lives of Yaya)
 
 ## Prologue
@@ -395,7 +399,7 @@ April fools joke
   </figcaption>
 </figure>
 
-The seeds for Yaya were planted a long time ago. Let's briefly go back to the very beginning. ([or skip ahead to the learnings](#what-i-learned))
+The seeds for Yaya were planted a long time ago. Let's briefly go back to the very beginning.
 
 I have an early memory of learning the French colors sitting cross-legged on the floor of a sun-drenched classroom way back in the mid 90s. But my interest didn't really take off until an "introduction to foreign languages" class in middle school in the early aughts.
 
@@ -436,7 +440,7 @@ And in the midst of all of this I got married and decided to take some time off 
 
 The big feature that I worked on before wrapping up work and leaving on a long honeymoon was adding audio to the app. It was challenging and David had to do a pretty big refactor (haha), but it felt good shipping a tangible and meaningful feature.
 
-Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends and family), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more above if you missed it](#prioritize)).
+Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends, family, and acquaintances), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more above if you missed it](#prioritize)).
 
 In the end, I asked David how much software engineering I'd really learned. And he said he'd hire me as a junior engineer, which felt good and validated all the effort. As mentioned though, I'm more passionate about the business stuff, so that's where I'll focus for now. Hopefully I'll find something that marries these interests.
 
@@ -469,7 +473,7 @@ Before too long, we realized this wasn't going to be useful outside of a tiny an
 
 Next (for a short time), we pivoted to public domain classics that we could pre-upload in a variety of languages. The main issue here was that while we solved the problem of uploading content for the user, we didn't solve any of the other problems, namely that only a tiny audience (of mostly experts) wants to read classics in the original.
 
-At this point we'd kept plugging away and improving the interface. We had a working app for reading foreign language content, but alas, no good content.
+By now we'd kept plugging away and improving the interface. We had a working app for reading foreign language content, but alas, no good content.
 
 ### v0.3
 
@@ -483,7 +487,7 @@ It wasn't gonna be great literature, but at this point we had something. Unfortu
 
 From here on, we started getting the product in front of more users (who were not us) and making iterative improvements. We did a ton of "high tech" [prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering) to get better quality and variety. Some of the big feature additions were: [spaced-repetition](https://en.wikipedia.org/wiki/Spaced_repetition) vocabulary to include in generated content, flashcards, audio, and clickable definitions + grammar explanations for any word or phrase (also AI-generated). We also ironed out some kinks with poor performance in some languages (starting with AI-generated English content and then translating for those languages).
 
-By now we had built a good product, but we struggled to get people to use it, which after all, is what counts. More on this [below](#what-i-learned).
+By this point in time we had built a good product, but we struggled to get people to use it, which after all, is what counts. More on this [in the prior post](/posts/yaya2).
 
 [^ to ToC](#toc)
 
@@ -518,7 +522,9 @@ Thanks for reading! I'll be back next week with the final post, an overview of o
     width={500}
     height={500}
   />
-  <figcaption>The mythical objects on our quest</figcaption>
+  <figcaption>
+    The mythical objects on our quest <em>(image credit: DALL-E)</em>
+  </figcaption>
 </figure>
 
 Here are the [key tools](#key-tools) we used while building Yaya. Since I was a beginner and learning to code, I'll also mention some [basic tools](#basic-tools) that experienced developers might take for granted.
