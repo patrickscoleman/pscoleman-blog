@@ -13,7 +13,9 @@ export const MdxComponents = {
     const h2Text = props.children;
     const h2ReplaceSpecialCharsWithDash = h2Text
       .toLowerCase()
-      .replace(/[^a-zA-Z0-9]+/g, "-");
+      .replace(/[^a-zA-Z0-9]+/g, " ")
+      .trim()
+      .replace(/\s+/g, "-");
     const uri = encodeURI(h2ReplaceSpecialCharsWithDash);
     return (
       <>

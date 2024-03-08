@@ -1,7 +1,7 @@
 ---
-title: "What I learned building an AI language learning app"
-date: "2024-03-01"
-description: "Reflections on building Yaya (using ChatGPT, NextJS, and Firebase) with my friend David Gaynor for a little over half a year."
+title: "What I learned building an AI language learning app (part 1/4)"
+date: "2024-03-18"
+description: "Reflections on building Yaya v1.0, which never quite took off, with a friend in 2023 H1"
 previewImage: "/images/posts/yaya/preview.png"
 hidden: true
 ---
@@ -10,25 +10,44 @@ import { PostLayout } from "@/components/postLayout";
 import Image from "next/image";
 import Link from "next/link";
 
-# What I learned building an AI language learning app
+<a id="1"></a>
 
-**NOTE: THE NEW VERSION OF YAYA WILL LAUNCH ON MARCH 15TH.**
+# What I learned building an AI language learning app (part 1/4)
 
 <small>
   <time dateTime={date}>March 18th, 2024</time>
 </small>
 
-> Reader: So what is [Yaya](https://www.yaya.press)?"
+Welcome! Maybe you're curious about AI, software development, language learning, or startups? Maybe you know me? Or maybe you just clicked a link? Whatever your reasons for being here, let me first tell you a little about [Yaya.](https://www.yaya.press)
+
+> Reader: Wait, what is Yaya"
 >
 > "Author: An AI foreign language learning app that generates dialogs, stories, and more.
 
-You hear a lot about the big startup successes. This won't be one of those stories. I'll share an inside look at when things don't quite work out.
+You hear a lot about the big startup successes. This won't be one of those stories. In four blogposts, I'll share an inside look at when things don't quite work out.
 
-The first version of Yaya never saw the growth we wanted. And personal priorities changed. So I moved on and my business partner kept going at a more relaxed pace. He just released a big update on March 15th. And we're very optimistic about the new version. [Check it out!](https://www.yaya.press/)
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/reader.png"
+    className="mx-auto"
+    alt="Screenshot of the Yaya web app, showing a story in Spanish"
+    width={500}
+    height={500}
+  />
+  <figcaption>Yaya v1.0 circa summer 2023</figcaption>
+</figure>
 
-**Yaya v1.0**: During the first half of 2023, I, Patrick Coleman (a startup business guy), and my friend, [David Gaynor](http://freedavid.co/) (an experienced engineer/founder), built the first version of Yaya. It used AI to generate reading content at an appropriate learning level in (almost) any language. We built it using ChatGPT, NextJS, and Firebase ([more on that below](#how-we-built-it)).
+## The evolution of Yaya
 
-So you can get a better idea of how v1.0 worked, first watch this short video overview of the app.
+### Yaya v1.0
+
+During the first half of 2023, I, [Patrick Coleman](/about) (a startup business guy), and my friend, [David Gaynor](http://freedavid.co/) (an experienced engineer/founder), built the first version of Yaya. It used AI to generate reading content at an appropriate learning level in (almost) any language. We built it using ChatGPT, NextJS, and Firebase.
+
+David also taught me how to code.
+
+While we learned a ton, the first version of Yaya never saw the growth we wanted. I ended up moving on, and David kept going at a more relaxed pace.
+
+But first, to get a better idea of how v1.0 worked, watch this short video overview:
 
 <figure align="center">
   <iframe
@@ -40,63 +59,83 @@ So you can get a better idea of how v1.0 worked, first watch this short video ov
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowFullScreen
   ></iframe>
-  <figcaption>Quick preview of Yaya circa summer 2023</figcaption>
+  <figcaption>Yaya in 2-minutes</figcaption>
 </figure>
 
-Want to go deeper before reading on? [Try Yaya v1.0](https://www.yaya.press/) for yourself. Or if you prefer video, watch this [11-minute deep dive](https://www.youtube-nocookie.com/embed/rWw079aEzw8?si=XxL9aA6GuOsbQYs1).
+Want to go a little deeper? [Try Yaya v1.0](https://www.yaya.press/) for yourself. Or if you prefer video, watch this [11-minute deep dive](https://www.youtube-nocookie.com/embed/rWw079aEzw8?si=XxL9aA6GuOsbQYs1).
 
-I stepped away from Yaya last summer for two major reasons. I wanted to travel the world with my new wife. And after some reflection, I realized that I enjoyed working on the business side of startups (go-to-market, growth, and ops) more than I enjoyed spending my days coding. David wanted to keep Yaya small, so it didn't make sense to do that for Yaya.
-
-**Yaya v2.0**: David's newly updated version focuses on students working with language tutors. It's got a ton of features for language learners and tutors to use together during sessions and individually to study or prep.
-
-This post's another long one, so here's a quick table of contents. Go ahead and skip around.
-
-<a id="toc"></a>
-**目次**
-
-- [Prologue](#prologue) (my skippable personal backstory)
-- [What I learned](#what-i-learned) (the juicy bits, plus some advice for other software builders)
-- [Early iterations and missteps](#early-iterations-and-missteps) (the past lives of Yaya)
-- [How we built it](#how-we-built-it) (the software and tools we used)
-- [What I worked on](#what-i-worked-on) (my share of the contributions)
-- [What's next](#whats-next) (for Yaya and me)
-
-And lastly before diving in, I want to give a huge thanks to David. He's been a great friend and mentor to me. I've learned so much from him, and we had a ton of fun building Yaya together. Even though I'm no longer involved on a day-to-day basis (and am currently looking for my next gig), I'm so excited to see where he takes Yaya next!
-
-## Prologue
+### Yaya v2.0
 
 <figure align="center">
   <Image
-    src="/images/posts/yaya/prologue.webp"
+    src="/images/posts/yaya/reader.png"
     className="mx-auto"
-    alt="An illustration of a magical forest in a book"
+    alt="Screenshot of the Yaya web app, showing a story in Spanish"
+    width={500}
+    height={500}
+  />
+  <figcaption>The new Yaya</figcaption>
+</figure>
+
+On March 15th, David released a massive update/overhual of Yaya. The new version focuses on students working with language tutors. It's got a ton of features for language learners and tutors to use together during sessions and individually to study or prep.
+
+Needless to say, we're very optimistic about the new version. [Give it a go!](https://www.yaya.press/)
+
+## This series
+
+Here's what to expect over the next few weeks. I'll be adding links to the posts as they go live.
+
+- **Part 1** (this post): An introduction to Yaya v1.0
+- **Part 2** (coming 3/25): A deeper dive on the lessons learned while building Yaya
+- **Part 3** (coming 4/1): The backstory: how I got to Yaya, what I did, and our early iterations
+- **Part 4** (coming 4/8): The tools we used to build Yaya and some final thoughts
+
+## Some reflections
+
+So what's next?
+
+As for [Yaya](https://yaya.press/), David will keep working on it, using the features we built for v1.0 as a foundation. I'm excited to see it grow and evolve. I'll be using it to study Korean.
+
+As for me, I'm looking for work again doing startup go-to-market, growth, and ops ([send me an email](mailto:patrick@pscoleman.me) if you'd like to chat). That's what I like and where I believe I can do my best work.
+
+I stepped away from Yaya last summer for two major reasons.
+
+First, I realized that I enjoy working on the business side of startups more than I enjoy spending my days coding. David wants to keep Yaya small, so it doesn't make sense to do that for Yaya.
+
+And second, I wanted to travel the world with my wife. This meant pausing professional work and drawing down savings. David wants to bootstrap Yaya. Now that I'm back, I need a steady salary again. As you may know, life in San Francisco is expensive. But I love it here, it's close to family, and I can't imagine living anywhere else.
+
+I also want to say a huge thank you to David. He's been a true friend and mentor throughout this journey. I learned a ton hacking on Yaya and had a great time doing it. I'm sure I'll be buiding something from scratch again someday!
+
+Thank you too for reading this first post. I hope to see you back each week as I share more.
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/next.webp"
+    className="mx-auto"
+    alt="A small man standing on a book and looking out a window with two landscapes"
     width={500}
     height={500}
   />
   <figcaption>
-    The story begins <em>(image credit: DALL-E)</em>
+    Looking ahead <em>(image credit: DALL-E)</em>
   </figcaption>
 </figure>
 
-The seeds for Yaya were planted a long time ago. Let's briefly go back to the very beginning. ([or skip ahead to the learnings](#what-i-learned))
+<a id="2"></a>
 
-I have an early memory of learning the French colors sitting cross-legged on the floor of a sun-drenched classroom way back in the mid 90s. But my interest didn't really take off until an "introduction to foreign languages" class in middle school in the early aughts.
+# What I learned building an AI language learning app (part 2/4)
 
-First it was Spanish. I studied all through high school and college, picking up a minor in Spanish literature (talk to me about writers like Jorge Luis Borges or Roberto Bolaño anytime). Then in my middle-ish-twenties, I started learning Japanese and spent two months living in Tokyo just before COVID. My goal (recently accomplished) was to comfortably read a Haruki Murakami novel in Japanese. A few years ago, I started dating a Korean American (now married) and learning Korean too.
+**description: A deeper dive on the lessons learned while building Yaya.**
 
-Also in high school, I started taking compsci classes, placing directly into AP CS and going on to take classes in AI and computer architecture (a lot has changed since 2007...). I was lucky to go to a science and tech school and got absorbed in coding. But then I studied finance in college.
+<small>
+  <time dateTime={date}>March 25th, 2024</time>
+</small>
 
-Later as my professional career shifted from Wall Street to software startups, I kept toying with the idea of finally learning to code properly. I considered doing a bootcamp or going back to school, but I didn't think it'd be the right fit. My background knowledge was all over the place, I've typically prefered self-directed learning [with tutors](https://en.wikipedia.org/wiki/Bloom%27s_2_sigma_problem) as an adult, and many institutions are teaching outdated curriculum. As part of a consulting project, I looked at the tech stacks of startups over the past decade and saw a big shift to [serverless architectures](https://docs.aws.amazon.com/serverless/latest/devguide/serverless-shift-mindset.html), which isn't taught as widely.
+Welcome back! As a quick refresh, [Yaya](https://www.yaya.press) is an AI language learning app. The first version never quite took off. In this post, I'll share some of the lessons I learned the hard way. These are the juicy bits.
 
-Then finally in the fall of 2022 (well into my early thirties), I was cutting back on some consulting hours and thinking about a new project. I wanted to learn to code and still wanted to tackle that Murakami novel. David and I had a catch up call, and I shared an idea I'd been thinking of to interlace foreign texts with professional, i.e. human, translations (inspired by [Read Real Japanese](https://www.tofugu.com/reviews/read-real-japanese/) and similar books).
+Note: If you missed [part 1](/posts/yaya), I recommend starting there. In it, I introduce [Yaya v1.0](https://www.yaya.press/), the version covered in this post, and also share a bit about the newly launched [v2.0](https://www.yaya.press/). Or you can check out the [quick video overview](https://www.youtube.com/watch?v=hr61Y_F6oAU) of v1.0.
 
-It turns out David had been using Harry Potter to learn Chinese with his wife before bedtime and had already built a simple prototype using Google Translate for the translations. I asked David to teach me how to code, and in the first few days of 2023 we started working on Yaya together.
-
-I was fantasizing about Yaya turning into a wildly successful business, while also telling myself that it'd be fine if this was all just a good learning experience. Spoiler: We didn't get rich overnight. But we did bring something new into the world. We don't regret a thing.
-
-[^ to ToC](#toc)
-
-## What I learned
+I learned a lot building Yaya. I got a lot right and a lot wrong. I've written all this down to get some clarity for myself. But I'm sharing it too in the hopes that it will help others, whether you're working on a software startup, just a project or are just curious.
 
 <figure align="center">
   <Image
@@ -106,20 +145,38 @@ I was fantasizing about Yaya turning into a wildly successful business, while al
     width={500}
     height={500}
   />
-  <figcaption>The narrator reflects on knowledge gained</figcaption>
+  <figcaption>
+    The narrator reflects on knowledge gained <em>(image credit: DALL-E)</em>
+  </figcaption>
 </figure>
 
-I learned a lot building Yaya. I got a lot right and a lot wrong. I'm writing all this down to get some clarity for myself, but I'm sharing it too in the hopes that it will help others working on software startups (or just software projects).
+This one's long so here's a ToC (feel free to jump around):
 
-<a id="get-clarity"></a>
-### Be clear on what you want
+<a id="toc"></a>
+### 目次
+
+- [Be clear on what you want](#be-clear-on-what-you-want)
+- [Get something in front of real users ASAP](#get-something-in-front-of-real-users-asap)
+- [Give your users what they want](#give-your-users-what-they-want)
+- [Meet your users where they are](#meet-your-users-where-they-are)
+- [Be better than your substitutes](#be-better-than-your-substitutes)
+- [Ruthlessly prioritize your time](#ruthlessly-prioritize-your-time)
+- [Move fast and kill your darlings](#move-fast-and-kill-your-darlings)
+- [AI "art" is not quite there yet](#ai-art-is-not-quite-there-yet)
+- [Know your limits (patience please)](#know-your-limits-patience-please)
+- [Have fun](#have-fun)
+
+So let's jump in.
+
+## Be clear on what you want
 
 I spent a lot of time wanting Yaya to be a high-growth venture-backable business that I could work on full-time while living comfortably in San Francisco. I also really wanted to do (a meaningful portion of) the coding myself in order to learn. And I wanted to build a niche language-learning product that I would love to use myself. Sometimes these goals were at odds with each other. And Yaya went through a few incarnations (pivots if you will) while my wants evolved.
 
 If I'd been a little clearer with myself and with David about what it was I wanted, I would have made some different decisions, perhaps skipping the legal incorporation and not worrying too much about the name or business model potential. But hindsight is 20/20, as they say, and I can't imagine walking any straight-line path to get to where I am today. I learned a lot and had a lot of fun.
 
-<a id="real-users"></a>
-### Get something in front of real users ASAP
+[^ to ToC](#toc)
+
+## Get something in front of real users ASAP
 
 We spent weeks and months building features and tweaking the product before getting it in front of real users. Then when we finally started asking people to try Yaya, we watched as the initial excitement morphed into confusion or polite disinterest. Of course, we listened to all the feedback and kept iterating and going back for more feedback. And while we did get a small number of repeat users, we struggled to get the audience we really wanted with Yaya v1.0.
 
@@ -127,8 +184,9 @@ This is a bit downstream of being clear on what you want. If you want to build a
 
 While the conventional wisdom is to ship fast fast fast, I still feel ok about our timeline. David and I were both juggling other work (more for him than me), life events (I got married!), learning (me) and teaching (David), and just having fun. Plus we were using Yaya for our own language learning the whole time.
 
-<a id="what-they-want"></a>
-### Give your users what they want
+[^ to ToC](#toc)
+
+## Give your users what they want
 
 I want to draw on [Clay Christensen's famous business advice](https://hbswk.hbs.edu/item/clay-christensens-milkshake-marketing) here. When people decide to use a product, in a sense, they're "hiring" it because they have a "job to be done." He tells a story of a fast-food restaurant that noticed people were buying milkshakes in the morning. After some research they found that people were "hiring" the milkshake as a snack on their long commutes. So they made the milkshake thicker to last longer. People loved it.
 
@@ -148,26 +206,28 @@ Even though Yaya v1.0 didn't take off, I still think this was a solid focus for 
 
 In summary: give your users thick milkshakes 🥛🍦
 
-<a id="meet-your-users"></a>
-### Meet your users where they're at
+[^ to ToC](#toc)
 
-One thing we struggled with was getting the average person to understand Yaya. They came in with a lot of [prior expectations](https://en.wikipedia.org/wiki/Bayesian_probability), and we didn't meet them there.
+## Meet your users where they are
+
+One thing we struggled with was getting the average person to understand Yaya. They came in with a lot of [prior expectations](https://www.countbayesie.com/blog/2015/2/18/hans-solo-and-bayesian-priors), and we didn't meet them there.
 
 Some expectations of language learners and what that meant for us:
 
-- Most people interested in learning a language haven't started yet or are beginners. We really struggled to make the "newbie" reading level on Yaya easy enough for beginners. And what easy means varies somewhat from language to language. Getting this right turned out to be more work than we initially expected.
-- These days everyone (whether you've used it or not) knows of [Duolingo.](https://www.duolingo.com/) Their users love the gamified quizzes and clear progression. We didn't spend enough time specifically differentiating ourselves vs. them. And we didn't do a good job making users feel like they were learning and progressing.
-- Most language learners want to speak and communicate in a foreign language, not read literature, news, etc. It's harder to get people to try a new hobby than it is to get them to try a new product.
-- Chat is the dominant interface metaphor in AI right now. Some people were confused by how Yaya used AI (and even thought that we wrote the stories ourselves). People also wanted to customize the content after the initial generation, which we didn't allow. (This level of customization did make it into David's v2.0)
-- Many people (especially the younger generations ("ok boomer...")) prefer video to text, largely hanging out on TikTok and YouTube. We could market there, but it's tough to get users off platform.
-- Learners have an expectation that their learning content will be correct. It varied a lot by language, but the AI-generated content included occasional grammatical mistakes and awkward phrasing. Beginners (who we struggled to reach) wouldn't know, but more experienced learners (who we thought we were targeting) would be turned off.
-- Serious learners typically use flashcards with spaced-repetition to supplement other tools (check out the [Fluent Forever book](https://fluent-forever.com/book) for great [Anki](https://apps.ankiweb.net/) tips). We thought SRS vocabulary in the context of a story would be more fun/effective. We didn't communicate that well enough to know if it resonated.
-- Most people are casual learners, looking to spend say just 15-minutes a day studying. This further limited our audience and meant we'd have to find serious learners where they hung out (e.g. [subreddits](https://www.reddit.com/r/LearnJapanese/), [forums](https://japanese.stackexchange.com/), etc.). These communities are typically averse to self-promotion.
+- Most people interested in learning a language are beginners. We really struggled to make the "newbie" reading level on Yaya easy enough for beginners. Also different languages have different learning curves. Getting it right for beginners turned out to be harder than we expected.
+- These days everyone (whether you've used it or not) knows of [Duolingo.](https://www.duolingo.com/) Their users love the gamified quizzes and clear progression. We didn't spend enough time specifically differentiating ourselves vs. them. And we didn't do a good job showing users that they were learning and progressing.
+- Most learners are casual, looking to spend just 15-minutes a day studying. They often find products on app stores. As a web application, we couldn't reach this audience without building a mobile app as well. Web applications are faster/easier to build/update, but you have to get more creative with user acquisition. Building and maintaining both a web application and mobile app is a lot of work for a small team and requires different knowledge/competency.
+- Most language learners want to speak and communicate in a foreign language, not read literature, news, philosophy, etc. To reach more users, we'd have to convince them pick up a new hobby, which is much harder than just convincing them to try a new product.
+- Chat is the dominant interface metaphor in AI right now. Some people were confused by how Yaya used AI (and even thought that we wrote the stories ourselves). People also wanted to customize the content after the initial generation, which we didn't allow at the time. This level of customization has now made it into David's v2.0.
+- Learners have an expectation that their learning content will be correct. It varied a lot by language, but the AI-generated content included occasional grammatical mistakes and awkward phrasing. Beginners (who we struggled to reach) wouldn't know, but more experienced learners (who we were targeting) would be turned off.
+- Experienced learners typically use flashcards with spaced-repetition to supplement other tools (check out the [Fluent Forever book](https://fluent-forever.com/book) for great [Anki](https://apps.ankiweb.net/) tips). We thought SRS vocabulary in the context of a story would be more fun/effective. We didn't communicate that well enough to know if it resonated.
+- Many serious learners "hang out" with other learners in online communities (e.g. [subreddits](https://www.reddit.com/r/LearnJapanese/), [forums](https://japanese.stackexchange.com/), etc.). These users are often early adopters and willing to try new products, but the communities are typically averse to self-promotion.
+- Many people (especially the younger generations ("ok boomer...")) prefer video to text, largely hanging out on TikTok and YouTube. We could market on those platforms, but it's tough to get users to visit an external link (and many platforms discourage this behavior).
 - Some very serious learners want complete immersion in their target language. It was possible to use Yaya without translations but that wasn't our emphasis. These people are also likely to graduate off of learning tools within 6 months to a couple years, which could limit customer lifetime value (LTV) unless we reengaged them to come back and learn another new language.
 
-As we learned more, our niche kept growing smaller and smaller. And for Yaya v1.0, we didn't find product-market fit.
+As we learned more, our niche (reading practice for intermediate language learners) kept growing smaller and smaller. And for Yaya v1.0, we didn't find product-market fit.
 
-I also think that before overbuilding, we could have spent more of our time getting feedback from the market (while being careful not to give people [faster horses](https://hbr.org/2011/08/henry-ford-never-said-the-fast)). Instead I was spending a lot of my time coding unused features ([see above](#get-clarity)) and creatively procrastinating ([see below](#prioritize)). There are only so many hours in the day and it's easy to fall into these traps, so it's good to specialize. I think that's why the best teams include a mix of product builders (engineers, designers, PMs, etc.) and business growers (sales, marketing, ops, etc.).
+I also think that before overbuilding, we could have spent more of our time getting feedback from the market (while being careful not to give people [faster horses](https://hbr.org/2011/08/henry-ford-never-said-the-fast)). Instead I was spending a lot of my time personally coding unused features ([see above](#be-clear-on-what-you-want)) and creatively procrastinating ([see below](#ruthlessly-prioritize-your-time)). There are only so many hours in the day and it's easy to fall into these traps, so it's good to specialize. I think that's why the best teams include a mix of product builders (engineers, designers, PMs, etc.) and business growers (sales, marketing, ops, etc.).
 
 Get out there and talk to tons of folks. Know your audience well!
 
@@ -194,8 +254,9 @@ Get out there and talk to tons of folks. Know your audience well!
 
 This search for an "ideal customer profile" (ICP) and the iterative tweaking of positioning (how you describe the product) and outreach (how you find customers) is a huge part of any early stage startup's life-or-death search for product-market fit. And it's one of the things I focus on professionally. It's a creative challenge.
 
-<a id="substitutes"></a>
-### Be better than your substitutes
+[^ to ToC](#toc)
+
+## Be better than your substitutes
 
 While there are a lot of direct competitors in the language learning space, we were also competing with general-purpose AI tools like [ChatGPT](https://openai.com/gpt-3/) or [Claude](https://claude.ai/). We had to be better than these well-funded substitutes to get people to use Yaya.
 
@@ -203,10 +264,9 @@ You can use these AI tools to generate reading content in a lot of languages (an
 
 It's worth thinking through your positioning not just for the obvious competitors but also for the less obvious alternatives. This includes other pastimes or hobbies (or even just watching Netflix).
 
-<a id="prioritize"></a>
-### Ruthlessly prioritize your time
+[^ to ToC](#toc)
 
-This is the about page that I rewrote about a thousand times. The only people that cared were my parents (and in-laws). If it's not obvious from this blog, I like to write. So if you're like me, fight that impulse. If you build something people love, you'll get a chance to tell your story. Focus first on building a rock solid onboarding journey and making those first users keep coming back.
+## Ruthlessly prioritize your time
 
 <figure align="center">
   <Image
@@ -219,27 +279,39 @@ This is the about page that I rewrote about a thousand times. The only people th
   <figcaption>Yaya's about page (draft one thousand and one)</figcaption>
 </figure>
 
-And here are some of the other things I spent too much time on: generating and regenerating images on midjourney (especially useless when it's for a [404 page](https://www.yaya.press/error) nobody will see); changing the company name a few times (although to be fair the first name was the near unpronounceable "yomuya"); buying domain names for the different company names; tweaking and retweaking the visual and logo designs; etc.; etc.
+This is the about page that I rewrote about a thousand times. The only people that cared were my parents (and in-laws). If it's not obvious from this blog, I like to write. So if you're like me, fight that impulse. If you build something people love, you'll get a chance to tell your story. Focus first on building a rock solid onboarding journey and making those first users keep coming back.
+
+And here are some of the other things I spent too much time on:
+
+- generating and regenerating images on midjourney (especially useless when it's for a [404 page](https://www.yaya.press/error) nobody will see)
+- changing the company name a few times (although to be fair the first name was the near unpronounceable "yomuya")
+- buying domain names for the different company names
+- trying to do all the visual design myself (we eventually found a solid designer on [fiverr](https://www.fiverr.com/) )
+- tweaking and retweaking the visual and logo designs afterwards
+- etc.
+- etc.
 
 In short: Focus on what's life or death for your startup (or project). In the very beginning, that's typically building product and talking to users.
 
-<a id="darlings"></a>
-### Move fast and kill your darlings
+[^ to ToC](#toc)
 
-The most important thing when building a new software product is to **move fast**. This is especially true if you're smaller than your competition. I learned this time and again at [Replit](https://replit.com/) and [PeopleGrove](https://www.peoplegrove.com/). So think about what's critically important for your users, build that and only that, ship it, and get feedback. If it doesn't work, kill it. If it does, improve it and/or move on.
+## Move fast and kill your darlings
+
+The most important thing when building a new software product is to **move fast**. This is especially true if you're smaller than your competition. I've learned this time and again in my [startup career](/about#professional-highlights). So think about what's critically important for your users, build that and only that, ship it, and get feedback. If it doesn't work, kill it. If it does, improve it and/or move on.
 
 (Note: Of course this doesn't apply when lives or safety are on the line. Then you should absolutely measure twice (or more) before you cut. More generally, if a decision is reversible, move fast, if not, move slow.)
 
 You won't always build the right thing. And you can't always know if people will want something until you've built it. That's why it's important to move fast. If you get it right, amazing! But if you fail fast, you can pick yourself right back up again and make changes. On the other hand, if you fail slow, you've lost a lot of time and it's much tougher emotionally to move on.
 
-One "fail" for us was building the complex feature to match foreign language text to existing translations. I had a high tolerance for this difficult-to-use feature because it was "my" thing and I was using it daily to study. But it became obvious quickly that we would never get many people using it. We had to kill our darling.
+One "fail" for us was building a complex feature to match foreign language text to existing translations. I had a high tolerance for this difficult-to-use feature because it was "my" thing and I was using it daily to study. But it became obvious quickly that we would never get many people using it. We had to kill our darling.
 
-Admittedly David got there a little bit faster than I did, and I argued to find away to keep this feature in new versions of the product. But it just didn't make sense. After recognizing this, we made a decision to delete the old code and move on within a week. I think this is one of the things we actually did well.
+Admittedly David got there a little faster than I did, and I argued to find a way to keep this feature in new versions of the product. But it just didn't make sense. After recognizing this, we made a decision to delete the old code and move on within a week. I think this is one of the things we actually did well.
 
 Corollary for further along the startup road: [give away your legos](https://review.firstround.com/give-away-your-legos-and-other-commandments-for-scaling-startups/).
 
-<a id="art"></a>
-### AI "art" is not quite there yet
+[^ to ToC](#toc)
+
+## AI "art" is not quite there yet
 
 What even is art? Who knows? People have [opinions](https://www.youtube.com/watch?v=VcidL9uXw6A). We've all got [wide-ranging](https://www.youtube.com/watch?v=nfWlot6h_JM) [tastes](https://www.youtube.com/watch?v=ntbNRUycbD4). But as they say, you know it when you see it.
 
@@ -249,29 +321,31 @@ With Yaya, we spent a lot of time fine-tuning our prompts to try to get the AI-g
 
 The stories were ok... They were good for learning, but you didn't lose yourself in them. The plots were a bit formulaic, repetitive, and internally inconsistent. And we had [Chekhov's guns](https://en.wikipedia.org/wiki/Chekhov%27s_gun) all over the place that never got fired. This was particularly true when the AI tried to work in a vocab word due for SRS review that didn't fit the story (e.g. the word "sewer" in a story about a princess).
 
-Ultimately we realized that we never finished reading Yaya's multi-chapter stories, so we ditched the outline generation, used a simpler prompt, and switched to infinitely generating new content as the user scrolled (until they got bored and wanted something fresh). This improved the user experience, generated stories faster, and simplified the code.
+Ultimately we realized that we never actually finished reading Yaya's multi-chapter stories, so we ditched the outline generation, used a simpler prompt, and switched to infinitely generating new content as the user scrolled (until they got bored and wanted something fresh). This improved the user experience, generated stories faster, and simplified the code.
 
 For a talented writer's take on all this, check out [Jennifer Egan's](https://jenniferegan.com/) latest novel, Candy House. In it she parodies generated stories (and so much else) built with standardized ["stockblocks"](https://theconversation.com/in-the-candy-house-jennifer-egan-delivers-an-inventive-novel-for-a-digital-age-181151) to great comedic and storytelling effect.
 
-May the technological tinkerers keep pushing us forward with amazingly efficient machines, and may the artists keep tearing it all down and [keeping us human](https://www.goodreads.com/quotes/11429950-one-opposite-of-imagination-is-efficiency). I think the world will be better for it.
+May the technological tinkerers keep pushing us forward with amazingly efficient machines, and may the artists keep tearing it all down and [reminding us](https://www.goodreads.com/quotes/11429950-one-opposite-of-imagination-is-efficiency) of what it means to be human. I think the world will be better for it.
 
-<a id="patience"></a>
-### Know your limits (patience please)
+[^ to ToC](#toc)
+
+## Know your limits (patience please)
 
 If you spend any time in Silicon Valley circles, you'll hear a lot about "hypergrowth" and moving fast ([see above even](#darlings) :P). You'll see people achieve astronomical financial success in a short amount of time (and sometimes lose it just as fast). While moving fast is great practical advice for building a certain type of business (but definitely not all types), some things just take time.
 
-Learning is one of these things. This is not [the Matrix](https://www.youtube.com/watch?v=OrzgxUhnYjY). The human [brain](https://www.anilseth.com/being-you/) and body take time to acquire new skills. And even with these wonderful new AI tools, we're still limited by our biology. In tech, you'll often hear the phrase: "humans grow linearly, companies grow exponentially" (source: [Khalid Halim](https://review.firstround.com/hypergrowth-and-the-law-of-startup-physics/)).
+Learning is one of these things. This is not [the Matrix](https://www.youtube.com/watch?v=OrzgxUhnYjY). The human [brain](https://www.anilseth.com/being-you/) and body take time to acquire new skills. And even with these wonderful new AI tools, we're still limited by our biology. In tech, you'll often hear [the phrase](https://review.firstround.com/hypergrowth-and-the-law-of-startup-physics/): "humans grow linearly, companies grow exponentially."
 
-At some level, I internalized the learn-to-code-in-X-time rhetoric and the techie-exceptionalism, and I figured that within a few months I'd be able to code a fully-featured and compelling product entirely on my own. I was wrong. It takes a lot of time and hard work to learn to code.
+At some level, I internalized the learn-to-code-in-X-time rhetoric and the techie-exceptionalism, and I figured that within a few months I'd be able to code a fully-featured and compelling product entirely on my own. I was wrong. It takes a lot of time and hard work to learn to build complex software applications.
 
-After all people dedicate their lives and careers to this thing. Why not [learn programming in 10 years](https://norvig.com/21-days.html) instead? Why not [get to the bottom of things](https://www-cs-faculty.stanford.edu/~knuth/email.html) instead of trying to stay on top of everything?
+After all people dedicate their careers to this thing. Why not [learn programming in 10 years](https://norvig.com/21-days.html) instead? Why not [get to the bottom of things](https://www-cs-faculty.stanford.edu/~knuth/email.html) instead of trying to stay on top of everything?
 
 But I wasn't completely wrong though. _In collaboration_ with a partner, I _was_ able to build something meaningful. And I did get better and better every day every day that I sat down and wrote code and debugged.
 
-(Note to beginners: Don't let all that discourage you from getting started. The payoff is great and the journey is fun, whether you code professionally or not. Plus there's more help available than ever. Considering using [Replit](https://replit.com/) and [freeCodeCamp](https://www.freecodecamp.org/). They've got great learning resources and great communities. Disclaimer: I used to work at Replit. Stick to it but have patience!)
+(Note to beginners: Don't let all that discourage you from getting started. You'll be able to code simple but useful applications much sooner. If you stick to it, the payoff is great and the journey is fun, whether you end up coding professionally or not. Plus there's more help available than ever. Considering using [Replit](https://replit.com/) and [freeCodeCamp](https://www.freecodecamp.org/). They've got great learning resources and great communities. Disclaimer: I used to work at Replit.)
 
-<a id="fun"></a>
-### Have fun
+[^ to ToC](#toc)
+
+## Have fun
 
 This should be obvious but it may not be.
 
@@ -282,6 +356,93 @@ As for me, one of my biggest learnings from Yaya was that I don't want to spend 
 Ofc having fun is just as applicable for language learning as it is for startups!
 
 [^ to ToC](#toc)
+
+## Next in the series
+
+Thanks for reading! I'll be back next week with the backstory of Yaya. Here are all the posts in the series. I'll be adding links as they go live.
+
+- [Part 1](/posts/yaya): An introduction to Yaya v1.0, plus some reflections
+- **Part 2** (this post): A deeper dive on the lessons learned while building Yaya
+- **Part 3** (coming 4/1): The backstory: how I got to Yaya, what I did, and our early iterations
+- **Part 4** (coming 4/8): The tools we used to build Yaya and some final thoughts
+
+<a id="3"></a>
+
+# What I learned building an AI language learning app (part 3/4)
+
+**description: The backstory: how I got to Yaya, what I did, and our early iterations.**
+
+<small>
+  <time dateTime={date}>April 1st, 2024</time>
+</small>
+
+News update: This morning, we got an unsolicited 7-figure acquisition offer for Yaya from a huge public tech co! April fools ;)
+
+Welcome back again! If you're just joining us now, I recommend [starting at the beginning](/posts/yaya). In this post, I'll share some of the history of [Yaya](https://www.yaya.press) and my work contributions. Read on.
+
+- [Prologue](#prologue) (my skippable personal backstory)
+- [What I worked on](#what-i-worked-on) (my share of things)
+- [Early iterations and missteps](#early-iterations-and-missteps) (the past lives of Yaya)
+
+## Prologue
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/prologue.webp"
+    className="mx-auto"
+    alt="An illustration of a magical forest in a book"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    The story begins <em>(image credit: DALL-E)</em>
+  </figcaption>
+</figure>
+
+The seeds for Yaya were planted a long time ago. Let's briefly go back to the very beginning.
+
+I have an early memory of learning the French colors sitting cross-legged on the floor of a sun-drenched classroom way back in the mid 90s. But my interest didn't really take off until an "introduction to foreign languages" class in middle school in the early aughts.
+
+First it was Spanish. I studied all through high school and college, picking up a minor in Spanish literature (talk to me about writers like Jorge Luis Borges or Roberto Bolaño anytime). Then in my middle-ish-twenties, I started learning Japanese and spent two months living in Tokyo just before COVID. My goal (recently accomplished) was to comfortably read a Haruki Murakami novel in Japanese. A few years ago, I started dating a Korean American (now married) and learning Korean too.
+
+Also in high school, I started taking compsci classes, placing directly into AP CS and going on to take classes in AI and computer architecture (a lot has changed since 2007...). I was lucky to go to a science and tech school and got absorbed in coding. But then I studied finance in college.
+
+Later as my professional career shifted from Wall Street to software startups, I kept toying with the idea of finally learning to code properly. I considered doing a bootcamp or going back to school, but I didn't think it'd be the right fit. My background knowledge was all over the place, I've typically prefered self-directed learning [with tutors](https://en.wikipedia.org/wiki/Bloom%27s_2_sigma_problem) as an adult, and many institutions are teaching outdated curriculum. As part of a consulting project, I looked at the tech stacks of startups over the past decade and saw a big shift to [serverless architectures](https://docs.aws.amazon.com/serverless/latest/devguide/serverless-shift-mindset.html), which isn't taught as widely.
+
+Then finally in the fall of 2022 (well into my early thirties), I was cutting back on some consulting hours and thinking about a new project. I wanted to learn to code and still wanted to tackle that Murakami novel. David and I had a catch up call, and I shared an idea I'd been thinking of to interlace foreign texts with professional, i.e. human, translations (inspired by [Read Real Japanese](https://www.tofugu.com/reviews/read-real-japanese/) and similar books).
+
+It turns out David had been using Harry Potter to learn Chinese with his wife before bedtime and had already built a simple prototype using Google Translate for the translations. I asked David to teach me how to code, and in the first few days of 2023 we started working on Yaya together.
+
+I was fantasizing about Yaya turning into a wildly successful business, while also telling myself that it'd be fine if this was all just a good learning experience. Spoiler: We didn't get rich overnight. But we did bring something new into the world. We don't regret a thing.
+
+[^ to ToC](#toc)
+
+## What I worked on
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/contributions.webp"
+    className="mx-auto"
+    alt="An illustration of a hero fighting a dragon in a book"
+    width={500}
+    height={500}
+  />
+  <figcaption>Slaying the dragon with a little help</figcaption>
+</figure>
+
+Since this was my first time coding anything substantial, needless to say, I leaned on David a lot. Before this I'd taken a fair amount of computer science classes in school, wrote some VBA macros for Excel and PowerPoint early in my career, fixed some website typos (directly in text fields in Github, which felt like [flying blind](https://www.youtube.com/watch?v=89AaqbrqcHI)), and created some devtools marketing content while working at startups. So David built the initial app and set up hosting. Then I worked in his codebase/system. That in itself was some great learning.
+
+At the start, I did frontend work (building out the UI and adding features) and some data/algorithm manipulation. It was seriously fun banging my head against the beam search algorithm. Firebase was tricky at times and [RXJS Observables](https://rxjs.dev/guide/observable) consistently confounded me, but I kept plugging away with David's (and ChatGPT's) help.
+
+As things progressed, I got a bit more comfortable. I kept working on the frontend and got more confident on my own. From time to time, I'd also work with the data, but as we started getting a few users and wanted things to stay stable, this was mostly just in pair sessions with David. I also spent an inordinate amount of time on prompt engineering and testing.
+
+And in the midst of all of this I got married and decided to take some time off work to travel the world :)
+
+The big feature that I worked on before wrapping up work and leaving on a long honeymoon was adding audio to the app. It was challenging and David had to do a pretty big refactor (haha), but it felt good shipping a tangible and meaningful feature.
+
+Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends, family, and acquaintances), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more above if you missed it](#prioritize)).
+
+In the end, I asked David how much software engineering I'd really learned. And he said he'd hire me as a junior engineer, which felt good and validated all the effort. As mentioned though, I'm more passionate about the business stuff, so that's where I'll focus for now. Hopefully I'll find something that marries these interests.
 
 ## Early iterations and missteps
 
@@ -312,11 +473,11 @@ Before too long, we realized this wasn't going to be useful outside of a tiny an
 
 Next (for a short time), we pivoted to public domain classics that we could pre-upload in a variety of languages. The main issue here was that while we solved the problem of uploading content for the user, we didn't solve any of the other problems, namely that only a tiny audience (of mostly experts) wants to read classics in the original.
 
-At this point we'd kept plugging away and improving the interface. We had a working app for reading foreign language content, but alas, no good content.
+By now we'd kept plugging away and improving the interface. We had a working app for reading foreign language content, but alas, no good content.
 
 ### v0.3
 
-So then we tried chatGPT-generated stories. I pushed back at first, because who wants to read the hallucinations of a soulless algorithm? Although the [Blake Lemoine](https://news.ycombinator.com/item?id=32198214) types may take issue with calling it “soulless”...
+So then we tried chatGPT-generated stories. I pushed back at first, because who wants to read the hallucinations of a soulless algorithm? Although [some folks](https://news.ycombinator.com/item?id=32198214) may take issue with calling it “soulless”...
 
 Instead I quickly found that the AI-generated content was as good (or at least sufficiently good for learning) as a lot of the human-written bilingual graded readers out there. And, like the [library of babel](https://libraryofbabel.info/), it had infinite content. So go on and read those space operas featuring superintelligent frogs or those paranormal romance whodunits to your heart's content.
 
@@ -326,11 +487,34 @@ It wasn't gonna be great literature, but at this point we had something. Unfortu
 
 From here on, we started getting the product in front of more users (who were not us) and making iterative improvements. We did a ton of "high tech" [prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering) to get better quality and variety. Some of the big feature additions were: [spaced-repetition](https://en.wikipedia.org/wiki/Spaced_repetition) vocabulary to include in generated content, flashcards, audio, and clickable definitions + grammar explanations for any word or phrase (also AI-generated). We also ironed out some kinks with poor performance in some languages (starting with AI-generated English content and then translating for those languages).
 
-By now we had built a good product, but we struggled to get people to use it, which after all, is what counts. More on this [below](#what-i-learned).
+By this point in time we had built a good product, but we struggled to get people to use it, which after all, is what counts. More on this [in the prior post](/posts/yaya2).
 
 [^ to ToC](#toc)
 
-## How we built it
+## Next in the series
+
+Thanks for reading! I'll be back next week with the final post, an overview of our tools. I'll add a link when it goes live. Here is a list of the whole series.
+
+- [Part 1](/posts/yaya): An introduction to Yaya v1.0, plus some reflections
+- [Part 2](/posts/yaya2): A deeper dive on the lessons learned while building Yaya
+- **Part 3** (this post): The backstory: how I got to Yaya, what I did, and our early iterations
+- **Part 4** (coming 4/8): The tools we used to build Yaya and some final thoughts
+
+<a id="4"></a>
+
+# What I learned building an AI language learning app (part 4/4)
+
+**description: Tools: key tools (ChatGPT, NextJS, Firebase) and basics for beginners.**
+
+<small>
+  <time dateTime={date}>April 8th, 2024</time>
+</small>
+
+Welcome back for the final post in the series! Once again if you're new, [start at part 1](/posts/yaya).
+
+In this post, I'll share the tools we used to build [Yaya v1.0](https://www.yaya.press/) along with some thoughts for each. I'll start with the [key tools](#key-tools), which may be all you're interested in if you're a software engineer or a business person. But since I started as a beginner on this project, I'll also mention a bunch of [basic tools](#basic-tools) that more experienced coders might take for granted. And finally I'll close things out with a few [final thoughts](#final-thoughts).
+
+Note: there's a new version of Yaya too. [Check it out!](https://www.yaya.press/)
 
 <figure align="center">
   <Image
@@ -340,82 +524,80 @@ By now we had built a good product, but we struggled to get people to use it, wh
     width={500}
     height={500}
   />
-  <figcaption>The mythical objects on our quest</figcaption>
+  <figcaption>
+    The mythical objects on our quest <em>(image credit: DALL-E)</em>
+  </figcaption>
 </figure>
 
-Here are the [key tools](#key-tools) we used while building Yaya. Since I was a beginner and learning to code, I'll also mention some [basic tools](#basic-tools) that experienced developers might take for granted.
+## Key Tools
 
-<a id="key-tools"></a>
-### Key Tools
-
-#### ChatGPT API
+### ChatGPT API
 
 We used [OpenAI's ChatGPT API](https://openai.com/blog/introducing-chatgpt-and-whisper-apis) (GPT-3.5) to generate the reading content as well as the definitions/grammar explanations. We did a lot of prompt engineering to get consistently good output. We were curious about [tools for testing prompts](https://community.openai.com/t/tools-for-testing-prompts/305309) to improve stability and consistency but had other priorities at the time. The quality was generally solid in popular languages (English, Spanish, etc.) but trailed off in less common languages, putting out weird grammar patterns or even gibberish. We were eagerly awaiting access to the GPT-4 API.
 
-#### Google Translate API
+### Google Translate API
 
 We used the [Google Translate API](https://cloud.google.com/translate) to translate the generated content into other languages. It wasn't perfect, but it was good enough for language learning purposes. We were planning to pass in more context to improve the translation quality but also had other priorities. As I mentioned above, we also used Google Translate as a workaround for languages where ChatGPT was weak.
 
-#### NextJS
+### NextJS
 
 [NextJS](https://nextjs.org/) is a great framework for building React web apps that comes with a lot of built-in features that make development much easier. It's also great for SEO and performance (see [SSR/SSG](https://vercel.com/blog/nextjs-server-side-rendering-vs-static-generation), etc.). It was created by Vercel, so works best when you deploy there (more below).
 
-#### Vercel
+### Vercel
 
 We used [Vercel](https://vercel.com/) to host the app. It's a great platform for hosting NextJS apps (and other serverless apps). It's easy to use, has great performance (see their [Edge Network](https://vercel.com/docs/edge-network/overview), etc.), and is free for small projects. Deploying is as easy as [pushing to Github](https://vercel.com/docs/deployments/git/vercel-for-github) and the [basic analytics](https://vercel.com/docs/analytics) are solid too.
 
-#### Firebase
+### Firebase
 
 We used [Firebase](https://firebase.google.com/) for the back end, e.g. user authentication, serverless functions, and data storage in a NoSQL DB (among other things). It's a good complement for serverless apps. It was a bit of a learning curve for me, but it's pretty easy to work with the data in Javascript, the web GUI is convenient when needed, and it's popular so there's a ton of [learning content](https://www.youtube.com/results?search_query=firebase) out there. David also had a lot of experience with it (and training junior developers on it) from other projects.
 
 For an open source alternative, I've heard good things about [Supabase](https://supabase.io/).
 
-<a id="basic-tools"></a>
-### Basic Tools
+## Basic Tools
 
-([skip to the next section](#what-i-worked-on) if you're already familiar with the basics)
+([skip to the end](#final-thoughts) if you're already familiar with the basics)
 
-#### Javascript
+### Javascript
 
 It's pretty basic, but we wrote the app in [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript). If you're a total beginner and want to work on web apps, learn Javascript.
 
-#### TypeScript
+### TypeScript
 
 We used [TypeScript](https://www.typescriptlang.org/) to write the app. It's a superset of Javascript that adds static types. It's a good way to catch bugs early and make your code more readable and maintainable. It's also the most popular way to write Javascript these days.
 
-#### React
+### React
 
 We used [React](https://reactjs.org/) to build the front end. It's the most popular front end framework for a reason.
 
-[Svelte](https://svelte.dev/) and other hot frameworks look cool, and the nerd in me wants to try them out, but you better have a good reason if you're not gonna stick with the defaults, especially if you're working on a team. (and React still hasn't become [an old dinosaur](https://www.forbes.com/sites/duenablomstrom1/2018/11/30/nobody-gets-fired-for-buying-ibm-but-they-should/) yet)
+The nerd in me wanted to try [Svelte](https://svelte.dev/) or another hot framework, but you better have a good reason if you're not gonna stick with the "industry standard," especially if you're working on a team. React hasn't yet become [an old dinosaur](https://www.forbes.com/sites/duenablomstrom1/2018/11/30/nobody-gets-fired-for-buying-ibm-but-they-should/) to consider only cautiously.
 
-#### MUI
+### MUI
 
 We used [MUI](https://mui.com/) for the UI components (buttons, drop downs, menus, etc.). Pick a customizable and widely-used component library and save yourself a lot of time.
 
-#### TailwindCSS
+### TailwindCSS
 
 We used [TailwindCSS](https://tailwindcss.com/) for the CSS styles (colors, sizes, layout, etc.). It's a great way to get a good-looking and consistent app without needing to be a designer. [Utility classes](https://en.wikipedia.org/wiki/Tailwind_CSS) are just one way to do things, but I found it pretty easy and intuitive. It's worth spending time [customizing themes and colors](https://tailwindcss.com/docs/configuration) to make your life easier. Occasionally Tailwind didn't play nice with MUI (and vice versa) but it was mostly smooth sailing.
 
-#### Google Domains
+### Google Domains
 
-[This](https://domains.google/) is where we bought our domains. Google doesn't offer this service anymore, but there are tons of alternatives. It's a commodity, so don't overthink it.
+[This](https://domains.google/) is where we bought our domains. Google doesn't offer this service anymore, but there are tons of alternatives ([here's one](https://www.namecheap.com/)). It's a commodity, so don't overthink it.
 
-#### Google Analytics
+### Google Analytics
 
 [Google analytics](https://marketingplatform.google.com/about/analytics/) is probably the most popular web analytics tool (although I've used privacy-focused alternatives like [Plausible](https://plausible.io/) in the past as well). We used it to track traffic to the site/app and user activity. When you're using Firebase, it's good to stick in the Google ecosystem.
 
 If we were a little further along and had the budget, tools like [Amplitude](https://amplitude.com/) and [FullStory](https://www.fullstory.com/) would have been great for understanding user behavior and getting feedback. We did a lot of user testing and feedback collection manually.
 
-#### Github
+### Github
 
 We used [Github](https://github.com/) for version control and as a code repository. I learned the basics of [git](https://www.w3schools.com/git/), some [best practices](https://gist.github.com/mattlewissf/9958704), how to do [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests), and some collaboration etiquette from David. Github is ubiquitous and great. It also has a really nice [integration with Vercel](https://vercel.com/docs/deployments/git/vercel-for-github). Seriously nice.
 
-#### VSCode
+### VSCode
 
 [VSCode](https://code.visualstudio.com/) is the code editor that most professional engineers use. It's solid and extensible. We used it too.
 
-#### Mac
+### Mac
 
 If you're using Windows now and don't have a good professional reason for that (e.g. working in finance), switch. Mac has a great ecosystem for developers, and coding on a unix-based OS is a better experience. If cost is a factor, buy used.
 
@@ -423,27 +605,27 @@ As for me, switching to a [Mac laptop](https://www.apple.com/mac/) after years o
 
 Quick plug for [Rectangle](https://rectangleapp.com/) a nice little window manager for macOS. Definitely improved my quality of life.
 
-#### iTerm
+### iTerm
 
 [iTerm](https://iterm2.com/) is a great terminal emulator for macOS. The default app works fine, but iTerm just makes everything a bit more comfortable. I got a bit carried away with mostly unnecessary but fun customizations (like [ZSH](https://ohmyz.sh/) and [powerlevel10k](https://github.com/romkatv/powerlevel10k)). It took me back to the days of playing with my linux config and [Compiz Fusion](https://www.youtube.com/watch?v=E4Fbk52Mk1w) in high school.
 
-#### Figma
+### Figma
 
 We didn't use it much, but for a handful of complicated page mockups and brainstorming, [Figma](https://www.figma.com/) was pretty essential. It's a great product design tool that scales up and down.
 
-#### Google Docs
+### Google Docs
 
 Perhaps surprisingly, I mostly used [Google Docs](https://www.google.com/docs/about/) to keep track of work, burning through new docs almost as fast as stickie notes. David used [Roam](https://roamresearch.com/) and other tools. I'm a big fan of [Asana](https://asana.com/) (and project management software generally - very curious about [Linear](https://linear.app/)) in a professional setting, but with just two people in pretty constant communication, we opted to keep it simple. Use the right tool for the job and all.
 
-#### Tuple
+### Tuple
 
 We used [Tuple](https://tuple.app/) for pair programming. It's seriously great.
 
-#### WhatsApp
+### WhatsApp
 
 And we used [WhatsApp](https://www.whatsapp.com/) to chat on and off asynchronously. While it is a great tool, you definitely don't need [Slack](https://slack.com/) for two people.
 
-#### AI Assistants
+### AI Assistants
 
 And finally, I also used [ChatGPT](https://chat.openai.com/) as a "coding tutor." If you haven't already, try asking ChatGPT questions and pasting in code snippets to get help with tricky problems and debugging. It's not perfect, but often it saves a lot of time vs. Google searching for blogs or digging through docs or StackOverflow. [Copilot](https://github.com/features/copilot) is also great for getting tips without breaking flow. Of course, these are both gonna get it wrong a lot of the time, and you'll still run into lots of bugs when coding... but debugging is half the fun, right?
 
@@ -451,57 +633,26 @@ And if you're new (or experienced and building smaller projects), I can't say en
 
 [^ to ToC](#toc)
 
-## What I worked on
+## The series
 
-<figure align="center">
-  <Image
-    src="/images/posts/yaya/contributions.webp"
-    className="mx-auto"
-    alt="An illustration of a hero fighting a dragon in a book"
-    width={500}
-    height={500}
-  />
-  <figcaption>Slaying the dragon with a little help</figcaption>
-</figure>
+If you'd like to go back and revisit anything, here's a list of the whole series.
 
-Since this was my first time coding anything substantial, needless to say, I leaned on David a lot. Before this I'd taken a fair amount of computer science classes in school, wrote some VBA macros for Excel and PowerPoint early in my career, fixed some website typos (directly in text fields in Github, which felt like [flying blind](https://www.youtube.com/watch?v=89AaqbrqcHI)), and created some devtools marketing content while working at startups. So David built the initial app and set up hosting. Then I worked in his codebase/system. That in itself was some great learning.
+- [Part 1](/posts/yaya): An introduction to Yaya v1.0, plus some reflections
+- [Part 2](/posts/yaya2): A deeper dive on the lessons learned while building Yaya
+- [Part 3](/posts/yaya3): The backstory: how I got to Yaya, what I did, and our early iterations
+- **Part 4** (this post): The tools we used to build Yaya and some final thoughts
 
-At the start, I did frontend work (building out the UI and adding features) and some data/algorithm manipulation. It was seriously fun banging my head against the beam search algorithm. Firebase was tricky at times and [RXJS Observables](https://rxjs.dev/guide/observable) consistently confounded me, but I kept plugging away with David's (and ChatGPT's) help.
+## Final thoughts
 
-As things progressed, I got a bit more comfortable. I kept working on the frontend and got more confident on my own. From time to time, I'd also work with the data, but as we started getting a few users and wanted things to stay stable, this was mostly just in pair sessions with David. I also spent an inordinate amount of time on prompt engineering and testing.
+Thanks for reading! I had a great time writing these blogposts. The writing process really helped me to reflect on the time I spent building Yaya with David and to get clear on what I want to do next. I sincerely hope you found something helpful in here.
 
-And in the midst of all of this I got married and decided to take some time off work to travel the world :)
+Foreign language learning is a big passion of mine. I've studied Spanish (español), Japanese (日本語), and Korean (한국어). I also love software. Using it, writing it, and helping grow it. It was a treat to work on a project that combined these interests. I learned so so much.
 
-The big feature that I worked on before wrapping up work and leaving on a long honeymoon was adding audio to the app. It was challenging and David had to do a pretty big refactor (haha), but it felt good shipping a tangible and meaningful feature.
+As I mentioned in the first post, I'm currently looking for my next gig. I'm a business generalist, which means I focus on go-to-market (sales and marketing), growth (product), and operations (management, finance, legal, HR, recruiting, etc.). Plus I code a little (enough to be dangerous perhaps...).
 
-Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends and family), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more above if you missed it](#prioritize)).
+I think I can offer the most to early-/mid-stage startups working on AI, edtech or dev tools. But I'm open to anything with an inspiring team and mission. If you'd like to chat, please [email me.](mailto:patrick@pscoleman.me)
 
-In the end, I asked David how much software engineering I'd really learned. And he said he'd hire me as a junior engineer, which felt good and validated all the effort. As mentioned though, I'm more passionate about the business stuff, so that's where I'll focus for now. Hopefully I'll find something that marries these interests.
-
-## What's next
-
-<figure align="center">
-  <Image
-    src="/images/posts/yaya/next.webp"
-    className="mx-auto"
-    alt="A small man standing on a book and looking out a window with two landscapes"
-    width={500}
-    height={500}
-  />
-  <figcaption>Back again, transformed and looking ahead</figcaption>
-</figure>
-
-As for [Yaya](https://yaya.press/), David will keep working on it, using the features we built as a foundation. I'm excited to see it grow and evolve. I'll be using it to study Korean, and I hope you'll give it a try too!
-
-As for me, I'm looking for work again doing startup go-to-market, growth, and ops. That's what I like and what I'm good at.
-
-Last summer I also chose to [travel around the world](/posts/honeymoon) for seven months with my wife before settling down again. This meant pausing professional work and drawing down savings. David wants to bootstrap Yaya. And right now I need a steady salary. As you may know, life in San Francisco is a little expensive. But I love it here, it's close to family, and I can't imagine living anywhere else. So I'm happy to let David run with Yaya, while I turn the page to the next chapter.
-
-I just gotta say though, I had too much fun hacking away on Yaya. I'm sure I'll be buiding something from scratch again someday.
-
-Thanks so much for reading! If you want to talk, [send me an email.](mailto:patrick@pscoleman.me)
-
-[^ to ToC](#toc)
+Whatever you're working on, whatever you're learning, I wish you the best. Have fun out there!
 
 export default ({ children }) => (
   <PostLayout
