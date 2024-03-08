@@ -10,25 +10,44 @@ import { PostLayout } from "@/components/postLayout";
 import Image from "next/image";
 import Link from "next/link";
 
-# What I learned building an AI language learning app (part 1/4)
+<a id="1"></a>
 
-**NOTE: THE NEW VERSION OF YAYA WILL LAUNCH ON MARCH 15TH.**
+# What I learned building an AI language learning app (part 1/4)
 
 <small>
   <time dateTime={date}>March 18th, 2024</time>
 </small>
 
-> Reader: So what is [Yaya](https://www.yaya.press)?"
+Welcome! Maybe you're curious about AI, software development, language learning, or startups? Maybe you know me? Or maybe you just clicked a link? Whatever your reasons for being here, let me first tell you a little about [Yaya.](https://www.yaya.press)
+
+> Reader: Wait, what is Yaya"
 >
 > "Author: An AI foreign language learning app that generates dialogs, stories, and more.
 
-You hear a lot about the big startup successes. This won't be one of those stories. I'll share an inside look at when things don't quite work out.
+You hear a lot about the big startup successes. This won't be one of those stories. In four blogposts, I'll share an inside look at when things don't quite work out.
 
-The first version of Yaya never saw the growth we wanted. And personal priorities changed. So I moved on and my business partner kept going at a more relaxed pace. He just released a big update on March 15th. And we're very optimistic about the new version. [Check it out!](https://www.yaya.press/)
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/reader.png"
+    className="mx-auto"
+    alt="Screenshot of the Yaya web app, showing a story in Spanish"
+    width={500}
+    height={500}
+  />
+  <figcaption>Yaya v1.0 circa summer 2023</figcaption>
+</figure>
 
-**Yaya v1.0**: During the first half of 2023, I, Patrick Coleman (a startup business guy), and my friend, [David Gaynor](http://freedavid.co/) (an experienced engineer/founder), built the first version of Yaya. It used AI to generate reading content at an appropriate learning level in (almost) any language. We built it using ChatGPT, NextJS, and Firebase ([more on that below](#how-we-built-it)).
+## The evolution of Yaya
 
-So you can get a better idea of how v1.0 worked, first watch this short video overview of the app.
+### Yaya v1.0
+
+During the first half of 2023, I, Patrick Coleman (a startup business guy), and my friend, [David Gaynor](http://freedavid.co/) (an experienced engineer/founder), built the first version of Yaya. It used AI to generate reading content at an appropriate learning level in (almost) any language. We built it using ChatGPT, NextJS, and Firebase.
+
+David also taught me how to code.
+
+While we learned a ton, the first version of Yaya never saw the growth we wanted. I ended up moving on, and David kept going at a more relaxed pace.
+
+But first, to get a better idea of how v1.0 worked, watch this short video overview:
 
 <figure align="center">
   <iframe
@@ -40,30 +59,54 @@ So you can get a better idea of how v1.0 worked, first watch this short video ov
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowFullScreen
   ></iframe>
-  <figcaption>Quick preview of Yaya circa summer 2023</figcaption>
+  <figcaption>Yaya in 2-minutes</figcaption>
 </figure>
 
-Want to go deeper before reading on? [Try Yaya v1.0](https://www.yaya.press/) for yourself. Or if you prefer video, watch this [11-minute deep dive](https://www.youtube-nocookie.com/embed/rWw079aEzw8?si=XxL9aA6GuOsbQYs1).
+Want to go a little deeper? [Try Yaya v1.0](https://www.yaya.press/) for yourself. Or if you prefer video, watch this [11-minute deep dive](https://www.youtube-nocookie.com/embed/rWw079aEzw8?si=XxL9aA6GuOsbQYs1).
 
-I stepped away from Yaya last summer for two major reasons. I wanted to travel the world with my wife. And after some reflection, I realized that I enjoyed working on the business side of startups (go-to-market, growth, and ops) more than I enjoyed spending my days coding. David wanted to keep Yaya small, so it didn't make sense to do that for Yaya.
+### Yaya v2.0
 
-**Yaya v2.0**: David's newly updated version focuses on students working with language tutors. It's got a ton of features for language learners and tutors to use together during sessions and individually to study or prep.
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/reader.png"
+    className="mx-auto"
+    alt="Screenshot of the Yaya web app, showing a story in Spanish"
+    width={500}
+    height={500}
+  />
+  <figcaption>The new Yaya</figcaption>
+</figure>
 
-This post's another long one, so here's a quick table of contents. Go ahead and skip around.
+On March 15th, David released a massive update/overhual of Yaya. The new version focuses on students working with language tutors. It's got a ton of features for language learners and tutors to use together during sessions and individually to study or prep.
 
-<a id="toc"></a>
-**目次**
+Needless to say, we're very optimistic about the new version. [Give it a go!](https://www.yaya.press/)
 
-- [Prologue](#prologue) (my skippable personal backstory)
-- [What I learned](#what-i-learned) (the juicy bits, plus some advice for other software builders)
-- [Early iterations and missteps](#early-iterations-and-missteps) (the past lives of Yaya)
-- [How we built it](#how-we-built-it) (the software and tools we used)
-- [What I worked on](#what-i-worked-on) (my share of the contributions)
-- [What's next](#whats-next) (for Yaya and me)
+## This series
 
-And lastly before diving in, I want to give a huge thanks to David. He's been a great friend and mentor to me. I've learned so much from him, and we had a ton of fun building Yaya together. Even though I'm no longer involved on a day-to-day basis (and am currently looking for my next gig), I'm so excited to see where he takes Yaya next!
+Here's what to expect over the next few weeks. I'll be adding links to the posts as they go live.
 
-## What's next
+- **Part 1** (this post): An introduction to Yaya v1.0
+- **Part 2** (coming 3/25): A deeper dive on the lessons learned while building Yaya
+- **Part 3** (coming 4/1): The backstory: how I got to Yaya, what I did, and our early iterations
+- **Part 4** (coming 4/8): The tools we used to build Yaya and some final thoughts
+
+## Some reflections
+
+So what's next?
+
+As for [Yaya](https://yaya.press/), David will keep working on it, using the features we built for v1.0 as a foundation. I'm excited to see it grow and evolve. I'll be using it to study Korean.
+
+As for me, I'm looking for work again doing startup go-to-market, growth, and ops ([send me an email](mailto:patrick@pscoleman.me) if you'd like to chat). That's what I like and where I believe I can do my best work.
+
+I stepped away from Yaya last summer for two major reasons.
+
+First, I realized that I enjoy working on the business side of startups more than I enjoy spending my days coding. David wants to keep Yaya small, so it doesn't make sense to do that for Yaya.
+
+And second, I wanted to travel the world with my wife. This meant pausing professional work and drawing down savings. David wants to bootstrap Yaya. Now that I'm back, I need a steady salary again. As you may know, life in San Francisco is expensive. But I love it here, it's close to family, and I can't imagine living anywhere else.
+
+I also want to say a huge thank you to David. He's been a true friend and mentor throughout this journey. I learned a ton hacking on Yaya and had a great time doing it. I'm sure I'll be buiding something from scratch again someday!
+
+Thank you too for reading this first post. I hope to see you back each week as I share more.
 
 <figure align="center">
   <Image
@@ -73,20 +116,12 @@ And lastly before diving in, I want to give a huge thanks to David. He's been a 
     width={500}
     height={500}
   />
-  <figcaption>Back again, transformed and looking ahead</figcaption>
+  <figcaption>
+    Looking ahead <em>(image credit: DALL-E)</em>
+  </figcaption>
 </figure>
 
-As for [Yaya](https://yaya.press/), David will keep working on it, using the features we built as a foundation. I'm excited to see it grow and evolve. I'll be using it to study Korean, and I hope you'll give it a try too!
-
-As for me, I'm looking for work again doing startup go-to-market, growth, and ops. That's what I like and what I'm good at.
-
-Last summer I also chose to [travel around the world](/posts/honeymoon) for seven months with my wife before settling down again. This meant pausing professional work and drawing down savings. David wants to bootstrap Yaya. And right now I need a steady salary. As you may know, life in San Francisco is a little expensive. But I love it here, it's close to family, and I can't imagine living anywhere else. So I'm happy to let David run with Yaya, while I turn the page to the next chapter.
-
-I just gotta say though, I had too much fun hacking away on Yaya. I'm sure I'll be buiding something from scratch again someday.
-
-Thanks so much for reading! If you want to talk, [send me an email.](mailto:patrick@pscoleman.me)
-
-[^ to ToC](#toc)
+<a id="2"></a>
 
 # What I learned building an AI language learning app (part 2/4)
 
@@ -95,6 +130,10 @@ Thanks so much for reading! If you want to talk, [send me an email.](mailto:patr
 <small>
   <time dateTime={date}>March 25th, 2024</time>
 </small>
+
+This one's long
+
+- [What I learned](#what-i-learned) (the juicy bits, plus some advice for other software builders)
 
 ## What I learned
 
@@ -284,13 +323,21 @@ Ofc having fun is just as applicable for language learning as it is for startups
 
 [^ to ToC](#toc)
 
+<a id="3"></a>
+
 # What I learned building an AI language learning app (part 3/4)
 
-**description: The backstory: how I got to Yaya and our early iterations.**
+**description: The backstory: how I got to Yaya, what I did, and our early iterations.**
 
 <small>
   <time dateTime={date}>April 1st, 2024</time>
 </small>
+
+April fools joke
+
+- [Prologue](#prologue) (my skippable personal backstory)
+- [What I worked on](#what-i-worked-on) (my share of the contributions)
+- [Early iterations and missteps](#early-iterations-and-missteps) (the past lives of Yaya)
 
 ## Prologue
 
@@ -324,6 +371,33 @@ It turns out David had been using Harry Potter to learn Chinese with his wife be
 I was fantasizing about Yaya turning into a wildly successful business, while also telling myself that it'd be fine if this was all just a good learning experience. Spoiler: We didn't get rich overnight. But we did bring something new into the world. We don't regret a thing.
 
 [^ to ToC](#toc)
+
+## What I worked on
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/contributions.webp"
+    className="mx-auto"
+    alt="An illustration of a hero fighting a dragon in a book"
+    width={500}
+    height={500}
+  />
+  <figcaption>Slaying the dragon with a little help</figcaption>
+</figure>
+
+Since this was my first time coding anything substantial, needless to say, I leaned on David a lot. Before this I'd taken a fair amount of computer science classes in school, wrote some VBA macros for Excel and PowerPoint early in my career, fixed some website typos (directly in text fields in Github, which felt like [flying blind](https://www.youtube.com/watch?v=89AaqbrqcHI)), and created some devtools marketing content while working at startups. So David built the initial app and set up hosting. Then I worked in his codebase/system. That in itself was some great learning.
+
+At the start, I did frontend work (building out the UI and adding features) and some data/algorithm manipulation. It was seriously fun banging my head against the beam search algorithm. Firebase was tricky at times and [RXJS Observables](https://rxjs.dev/guide/observable) consistently confounded me, but I kept plugging away with David's (and ChatGPT's) help.
+
+As things progressed, I got a bit more comfortable. I kept working on the frontend and got more confident on my own. From time to time, I'd also work with the data, but as we started getting a few users and wanted things to stay stable, this was mostly just in pair sessions with David. I also spent an inordinate amount of time on prompt engineering and testing.
+
+And in the midst of all of this I got married and decided to take some time off work to travel the world :)
+
+The big feature that I worked on before wrapping up work and leaving on a long honeymoon was adding audio to the app. It was challenging and David had to do a pretty big refactor (haha), but it felt good shipping a tangible and meaningful feature.
+
+Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends and family), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more above if you missed it](#prioritize)).
+
+In the end, I asked David how much software engineering I'd really learned. And he said he'd hire me as a junior engineer, which felt good and validated all the effort. As mentioned though, I'm more passionate about the business stuff, so that's where I'll focus for now. Hopefully I'll find something that marries these interests.
 
 ## Early iterations and missteps
 
@@ -372,6 +446,8 @@ By now we had built a good product, but we struggled to get people to use it, wh
 
 [^ to ToC](#toc)
 
+<a id="4"></a>
+
 # What I learned building an AI language learning app (part 4/4)
 
 **description: Tools: key tools (ChatGPT, NextJS, Firebase) and basics for beginners.**
@@ -379,6 +455,8 @@ By now we had built a good product, but we struggled to get people to use it, wh
 <small>
   <time dateTime={date}>April 8th, 2024</time>
 </small>
+
+- [How we built it](#how-we-built-it) (the software and tools we used)
 
 ## How we built it
 
@@ -500,33 +578,6 @@ And finally, I also used [ChatGPT](https://chat.openai.com/) as a "coding tutor.
 And if you're new (or experienced and building smaller projects), I can't say enough good stuff about [Replit's AI features](https://replit.com/ai).
 
 [^ to ToC](#toc)
-
-## What I worked on
-
-<figure align="center">
-  <Image
-    src="/images/posts/yaya/contributions.webp"
-    className="mx-auto"
-    alt="An illustration of a hero fighting a dragon in a book"
-    width={500}
-    height={500}
-  />
-  <figcaption>Slaying the dragon with a little help</figcaption>
-</figure>
-
-Since this was my first time coding anything substantial, needless to say, I leaned on David a lot. Before this I'd taken a fair amount of computer science classes in school, wrote some VBA macros for Excel and PowerPoint early in my career, fixed some website typos (directly in text fields in Github, which felt like [flying blind](https://www.youtube.com/watch?v=89AaqbrqcHI)), and created some devtools marketing content while working at startups. So David built the initial app and set up hosting. Then I worked in his codebase/system. That in itself was some great learning.
-
-At the start, I did frontend work (building out the UI and adding features) and some data/algorithm manipulation. It was seriously fun banging my head against the beam search algorithm. Firebase was tricky at times and [RXJS Observables](https://rxjs.dev/guide/observable) consistently confounded me, but I kept plugging away with David's (and ChatGPT's) help.
-
-As things progressed, I got a bit more comfortable. I kept working on the frontend and got more confident on my own. From time to time, I'd also work with the data, but as we started getting a few users and wanted things to stay stable, this was mostly just in pair sessions with David. I also spent an inordinate amount of time on prompt engineering and testing.
-
-And in the midst of all of this I got married and decided to take some time off work to travel the world :)
-
-The big feature that I worked on before wrapping up work and leaving on a long honeymoon was adding audio to the app. It was challenging and David had to do a pretty big refactor (haha), but it felt good shipping a tangible and meaningful feature.
-
-Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends and family), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more above if you missed it](#prioritize)).
-
-In the end, I asked David how much software engineering I'd really learned. And he said he'd hire me as a junior engineer, which felt good and validated all the effort. As mentioned though, I'm more passionate about the business stuff, so that's where I'll focus for now. Hopefully I'll find something that marries these interests.
 
 export default ({ children }) => (
   <PostLayout
