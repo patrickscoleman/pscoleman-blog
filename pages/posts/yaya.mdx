@@ -1,7 +1,7 @@
 ---
-title: "What I learned building an AI language learning app"
-date: "2024-03-01"
-description: "Reflections on building Yaya (using ChatGPT, NextJS, and Firebase) with my friend David Gaynor for a little over half a year."
+title: "What I learned building an AI language learning app (part 1/4)"
+date: "2024-03-18"
+description: "Reflections on building Yaya v1.0, which never quite took off, with a friend in 2023 H1"
 previewImage: "/images/posts/yaya/preview.png"
 hidden: true
 ---
@@ -10,7 +10,7 @@ import { PostLayout } from "@/components/postLayout";
 import Image from "next/image";
 import Link from "next/link";
 
-# What I learned building an AI language learning app
+# What I learned building an AI language learning app (part 1/4)
 
 **NOTE: THE NEW VERSION OF YAYA WILL LAUNCH ON MARCH 15TH.**
 
@@ -63,38 +63,38 @@ This post's another long one, so here's a quick table of contents. Go ahead and 
 
 And lastly before diving in, I want to give a huge thanks to David. He's been a great friend and mentor to me. I've learned so much from him, and we had a ton of fun building Yaya together. Even though I'm no longer involved on a day-to-day basis (and am currently looking for my next gig), I'm so excited to see where he takes Yaya next!
 
-## Prologue
+## What's next
 
 <figure align="center">
   <Image
-    src="/images/posts/yaya/prologue.webp"
+    src="/images/posts/yaya/next.webp"
     className="mx-auto"
-    alt="An illustration of a magical forest in a book"
+    alt="A small man standing on a book and looking out a window with two landscapes"
     width={500}
     height={500}
   />
-  <figcaption>
-    The story begins <em>(image credit: DALL-E)</em>
-  </figcaption>
+  <figcaption>Back again, transformed and looking ahead</figcaption>
 </figure>
 
-The seeds for Yaya were planted a long time ago. Let's briefly go back to the very beginning. ([or skip ahead to the learnings](#what-i-learned))
+As for [Yaya](https://yaya.press/), David will keep working on it, using the features we built as a foundation. I'm excited to see it grow and evolve. I'll be using it to study Korean, and I hope you'll give it a try too!
 
-I have an early memory of learning the French colors sitting cross-legged on the floor of a sun-drenched classroom way back in the mid 90s. But my interest didn't really take off until an "introduction to foreign languages" class in middle school in the early aughts.
+As for me, I'm looking for work again doing startup go-to-market, growth, and ops. That's what I like and what I'm good at.
 
-First it was Spanish. I studied all through high school and college, picking up a minor in Spanish literature (talk to me about writers like Jorge Luis Borges or Roberto Bolaño anytime). Then in my middle-ish-twenties, I started learning Japanese and spent two months living in Tokyo just before COVID. My goal (recently accomplished) was to comfortably read a Haruki Murakami novel in Japanese. A few years ago, I started dating a Korean American (now married) and learning Korean too.
+Last summer I also chose to [travel around the world](/posts/honeymoon) for seven months with my wife before settling down again. This meant pausing professional work and drawing down savings. David wants to bootstrap Yaya. And right now I need a steady salary. As you may know, life in San Francisco is a little expensive. But I love it here, it's close to family, and I can't imagine living anywhere else. So I'm happy to let David run with Yaya, while I turn the page to the next chapter.
 
-Also in high school, I started taking compsci classes, placing directly into AP CS and going on to take classes in AI and computer architecture (a lot has changed since 2007...). I was lucky to go to a science and tech school and got absorbed in coding. But then I studied finance in college.
+I just gotta say though, I had too much fun hacking away on Yaya. I'm sure I'll be buiding something from scratch again someday.
 
-Later as my professional career shifted from Wall Street to software startups, I kept toying with the idea of finally learning to code properly. I considered doing a bootcamp or going back to school, but I didn't think it'd be the right fit. My background knowledge was all over the place, I've typically prefered self-directed learning [with tutors](https://en.wikipedia.org/wiki/Bloom%27s_2_sigma_problem) as an adult, and many institutions are teaching outdated curriculum. As part of a consulting project, I looked at the tech stacks of startups over the past decade and saw a big shift to [serverless architectures](https://docs.aws.amazon.com/serverless/latest/devguide/serverless-shift-mindset.html), which isn't taught as widely.
-
-Then finally in the fall of 2022 (well into my early thirties), I was cutting back on some consulting hours and thinking about a new project. I wanted to learn to code and still wanted to tackle that Murakami novel. David and I had a catch up call, and I shared an idea I'd been thinking of to interlace foreign texts with professional, i.e. human, translations (inspired by [Read Real Japanese](https://www.tofugu.com/reviews/read-real-japanese/) and similar books).
-
-It turns out David had been using Harry Potter to learn Chinese with his wife before bedtime and had already built a simple prototype using Google Translate for the translations. I asked David to teach me how to code, and in the first few days of 2023 we started working on Yaya together.
-
-I was fantasizing about Yaya turning into a wildly successful business, while also telling myself that it'd be fine if this was all just a good learning experience. Spoiler: We didn't get rich overnight. But we did bring something new into the world. We don't regret a thing.
+Thanks so much for reading! If you want to talk, [send me an email.](mailto:patrick@pscoleman.me)
 
 [^ to ToC](#toc)
+
+# What I learned building an AI language learning app (part 2/4)
+
+**description: A deeper dive on the lessons learned while building Yaya.**
+
+<small>
+  <time dateTime={date}>March 25th, 2024</time>
+</small>
 
 ## What I learned
 
@@ -284,6 +284,47 @@ Ofc having fun is just as applicable for language learning as it is for startups
 
 [^ to ToC](#toc)
 
+# What I learned building an AI language learning app (part 3/4)
+
+**description: The backstory: how I got to Yaya and our early iterations.**
+
+<small>
+  <time dateTime={date}>April 1st, 2024</time>
+</small>
+
+## Prologue
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/prologue.webp"
+    className="mx-auto"
+    alt="An illustration of a magical forest in a book"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    The story begins <em>(image credit: DALL-E)</em>
+  </figcaption>
+</figure>
+
+The seeds for Yaya were planted a long time ago. Let's briefly go back to the very beginning. ([or skip ahead to the learnings](#what-i-learned))
+
+I have an early memory of learning the French colors sitting cross-legged on the floor of a sun-drenched classroom way back in the mid 90s. But my interest didn't really take off until an "introduction to foreign languages" class in middle school in the early aughts.
+
+First it was Spanish. I studied all through high school and college, picking up a minor in Spanish literature (talk to me about writers like Jorge Luis Borges or Roberto Bolaño anytime). Then in my middle-ish-twenties, I started learning Japanese and spent two months living in Tokyo just before COVID. My goal (recently accomplished) was to comfortably read a Haruki Murakami novel in Japanese. A few years ago, I started dating a Korean American (now married) and learning Korean too.
+
+Also in high school, I started taking compsci classes, placing directly into AP CS and going on to take classes in AI and computer architecture (a lot has changed since 2007...). I was lucky to go to a science and tech school and got absorbed in coding. But then I studied finance in college.
+
+Later as my professional career shifted from Wall Street to software startups, I kept toying with the idea of finally learning to code properly. I considered doing a bootcamp or going back to school, but I didn't think it'd be the right fit. My background knowledge was all over the place, I've typically prefered self-directed learning [with tutors](https://en.wikipedia.org/wiki/Bloom%27s_2_sigma_problem) as an adult, and many institutions are teaching outdated curriculum. As part of a consulting project, I looked at the tech stacks of startups over the past decade and saw a big shift to [serverless architectures](https://docs.aws.amazon.com/serverless/latest/devguide/serverless-shift-mindset.html), which isn't taught as widely.
+
+Then finally in the fall of 2022 (well into my early thirties), I was cutting back on some consulting hours and thinking about a new project. I wanted to learn to code and still wanted to tackle that Murakami novel. David and I had a catch up call, and I shared an idea I'd been thinking of to interlace foreign texts with professional, i.e. human, translations (inspired by [Read Real Japanese](https://www.tofugu.com/reviews/read-real-japanese/) and similar books).
+
+It turns out David had been using Harry Potter to learn Chinese with his wife before bedtime and had already built a simple prototype using Google Translate for the translations. I asked David to teach me how to code, and in the first few days of 2023 we started working on Yaya together.
+
+I was fantasizing about Yaya turning into a wildly successful business, while also telling myself that it'd be fine if this was all just a good learning experience. Spoiler: We didn't get rich overnight. But we did bring something new into the world. We don't regret a thing.
+
+[^ to ToC](#toc)
+
 ## Early iterations and missteps
 
 <figure align="center">
@@ -330,6 +371,14 @@ From here on, we started getting the product in front of more users (who were no
 By now we had built a good product, but we struggled to get people to use it, which after all, is what counts. More on this [below](#what-i-learned).
 
 [^ to ToC](#toc)
+
+# What I learned building an AI language learning app (part 4/4)
+
+**description: Tools: key tools (ChatGPT, NextJS, Firebase) and basics for beginners.**
+
+<small>
+  <time dateTime={date}>April 8th, 2024</time>
+</small>
 
 ## How we built it
 
@@ -478,31 +527,6 @@ The big feature that I worked on before wrapping up work and leaving on a long h
 Of course I also did various non-engineering work on building Yaya, like product design, user interviews (with very patient/generous friends and family), copywriting, etc. I worked with web and logo designers via [fiverr](https://www.fiverr.com/) and incorporated the business with [Clerky](https://www.clerky.com/) too. In retrospect, I pobably spent too much time on these things relative to working on the product given our stage ([more above if you missed it](#prioritize)).
 
 In the end, I asked David how much software engineering I'd really learned. And he said he'd hire me as a junior engineer, which felt good and validated all the effort. As mentioned though, I'm more passionate about the business stuff, so that's where I'll focus for now. Hopefully I'll find something that marries these interests.
-
-## What's next
-
-<figure align="center">
-  <Image
-    src="/images/posts/yaya/next.webp"
-    className="mx-auto"
-    alt="A small man standing on a book and looking out a window with two landscapes"
-    width={500}
-    height={500}
-  />
-  <figcaption>Back again, transformed and looking ahead</figcaption>
-</figure>
-
-As for [Yaya](https://yaya.press/), David will keep working on it, using the features we built as a foundation. I'm excited to see it grow and evolve. I'll be using it to study Korean, and I hope you'll give it a try too!
-
-As for me, I'm looking for work again doing startup go-to-market, growth, and ops. That's what I like and what I'm good at.
-
-Last summer I also chose to [travel around the world](/posts/honeymoon) for seven months with my wife before settling down again. This meant pausing professional work and drawing down savings. David wants to bootstrap Yaya. And right now I need a steady salary. As you may know, life in San Francisco is a little expensive. But I love it here, it's close to family, and I can't imagine living anywhere else. So I'm happy to let David run with Yaya, while I turn the page to the next chapter.
-
-I just gotta say though, I had too much fun hacking away on Yaya. I'm sure I'll be buiding something from scratch again someday.
-
-Thanks so much for reading! If you want to talk, [send me an email.](mailto:patrick@pscoleman.me)
-
-[^ to ToC](#toc)
 
 export default ({ children }) => (
   <PostLayout
