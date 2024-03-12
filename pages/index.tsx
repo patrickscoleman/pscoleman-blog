@@ -38,14 +38,13 @@ const Home = () => {
           recruiting, etc.). Plus I code a little.
         </p>
         <p>
-          I think I can offer the most to early-/mid-stage startups working on
-          AI, edtech or dev tools. But I&apos;m open to anything with an
-          inspiring team and mission.
+          I think I can offer the most to startups working on AI, edtech or dev
+          tools. But I&apos;m open to anything with an inspiring team and
+          mission.
         </p>
         <p>
-          Until recently I was traveling around the world on an{" "}
-          <Link href="/posts/honeymoon">extended honeymoon</Link> with my wife
-          Courtney (and trying to keep up on my Korean learning). Before that I
+          Until recently I was traveling around the world on an extended
+          honeymoon (and trying to keep up on my Korean learning). Before that I
           was working with a friend on{" "}
           <Link
             href="https://www.yaya.press/"
