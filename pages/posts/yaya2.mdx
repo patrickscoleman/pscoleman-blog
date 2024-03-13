@@ -41,14 +41,14 @@ This one's long so here's a ToC (feel free to jump around):
 ### 目次
 
 - [Meet your users where they are](#meet-your-users-where-they-are)
-- [AI "art" is not quite there yet](#ai-art-is-not-quite-there-yet)
-- [Be clear on what you want](#be-clear-on-what-you-want)
-- [Get something in front of real users ASAP](#get-something-in-front-of-real-users-asap)
 - [Give your users what they want](#give-your-users-what-they-want)
+- [Be clear on what you want](#be-clear-on-what-you-want)
+- [AI "art" is not quite there yet](#ai-art-is-not-quite-there-yet)
 - [Be better than your substitutes](#be-better-than-your-substitutes)
-- [Ruthlessly prioritize your time](#ruthlessly-prioritize-your-time)
+- [Get something in front of real users ASAP](#get-something-in-front-of-real-users-asap)
 - [Move fast and kill your darlings](#move-fast-and-kill-your-darlings)
 - [Know your limits (patience please)](#know-your-limits-patience-please)
+- [Ruthlessly prioritize your time](#ruthlessly-prioritize-your-time)
 - [Have fun](#have-fun)
 
 So let's jump in.
@@ -59,16 +59,16 @@ One thing we struggled with was getting the average person to understand Yaya. T
 
 Some expectations of language learners and what that meant for us:
 
-- Most people interested in learning a language are beginners. They expect tools to be beginner-friendly. We really struggled to make the "newbie" reading level on Yaya easy enough though. We couldn't get ChatGPT's API (then 3.5) to consistently simplify its grammar and vocabulary, especially with long documents. Also different languages have different learning curves. Getting this right turned out to be harder than we expected.
-- These days everyone (whether you've used it or not) knows of [Duolingo.](https://www.duolingo.com/) Their users love the gamified quizzes and clear progression. We didn't spend enough time specifically differentiating ourselves vs. them. And we didn't do a good job showing users that they were learning and progressing.
-- Most learners are casual, looking to spend just 15-minutes a day studying. They often find products on app stores. As a web application, we couldn't reach this audience without building a mobile app as well. Web applications are faster/easier to build/update, but you have to get more creative with user acquisition. Building and maintaining both a web application and mobile app is a lot of work for a small team and requires different knowledge/competency.
-- Most language learners want to speak and communicate in a foreign language, not read literature, news, philosophy, etc. To reach more users, we'd have to convince them pick up a new hobby, which is much harder than just convincing them to try a new product.
-- Chat is the dominant interface metaphor in AI right now. Some people were confused by how Yaya used AI (and even thought that we wrote the stories ourselves). People also wanted to customize the content after the initial generation, which we didn't allow at the time. This level of customization has now made it into David's v2.0.
-- Learners have an expectation that their learning content will be correct. It varied a lot by language, but the AI-generated content included occasional grammatical mistakes and awkward phrasing. Beginners (who we struggled to reach) wouldn't know, but more experienced learners (who we were targeting) would be turned off.
-- Experienced learners typically use flashcards with spaced-repetition to supplement other tools (check out the [Fluent Forever book](https://fluent-forever.com/book) for great [Anki](https://apps.ankiweb.net/) tips). We thought SRS vocabulary in the context of a story would be more fun/effective. We didn't communicate that well enough to know if it resonated.
-- Many serious learners "hang out" with other learners in online communities (e.g. [subreddits](https://www.reddit.com/r/LearnJapanese/), [forums](https://japanese.stackexchange.com/), etc.). These users are often early adopters and willing to try new products, but the communities are typically averse to self-promotion.
-- Many people (especially the younger generations ("ok boomer...")) prefer video to text, largely hanging out on TikTok and YouTube. We could market on those platforms, but it's tough to get users to visit an external link (and many platforms discourage this behavior).
-- Some very serious learners want complete immersion in their target language. It was possible to use Yaya without translations but that wasn't our emphasis. These people are also likely to graduate off of learning tools within 6 months to a couple years, which could limit customer lifetime value (LTV) unless we reengaged them to come back and learn another new language.
+- **Beginner-friendly:** Most people interested in learning a language are beginners. They expect tools to be beginner-friendly. We really struggled to make the "newbie" reading level on Yaya easy enough though. We couldn't get ChatGPT's API (then 3.5) to consistently simplify its grammar and vocabulary, especially with long documents. Also different languages have different learning curves. Getting this right turned out to be harder than we expected.
+- **Gamification:** These days everyone (whether you've used it or not) knows of [Duolingo.](https://www.duolingo.com/) Their users love the gamified quizzes and clear progression. We didn't spend enough time specifically differentiating ourselves vs. them. And we didn't do a good job showing users that they were learning and progressing.
+- **Casual:** Most learners are casual, looking to spend just 15-minutes a day studying. They often find products on app stores. As a web application, we couldn't reach this audience without building a mobile app as well. Web applications are faster/easier to build/update, but you have to get more creative with user acquisition. Building and maintaining both a web application and mobile app is a lot of work for a small team and requires different knowledge/competency.
+- **Communication-focused:** Most language learners want to speak and communicate in a foreign language, not read literature, news, philosophy, etc. To reach more users, we'd have to convince them pick up a new hobby, which is much harder than just convincing them to try a new product.
+- **Chat:** Chat is the dominant interface metaphor in AI right now. Some people were confused by how Yaya used AI (and even thought that we wrote the stories ourselves). People also wanted to customize the content after the initial generation, which we didn't allow at the time. This level of customization has now made it into David's v2.0.
+- **Accuracy:** Learners have an expectation that their learning content will be correct. It varied a lot by language, but the AI-generated content included occasional grammatical mistakes and awkward phrasing. Beginners (who we struggled to reach) wouldn't know, but more experienced learners (who we were targeting) would be turned off.
+- **Spaced-repetition:** Experienced learners typically use flashcards with spaced-repetition to supplement other tools (check out the [Fluent Forever book](https://fluent-forever.com/book) for great [Anki](https://apps.ankiweb.net/) tips). We thought SRS vocabulary in the context of a story would be more fun/effective. We didn't communicate that well enough to know if it resonated.
+- **Peer reviewed:** Many serious learners "hang out" with other learners in online communities (e.g. [subreddits](https://www.reddit.com/r/LearnJapanese/), [forums](https://japanese.stackexchange.com/), etc.). These users are often early adopters and willing to try new products, but the communities are typically averse to self-promotion.
+- **Video:** Many people (especially the younger generations ("ok boomer...")) prefer video to text, largely hanging out on TikTok and YouTube. We could market on those platforms, but it's tough to get users to visit an external link (and many platforms discourage this behavior).
+- **Immersion:** Some very serious learners want complete immersion in their target language. It was possible to use Yaya without translations but that wasn't our emphasis. These people are also likely to graduate off of learning tools within 6 months to a couple years, which could limit customer lifetime value (LTV) unless we reengaged them to come back and learn another new language.
 
 As we learned more, our niche (reading practice for intermediate language learners) kept growing smaller and smaller. And for Yaya v1.0, we didn't find product-market fit.
 
@@ -97,6 +97,59 @@ Get out there and talk to tons of folks. Know your audience well!
 </figure>
 
 This search for an "ideal customer profile" (ICP) and the iterative tweaking of positioning (how you describe the product) and outreach (how you find customers) is a huge part of any early stage startup's life-or-death search for product-market fit. And it's one of the things I focus on professionally. It's a creative challenge.
+
+[^ to ToC](#toc)
+
+## Give your users what they want
+
+I want to draw on [Clay Christensen's famous business advice](https://hbswk.hbs.edu/item/clay-christensens-milkshake-marketing) here. When people decide to use a product, in a sense, they're "hiring" it because they have a "job to be done." He tells a story of a fast-food restaurant that noticed people were buying milkshakes in the morning. After some research they found that people were "hiring" the milkshake as a snack on their long commutes. So they made the milkshake thicker to last longer. People loved it.
+
+So what was Yaya's "job-to-be-done"?
+
+On a certain level, it was obvious: "to learn a foreign language." But there are a lot of options out there to learn a language, from apps like [Duolingo](https://www.duolingo.com/) to private tutors on sites like [Preply](https://preply.com/) or [italki](https://www.italki.com/) to immersive programs like the [Middlebury Language Schools](https://www.middlebury.edu/language-schools). And the big players claim to do it all. So we'd have to be different.
+
+(Note: People are not just trying to learn a language. They're also trying to stay motivated while they learn. Check out [this great blogpost](https://www.reachcapital.com/2023/06/15/product-lessons-from-duolingos-former-chief-product-officer-jorge-mazal/) from the former CPO at Duolingo on jobs-to-be-done.)
+
+As a **small** team (just two people, one of whom had never coded anything substantial before), we knew we had to focus. And as longtime language learners ourselves, we knew that do-it-all solutions typically sound better than they actually are. The reality is that most language learners who reach proficiency or fluency actually use a lot of different tools and combine them in creative ways. So for Yaya v1.0 we decided to build a single tool that would fit into learners' toolbelts (like some of these [other](https://apps.ankiweb.net/) [great](https://www.satorireader.com/) [tools](https://www.wanikani.com/)).
+
+[Comprehensible input](https://en.wikipedia.org/wiki/Input_hypothesis) (content in your target language that's just barely above your current level) is the fastest way to learn a language, and ["compelling input"](https://sdkrashen.com/content/articles/krashen_sla.pdf) (content that's so good you forget you're consuming it in another language) is the best way to stay motivated. Hat tip to [Arun Prasad](https://learnsanskrit.org/) for the previous link.
+
+There's a lot of comprehensible and compelling content out there from books to TV, movies, music, and games, but we decided to take a stab at making reading great foreign language content easier. We figured we could do better (or at least more engaging) than the many [graded readers](https://en.wikipedia.org/wiki/Graded_reader) out there. And we decided to offer it in any language, so we could reach as many people as possible.
+
+Even though Yaya v1.0 didn't take off, I still think this was a solid focus for the first version of the product.
+
+In summary: give your users thick milkshakes 🥛🍦
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/milkshake.webp"
+    className="mx-auto"
+    alt="An illustration of a milkshake in a magical diner in a book"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    <Link
+      href="https://www.youtube.com/watch?v=lZzai6at_xA"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      A five dollar milkshake?!?
+    </Link>
+  </figcaption>
+</figure>
+
+[^ to ToC](#toc)
+
+## Be clear on what you want
+
+I spent a lot of time wanting Yaya to be a high-growth venture-backable business that I could work on full-time while living comfortably in San Francisco. I also really wanted to do (a meaningful portion of) the coding myself in order to learn. And I wanted to build a niche language-learning product that I would love to use myself.
+
+Sometimes these goals were at odds with each other. And Yaya went through a few incarnations (pivots if you will) while my wants evolved.
+
+If I'd been a little clearer with myself and with David about what it was I wanted, I would have made some different decisions, perhaps skipping the legal incorporation and not worrying too much about the name or business model potential. Or perhaps I would have spent more time talking to users instead of coding things in 10x more time than it would take David.
+
+But hindsight is 20/20, as they say, and I can't imagine walking any straight-line path to get to where I am today. I learned a lot and had a lot of fun.
 
 [^ to ToC](#toc)
 
@@ -129,15 +182,15 @@ May the technological tinkerers keep pushing us forward with amazingly efficient
 
 [^ to ToC](#toc)
 
-## Be clear on what you want
+## Be better than your substitutes
 
-I spent a lot of time wanting Yaya to be a high-growth venture-backable business that I could work on full-time while living comfortably in San Francisco. I also really wanted to do (a meaningful portion of) the coding myself in order to learn. And I wanted to build a niche language-learning product that I would love to use myself.
+While there are a lot of direct competitors in the language learning space, we were also competing with general-purpose AI tools like [ChatGPT](https://openai.com/gpt-3/) or [Claude](https://claude.ai/). We had to be better than these well-funded substitutes to get people to use Yaya.
 
-Sometimes these goals were at odds with each other. And Yaya went through a few incarnations (pivots if you will) while my wants evolved.
+You can use these AI tools to generate reading content in a lot of languages (and now audio too), but we figured we had a few key advantages: 1. fine-tuned learning levels; 2. built-in spaced repetition; and 3. clickable definitions and grammar explanations. We saved our users a ton of time and gave them a consistent experience, so they wouldn't waste study time on wrangling with the AI.
 
-If I'd been a little clearer with myself and with David about what it was I wanted, I would have made some different decisions, perhaps skipping the legal incorporation and not worrying too much about the name or business model potential. Or perhaps I would have spent more time talking to users instead of coding things in 10x more time than it would take David.
+And of course we were also competing with old fashioned bilingual books (e.g. [Penguin's parallel text series](https://www.penguinrandomhouse.com/series/BMH/penguin-parallel-text/)). We felt that the experience was much better on Yaya, but these books were already well known, widely available, and had access to high quality works under copyright.
 
-But hindsight is 20/20, as they say, and I can't imagine walking any straight-line path to get to where I am today. I learned a lot and had a lot of fun.
+It's worth thinking through your positioning not just for the obvious competitors but also for the less obvious alternatives. This even includes other pastimes or hobbies (like just watching YouTube).
 
 [^ to ToC](#toc)
 
@@ -151,56 +204,46 @@ While the conventional wisdom is to ship fast fast fast, I still feel ok about o
 
 [^ to ToC](#toc)
 
-## Give your users what they want
-
-I want to draw on [Clay Christensen's famous business advice](https://hbswk.hbs.edu/item/clay-christensens-milkshake-marketing) here. When people decide to use a product, in a sense, they're "hiring" it because they have a "job to be done." He tells a story of a fast-food restaurant that noticed people were buying milkshakes in the morning. After some research they found that people were "hiring" the milkshake as a snack on their long commutes. So they made the milkshake thicker to last longer. People loved it.
+## Move fast and kill your darlings
 
 <figure align="center">
   <Image
-    src="/images/posts/yaya/milkshake.webp"
+    src="/images/posts/yaya/time.webp"
     className="mx-auto"
-    alt="An illustration of a milkshake in a magical diner in a book"
+    alt="An illustration of a time travel watch in a book"
     width={500}
     height={500}
   />
-  <figcaption>
-    <Link
-      href="https://www.youtube.com/watch?v=lZzai6at_xA"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      A five dollar milkshake?!?
-    </Link>
-  </figcaption>
+  <figcaption>Or just slow down time</figcaption>
 </figure>
 
-So what was Yaya's "job-to-be-done"?
+But actually though, the most important thing when building a new software product is to **move fast**. This is especially true if you're smaller than your competition. I've learned this time and again in my [startup career](/about#professional-highlights). So think about what's critically important for your users, build that and only that, ship it, and get feedback. If it doesn't work, kill it. If it does, improve it and/or move on.
 
-On a certain level, it was obvious: "to learn a foreign language." But there are a lot of options out there to learn a language, from apps like [Duolingo](https://www.duolingo.com/) to private tutors on sites like [Preply](https://preply.com/) or [italki](https://www.italki.com/) to immersive programs like the [Middlebury Language Schools](https://www.middlebury.edu/language-schools). And the big players claim to do it all. So we'd have to be different.
+(Note: Of course this doesn't apply when lives or safety are on the line. Then you should absolutely measure twice (or more) before you cut. More generally, if a decision is reversible, move fast, if not, move slow.)
 
-(Note: People are not just trying to learn a language. They're also trying to stay motivated while they learn. Check out [this great blogpost](https://www.reachcapital.com/2023/06/15/product-lessons-from-duolingos-former-chief-product-officer-jorge-mazal/) from the former CPO at Duolingo on jobs-to-be-done.)
+You won't always build the right thing. And you can't always know if people will want something until you've built it. That's why it's important to move fast. If you get it right, amazing! But if you fail fast, you can pick yourself right back up again and make changes. On the other hand, if you fail slow, you've lost a lot of time and it's much tougher emotionally to move on.
 
-As a **small** team (just two people, one of whom had never coded anything substantial before), we knew we had to focus. And as longtime language learners ourselves, we knew that do-it-all solutions typically sound better than they actually are. The reality is that most language learners who reach proficiency or fluency actually use a lot of different tools and combine them in creative ways. So for Yaya v1.0 we decided to build a single tool that would fit into learners' toolbelts (like some of these [other](https://apps.ankiweb.net/) [great](https://www.satorireader.com/) [tools](https://www.wanikani.com/)).
+One "fail" for us was building a complex feature to match foreign language text to existing translations (e.g. short stories by famous authors with professional human translations). I had a high tolerance for this difficult-to-use feature because it was "my" thing and I was using it daily to study. But it became obvious quickly that we would never get many people using it. We had to kill our darling.
 
-[Comprehensible input](https://en.wikipedia.org/wiki/Input_hypothesis) (content in your target language that's just barely above your current level) is the fastest way to learn a language, and ["compelling input"](https://sdkrashen.com/content/articles/krashen_sla.pdf) (content that's so good you forget you're consuming it in another language) is the best way to stay motivated. Hat tip to [Arun Prasad](https://learnsanskrit.org/) for the previous link.
+Admittedly David got there a little faster than I did, and I argued to find a way to keep this feature in new versions of the product. But it just didn't make sense. After recognizing this, we made a decision to delete the old code and move on within a week. I think this is one of the things we actually did well.
 
-There's a lot of comprehensible and compelling content out there from books to TV, movies, music, and games, but we decided to take a stab at making reading great foreign language content easier. We figured we could do better (or at least more engaging) than the many [graded readers](https://en.wikipedia.org/wiki/Graded_reader) out there. And we decided to offer it in any language, so we could reach as many people as possible.
-
-Even though Yaya v1.0 didn't take off, I still think this was a solid focus for the first version of the product.
-
-In summary: give your users thick milkshakes 🥛🍦
+Corollary for further along the startup road: [give away your legos](https://review.firstround.com/give-away-your-legos-and-other-commandments-for-scaling-startups/).
 
 [^ to ToC](#toc)
 
-## Be better than your substitutes
+## Know your limits (patience please)
 
-While there are a lot of direct competitors in the language learning space, we were also competing with general-purpose AI tools like [ChatGPT](https://openai.com/gpt-3/) or [Claude](https://claude.ai/). We had to be better than these well-funded substitutes to get people to use Yaya.
+If you spend any time in Silicon Valley circles, you'll hear a lot about "hypergrowth" and moving fast (see above even :P). You'll see people achieve astronomical financial success in a short amount of time (and sometimes lose it just as fast). While moving fast is great practical advice for building a certain type of business (but definitely not all types), some things just take time.
 
-You can use these AI tools to generate reading content in a lot of languages (and now audio too), but we figured we had a few key advantages: 1. fine-tuned learning levels; 2. built-in spaced repetition; and 3. clickable definitions and grammar explanations. We saved our users a ton of time and gave them a consistent experience, so they wouldn't waste study time on wrangling with the AI.
+Learning is one of these things. This is not [the Matrix](https://www.youtube.com/watch?v=OrzgxUhnYjY). The human [brain](https://www.anilseth.com/being-you/) and body take time to acquire new skills. And even with these wonderful new AI tools, we're still limited by our biology. In tech, you'll often hear [the phrase](https://review.firstround.com/hypergrowth-and-the-law-of-startup-physics/): "humans grow linearly, companies grow exponentially."
 
-And of course we were also competing with old fashioned bilingual books (e.g. [Penguin's parallel text series](https://www.penguinrandomhouse.com/series/BMH/penguin-parallel-text/)). We felt that the experience was much better on Yaya, but these books were already well known, widely available, and had access to high quality works under copyright.
+At some level, I internalized the learn-to-code-in-X-time rhetoric and the techie-exceptionalism, and I figured that within a few months I'd be able to code a fully-featured and compelling product entirely on my own. I was wrong. It takes a lot of time and hard work to learn to build complex software applications.
 
-It's worth thinking through your positioning not just for the obvious competitors but also for the less obvious alternatives. This even includes other pastimes or hobbies (like just watching YouTube).
+After all people dedicate their careers to this thing. Why not [learn programming in 10 years](https://norvig.com/21-days.html) instead? Why not [get to the bottom of things](https://www-cs-faculty.stanford.edu/~knuth/email.html) instead of trying to stay on top of everything?
+
+But I wasn't completely wrong though. _In collaboration_ with a partner, I _was_ able to build something meaningful. And I did get better and better every day every day that I sat down and wrote code and debugged.
+
+(Note to beginners: Don't let all that discourage you from getting started. You'll be able to code simple but useful applications much sooner. If you stick to it, the payoff is great and the journey is fun, whether you end up coding professionally or not. Plus there's more help available than ever. Considering using [Replit](https://replit.com/) and [freeCodeCamp](https://www.freecodecamp.org/). They've got great learning resources and great communities. Disclaimer: I used to work at Replit.)
 
 [^ to ToC](#toc)
 
@@ -230,49 +273,6 @@ And here are some of the other things I spent too much time on:
 - etc.
 
 In short: Focus on what's life or death for your startup (or project). In the very beginning, that's typically building product and talking to users.
-
-[^ to ToC](#toc)
-
-## Move fast and kill your darlings
-
-<figure align="center">
-  <Image
-    src="/images/posts/yaya/time.webp"
-    className="mx-auto"
-    alt="An illustration of a time travel watch in a book"
-    width={500}
-    height={500}
-  />
-  <figcaption>Or just slow down time</figcaption>
-</figure>
-
-The most important thing when building a new software product is to **move fast**. This is especially true if you're smaller than your competition. I've learned this time and again in my [startup career](/about#professional-highlights). So think about what's critically important for your users, build that and only that, ship it, and get feedback. If it doesn't work, kill it. If it does, improve it and/or move on.
-
-(Note: Of course this doesn't apply when lives or safety are on the line. Then you should absolutely measure twice (or more) before you cut. More generally, if a decision is reversible, move fast, if not, move slow.)
-
-You won't always build the right thing. And you can't always know if people will want something until you've built it. That's why it's important to move fast. If you get it right, amazing! But if you fail fast, you can pick yourself right back up again and make changes. On the other hand, if you fail slow, you've lost a lot of time and it's much tougher emotionally to move on.
-
-One "fail" for us was building a complex feature to match foreign language text to existing translations (e.g. short stories by famous authors with professional human translations). I had a high tolerance for this difficult-to-use feature because it was "my" thing and I was using it daily to study. But it became obvious quickly that we would never get many people using it. We had to kill our darling.
-
-Admittedly David got there a little faster than I did, and I argued to find a way to keep this feature in new versions of the product. But it just didn't make sense. After recognizing this, we made a decision to delete the old code and move on within a week. I think this is one of the things we actually did well.
-
-Corollary for further along the startup road: [give away your legos](https://review.firstround.com/give-away-your-legos-and-other-commandments-for-scaling-startups/).
-
-[^ to ToC](#toc)
-
-## Know your limits (patience please)
-
-If you spend any time in Silicon Valley circles, you'll hear a lot about "hypergrowth" and moving fast (see above even :P). You'll see people achieve astronomical financial success in a short amount of time (and sometimes lose it just as fast). While moving fast is great practical advice for building a certain type of business (but definitely not all types), some things just take time.
-
-Learning is one of these things. This is not [the Matrix](https://www.youtube.com/watch?v=OrzgxUhnYjY). The human [brain](https://www.anilseth.com/being-you/) and body take time to acquire new skills. And even with these wonderful new AI tools, we're still limited by our biology. In tech, you'll often hear [the phrase](https://review.firstround.com/hypergrowth-and-the-law-of-startup-physics/): "humans grow linearly, companies grow exponentially."
-
-At some level, I internalized the learn-to-code-in-X-time rhetoric and the techie-exceptionalism, and I figured that within a few months I'd be able to code a fully-featured and compelling product entirely on my own. I was wrong. It takes a lot of time and hard work to learn to build complex software applications.
-
-After all people dedicate their careers to this thing. Why not [learn programming in 10 years](https://norvig.com/21-days.html) instead? Why not [get to the bottom of things](https://www-cs-faculty.stanford.edu/~knuth/email.html) instead of trying to stay on top of everything?
-
-But I wasn't completely wrong though. _In collaboration_ with a partner, I _was_ able to build something meaningful. And I did get better and better every day every day that I sat down and wrote code and debugged.
-
-(Note to beginners: Don't let all that discourage you from getting started. You'll be able to code simple but useful applications much sooner. If you stick to it, the payoff is great and the journey is fun, whether you end up coding professionally or not. Plus there's more help available than ever. Considering using [Replit](https://replit.com/) and [freeCodeCamp](https://www.freecodecamp.org/). They've got great learning resources and great communities. Disclaimer: I used to work at Replit.)
 
 [^ to ToC](#toc)
 
