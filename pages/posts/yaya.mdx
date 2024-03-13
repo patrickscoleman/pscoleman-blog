@@ -10,21 +10,17 @@ import { PostLayout } from "@/components/postLayout";
 import Image from "next/image";
 import Link from "next/link";
 
-<a id="1"></a>
+# What I learned building an AI language learning app
 
-# What I learned building an AI language learning app (part 1/4)
+### Part 1/4: Intro
+
+### NOTE: YAYA V2 LAUNCHES ON MARCH 15TH. LINKS WILL BE UPDATED THEN.
 
 <small>
   <time dateTime={date}>March 18th, 2024</time>
 </small>
 
-Welcome! Maybe you're curious about AI, software development, language learning, or startups? Maybe you know me? Or maybe you just clicked a link? Whatever your reasons for being here, let me first tell you a little about [Yaya.](https://www.yaya.press)
-
-> Reader: Wait, what is Yaya"
->
-> "Author: An AI foreign language learning app that generates dialogs, stories, and more.
-
-You hear a lot about the big startup successes. This won't be one of those stories. In four blogposts, I'll share an inside look at when things don't quite work out.
+In the first half of 2023, I, [Patrick Coleman](/about) (a longtime startup business guy), and my friend, [David Gaynor](http://freedavid.co/) (an experienced engineer/founder), built the [first version of Yaya.](https://www.yaya.press) During this time David also taught me to code.
 
 <figure align="center">
   <Image
@@ -37,19 +33,25 @@ You hear a lot about the big startup successes. This won't be one of those stori
   <figcaption>Yaya v1.0 circa summer 2023</figcaption>
 </figure>
 
+> Reader: Wait wait, what is Yaya"
+>
+> "Author: Yaya is a foreign language learning app that uses AI to generate dialogs, stories, and more. It follows the language learning principles of comprehensible input and spaced repetition."
+>
+> "Reader: Oh cool, so is it really popular?"
+>
+> "Author: Well...
+
+The truth is the first version of Yaya never saw the growth we wanted. We learned a ton (keep on reading), but in the end, we moved on from Yaya v1.0. I ended up moving on from the project too. David kept going at a more relaxed pace, and on March 15th, 2024, he released a [massive update](https://www.yaya.press) ([more below](#v2)).
+
+You hear a lot about the big startup successes. This won't be one of those stories. In this blogpost series, I'll share an inside look at when things don't quite work out. If you're interested in AI, software development, startups, language learning, learning to code, or if you just know me, I think you'll find this interesting.
+
 ## The evolution of Yaya
 
 ### Yaya v1.0
 
-During the first half of 2023, I, [Patrick Coleman](/about) (a startup business guy), and my friend, [David Gaynor](http://freedavid.co/) (an experienced engineer/founder), built the first version of Yaya. It used AI to generate reading content at an appropriate learning level in (almost) any language.
+The first version of Yaya used AI to generate reading content at an appropriate learning level in (almost) any language. We built it using ChatGPT, NextJS, Firebase, and a handful of other tools. And we bootsrapped the business, not taking any outside money.
 
-We built it using ChatGPT, NextJS, and Firebase. And we bootsrapped the business, not taking any outside money. David was also teaching me to code during this time.
-
-In the beginning, I was fantasizing about Yaya turning into a wildly successful business, while also telling myself that it'd be fine if this was all just a good learning experience. Spoiler: We didn't get rich overnight. But we did bring something new into the world.
-
-And while we learned a ton, the first version of Yaya just never saw the growth we wanted. I ended up moving on, and David kept going at a more relaxed pace. Neither of us regret a thing.
-
-Now to get a better idea of how v1.0 worked, watch this short video overview:
+To get a better idea of how v1.0 worked, watch this short video overview:
 
 <figure align="center">
   <iframe
@@ -64,7 +66,99 @@ Now to get a better idea of how v1.0 worked, watch this short video overview:
   <figcaption>Yaya in 2-minutes</figcaption>
 </figure>
 
-Want to go a little deeper? [Try Yaya v1.0](https://www.yaya.press/) for yourself. Or if you prefer video, watch this [11-minute deep dive](https://www.youtube-nocookie.com/embed/rWw079aEzw8?si=XxL9aA6GuOsbQYs1).
+**The core user journey:**
+
+1. Generate content in your target language
+1. Read and listen
+1. Study words and phrases you don't know
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/choose.png"
+    className="mx-auto"
+    alt="Screenshot of the Yaya web app, choosing a language and level"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    <strong>Choose your language and level</strong>
+  </figcaption>
+</figure>
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/customize.png"
+    className="mx-auto"
+    alt="Screenshot of the Yaya web app, customizing reading content"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    <strong>Customize your reading content</strong>
+    <br />
+    With tons of prompts in different genres to seed your ideas
+  </figcaption>
+</figure>
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/read.png"
+    className="mx-auto"
+    alt="Screenshot of the Yaya web app, showing a story in Japanese"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    <strong>Read and listen in your target language</strong>
+  </figcaption>
+</figure>
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/lookup.png"
+    className="mx-auto"
+    alt="Screenshot of the Yaya web app, looking up a word in Japanese"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    <strong>Look up words and phrases you don't know</strong>
+    <br />
+    Includes pronunciation, audio, grammar explanations, and example sentences
+  </figcaption>
+</figure>
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/study.png"
+    className="mx-auto"
+    alt="Screenshot of the Yaya web app, vocab review page"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    <strong>Review with flashcards</strong>
+    <br />
+    Built in spaced-repetition (SRS) and Anki export
+  </figcaption>
+</figure>
+
+<figure align="center">
+  <Image
+    src="/images/posts/yaya/srs.png"
+    className="mx-auto"
+    alt="Screenshot of the Yaya web app, add vocab to a generated story"
+    width={500}
+    height={500}
+  />
+  <figcaption>
+    <strong>Or include your due vocabulary in a story</strong>
+  </figcaption>
+</figure>
+
+Want to go even deeper? [Try Yaya v1.0](https://www.yaya.press/) for yourself. Or if you prefer video, watch this [11-minute deep dive](https://www.youtube-nocookie.com/embed/rWw079aEzw8?si=XxL9aA6GuOsbQYs1).
+
+<a id="v2"></a>
 
 ### Yaya v2.0
 
@@ -79,9 +173,9 @@ Want to go a little deeper? [Try Yaya v1.0](https://www.yaya.press/) for yoursel
   <figcaption>The new Yaya</figcaption>
 </figure>
 
-On March 15th, 2024, David released a massive update/overhual of Yaya. The new version focuses on students working with language tutors. It's got a ton of features for language learners and tutors to use together during sessions and individually to study or prep.
+The new version of Yaya focuses on students working with language tutors. It's got a ton of features for language learners and tutors to use together during sessions and individually to study or prep.
 
-Needless to say, we're very optimistic about the new version. [Give it a go!](https://www.yaya.press/)
+Needless to say, we're very optimistic. [Give it a go!](https://www.yaya.press/)
 
 ## Some reflections
 
@@ -112,11 +206,9 @@ And second, I wanted to travel the world with my wife. This meant pausing profes
 
 I also want to say a huge thank you to David! He's been a true friend and mentor throughout this journey. I learned a ton hacking on Yaya and had a great time doing it. I'm sure I'll be buiding something from scratch again someday.
 
-Thank you too for reading this first post!
-
 ## This series
 
-Like Netflix, I'm releasing this series all at once. If you like to binge, have at it. Or check back weekly on social media if you prefer to have it coursed out.
+Thank you too for reading this first post in the series! Like Netflix, I'm releasing everything all at once. If you like to binge, have at it. Or check back weekly on social media if you prefer to have it coursed out.
 
 - **Part 1** (this post): An introduction to Yaya v1.0
 - [Part 2](/posts/yaya2): A deeper dive on the lessons learned while building Yaya
