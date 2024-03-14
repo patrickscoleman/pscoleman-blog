@@ -32,9 +32,9 @@ const Home = () => {
           lovely space rock called Earth.
         </p>
         <p>
-          These days, I&apos;m looking for my next gig. I&apos;m interested in
-          AI, edtech, and dev tools. If you need a smart, hard-working business
-          generalist with a technical background,{" "}
+          These days, I&apos;m looking for my next gig. I&apos;m especially
+          interested in AI, edtech, and dev tools startups. If you need a smart,
+          hard-working business generalist with a technical background,{" "}
           <Link href="/hireme">consider hiring me</Link>.
         </p>
         <p>
