@@ -32,20 +32,14 @@ const Home = () => {
           lovely space rock called Earth.
         </p>
         <p>
-          These days, I&apos;m looking for my next gig. I&apos;m a business
-          generalist, which means I focus on go-to-market (sales and marketing),
-          growth (product), and operations (management, finance, legal, HR,
-          recruiting, etc.). Plus I code a little.
-        </p>
-        <p>
-          I think I can offer the most to startups working on AI, edtech or dev
-          tools. But I&apos;m open to anything with an inspiring team and
-          mission.
+          These days, I&apos;m looking for my next gig. I&apos;m interested in
+          AI, edtech, and dev tools. If you need a smart, hard-working business
+          generalist with a technical background,{" "}
+          <Link href="/hireme">consider hiring me</Link>.
         </p>
         <p>
           Until recently I was traveling around the world on an extended
-          honeymoon (and trying to keep up on my Korean learning). Before that I
-          was working with a friend on{" "}
+          honeymoon. Before that I co-founded{" "}
           <Link
             href="https://www.yaya.press/"
             target="_blank"
