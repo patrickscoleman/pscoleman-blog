@@ -1,0 +1,51 @@
+---
+title: "Hire Patrick Coleman"
+date: "2024-03-14"
+description: "Brief background on Patrick for prospective employers."
+---
+
+import { Layout } from "@/components/layout";
+import { MdxComponents } from "@/components/mdxComponents";
+import { MDXProvider } from "@mdx-js/react";
+import Image from "next/image";
+
+# Hire Patrick Coleman
+
+<small>
+  Updated: <time dateTime={date}>March 14th, 2024</time>
+</small>
+
+<Image
+  src="/images/patrick-photo.png"
+  className="rounded-full mx-auto mb-6 md:mb-8"
+  alt="Photo of Patrick"
+  width={200}
+  height={200}
+/>
+
+I'm Patrick, and I'm currently looking for my next gig.
+
+I'm a business generalist, which means I focus on **go-to-market** (sales and marketing), **growth** (product), and **operations** (management, finance, legal, HR, recruiting, etc.). Plus I code a little.
+
+For a full list of my skills and experience, check out [my about page](/about). Some highlights:
+
+- Co-Founder at [Yaya](https://yaya.press/) ([lessons learned](/posts/yaya))
+- VP of Operations/Growth at [Replit](https://replit.com/)
+- VP of Operations at [PeopleGrove](https://peoplegrove.com/)
+- Investment Banking Analyst at [BofA Merrill Lynch](https://www.bofaml.com/)
+
+I think I can offer the most to startups working on **AI**, **edtech** or **dev tools**. But I'm open to anything with an inspiring team and mission.
+
+I don't care too much about titles. Whether it's COO, VP, business operations, biz guy, or something else, I'll be happy if the team, product, and mission are right.
+
+[Send me an email to chat.](mailto:patrick@pscoleman.me)
+
+export default ({ children }) => (
+  <Layout title={title} description={description}>
+    <MDXProvider components={MdxComponents}>
+      <div className="prose max-w-none prose-stone dark:prose-invert dark:prose-headings:text-text-darkbold dark:prose-a:text-text-darkbold dark:prose-strong:text-text-darkbold">
+        {children}
+      </div>
+    </MDXProvider>
+  </Layout>
+);
