@@ -30,10 +30,14 @@ export const getAllPosts = async () => {
   const sortedData = allPostsData
     .filter((i) => i !== null)
     .sort((a, b) => {
+      // Compare dates in descending order
       if (a.date < b.date) {
         return 1;
-      } else {
+      } else if (a.date > b.date) {
         return -1;
+      } else {
+        // If dates are equal, compare titles in alphabetical order
+        return a.title.localeCompare(b.title);
       }
     });
 
