@@ -1,17 +1,9 @@
 [
   {
-    "id": "yaya4",
-    "title": "What I learned building an AI language learning app (part 4/4)",
+    "id": "yaya",
+    "title": "What I learned building an AI language learning app (part 1/4)",
     "date": "2024-03-18",
-    "description": "Tools: key tools (ChatGPT, NextJS, Firebase) and basics for beginners",
-    "previewImage": "/images/posts/yaya/preview.png",
-    "hidden": false
-  },
-  {
-    "id": "yaya3",
-    "title": "What I learned building an AI language learning app (part 3/4)",
-    "date": "2024-03-18",
-    "description": "The backstory: how I got to Yaya, what I did, and our early iterations",
+    "description": "Reflections on building Yaya v1.0, which never quite took off, with a friend in 2023 H1",
     "previewImage": "/images/posts/yaya/preview.png",
     "hidden": false
   },
@@ -24,10 +16,18 @@
     "hidden": false
   },
   {
-    "id": "yaya",
-    "title": "What I learned building an AI language learning app (part 1/4)",
+    "id": "yaya3",
+    "title": "What I learned building an AI language learning app (part 3/4)",
     "date": "2024-03-18",
-    "description": "Reflections on building Yaya v1.0, which never quite took off, with a friend in 2023 H1",
+    "description": "The backstory: how I got to Yaya, what I did, and our early iterations",
+    "previewImage": "/images/posts/yaya/preview.png",
+    "hidden": false
+  },
+  {
+    "id": "yaya4",
+    "title": "What I learned building an AI language learning app (part 4/4)",
+    "date": "2024-03-18",
+    "description": "Tools: key tools (ChatGPT, NextJS, Firebase) and basics for beginners",
     "previewImage": "/images/posts/yaya/preview.png",
     "hidden": false
   },
