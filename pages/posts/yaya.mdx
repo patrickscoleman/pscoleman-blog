@@ -7,6 +7,7 @@ hidden: false
 ---
 
 import { PostLayout } from "@/components/postLayout";
+import { ResponsiveIframe } from "@/components/responsiveIframe";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -49,19 +50,15 @@ You hear a lot about the big startup successes. This won't be one of those stori
 
 The first version of Yaya used AI to generate reading content at an appropriate learning level in (almost) any language. It follows the language learning principles of [comprehensible input](https://en.wikipedia.org/wiki/Input_hypothesis) and [spaced repetition.](https://en.wikipedia.org/wiki/Spaced_repetition) We built it using ChatGPT, NextJS, Firebase, and a handful of other tools. And we bootsrapped the business, not taking any outside money.
 
-To get a better idea of how v1.0 worked, watch this short video overview:
+To get a better idea of how Yaya worked, watch this short video overview:
 
 <figure align="center">
-  <iframe
-    width={560}
-    height={315}
-    className="mx-auto border-none md:w-0 w-full"
+  <ResponsiveIframe
+    className="mx-auto border-none"
     src="https://www.youtube-nocookie.com/embed/hr61Y_F6oAU?si=CjcigNGRM4q8VNty"
     title="YouTube video player: Yaya preview"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowFullScreen
-  ></iframe>
-  <figcaption>Yaya in 2-minutes</figcaption>
+  />
+  <figcaption>Yaya v1.0 in 2-minutes</figcaption>
 </figure>
 
 **The core user journey:**
