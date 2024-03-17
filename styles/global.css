@@ -25,7 +25,7 @@ body {
     @apply my-4;
   }
   a {
-    @apply font-bold underline underline-offset-4 decoration-1 hover:decoration-2 decoration-accent-light dark:text-text-darkbold dark:decoration-accent-dark;
+    @apply font-bold underline underline-offset-4 decoration-1 hover:decoration-2 group-hover:decoration-2 decoration-accent-light dark:text-text-darkbold dark:decoration-accent-dark;
   }
   ul {
     @apply my-4;

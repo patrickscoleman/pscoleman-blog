@@ -36,19 +36,28 @@ export const MdxComponents = {
   a: (props) => (
     <>
       {props.href.startsWith("/") || props.href.startsWith("#") ? (
-        <Link
-          {...props}
-          className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
-        ></Link>
+        <Link {...props}></Link>
       ) : (
         <Link
           {...props}
-          className="decoration-1 decoration-accent-light dark:decoration-accent-dark"
+          className="group"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {props.children}
-          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />
+          {typeof props.children === "string" ? (
+            <>
+              {/* All but the last word */}
+              {props.children.split(" ").slice(0, -1).join(" ") + " "}
+              {/* Last word with icon */}
+              <span className="inline-flex items-center">
+                {/* Wrap in an a to ensure consistent underline */}
+                <a>{props.children.split(" ").slice(-1)}</a>
+                <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />
+              </span>
+            </>
+          ) : (
+            props.children
+          )}
         </Link>
       )}
     </>
