@@ -68,7 +68,7 @@ It turns out David had been using Harry Potter to learn Chinese with his wife be
 
 Since this was my first time coding anything substantial, needless to say, I leaned on David a lot. Before this I'd taken a fair amount of computer science classes in school, wrote some VBA macros for Excel and PowerPoint early in my career, fixed some website typos (directly in text fields in Github, which felt like [flying blind](https://www.youtube.com/watch?v=89AaqbrqcHI)), and created some devtools marketing content while working at startups. So David built the initial app and set up hosting. Then I worked in his codebase/system. That in itself was some great learning.
 
-At the start, I did frontend work (building out the UI and adding features) and some data/algorithm manipulation. It was seriously fun banging my head against the beam search algorithm. Firebase was tricky at times and [RXJS Observables](https://rxjs.dev/guide/observable) consistently confounded me, but I kept plugging away with David's (and ChatGPT's) help.
+At the start, I did frontend work (building out the UI and adding features) and some data/algorithm manipulation. It was seriously fun banging my head against the [beam search](https://en.wikipedia.org/wiki/Beam_search) algorithm. Firebase was tricky at times and [RXJS Observables](https://rxjs.dev/guide/observable) consistently confounded me, but I kept plugging away with David's (and ChatGPT's) help.
 
 As things progressed, I got a bit more comfortable. I kept working on the frontend and got more confident on my own. From time to time, I'd also work with the data, but as we started getting a few users and wanted things to stay stable, this was mostly just in pair sessions with David. I also spent an inordinate amount of time on prompt engineering and testing.
 
@@ -101,7 +101,7 @@ Now on to the earliest failures and learnings.
 
 The very first version of Yaya matched and interlaced text in two languages. It let you upload the text of a story, novel, or any content in another language plus text for the translation, and it would give you sentence by sentence mappings.
 
-David and another friend built the proof of concept as a weekend project using sentence embeddings, a matching algorithm ([beam search](https://en.wikipedia.org/wiki/Beam_search) with vector difference), and a simple web interface. I started testing it with Japanese short stories and English translations. It was a bit clunky and didn't always get the matching right, but it was enough to get started. It was really interesting seeing the techniques of different translators too.
+David and another friend built the proof of concept as a weekend project using sentence embeddings, a matching algorithm (beam search with vector difference), and a simple web interface. I started testing it with Japanese short stories and English translations. It was a bit clunky and didn't always get the matching right, but it was enough to get started. It was really interesting seeing the techniques of different translators too.
 
 I plugged away on updates to the web interface (on my own and in pair programming sessions with David), and he added more features like an option to use Google Translate, instead of an uploaded translation, and an ePub export, so you could read on an eReader or app. We took turns tweaking the matching algorithm and got improvements, but with neither of us having PhDs in this stuff, we were only able to get so far.
 
@@ -123,7 +123,7 @@ It wasn't gonna be great literature, but at this point we had something. Unfortu
 
 ### v0.4
 
-From here on, we started getting the product in front of more users (who were not us) and making iterative improvements. We did a ton of "high tech" [prompt engineering](https://en.wikipedia.org/wiki/Prompt_engineering) to get better quality and variety. Some of the big feature additions were: [spaced-repetition](https://en.wikipedia.org/wiki/Spaced_repetition) vocabulary to include in generated content, flashcards, audio, and clickable definitions + grammar explanations for any word or phrase (also AI-generated). We also ironed out some kinks with poor performance in some languages (starting with AI-generated English content and then translating for those languages).
+From here on, we started getting the product in front of more users (who were not us) and making iterative improvements. We did a ton of "high tech" prompt engineering to get better quality and variety. Some of the big feature additions were: spaced-repetition vocabulary to include in generated content, flashcards, audio, and clickable definitions + grammar explanations for any word or phrase (also AI-generated). We also ironed out some kinks with poor performance in some languages (starting with AI-generated English content and then translating for those languages).
 
 By this point in time we had built a good product, but we struggled to get people to use it, which after all, is what counts. More on this [in the prior post](/posts/yaya2).
 
