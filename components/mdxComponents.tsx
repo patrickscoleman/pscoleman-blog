@@ -33,7 +33,49 @@ export const MdxComponents = {
       </>
     );
   },
-  a: (props) => (
+  a: (props) => {
+    const isInternalLink =
+      props.href.startsWith("/") || props.href.startsWith("#");
+
+    // Check if children is a string and handle accordingly
+    const content =
+      typeof props.children === "string"
+        ? props.children.split(" ").reduce((acc, word, index, array) => {
+            // Add the word itself
+            acc.push(word);
+
+            // If it's not the last word, add a space after it
+            if (index < array.length - 1) {
+              acc.push(" ");
+            }
+
+            // If it's the last word, add the OpenInNew icon
+            if (index === array.length - 1) {
+              acc.push(
+                <OpenInNew
+                  key="icon"
+                  className="ml-1 inline"
+                  sx={{ fontSize: "1rem" }}
+                />
+              );
+            }
+
+            return acc;
+          }, [])
+        : props.children;
+
+    return (
+      <Link
+        {...props}
+        className={`decoration-1 decoration-accent-light dark:decoration-accent-dark ${
+          !isInternalLink ? "inline-flex items-center" : ""
+        }`}
+        target={!isInternalLink ? "_blank" : undefined}
+        rel={!isInternalLink ? "noopener noreferrer" : undefined}
+      >
+        {content}
+      </Link>
+    );
     <>
       {props.href.startsWith("/") || props.href.startsWith("#") ? (
         <Link
@@ -51,6 +93,6 @@ export const MdxComponents = {
           <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />
         </Link>
       )}
-    </>
-  ),
+    </>;
+  },
 };
