@@ -38,10 +38,10 @@ export const MdxComponents = {
       {props.href.startsWith("/") || props.href.startsWith("#") ? (
         <Link {...props}></Link>
       ) : (
-        <span className="inline-flex items-center">
-          <Link {...props} target="_blank" rel="noopener noreferrer"></Link>
+        <Link {...props} target="_blank" rel="noopener noreferrer">
+          {props.children}
           <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />
-        </span>
+        </Link>
       )}
     </>
   ),
