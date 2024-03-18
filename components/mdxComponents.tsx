@@ -39,9 +39,7 @@ export const MdxComponents = {
         <Link {...props}></Link>
       ) : (
         <span className="inline-flex items-center">
-          <Link {...props} target="_blank" rel="noopener noreferrer">
-            {props.children.split(" ").slice(-1)}
-          </Link>
+          <Link {...props} target="_blank" rel="noopener noreferrer"></Link>
           <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />
         </span>
       )}
