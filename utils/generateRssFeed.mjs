@@ -1,8 +1,7 @@
 import fs from "fs";
 import prettier from "prettier";
-import postsList from "../data/postsList.json";
 
-export const generateRssFeed = async () => {
+export const generateRssFeed = async (postsList) => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
 
   console.log("generating rss feed");
@@ -11,7 +10,7 @@ export const generateRssFeed = async () => {
     <rss version="2.0">
     <channel>
         <title>Your Blog Title</title>
-        <link>https://pscoleman.me</link>
+        <link href="https://pscoleman.me" />
         <description>This is my personal blog.</description>
         <language>en-us</language>
         ${postsList
@@ -20,7 +19,7 @@ export const generateRssFeed = async () => {
             return `
               <item>
                   <title>${post.title}</title>
-                  <link>${`https://pscoleman.me${path}`}</link>
+                  <link href="${`https://pscoleman.me${path}`}" />
                   <description>${post.description || ""}</description>
                   <pubDate>${new Date(post.date).toUTCString()}</pubDate>
                   <guid>${`https://pscoleman.me${path}`}</guid>

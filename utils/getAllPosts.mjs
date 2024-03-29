@@ -42,4 +42,6 @@ export const getAllPosts = async () => {
     });
 
   fs.writeFileSync(postsListFile, JSON.stringify(sortedData, null, 2));
+
+  return sortedData;
 };
