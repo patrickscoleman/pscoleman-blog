@@ -1,0 +1,126 @@
+<rss version="2.0">
+  <channel>
+    <title>Patrick Coleman</title>
+    <link href="https://pscoleman.me" />
+    <description>Patrick Coleman's personal site and blog</description>
+    <language>en</language>
+
+    <item>
+      <title>
+        What I learned building an AI language learning app (part 1/4)
+      </title>
+      <link href="https://pscoleman.me/posts/yaya" />
+      <description
+        >Reflections on building Yaya v1.0, which never quite took off, with a
+        friend in 2023 H1</description
+      >
+      <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/yaya</guid>
+    </item>
+
+    <item>
+      <title>
+        What I learned building an AI language learning app (part 2/4)
+      </title>
+      <link href="https://pscoleman.me/posts/yaya2" />
+      <description
+        >A deeper dive on the lessons learned while building Yaya</description
+      >
+      <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/yaya2</guid>
+    </item>
+
+    <item>
+      <title>
+        What I learned building an AI language learning app (part 3/4)
+      </title>
+      <link href="https://pscoleman.me/posts/yaya3" />
+      <description
+        >The backstory: how I got to Yaya, what I did, and our early
+        iterations</description
+      >
+      <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/yaya3</guid>
+    </item>
+
+    <item>
+      <title>
+        What I learned building an AI language learning app (part 4/4)
+      </title>
+      <link href="https://pscoleman.me/posts/yaya4" />
+      <description
+        >Tools: key tools (ChatGPT, Next.js, Firebase) and basics for
+        beginners</description
+      >
+      <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/yaya4</guid>
+    </item>
+
+    <item>
+      <title>A Seven-month-long Honeymoon</title>
+      <link href="https://pscoleman.me/posts/honeymoon" />
+      <description
+        >Courtney's and Patrick's postnuptial adventures in Asia, South America,
+        and around the US of A.</description
+      >
+      <pubDate>Sun, 18 Feb 2024 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/honeymoon</guid>
+    </item>
+
+    <item>
+      <title>Axolotl by Julio Cortázar</title>
+      <link href="https://pscoleman.me/posts/axolotl" />
+      <description
+        >Spanish-to-English translation of Axolotl, short story by Julio
+        Cortázar (1956).</description
+      >
+      <pubDate>Thu, 13 Apr 2023 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/axolotl</guid>
+    </item>
+
+    <item>
+      <title>What am I up to in 2023?</title>
+      <link href="https://pscoleman.me/posts/what_am_i_up_to_2023" />
+      <description
+        >This year I'm getting married, learning to code, working on a language
+        learning app, and traveling to Europe and Asia.</description
+      >
+      <pubDate>Mon, 27 Feb 2023 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/what_am_i_up_to_2023</guid>
+    </item>
+
+    <item>
+      <title>On Relearning to Code as an Adult</title>
+      <link href="https://pscoleman.me/posts/relearning-to-code" />
+      <description
+        >A first-person report from a 30-something (re)learning to code after
+        years of false starts. Plus some of the things that helped me along the
+        way.</description
+      >
+      <pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/relearning-to-code</guid>
+    </item>
+
+    <item>
+      <title>Haiku by Basho</title>
+      <link href="https://pscoleman.me/posts/basho_haiku" />
+      <description
+        >Japanese-to-English translations of a handful of haiku by Matsuo Basho
+        (1644-1694).</description
+      >
+      <pubDate>Mon, 13 Feb 2023 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/basho_haiku</guid>
+    </item>
+
+    <item>
+      <title>A.I. Assistive Intuition</title>
+      <link href="https://pscoleman.me/posts/ai-assistive-intuition" />
+      <description
+        >Some measured but sweeping generalizations on AI from a non-expert
+        who's been having fun with some tools.</description
+      >
+      <pubDate>Sat, 11 Feb 2023 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/ai-assistive-intuition</guid>
+    </item>
+  </channel>
+</rss>
