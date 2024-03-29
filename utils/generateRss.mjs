@@ -2,7 +2,7 @@ import fs from "fs";
 import prettier from "prettier";
 import postsList from "../data/postsList.json";
 
-export const generateRssFeed = async () => {
+export const generateRss = async () => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
 
   console.log("generating rss feed");
