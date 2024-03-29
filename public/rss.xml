@@ -1,9 +1,9 @@
 <rss version="2.0">
   <channel>
-    <title>Your Blog Title</title>
+    <title>Patrick Coleman</title>
     <link href="https://pscoleman.me" />
-    <description>This is my personal blog.</description>
-    <language>en-us</language>
+    <description>Patrick Coleman's personal site and blog</description>
+    <language>en</language>
 
     <item>
       <title>

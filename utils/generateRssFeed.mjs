@@ -1,6 +1,6 @@
 import fs from "fs";
 import prettier from "prettier";
-import { SiteMetadata } from "../components/meta";
+import { siteMetadata } from "../utils/metadata.mjs";
 
 export const generateRssFeed = async (postsList) => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
@@ -10,20 +10,20 @@ export const generateRssFeed = async (postsList) => {
   const feed = `
     <rss version="2.0">
     <channel>
-        <title>${SiteMetadata.title}</title>
-        <link href="${SiteMetadata.siteUrl}" />
-        <description>${SiteMetadata.description}</description>
-        <language>${SiteMetadata.language}</language>
+        <title>${siteMetadata.title}</title>
+        <link href="${siteMetadata.siteUrl}" />
+        <description>${siteMetadata.description}</description>
+        <language>en</language>
         ${postsList
           .map((post) => {
             const path = `/posts/${post.id}`;
             return `
               <item>
                   <title>${post.title}</title>
-                  <link href="${SiteMetadata.siteUrl}${path}" />
+                  <link href="${siteMetadata.siteUrl}${path}" />
                   <description>${post.description || ""}</description>
                   <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-                  <guid>${SiteMetadata.siteUrl}${path}</guid>
+                  <guid>${siteMetadata.siteUrl}${path}</guid>
               </item>
             `;
           })
