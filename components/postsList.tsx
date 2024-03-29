@@ -1,6 +1,7 @@
 import { DateFormatted } from "@/components/dateFormatted";
 import postsList from "@/data/postsList.json";
 import Link from "next/link";
+import { RssButton } from "@/components/rssButton";
 
 const NUMBER_OF_POSTS_TO_SHOW = 3;
 
@@ -8,11 +9,17 @@ const PostsListComponent = ({ page }: { page?: boolean }) => {
   const posts = page ? postsList : postsList.slice(0, NUMBER_OF_POSTS_TO_SHOW);
 
   return (
-    <section className="">
+    <section>
       {page ? (
-        <h1 className="mb-1">All Blog Posts</h1>
+        <div className="flex mt-8 gap-2 items-center">
+          <h1 className="my-1">All Blog Posts</h1>
+          <RssButton className="my-1 text-xl" />
+        </div>
       ) : (
-        <h2 className="mb-1">Recent Blog Posts</h2>
+        <div className="flex mt-6 gap-2 items-center">
+          <h2 className="my-1">Recent Blog Posts</h2>
+          <RssButton className="text-lg my-1" />
+        </div>
       )}
       <hr />
       <ul className="mb-8">
