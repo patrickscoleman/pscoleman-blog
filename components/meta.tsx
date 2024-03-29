@@ -1,10 +1,20 @@
 import Head from "next/head";
 
+const siteMetadata = {
+  title: "Patrick Coleman",
+  description: "Patrick Coleman's personal site and blog",
+  previewImage: "/images/patrick.png",
+  siteUrl: "https://pscoleman.me",
+  firstName: "Patrick",
+  lastName: "Coleman",
+  twitterCardType: "summary_large_image",
+};
+
 const MetaComponent = ({
-  title = "Patrick Coleman",
+  title = siteMetadata.title,
   date,
-  description = "Patrick Coleman's personal site and blog",
-  previewImage = "/images/patrick.png",
+  description = siteMetadata.description,
+  previewImage = siteMetadata.previewImage,
   post = false,
 }: {
   title?: string;
@@ -27,7 +37,7 @@ const MetaComponent = ({
           />
           <meta
             property="article:author"
-            content="https://pscoleman.me/"
+            content={siteMetadata.siteUrl}
             key="article:author"
           />
         </>
@@ -45,23 +55,23 @@ const MetaComponent = ({
         content={
           previewImage.startsWith("http")
             ? previewImage
-            : "https://pscoleman.me" + previewImage
+            : siteMetadata.siteUrl + previewImage
         }
         key="og:image"
       />
       <meta
         property="profile:first_name"
-        content="Patrick"
+        content={siteMetadata.firstName}
         key="profile:first_name"
       />
       <meta
         property="profile:last_name"
-        content="Coleman"
+        content={siteMetadata.lastName}
         key="profile:last_name"
       />
       <meta
         name="twitter:card"
-        content="summary_large_image"
+        content={siteMetadata.twitterCardType}
         key="twitter:card"
       />
     </Head>
@@ -69,3 +79,4 @@ const MetaComponent = ({
 };
 
 export const Meta = MetaComponent;
+export const SiteMetadata = siteMetadata;
