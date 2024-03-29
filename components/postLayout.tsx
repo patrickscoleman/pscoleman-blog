@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { RssButton } from "@/components/rssButton";
 
 const PostLayoutComponent = ({
   children,
@@ -52,12 +53,15 @@ const PostLayoutComponent = ({
             prev
           </div>
         )}
-        <Link
-          href="/posts"
-          className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
-        >
-          [ all ]
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link
+            href="/posts"
+            className="no-underline hover:text-accent-light dark:hover:text-accent-dark"
+          >
+            [ all ]
+          </Link>
+          <RssButton className="text-sm" />
+        </div>
         {nextPost ? (
           <Link
             href={nextPost}

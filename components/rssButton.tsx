@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "@mui/material/styles";
 import Link from "next/link";
 
-export const RssIcon = ({ className, ...props }) => {
+export const RssIcon = ({ className = "", ...props }) => {
   const sizeClasses = {
     "text-xs": { width: "14", height: "14" },
     "text-sm": { width: "18", height: "18" },
@@ -17,10 +17,17 @@ export const RssIcon = ({ className, ...props }) => {
   };
 
   const getSize = () => {
+    if (!className) {
+      console.error("RssIcon requires a className to determine size.");
+      return { width: "20", height: "20" }; // Default size if no className
+    }
     const sizeClass = Object.keys(sizeClasses).find((size) =>
       className.includes(size)
     );
-    return sizeClasses[sizeClass] || { width: "20", height: "20" }; // Default size if no matching class
+    if (!sizeClass) {
+      return { width: "20", height: "20" }; // Default size if className does not specify a valid size
+    }
+    return sizeClasses[sizeClass];
   };
 
   const { width, height } = getSize();
