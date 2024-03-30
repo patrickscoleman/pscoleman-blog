@@ -1,5 +1,4 @@
-import React from "react";
-import { useTheme } from "@mui/material/styles";
+import Tooltip from "@mui/material/Tooltip";
 import Link from "next/link";
 
 export const RssIcon = ({ className = "", ...props }) => {
@@ -48,15 +47,17 @@ export const RssIcon = ({ className = "", ...props }) => {
 };
 
 const RssButtonComponent = (props) => (
-  <Link
-    target="_blank"
-    rel="noopener noreferrer"
-    className="ml-1 space-x-1 fill-text-light dark:fill-text-darkbold hover:fill-accent-light dark:hover:fill-accent-dark"
-    href="/rss.xml"
-    passHref
-  >
-    <RssIcon {...props} />
-  </Link>
+  <Tooltip title="RSS Feed">
+    <Link
+      target="_blank"
+      rel="noopener noreferrer"
+      className="ml-1 space-x-1 fill-text-light dark:fill-text-darkbold hover:fill-accent-light dark:hover:fill-accent-dark"
+      href="/rss.xml"
+      passHref
+    >
+      <RssIcon {...props} />
+    </Link>
+  </Tooltip>
 );
 
 export const RssButton = RssButtonComponent;
