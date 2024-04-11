@@ -7,13 +7,10 @@ import { KeyboardEvent, MouseEvent, useState } from "react";
 
 const MENU_WIDTH = 220;
 // @ts-ignore
-const FoodHamburger = () => <LunchDining color="topmenu" />;
-// @ts-ignore
 const IconHamburger = () => <MenuIcon color="topmenu" />;
 
 const MenuComponent = () => {
   const [open, setOpen] = useState(false);
-  const [hoverIcon, setHoverIcon] = useState(IconHamburger);
 
   const toggleMenu = (open: boolean) => (event: KeyboardEvent | MouseEvent) => {
     if (
@@ -30,12 +27,8 @@ const MenuComponent = () => {
 
   return (
     <>
-      <IconButton
-        onClick={toggleMenu(true)}
-        onMouseEnter={() => setHoverIcon(FoodHamburger)}
-        onMouseLeave={() => setHoverIcon(IconHamburger)}
-      >
-        {hoverIcon}
+      <IconButton onClick={toggleMenu(true)}>
+        <IconHamburger />
       </IconButton>
       <Drawer anchor="left" open={open} onClose={toggleMenu(false)}>
         <Box
