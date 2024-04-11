@@ -21,7 +21,7 @@ const Home = () => {
           Hi 👋 I&apos;m Patrick! I&apos;m a husband, dog dad, and startup
           business guy. I{" "}
           <Link
-            href="https://github.com/patrickscoleman/pscoleman-blog"
+            href="https://github.com/patrickscoleman"
             target="_blank"
             rel="noopener noreferrer"
           >
