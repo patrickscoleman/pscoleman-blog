@@ -27,7 +27,7 @@ const Home = () => {
           >
             code a little
           </Link>
-          <OpenInNew className="ml-1 text-sm" /> too.
+          <OpenInNew className="ml-1 text-xs md:text-sm" /> too.
         </p>
         <p>
           Until recently I was traveling around the world on a long honeymoon.
@@ -41,7 +41,7 @@ const Home = () => {
           >
             Replit
           </Link>
-          <OpenInNew className="ml-1 text-sm" /> and{" "}
+          <OpenInNew className="ml-1 text-xs md:text-sm" /> and{" "}
           <Link
             href="https://www.peoplegrove.com/"
             target="_blank"
@@ -49,7 +49,7 @@ const Home = () => {
           >
             PeopleGrove
           </Link>
-          <OpenInNew className="ml-1 text-sm" />. Check out{" "}
+          <OpenInNew className="ml-1 text-xs md:text-sm" />. Check out{" "}
           <Link href="/about">my about page</Link> for more.
         </p>
         <p>
