@@ -7,7 +7,7 @@ import Link from "next/link";
 const Home = () => {
   return (
     <Layout home>
-      <h1 className="mb-1">A little about Patrick Coleman...</h1>
+      <h1 className="mb-1">About Patrick Coleman</h1>
       <hr className="mb-8" />
       <Image
         src="/images/patrick-photo.png"
