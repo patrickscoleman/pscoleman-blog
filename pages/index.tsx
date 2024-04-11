@@ -7,7 +7,7 @@ import Link from "next/link";
 const Home = () => {
   return (
     <Layout home>
-      <h1 className="mb-1">Patrick Coleman&apos;s Personal Website</h1>
+      <h1 className="mb-1">About Patrick Coleman</h1>
       <hr className="mb-8" />
       <Image
         src="/images/patrick-photo.png"
@@ -17,59 +17,49 @@ const Home = () => {
         height={250}
       />
       <section className="">
-        <p>Hi, I&apos;m Patrick! 👋</p>
         <p>
-          I&apos;m a husband, dog/plant dad, and startup business guy. I{" "}
+          Hi 👋 I&apos;m Patrick! I&apos;m a husband, dog dad, and startup
+          business guy. I{" "}
           <Link
             href="https://github.com/patrickscoleman/pscoleman-blog"
             target="_blank"
             rel="noopener noreferrer"
           >
-            built this blog
+            code a little
           </Link>
-          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} /> and{" "}
-          <Link href="/posts">wrote these posts</Link>. And I too live on this
-          lovely space rock called Earth.
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} /> too.
         </p>
         <p>
-          These days, I&apos;m looking for my next gig. I&apos;m especially
-          interested in AI, edtech, and dev tools startups. If you need a smart,
-          hard-working business generalist with a technical background,{" "}
-          <Link href="/hireme">consider hiring me</Link>.
+          Until recently I was traveling around the world on a long honeymoon.
+          Before that I co-founded <Link href="/posts/yaya">Yaya</Link>, an AI
+          foreign language learning app. I was also the first business hire and
+          an early leader at{" "}
+          <span className="flex-inline items-center space-x-1">
+            <Link
+              href="https://replit.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Replit
+            </Link>
+            <OpenInNew className="text-sm" />
+          </span>{" "}
+          and{" "}
+          <span className="flex-inline items-center space-x-1">
+            <Link
+              href="https://www.peoplegrove.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PeopleGrove
+            </Link>
+            <OpenInNew className="text-sm" />
+          </span>
+          . Check out <Link href="/about">my about page</Link> for more.
         </p>
         <p>
-          Until recently I was traveling around the world on an extended
-          honeymoon. Before that I co-founded{" "}
-          <Link
-            href="https://www.yaya.press/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Yaya
-          </Link>
-          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />, an AI
-          foreign language learning app (
-          <Link href="/posts/yaya">lessons learned</Link>). I was also an early
-          leader at{" "}
-          <Link
-            href="https://replit.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Replit
-          </Link>
-          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} /> and{" "}
-          <Link
-            href="https://www.peoplegrove.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            PeopleGrove
-          </Link>
-          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />.
-        </p>
-        <p>
-          Check out <Link href="/about">my about page</Link> for more.
+          If you need a smart generalist, who spikes in finance + go-to-market
+          and learns fast, consider <Link href="/hireme">working with me</Link>.
         </p>
       </section>
       <PostsList />
