@@ -21,19 +21,19 @@ const Home = () => {
           Hi 👋 I&apos;m Patrick! I&apos;m a husband, dog dad, and startup
           business guy. I{" "}
           <Link
-            href="https://github.com/patrickscoleman/pscoleman-blog"
+            href="https://github.com/patrickscoleman"
             target="_blank"
             rel="noopener noreferrer"
           >
             code a little
           </Link>
-          <OpenInNew className="ml-1 text-xs md:text-sm" /> too.
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} /> too.
         </p>
         <p>
           Until recently I was traveling around the world on a long honeymoon.
           Before that I co-founded <Link href="/posts/yaya">Yaya</Link>, an AI
-          foreign language learning app. I was also the first business hire and
-          an early leader at{" "}
+          foreign language learning app. I was the first business hire and an
+          early leader at{" "}
           <Link
             href="https://replit.com/"
             target="_blank"
@@ -41,7 +41,7 @@ const Home = () => {
           >
             Replit
           </Link>
-          <OpenInNew className="ml-1 text-xs md:text-sm" /> and{" "}
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} /> and{" "}
           <Link
             href="https://www.peoplegrove.com/"
             target="_blank"
@@ -49,7 +49,7 @@ const Home = () => {
           >
             PeopleGrove
           </Link>
-          <OpenInNew className="ml-1 text-xs md:text-sm" />. Check out{" "}
+          <OpenInNew className="ml-1" sx={{ fontSize: "1rem" }} />. Check out{" "}
           <Link href="/about">my about page</Link> for more.
         </p>
         <p>
