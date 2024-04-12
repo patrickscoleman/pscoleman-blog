@@ -53,8 +53,9 @@ const Home = () => {
           <Link href="/about">my about page</Link> for more.
         </p>
         <p>
-          If you need a smart generalist, who spikes in finance + go-to-market
-          and learns fast, consider <Link href="/hireme">working with me</Link>.
+          <strong>I&apos;m looking for work.</strong> If you need a smart
+          generalist, who spikes in finance + go-to-market and learns fast,
+          consider <Link href="/hireme">working with me</Link>.
         </p>
       </section>
       <PostsList />

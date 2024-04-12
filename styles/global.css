@@ -27,6 +27,9 @@ body {
   a {
     @apply font-bold underline underline-offset-4 decoration-1 hover:decoration-2 group-hover:decoration-2 decoration-accent-light dark:text-text-darkbold dark:decoration-accent-dark;
   }
+  strong {
+    @apply font-bold dark:text-text-darkbold;
+  }
   ul {
     @apply my-4;
   }
