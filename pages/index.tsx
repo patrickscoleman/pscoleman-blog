@@ -54,8 +54,8 @@ const Home = () => {
         </p>
         <p>
           <strong>I&apos;m looking for work.</strong> If you need a smart
-          generalist, who&apos;s spiky in ops and learns fast, consider{" "}
-          <Link href="/hireme">working with me</Link>.
+          generalist, who&apos;s spiky in ops, can do GTM, and learns fast,
+          consider <Link href="/hireme">working with me</Link>.
         </p>
       </section>
       <PostsList />
