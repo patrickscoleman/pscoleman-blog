@@ -6,6 +6,17 @@
     <language>en</language>
 
     <item>
+      <title>Building a simple app to translate fiction</title>
+      <link href="https://pscoleman.me/posts/translatefiction" />
+      <description
+        >I wanted to translate some more short stories so I built a small app
+        with the ChatGPT API.</description
+      >
+      <pubDate>Mon, 22 Apr 2024 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/translatefiction</guid>
+    </item>
+
+    <item>
       <title>
         What I learned building an AI language learning app (part 1/4)
       </title>
