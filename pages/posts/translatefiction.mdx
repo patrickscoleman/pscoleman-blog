@@ -1,0 +1,57 @@
+---
+title: "Building a simple app to translate fiction"
+date: "2024-04-22"
+description: "I wanted to translate some more short stories so I built a small app with the ChatGPT API."
+previewImage: "/images/posts/translatefiction_v1.png"
+hidden: false
+---
+
+import { PostLayout } from "@/components/postLayout";
+import Image from "next/image";
+
+# Building a simple app to translate fiction
+
+<small>
+  <time dateTime={date}>April 22nd, 2024</time>
+</small>
+
+Here's v1 of [Translate Fiction](https://translatefiction.com/). It's a simple little app to help me translate and study languages.
+
+<img
+  src="/images/posts/translatefiction_v1.png"
+  className="mx-auto"
+  alt="Screenshot of the Translate Fiction app v1"
+  width={600}
+  height={600}
+/>
+
+It's very much a **work in progress**. This'll stay a side project. I'll keep adding features that'll help me learn, and I'll share more as I go!
+
+## What?
+
+How it works. Coming soon.
+
+## Why?
+
+Recently I'd been wanting to take a stab at translating some more short stories, starting with ["The Second Bakery Attack"](https://en.wikipedia.org/wiki/The_Second_Bakery_Attack) by Haruki Murakami. I like Jay Rubin's translation, but I wanted to try doing it myself (and to try making the language a bit more casual).
+
+I started out with an [online dictionary](https://jisho.org/). Then I figured why not use [ChatGPT](https://chat.openai.com/) to speed things up a bit? It was still pretty slow going though.
+
+Then I had a thought. Why not build a little app with the [ChatGPT API](https://platform.openai.com/) to save time copy/pasting unfamiliar or ambiguous words and phrases, making edits to improve the "literary quality," etc.?
+
+When I was working on [Yaya](/posts/yaya), my co-founder David did all of the work with the APIs, and I focused on UI/UX and prompt engineering. So this time, I was looking for a simple project to work with the API code myself. This was small enough that I could do it all.
+
+## How?
+
+How I built it. Coming soon.
+
+export default ({ children }) => (
+  <PostLayout
+    title={title}
+    date={date}
+    description={description}
+    previewImage={previewImage}
+  >
+    {children}
+  </PostLayout>
+);

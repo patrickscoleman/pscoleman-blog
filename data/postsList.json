@@ -1,5 +1,13 @@
 [
   {
+    "id": "translatefiction",
+    "title": "Building a simple app to translate fiction",
+    "date": "2024-04-22",
+    "description": "I wanted to translate some more short stories so I built a small app with the ChatGPT API.",
+    "previewImage": "/images/posts/mara_axolotl.png",
+    "hidden": false
+  },
+  {
     "id": "yaya",
     "title": "What I learned building an AI language learning app (part 1/4)",
     "date": "2024-03-18",
