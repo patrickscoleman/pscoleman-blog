@@ -1,7 +1,7 @@
 [
   {
     "id": "translatefiction",
-    "title": "Building a simple app to translate fiction",
+    "title": "Building an app to translate fiction with ChatGPT",
     "date": "2024-04-22",
     "description": "I wanted to translate some more short stories so I built a small app with the ChatGPT API.",
     "previewImage": "/images/posts/translatefiction_v1.png",
