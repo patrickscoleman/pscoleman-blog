@@ -25,7 +25,7 @@ I recently built [Translate Fiction](https://translatefiction.com/). It's a simp
   height={600}
 />
 
-This'll stay a side project. I may keep adding features that'll help me learn.
+This'll stay a side project. I may keep adding features that'll help me learn. Source code is [available on GitHub](https://github.com/patrickscoleman/translatefiction).
 
 ## What?
 
@@ -51,16 +51,15 @@ When I was working on [Yaya](/posts/yaya), my co-founder David did all of the wo
 
 ## How?
 
-I'd never built anything with the ChatGPT API, so I pulled up a [YouTube tutorial](https://www.youtube.com/watch?v=KiWClrSVgfU) and typed `npx create-next-app@latest` in my terminal to start a new [Next.js](https://nextjs.org/) project.
+I'd never built anything with the ChatGPT API, so I pulled up a [YouTube tutorial](https://www.youtube.com/watch?v=KiWClrSVgfU) and started a new [Next.js](https://nextjs.org/) project.
 
-I used [Cursor.sh](https://cursor.sh/) as my IDE and used the AI-powered ⌘K and chat liberally. First I had Cursor generate a simple UI and made some tweaks. Then I followed along with the video to set up an API endpoint to handle requests to the ChatGPT API for the translation. Once I got that working, I added the highlight/explain feature and added functionality to handle different types of messages going to ChatGPT. Then I finished things up by adding keyboard shortcuts (Mac only, sorry) and doing a tiny bit of polish.
+I used [Cursor](https://cursor.sh/) as my IDE and used the AI-powered ⌘K and chat liberally. First I had Cursor generate a simple UI and made some tweaks. Then I followed along with the video to set up an API endpoint to handle requests to the ChatGPT API for the translation. Once I got that working, I added the highlight/explain feature and added functionality to handle different types of messages going to ChatGPT. Then I finished things up by adding keyboard shortcuts (Mac only, sorry) and doing a tiny bit of polish.
 
-The whole project took about 10 hours across 3 days. I hope to get faster on the next project.
-
-If I keep working on this, I'll likely:
+Some ideas if I keep working on this:
 
 - Improve automatic language detection for short highlights by looking at language probabilities
 - Improve the explain feature to look for literary/cultural references
+- Try fine-tuning a model based on my first 10 edited paragraphs to improve generated translation quality
 - Add a settings menu to change models, set temperature, etc.
 - Improve the UX and clean up the code
 
