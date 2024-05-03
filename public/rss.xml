@@ -6,6 +6,17 @@
     <language>en</language>
 
     <item>
+      <title>The Bakery Attack Take 2</title>
+      <link href="https://pscoleman.me/posts/bakeryattack" />
+      <description
+        >Japanese-to-English translation of Haruki Murakami's 'The Second Bakery
+        Attack' (1985) about a couple's attempt to rob a bakery.</description
+      >
+      <pubDate>Fri, 03 May 2024 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/bakeryattack</guid>
+    </item>
+
+    <item>
       <title>Building an app to translate fiction with ChatGPT</title>
       <link href="https://pscoleman.me/posts/translatefiction" />
       <description
