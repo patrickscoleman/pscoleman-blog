@@ -77,7 +77,7 @@
     @apply font-mono scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-4;
   }
   h2 {
-    @apply font-mono scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight mt-12 mb-4;
+    @apply font-mono scroll-m-20 w-full border-b pb-2 text-3xl font-semibold tracking-tight mt-12 mb-4;
   }
   h3 {
     @apply font-mono scroll-m-20 text-2xl font-semibold tracking-tight;
@@ -113,7 +113,7 @@
     @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
   }
   ul {
-    @apply my-6 ml-6 list-disc [&>li]:mt-2;
+    @apply my-6 ml-6 list-disc [&>li]:mt-2 text-gray-600 dark:text-gray-300;
   }
   code {
     @apply relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
