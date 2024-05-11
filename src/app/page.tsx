@@ -32,11 +32,19 @@ export default function Home() {
       </div>
       <div className="space-y-4 md:col-span-3">
         <h1>Patrick Coleman</h1>
-        <p className="large">Startup business leader who codes</p>
+        <p className="large">Startup ops leader who codes</p>
         <p>
-          Hi, I&apos;m Patrick! Until recently I was traveling around the world
-          on a long honeymoon. Before that I co-founded Yaya, an AI foreign
-          language learning app. I was the first business hire and an early
+          Hi, I&apos;m Patrick! Professionally, I help companies grow. Most
+          recently I co-founded{" "}
+          <Link
+            className="no-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.yaya.press"
+          >
+            Yaya
+          </Link>
+          , an AI foreign language learning app. Before that I was an early
           leader at{" "}
           <Link
             className="no-underline"
@@ -55,7 +63,13 @@ export default function Home() {
           >
             PeopleGrove
           </Link>
-          . Check out my about page for more.
+          .
+        </p>
+        <p>I&apos;m currently looking to join a new team.</p>
+        <p>
+          Personally, I&apos;m a husband and dog dad. My biggest hobby is
+          studying languages (español, 日本語, 한국어). I also love to read,
+          climb, and travel.
         </p>
         <div className="flex justify-center gap-4 py-4">
           <Link href="/work" className="no-underline flex-1" passHref>
