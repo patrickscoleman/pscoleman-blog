@@ -82,7 +82,7 @@ export const Header = (props: { className?: string }) => {
         <ModeToggle />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button size="icon" variant="ghost">
+            <Button size="icon" variant="outline">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle menu</span>
             </Button>
