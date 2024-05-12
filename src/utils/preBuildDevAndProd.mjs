@@ -1,5 +1,5 @@
-import { getAllPosts } from "./getAllPosts.mjs";
-import { generateRssFeed } from "./generateRssFeed.mjs";
+// import { getAllPosts } from "./getAllPosts.mjs";
+// import { generateRssFeed } from "./generateRssFeed.mjs";
 
 // const postData = await getAllPosts();
 
