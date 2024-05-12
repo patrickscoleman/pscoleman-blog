@@ -34,13 +34,23 @@ export const Header = (props: { className?: string }) => {
             <span className="large font-mono">pscoleman.me/</span>
           </div>
         ) : (
-          <Link
-            className="flex items-center gap-2 text-lg font-semibold no-underline"
-            href="/"
-          >
-            <Home className="h-4 w-4" />
-            <span className="large font-mono">pscoleman.me/</span>
-          </Link>
+          <div className="large font-mono flex items-center text-lg font-semibold">
+            <Link className="flex items-center no-underline gap-2" href="/">
+              <Home className="h-4 w-4" />
+              pscoleman.me/
+            </Link>
+            <span className="items-center hidden sm:flex overflow-hidden whitespace-nowrap">
+              {pathname.includes("/") && pathname.split("/").length > 2 && (
+                <Link
+                  className="no-underline"
+                  href={`/${pathname.split("/")[1]}`}
+                >
+                  {pathname.split("/")[1]}/
+                </Link>
+              )}
+              <span className="truncate">{pathname.split("/").pop()}</span>
+            </span>
+          </div>
         )}
       </div>
       <div className="flex items-center gap-2">
