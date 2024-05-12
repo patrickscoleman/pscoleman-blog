@@ -2,21 +2,14 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-  Drawer,
-  DrawerTrigger,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-} from "@/components/ui/drawer";
-import { Input } from "@/components/ui/input";
-import { Search, Menu, Home, Laptop, FileText } from "lucide-react";
+import { Menu, Home, Laptop, FileText } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import { Search } from "@/components/search";
 import { ModeToggle } from "@/components/modeToggle";
 import { usePathname } from "next/navigation";
 
@@ -54,41 +47,7 @@ export const Header = (props: { className?: string }) => {
         )}
       </div>
       <div className="flex items-center gap-2">
-        <Drawer>
-          <DrawerTrigger asChild>
-            <Button className="md:hidden" size="icon" variant="ghost">
-              <Search className="h-4 w-4" />
-              <span className="sr-only">Search</span>
-            </Button>
-          </DrawerTrigger>
-          <DrawerContent>
-            <DrawerHeader>
-              <DrawerTitle>Search</DrawerTitle>
-            </DrawerHeader>
-            <div>
-              <form>
-                <div className="relative">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500 dark:text-gray-400" />
-                  <Input
-                    className="w-full bg-white shadow-none appearance-none pl-8 dark:bg-gray-950"
-                    placeholder="Search..."
-                    type="search"
-                  />
-                </div>
-              </form>
-            </div>
-          </DrawerContent>
-        </Drawer>
-        <form className="hidden md:block">
-          <div className="relative">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500 dark:text-gray-400" />
-            <Input
-              className="w-full bg-white shadow-none appearance-none pl-8 md:w-[200px] dark:bg-gray-950"
-              placeholder="Search..."
-              type="search"
-            />
-          </div>
-        </form>
+        {/* <Search /> */}
         <ModeToggle />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
