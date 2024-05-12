@@ -37,7 +37,6 @@ export default function Home() {
           Hi, I&apos;m Patrick! Professionally, I help companies grow. Most
           recently I co-founded{" "}
           <Link
-            className="no-underline"
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.yaya.press"
@@ -47,7 +46,6 @@ export default function Home() {
           , an AI foreign language learning app. Before that I was an early
           leader at{" "}
           <Link
-            className="no-underline"
             target="_blank"
             rel="noopener noreferrer"
             href="https://replit.com"
@@ -56,7 +54,6 @@ export default function Home() {
           </Link>{" "}
           and{" "}
           <Link
-            className="no-underline"
             target="_blank"
             rel="noopener noreferrer"
             href="https://peoplegrove.com"
