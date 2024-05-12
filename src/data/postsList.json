@@ -1,5 +1,13 @@
 [
   {
+    "id": "redesign",
+    "title": "Site Redesign",
+    "date": "2024-05-13",
+    "description": "A modern and minimalistic redesign, plus a move to Next.js 14.",
+    "previewImage": "/images/blog/redesign.png",
+    "hidden": false
+  },
+  {
     "id": "bakeryattack",
     "title": "The Bakery Attack Take 2",
     "date": "2024-05-03",

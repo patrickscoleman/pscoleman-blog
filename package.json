@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node ./utils/preBuildDevAndProd.mjs",
     "dev": "next dev",
+    "prebuild": "node ./src/utils/preBuildDevAndProd.mjs",
     "build": "next build",
+    "postbuild": "node ./src/utils/postBuildProd.mjs",
     "start": "next start",
     "lint": "next lint"
   },
