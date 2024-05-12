@@ -1,5 +1,4 @@
-# Hello my robots friends
-# You are all welcome here
+# Welcome, robots!
 User-agent: *
 Allow: /
 Sitemap: https://pscoleman.me/sitemap.xml

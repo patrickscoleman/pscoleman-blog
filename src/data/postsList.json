@@ -1,0 +1,106 @@
+[
+  {
+    "id": "redesign",
+    "title": "Site Redesign",
+    "date": "2024-05-13",
+    "description": "A modern and minimalistic redesign, plus a move to Next.js 14.",
+    "previewImage": "/images/blog/redesign.png",
+    "hidden": false
+  },
+  {
+    "id": "bakeryattack",
+    "title": "The Bakery Attack Take 2",
+    "date": "2024-05-03",
+    "description": "Japanese-to-English translation of Haruki Murakami's 'The Second Bakery Attack' (1985) about a couple's attempt to rob a bakery.",
+    "previewImage": "/images/blog/bakery_attack.jpeg",
+    "hidden": false
+  },
+  {
+    "id": "translatefiction",
+    "title": "Building an app to translate fiction with ChatGPT",
+    "date": "2024-04-22",
+    "description": "I wanted to translate some more short stories so I built a small app with the ChatGPT API.",
+    "previewImage": "/images/blog/translatefiction_v1.png",
+    "hidden": false
+  },
+  {
+    "id": "yaya",
+    "title": "What I learned building an AI language learning app (part 1/4)",
+    "date": "2024-03-18",
+    "description": "Reflections on building Yaya v1.0, which never quite took off, with a friend in 2023 H1",
+    "previewImage": "/images/blog/yaya/preview.png",
+    "hidden": false
+  },
+  {
+    "id": "yaya2",
+    "title": "What I learned building an AI language learning app (part 2/4)",
+    "date": "2024-03-18",
+    "description": "A deeper dive on the lessons learned while building Yaya",
+    "previewImage": "/images/blog/yaya/preview.png",
+    "hidden": false
+  },
+  {
+    "id": "yaya3",
+    "title": "What I learned building an AI language learning app (part 3/4)",
+    "date": "2024-03-18",
+    "description": "The backstory: how I got to Yaya, what I did, and our early iterations",
+    "previewImage": "/images/blog/yaya/preview.png",
+    "hidden": false
+  },
+  {
+    "id": "yaya4",
+    "title": "What I learned building an AI language learning app (part 4/4)",
+    "date": "2024-03-18",
+    "description": "Tools: key tools (ChatGPT, Next.js, Firebase) and basics for beginners",
+    "previewImage": "/images/blog/yaya/preview.png",
+    "hidden": false
+  },
+  {
+    "id": "honeymoon",
+    "title": "A Seven-month-long Honeymoon",
+    "date": "2024-02-18",
+    "description": "Courtney's and Patrick's postnuptial adventures in Asia, South America, and around the US of A.",
+    "previewImage": "/images/honeymoon/roadtrip.jpeg",
+    "hidden": false
+  },
+  {
+    "id": "axolotl",
+    "title": "Axolotl by Julio Cortázar",
+    "date": "2023-04-13",
+    "description": "Spanish-to-English translation of Axolotl, short story by Julio Cortázar (1956).",
+    "previewImage": "/images/blog/mara_axolotl.png",
+    "hidden": false
+  },
+  {
+    "id": "what_am_i_up_to_2023",
+    "title": "What am I up to in 2023?",
+    "date": "2023-02-27",
+    "description": "This year I'm getting married, learning to code, working on a language learning app, and traveling to Europe and Asia.",
+    "previewImage": "/images/mara/mara_230227.jpeg",
+    "hidden": false
+  },
+  {
+    "id": "relearning-to-code",
+    "title": "On Relearning to Code as an Adult",
+    "date": "2023-02-24",
+    "description": "A first-person report from a 30-something (re)learning to code after years of false starts. Plus some of the things that helped me along the way.",
+    "previewImage": "/images/mara/mara_230224.jpg",
+    "hidden": false
+  },
+  {
+    "id": "basho_haiku",
+    "title": "Haiku by Basho",
+    "date": "2023-02-13",
+    "description": "Japanese-to-English translations of a handful of haiku by Matsuo Basho (1644-1694).",
+    "previewImage": "/images/mara/mara_230213.jpeg",
+    "hidden": false
+  },
+  {
+    "id": "ai-assistive-intuition",
+    "title": "A.I. Assistive Intuition",
+    "date": "2023-02-11",
+    "description": "Some measured but sweeping generalizations on AI from a non-expert who's been having fun with some tools.",
+    "previewImage": "/images/blog/ai_spinach.jpeg",
+    "hidden": false
+  }
+]
