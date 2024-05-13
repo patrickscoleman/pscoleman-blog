@@ -2,18 +2,12 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
-
-export const gridColorLight = "#dbeafe";
-export const gridColorDark = "#172554";
 
 export const BackgroundGrid = (props: { className?: string }) => {
   const pathname = usePathname();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [radius, setRadius] = useState(0);
-
-  const { resolvedTheme } = useTheme();
-  const gridColor = resolvedTheme === "dark" ? gridColorDark : gridColorLight;
+  const [viewportSize, setViewportSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -26,23 +20,34 @@ export const BackgroundGrid = (props: { className?: string }) => {
       setRadius(Math.min(width, height) * 0.15);
     };
 
+    const updateViewportSize = () => {
+      setViewportSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("resize", updateRadius);
+    window.addEventListener("resize", updateViewportSize);
 
-    // Initial radius update on component mount
+    // Initial updates on component mount
     updateRadius();
+    updateViewportSize();
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("resize", updateRadius);
+      window.removeEventListener("resize", updateViewportSize);
     };
   }, []);
 
   return (
     <div
-      className={`absolute top-0 left-0 w-screen h-screen bg-none pointer-events-none ${props.className}`}
+      className={`fixed top-0 left-0 w-full h-full bg-none pointer-events-none ${props.className}`}
     >
-      <svg width="100%" height="100%">
+      <svg
+        height="100%"
+        width="100%"
+        key={`${viewportSize.width}-${viewportSize.height}`}
+      >
         <defs>
           <pattern
             id="gridPattern"
@@ -53,7 +58,7 @@ export const BackgroundGrid = (props: { className?: string }) => {
             <path
               d="M 20 0 L 0 0 0 20"
               fill="none"
-              stroke={gridColor}
+              stroke="var(--grid)"
               strokeWidth="1"
             />
           </pattern>
@@ -98,7 +103,7 @@ export const BackgroundGrid = (props: { className?: string }) => {
             />
           </mask>
         </defs>
-        {pathname === "/" && (
+        {pathname === "/" && viewportSize.width > 639 && (
           <rect
             x="0"
             y="0"

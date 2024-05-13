@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${source_code_pro.variable} ${noto_sans.variable} ${noto_sans_jp.variable} ${noto_sans_kr.variable}`}
+        className={`overscroll-x-none ${source_code_pro.variable} ${noto_sans.variable} ${noto_sans_jp.variable} ${noto_sans_kr.variable}`}
       >
         <ThemeProvider
           attribute="class"
@@ -54,13 +54,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col bg-background">
-            <Header className="z-10 bg-background" />
-            <main className="flex-1 px-6 py-12 md:px-12 lg:px-24 w-full">
-              <BackgroundGrid className="z-0 absolute inset-0" />
-              <div className="z-10 relative mx-auto max-w-3xl">{children}</div>
+          <div className="flex min-h-screen flex-col bg-background relative">
+            <BackgroundGrid className="z-0" />
+            <Header className="z-10" />
+            <main className="z-10 flex-1 px-6 py-12 md:px-12 lg:px-24 w-full h-full relative">
+              <div className="mx-auto max-w-3xl">{children}</div>
             </main>
-            <Footer className="z-10 bg-background" />
+            <Footer className="z-10" />
           </div>
         </ThemeProvider>
       </body>
