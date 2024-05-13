@@ -57,8 +57,8 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col bg-background">
             <Header className="z-10 bg-background" />
             <main className="flex-1 px-6 py-12 md:px-12 lg:px-24 w-full">
-              <BackgroundGrid className="z-0 absolute inset-0" />
-              <div className="z-10 relative mx-auto max-w-3xl">{children}</div>
+              <BackgroundGrid className="z-0" />
+              <div className="z-10 mx-auto max-w-3xl">{children}</div>
             </main>
             <Footer className="z-10 bg-background" />
           </div>

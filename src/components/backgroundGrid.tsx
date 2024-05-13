@@ -33,9 +33,9 @@ export const BackgroundGrid = (props: { className?: string }) => {
 
   return (
     <div
-      className={`absolute top-0 left-0 w-screen h-screen bg-none pointer-events-none ${props.className}`}
+      className={`absolute top-0 left-0 w-full h-full bg-none pointer-events-none ${props.className}`}
     >
-      <svg width="100%" height="100%">
+      <svg height="100%" width="100%">
         <defs>
           <pattern
             id="gridPattern"
