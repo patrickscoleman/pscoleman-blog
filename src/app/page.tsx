@@ -91,8 +91,10 @@ export default function Home() {
         <h3>Get in touch</h3>
         <div className="flex justify-center gap-4 py-4">
           <Link
-            href="mailto:patrick@pscoleman.me"
             className="no-underline flex-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:patrick@pscoleman.me"
             passHref
           >
             <Button
@@ -113,8 +115,10 @@ export default function Home() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="https://www.linkedin.com/in/patrickscoleman"
                   className="no-underline flex-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.linkedin.com/in/patrickscoleman"
                   passHref
                 >
                   <Button
@@ -134,8 +138,10 @@ export default function Home() {
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
-                  href="https://x.com/patrickscoleman"
                   className="no-underline flex-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://x.com/patrickscoleman"
                   passHref
                 >
                   <Button

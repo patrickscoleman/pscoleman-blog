@@ -103,7 +103,7 @@ export const BackgroundGrid = (props: { className?: string }) => {
             />
           </mask>
         </defs>
-        {pathname === "/" && (
+        {pathname === "/" && viewportSize.width > 639 && (
           <rect
             x="0"
             y="0"
