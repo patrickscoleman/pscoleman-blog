@@ -64,9 +64,8 @@ export default function Home() {
         </p>
         <p>I&apos;m currently looking to join a new team.</p>
         <p>
-          Personally, I&apos;m a husband and dog dad. My biggest hobby is
-          studying languages (español, 日本語, 한국어). I also love to read,
-          climb, and travel.
+          Personally, I&apos;m a husband and dog dad. I enjoy studying languages
+          (español, 日本語, 한국어), reading, traveling, and going outdoors.
         </p>
         <div className="flex justify-center gap-4 py-4">
           <Link href="/work" className="no-underline flex-1" passHref>
@@ -96,7 +95,11 @@ export default function Home() {
         </div>
         <h3>Get in touch</h3>
         <div className="flex justify-center gap-4 py-4">
-          <Link href="mailto:patrick@pscoleman.me" className="no-underline flex-1" passHref>
+          <Link
+            href="mailto:patrick@pscoleman.me"
+            className="no-underline flex-1"
+            passHref
+          >
             <Button
               variant="outline"
               className="h-14 w-full p-2 flex items-center justify-between px-4 group"
@@ -114,7 +117,11 @@ export default function Home() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link href="https://www.linkedin.com/in/patrickscoleman" className="no-underline flex-2" passHref>
+                <Link
+                  href="https://www.linkedin.com/in/patrickscoleman"
+                  className="no-underline flex-2"
+                  passHref
+                >
                   <Button
                     variant="outline"
                     className="h-14 w-full p-2 flex items-center justify-start gap-2 px-4"
@@ -131,7 +138,11 @@ export default function Home() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Link href="https://x.com/patrickscoleman" className="no-underline flex-2" passHref>
+                <Link
+                  href="https://x.com/patrickscoleman"
+                  className="no-underline flex-2"
+                  passHref
+                >
                   <Button
                     variant="outline"
                     className="h-14 w-full p-2 flex items-center justify-start gap-2 px-4"
