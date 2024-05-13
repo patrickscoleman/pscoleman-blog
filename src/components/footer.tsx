@@ -3,7 +3,7 @@ import Link from "next/link";
 export const Footer = (props: { className?: string }) => {
   return (
     <footer
-      className={`flex h-16 w-full items-center justify-between border-t border-gray-200 px-6 dark:border-gray-800 ${props.className}`}
+      className={`flex h-16 w-full items-center justify-between bg-background border-t border-gray-200 px-6 dark:border-gray-800 ${props.className}`}
     >
       <div className="muted flex flex-col sm:flex-row items-start sm:items-center">
         <span>© 2022-{new Date().getFullYear()} by</span>

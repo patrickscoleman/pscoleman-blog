@@ -55,12 +55,12 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="flex min-h-screen flex-col bg-background">
-            <Header className="z-10 bg-background" />
-            <main className="flex-1 px-6 py-12 md:px-12 lg:px-24 w-full">
+            <Header className="z-10" />
+            <main className="flex-1 px-6 py-12 md:px-12 lg:px-24 w-full h-full min-h-1 relative">
               <BackgroundGrid className="z-0" />
-              <div className="z-10 mx-auto max-w-3xl">{children}</div>
+              <div className="z-10 mx-auto max-w-3xl relative">{children}</div>
             </main>
-            <Footer className="z-10 bg-background" />
+            <Footer className="z-10" />
           </div>
         </ThemeProvider>
       </body>
