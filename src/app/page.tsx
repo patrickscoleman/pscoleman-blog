@@ -5,8 +5,6 @@ import { Laptop, FileText, ArrowRight } from "lucide-react";
 import { Mail, LinkedIn, X } from "@/components/icons";
 import Image from "next/image";
 import Link from "next/link";
-import { useTheme } from "next-themes";
-import { gridColorLight, gridColorDark } from "@/components/backgroundGrid";
 import {
   Tooltip,
   TooltipContent,
@@ -15,16 +13,13 @@ import {
 } from "@/components/ui/tooltip";
 
 export default function Home() {
-  const { resolvedTheme } = useTheme();
-  const shadowColor = resolvedTheme === "dark" ? gridColorDark : gridColorLight;
-
   return (
     <div className="md:grid md:grid-cols-5 md:gap-8">
       <div className="space-y-4 md:hidden">
         <Image
           alt="Patrick Coleman"
           className="mx-auto rounded-full object-cover mb-8"
-          style={{ boxShadow: `0 0px 10px ${shadowColor}` }}
+          style={{ boxShadow: `0 0px 10px var(--grid)` }}
           src="/images/patrick.png"
           width={150}
           height={150}
@@ -162,7 +157,7 @@ export default function Home() {
         <Image
           alt="Patrick Coleman"
           className="mx-auto rounded-full object-cover"
-          style={{ boxShadow: `0 0px 10px ${shadowColor}` }}
+          style={{ boxShadow: `0 0px 10px var(--grid)` }}
           src="/images/patrick.png"
           width={400}
           height={400}
