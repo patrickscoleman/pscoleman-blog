@@ -34,7 +34,10 @@ const noto_sans_kr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: siteMetadata.title,
+  title: {
+    template: `%s | ${siteMetadata.title}`,
+    default: siteMetadata.title,
+  },
   description: siteMetadata.description,
   creator: siteMetadata.firstName + " " + siteMetadata.lastName,
   publisher: siteMetadata.firstName + " " + siteMetadata.lastName,

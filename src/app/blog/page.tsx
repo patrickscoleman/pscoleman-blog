@@ -9,6 +9,11 @@ import {
 } from "@/components/ui/card";
 import { DateFormatted } from "@/components/dateFormatted";
 
+export const metadata = {
+  title: "Blog",
+  description: "Patrick Coleman's blog posts",
+};
+
 export default function Blog() {
   return (
     <div>
