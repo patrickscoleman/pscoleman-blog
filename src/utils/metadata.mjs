@@ -5,5 +5,4 @@ export const siteMetadata = {
   siteUrl: "https://pscoleman.me",
   firstName: "Patrick",
   lastName: "Coleman",
-  twitterCardType: "summary_large_image",
 };
