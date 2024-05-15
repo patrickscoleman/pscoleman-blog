@@ -16,6 +16,12 @@ import { usePathname } from "next/navigation";
 export const Header = (props: { className?: string }) => {
   const pathname = usePathname();
 
+  // Close the dropdown menu when clicking an item.
+  // This is necessary when using next/link. If you just use <a> tags, then the dropdown menu works normally.
+  function onClick() {
+    document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
+  }
+
   return (
     <header
       className={`flex h-16 w-full items-center justify-between bg-background border-b border-gray-200 px-6 dark:border-gray-800 ${props.className}`}
@@ -58,7 +64,7 @@ export const Header = (props: { className?: string }) => {
           </DropdownMenuTrigger>
           <nav>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem>
+              <DropdownMenuItem onClick={onClick}>
                 <Link
                   className="flex items-center gap-2 no-underline w-full h-full"
                   href="/"
@@ -67,7 +73,7 @@ export const Header = (props: { className?: string }) => {
                   Home
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              <DropdownMenuItem onClick={onClick}>
                 <Link
                   className="flex items-center gap-2 no-underline w-full h-full"
                   href="/hireme"
@@ -76,7 +82,7 @@ export const Header = (props: { className?: string }) => {
                   Work
                 </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
+              <DropdownMenuItem onClick={onClick}>
                 <Link
                   className="flex items-center gap-2 no-underline w-full h-full"
                   href="/posts"
