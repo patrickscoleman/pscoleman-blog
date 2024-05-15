@@ -3,17 +3,18 @@
 import Link from "next/link";
 import { RssButton } from "@/components/rssButton";
 import { usePathname } from "next/navigation";
+import { getPrevPost, getNextPost } from "@/utils/getPosts";
 
 interface PostNavigationProps {
   prevPost?: string;
   nextPost?: string;
 }
 
-export const PostNavigation: React.FC<PostNavigationProps> = ({
-  prevPost,
-  nextPost,
-}) => {
+export const PostNavigation: React.FC<PostNavigationProps> = () => {
   const pathname = usePathname();
+  const postId = pathname.split("/").pop() || "";
+  const prevPost = getPrevPost(postId);
+  const nextPost = getNextPost(postId);
 
   if (pathname.includes("/blog/")) {
     return (
@@ -25,13 +26,13 @@ export const PostNavigation: React.FC<PostNavigationProps> = ({
               &lt; prev
             </Link>
           ) : (
-            <div className="muted">prev</div>
+            <div className="text-muted-foreground">prev</div>
           )}
           <div className="flex items-center gap-2">
             <Link href="/blog" className="no-underline">
               [ all ]
             </Link>
-            <RssButton className="text-sm" />
+            <RssButton className="text-xs" />
           </div>
           {nextPost ? (
             <Link
@@ -41,9 +42,7 @@ export const PostNavigation: React.FC<PostNavigationProps> = ({
               next &gt;
             </Link>
           ) : (
-            <div className="text-text-lightfaint dark:text-text-darkfaint">
-              next
-            </div>
+            <div className="text-muted-foreground">next</div>
           )}
         </div>
       </>

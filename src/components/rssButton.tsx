@@ -5,6 +5,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Rss } from "lucide-react";
 
 export const RssIcon = ({ className = "", ...props }) => {
   const sizeClasses = {
@@ -51,7 +52,7 @@ export const RssIcon = ({ className = "", ...props }) => {
   );
 };
 
-export const RssButton = (props: any) => (
+export const RssButton = (props: { className?: string }) => (
   <TooltipProvider>
     <Tooltip>
       <TooltipTrigger asChild>
@@ -62,7 +63,7 @@ export const RssButton = (props: any) => (
           href="/rss.xml"
           passHref
         >
-          <RssIcon {...props} />
+          <Rss className={props.className} />
         </Link>
       </TooltipTrigger>
       <TooltipContent side="bottom">
