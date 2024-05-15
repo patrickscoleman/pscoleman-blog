@@ -7,13 +7,23 @@ hidden: true
 ---
 
 import Image from "next/image";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "First Thoughts";
+export const description =
+  "Patrick's first blog post, in which he decides to write a blog.";
 export const date = "2022-12-19";
-export const metadata = {
-  title: "First Thoughts",
-  description:
-    "Patrick's first blog post, in which he decides to write a blog.",
-};
+export const previewImage = "/images/mara/mara_221219.jpeg";
+export const alt = "Mara the dog, reposing on couch";
+export const hidden = true;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # First Thoughts
 
@@ -38,9 +48,9 @@ I wrote the first draft of this blog post back in December so I'd have some dumm
 I'm not entirely sure what direction this blog will take, but I'm excited to have a place to write and share online. Here are some things you might see:
 
 <Image
-  src="/images/mara/mara_221219.jpeg"
+  src={previewImage}
   className="mx-auto"
-  alt="Mara the dog, reposing on couch"
+  alt={alt}
   width={500}
   height={500}
 />

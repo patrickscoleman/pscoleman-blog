@@ -7,13 +7,23 @@ hidden: true
 ---
 
 import Image from "next/image";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "Second Thoughts";
+export const description =
+  "Patrick's second blog post, in which he revisits his first blog post and has some second thoughts.";
 export const date = "2023-02-07";
-export const metadata = {
-  title: "Second Thoughts",
-  description:
-    "Patrick's second blog post, in which he revisits his first blog post and has some second thoughts.",
-};
+export const previewImage = "/images/mara/mara_230207.jpeg";
+export const alt = "Mara the dog, curled up sleeping";
+export const hidden = true;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # Second Thoughts
 
@@ -35,9 +45,9 @@ I promise you a proper post next time. Until then 나중에 봐요！ (_see you 
 
 <figure align="center">
   <Image
-    src="/images/mara/mara_230207.jpeg"
+    src={previewImage}
     className="mx-auto"
-    alt="Mara the dog, curled up sleeping"
+    alt={alt}
     width={500}
     height={500}
   />

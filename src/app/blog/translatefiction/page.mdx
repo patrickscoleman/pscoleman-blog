@@ -7,13 +7,23 @@ hidden: false
 ---
 
 import Image from "next/image";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "Building an app to translate fiction with ChatGPT";
+export const description =
+  "I wanted to translate some more short stories so I built a small app with the ChatGPT API.";
 export const date = "2024-04-22";
-export const metadata = {
-  title: "Building an app to translate fiction with ChatGPT",
-  description:
-    "I wanted to translate some more short stories so I built a small app with the ChatGPT API.",
-};
+export const previewImage = "/images/blog/translatefiction_v1.png";
+export const alt = "Screenshot of the Translate Fiction app v1";
+export const hidden = false;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # Building an app to translate fiction with ChatGPT
 
@@ -24,9 +34,9 @@ export const metadata = {
 I recently built [Translate Fiction](https://translatefiction.vercel.app). It's a simple app to help me translate short fiction and study languages.
 
 <Image
-  src="/images/blog/translatefiction_v1.png"
+  src={previewImage}
   className="mx-auto"
-  alt="Screenshot of the Translate Fiction app v1"
+  alt={alt}
   width={600}
   height={600}
 />

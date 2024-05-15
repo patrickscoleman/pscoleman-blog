@@ -8,12 +8,23 @@ hidden: true
 
 import Image from "next/image";
 import { GenjoKoanText } from "./genjoKoanText";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "Genjo Koan by Dogen";
+export const description =
+  "Japanese-to-English translation of Dogen's Genjo Koan (1233).";
 export const date = "2023-03-29";
-export const metadata = {
-  title: "Genjo Koan by Dogen",
-  description: "Japanese-to-English translation of Dogen's Genjo Koan (1233).",
-};
+export const previewImage = "/images/mara/mara_230329.jpeg";
+export const alt = "Mara the dog, riding on a boat";
+export const hidden = true;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # Translation of the Genjo Koan by Dogen
 
@@ -67,9 +78,9 @@ In the past, I've also read [Dogen's Genjo Koan: Three Commentaries](https://www
 
 <figure align="center">
   <Image
-    src="/images/mara/mara_230329.jpeg"
+    src={previewImage}
     className="mx-auto"
-    alt="Mara the dog, riding on a boat"
+    alt={alt}
     width={400}
     height={400}
   />

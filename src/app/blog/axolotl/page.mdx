@@ -7,13 +7,23 @@ hidden: false
 ---
 
 import Image from "next/image";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "Axolotl by Julio Cortázar";
+export const description =
+  "Spanish-to-English translation of Axolotl, short story by Julio Cortázar (1956).";
 export const date = "2023-04-13";
-export const metadata = {
-  title: "Axolotl by Julio Cortázar",
-  description:
-    "Spanish-to-English translation of Axolotl, short story by Julio Cortázar (1956).",
-};
+export const previewImage = "/images/blog/axolotl.jpeg";
+export const alt = "Axolotl";
+export const hidden = false;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # Translation of Axolotl by Julio Cortázar
 
@@ -29,9 +39,9 @@ This story was my introduction to the mad genius of Julio Cortázar. I've since 
 
 <figure align="center">
   <Image
-    src="/images/blog/axolotl.jpeg"
+    src={previewImage}
     className="mx-auto"
-    alt="Axolotl"
+    alt={alt}
     width={600}
     height={400}
   />

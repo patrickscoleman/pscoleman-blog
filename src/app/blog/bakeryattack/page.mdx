@@ -7,13 +7,24 @@ hidden: false
 ---
 
 import Image from "next/image";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "The Bakery Attack Take 2";
+export const description =
+  "Japanese-to-English translation of Haruki Murakami's 'The Second Bakery Attack' (1985) about a couple's attempt to rob a bakery.";
 export const date = "2024-05-03";
-export const metadata = {
-  title: "The Bakery Attack Take 2",
-  description:
-    "Japanese-to-English translation of Haruki Murakami's 'The Second Bakery Attack' (1985) about a couple's attempt to rob a bakery.",
-};
+export const previewImage = "/images/blog/bakery_attack.jpeg";
+export const alt =
+  "Illustration of a masked couple robbing a McDonalds in Japan";
+export const hidden = false;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # The Bakery Attack Take 2
 
@@ -28,9 +39,9 @@ export const metadata = {
 {" "}
 
 <Image
-  src="/images/blog/bakery_attack.jpeg"
+  src={previewImage}
   className="mx-auto mt-4"
-  alt="Illustration of a masked couple robbing a McDonalds in Japan"
+  alt={alt}
   width={800}
   height={400}
 />

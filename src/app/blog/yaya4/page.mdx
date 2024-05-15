@@ -9,12 +9,22 @@ hidden: false
 import Image from "next/image";
 import Link from "next/link";
 
+export const title =
+  "What I learned building an AI language learning app (part 4/4)";
+export const description =
+  "Tools: key tools (ChatGPT, Next.js, Firebase) and basics for beginners";
 export const date = "2024-03-18";
-export const metadata = {
-  title: "What I learned building an AI language learning app (part 4/4)",
-  description:
-    "Tools: key tools (ChatGPT, Next.js, Firebase) and basics for beginners",
-};
+export const previewImage = "/images/blog/yaya/preview.png";
+export const alt = "Screenshot of the Yaya homepage with a picture of Patrick";
+export const hidden = false;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # What I learned building an AI language learning app
 

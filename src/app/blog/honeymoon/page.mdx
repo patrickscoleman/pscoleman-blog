@@ -7,13 +7,23 @@ hidden: false
 ---
 
 import Image from "next/image";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "A Seven-month-long Honeymoon";
+export const description =
+  "Courtney's and Patrick's postnuptial adventures in Asia, South America, and around the US of A.";
 export const date = "2024-02-18";
-export const metadata = {
-  title: "A Seven-month-long Honeymoon",
-  description:
-    "Courtney's and Patrick's postnuptial adventures in Asia, South America, and around the US of A.",
-};
+export const previewImage = "/images/honeymoon/roadtrip.jpeg";
+export const alt = "Patrick and Courtney with Mara in the car";
+export const hidden = false;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # A Seven-month-long Honeymoon
 
@@ -662,9 +672,9 @@ Now we've caught up to the present. We're in Santa Barbara, California. We're st
 
 <figure align="center">
   <Image
-    src="/images/honeymoon/roadtrip.jpeg"
+    src={previewImage}
     className="mx-auto"
-    alt="Patrick and Courtney with Mara in the car"
+    alt={alt}
     width={500}
     height={500}
   />

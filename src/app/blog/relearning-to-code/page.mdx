@@ -7,13 +7,23 @@ hidden: false
 ---
 
 import Image from "next/image";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "On Relearning to Code as an Adult";
+export const description =
+  "A first-person report from a 30-something (re)learning to code after years of false starts. Plus some of the things that helped me along the way.";
 export const date = "2023-02-24";
-export const metadata = {
-  title: "On Relearning to Code as an Adult",
-  description:
-    "A first-person report from a 30-something (re)learning to code after years of false starts. Plus some of the things that helped me along the way.",
-};
+export const previewImage = "/images/mara/mara_230224.jpg";
+export const alt = "Mara the dog, eating pinecone";
+export const hidden = false;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # On Relearning to Code as an Adult
 
@@ -37,9 +47,9 @@ Who says [learning through play](https://learningthroughplay.com/explore-the-res
 
 <figure align="center">
   <Image
-    src="/images/mara/mara_230224.jpg"
+    src={previewImage}
     className="mx-auto"
-    alt="Mara the dog, eating pinecone"
+    alt={alt}
     width={500}
     height={500}
   />
