@@ -8,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { DateFormatted } from "@/components/dateFormatted";
+import { RssButton } from "@/components/rssButton";
 
 export const metadata = {
   title: "Blog",
@@ -17,7 +18,10 @@ export const metadata = {
 export default function Blog() {
   return (
     <div>
-      <h1 className="mb-8">Blog Posts</h1>
+      <span className="mb-8 flex items-center justify-between">
+        <h1>Blog Posts</h1>
+        <RssButton className="text-4xl lg:text-5xl font-bold mb-4" />
+      </span>
       <div className="flex flex-wrap justify-center gap-4 mx-auto">
         {postsList.map((post: any) => (
           <Link
