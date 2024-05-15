@@ -77,6 +77,9 @@
   body {
     @apply font-sans bg-background text-foreground;
   }
+  img {
+    @apply my-4;
+  }
   h1 {
     @apply font-mono scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-4;
   }
@@ -84,7 +87,7 @@
     @apply font-mono scroll-m-20 w-full border-b pb-2 text-3xl font-semibold tracking-tight mt-12 mb-4;
   }
   h3 {
-    @apply font-mono scroll-m-20 text-2xl font-semibold tracking-tight;
+    @apply font-mono scroll-m-20 text-2xl font-semibold tracking-tight mt-4;
   }
   h4 {
     @apply font-mono scroll-m-20 text-xl font-semibold tracking-tight;

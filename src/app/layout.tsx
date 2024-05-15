@@ -34,8 +34,19 @@ const noto_sans_kr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: siteMetadata.title,
+  title: {
+    template: `%s | ${siteMetadata.baseUrl}`,
+    default: siteMetadata.title + " | " + siteMetadata.baseUrl,
+  },
   description: siteMetadata.description,
+  creator: siteMetadata.firstName + " " + siteMetadata.lastName,
+  publisher: siteMetadata.firstName + " " + siteMetadata.lastName,
+  authors: [
+    {
+      name: siteMetadata.firstName + " " + siteMetadata.lastName,
+      url: siteMetadata.siteUrl,
+    },
+  ],
 };
 
 export default function RootLayout({

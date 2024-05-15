@@ -1,29 +1,79 @@
 ---
 title: "Site Redesign"
-date: "2024-05-13"
+date: "2024-05-14"
 description: "A modern and minimalistic redesign, plus a move to Next.js 14."
 previewImage: "/images/blog/redesign.png"
 hidden: false
 ---
 
 import Image from "next/image";
-import { date } from "./page.mdx";
+
+export const date = "2024-05-14";
+export const metadata = {
+  title: "Site Redesign",
+  description: "A modern and minimalistic redesign, plus a move to Next.js 14.",
+};
 
 # Site Redesign
 
 <time dateTime={date} className="muted italic">
-  May 13th, 2024
+  May 14th, 2024
 </time>
 
+I redesigned my site to be more modern and minimalistic. For the UI, I used [v0 by Vercel](https://v0.dev/), [shadcn/ui](https://ui.shadcn.com/), and [Lucide](https://lucide.dev/guide/packages/lucide-react). I also moved from Next.js 13 to [Next.js 14](https://nextjs.org/blog/next-14).
+
 <Image
+  className="mx-auto"
   src="/images/blog/redesign.png"
-  alt="Site Redesign"
+  alt="Site redesign"
   width={600}
   height={300}
 />
 
-I redesigned my site to be more modern and minimalistic. For the UI, I used [v0 by Vercel](https://v0.dev/), [shadcn/ui](https://ui.shadcn.com/), and [Lucide](https://lucide.dev/guide/packages/lucide-react). I also moved from Next.js 13 to [Next.js 14](https://nextjs.org/blog/next-14).
+Overall I'm happy with the outcome and enjoyed working with these new frontend tools. It's a solid improvement vs. the old site.
 
-Overall I'm happy with the outcome and enjoyed working with these new frontend tools.
+<Image
+  className="mx-auto"
+  src="/images/blog/redesign-old.png"
+  alt="Prior site design"
+  width={600}
+  height={300}
+/>
 
-I'll be adding my impressions and more detail soon...
+## Impressions
+
+### v0 by Vercel
+
+v0 is tantalizingly close to being amazing!
+
+It was fun giving plain English instructions to the AI and tweaking the generated UI. It felt... collaborative. That said even with the handy npm package to add the generated code to your project (just type `npx v0 add XXXXXXXXXX`) there's still a lot of tweaking/adjusting. Plus the UI didn't exactly match what was shown in the web app.
+
+I think right now this is most useful for intermediate coders (like myself) who need directional pointers and to more experienced engineers who don't have as much frontend/design experience. I'm sure it'll keep getting better with time. It'll be magical when it works for anyone who's got an idea and knows just the basics of HTML/CSS/JS.
+
+For reference, here's what I got from v0 after 11 iterations.
+
+<Image
+  className="mx-auto"
+  src="/images/blog/redesign-v0.png"
+  alt="Site design from v0 by Vercel"
+  width={600}
+  height={300}
+/>
+
+### shadcn/ui
+
+I really like the shadcn/ui library.
+
+The approach of adding editable components directly to your app rather than installing additional npm packages was an adjustment at first, but I ended up really liking it. In the past, I fought with the defaults in [MUI Components](https://mui.com/) and especially with [Tailwind Typography](https://tailwindcss.com/docs/plugins#typography). This library gives you great visibility and makes customizing UI components so easy.
+
+### Lucide
+
+I picked Lucide because this is what came out of the box with v0 and shadcn/ui. I didn't do much research/comparison, but the icons look great. I don't have much to else add, but I think ease/aesthetics is what counts here.
+
+### Moving to Next.js 14
+
+If I could go back in time, I would not have migrated to the new Next.js. I would have just focused on the UI updates or split this into two separate projects.
+
+It was an adjustment going from [page routing](https://nextjs.org/docs/pages/building-your-application/routing) in Next.js 13 to [app routing](https://nextjs.org/docs/app/building-your-application/routing) in Next.js 14, and I spent a lot of time replicating the same old functionality with the new patterns.
+
+That said now that I've made the move, I'm happy with it. I learned the new framework, which was one of my goals. And Next.js 14 does feel a bit more intuitive/ergonomic. It should make things easier when I add new stuff in the future.

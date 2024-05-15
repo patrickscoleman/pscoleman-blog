@@ -18,7 +18,7 @@ export default function Home() {
       <div className="space-y-4 md:hidden">
         <Image
           alt="Patrick Coleman"
-          className="mx-auto rounded-full object-cover mb-8"
+          className="mx-auto rounded-full object-cover mt-0 mb-8"
           style={{ boxShadow: `0 0px 10px var(--grid)` }}
           src="/images/patrick.png"
           width={150}
@@ -29,8 +29,8 @@ export default function Home() {
         <h1>Patrick Coleman</h1>
         <p className="large">Startup operations leader who codes</p>
         <p>
-          Hi, I&apos;m Patrick! Professionally, I help companies grow. Most
-          recently I co-founded{" "}
+          Hi, I&apos;m Patrick! Professionally, I help early stage companies
+          grow. Most recently I co-founded{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
@@ -60,7 +60,7 @@ export default function Home() {
         <p>I&apos;m currently looking to join a new team.</p>
         <p>
           Personally, I&apos;m a husband and dog dad. I enjoy studying languages
-          (español, 日本語, 한국어), reading, traveling, and going outdoors.
+          (español, 日本語, 한국어), reading, traveling, and being outdoors.
         </p>
         <div className="flex justify-center gap-4 py-4">
           <Link href="/work" className="no-underline flex-1" passHref>
