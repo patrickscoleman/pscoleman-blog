@@ -7,13 +7,23 @@ hidden: false
 ---
 
 import Image from "next/image";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "A.I. Assistive Intuition";
 export const date = "2023-02-11";
-export const metadata = {
-  title: "A.I. Assistive Intuition",
-  description:
-    "Initial impressions of various AI tools as I'm starting to learn.",
-};
+export const description =
+  "Initial impressions of various AI tools as I'm starting to learn.";
+export const previewImage = "/images/blog/ai_spinach.jpeg";
+export const alt = "Child from the movie AI eating spinach";
+export const hidden = false;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # A.I. Assistive Intuition
 
@@ -25,7 +35,7 @@ export const metadata = {
   <Image
     src="/images/blog/ai_spinach.jpeg"
     className="mx-auto"
-    alt="Child from the movie AI eating spinach"
+    alt={alt}
     width={400}
     height={400}
   />
