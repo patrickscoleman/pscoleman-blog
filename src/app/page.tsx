@@ -18,7 +18,7 @@ export default function Home() {
       <div className="space-y-4 md:hidden">
         <Image
           alt="Patrick Coleman"
-          className="mx-auto rounded-full object-cover mb-8"
+          className="mx-auto rounded-full object-cover mt-0 mb-8"
           style={{ boxShadow: `0 0px 10px var(--grid)` }}
           src="/images/patrick.png"
           width={150}
