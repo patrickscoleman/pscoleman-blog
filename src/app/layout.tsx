@@ -11,6 +11,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { BackgroundGrid } from "@/components/backgroundGrid";
 import { siteMetadata } from "@/utils/metadata.mjs";
+import { PostNavigation } from "@/components/postNavigation";
 
 const source_code_pro = Source_Code_Pro({
   subsets: ["latin"],
@@ -69,7 +70,10 @@ export default function RootLayout({
             <BackgroundGrid className="z-0" />
             <Header className="z-10" />
             <main className="z-10 flex-1 px-6 py-12 md:px-12 lg:px-24 w-full h-full relative">
-              <div className="mx-auto max-w-3xl">{children}</div>
+              <div className="mx-auto max-w-3xl">
+                {children}
+                <PostNavigation />
+              </div>
             </main>
             <Footer className="z-10" />
           </div>

@@ -38,7 +38,7 @@ export default function Home() {
           >
             Yaya
           </Link>
-          , an AI foreign language learning app. Before that I was an early
+          , an AI foreign language learning app. Before that I was an early ops
           leader at{" "}
           <Link
             target="_blank"

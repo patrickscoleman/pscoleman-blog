@@ -9,13 +9,23 @@ hidden: false
 import { ResponsiveIframe } from "@/components/responsiveIframe";
 import Image from "next/image";
 import Link from "next/link";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "What I learned building an AI language learning app";
+export const description =
+  "Reflections on building Yaya v1.0, which never quite took off, with a friend in 2023 H1";
 export const date = "2024-03-18";
-export const metadata = {
-  title: "What I learned building an AI language learning app",
-  description:
-    "Reflections on building Yaya v1.0, which never quite took off, with a friend in 2023 H1",
-};
+export const previewImage = "/images/blog/yaya/preview.png";
+export const alt = "Screenshot of the Yaya homepage with a picture of Patrick";
+export const hidden = false;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # What I learned building an AI language learning app
 

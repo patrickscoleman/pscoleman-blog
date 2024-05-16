@@ -2,18 +2,28 @@
 title: "Haiku by Basho"
 date: "2023-02-13"
 description: "Japanese-to-English translations of a handful of haiku by Matsuo Basho (1644-1694)."
-previewImage: "/images/mara/mara_230213.jpeg"
+previewImage: "/images/mara/mara_230213_preview.jpeg"
 hidden: false
 ---
 
 import Image from "next/image";
+import { generatePostMetadata } from "@/utils/metadata.mjs";
 
+export const title = "Basho Haiku Translations";
+export const description =
+  "Japanese-to-English translations of a handful of haiku by Matsuo Basho (1644-1694).";
 export const date = "2023-02-13";
-export const metadata = {
-  title: "Basho Haiku Translations",
-  description:
-    "Japanese-to-English translations of a handful of haiku by Matsuo Basho (1644-1694).",
-};
+export const previewImage = "/images/mara/mara_230213_preview.jpeg";
+export const alt = "Mara the dog, walking into the fog";
+export const hidden = false;
+
+export const metadata = generatePostMetadata({
+  title,
+  description,
+  date,
+  previewImage,
+  alt,
+});
 
 # Basho Haiku Translations
 
@@ -94,9 +104,9 @@ fog sends things whirling about /
 a bell is sounding
 
 <Image
-  src="/images/mara/mara_230213.jpeg"
+  src={previewImage}
   className="mx-auto"
-  alt="Mara the dog, walking into the fog"
+  alt={alt}
   width={500}
   height={500}
 />
