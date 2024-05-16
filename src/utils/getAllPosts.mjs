@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-export const getAllPosts = async () => {
+export const getAllPostsAndWriteToFile = async () => {
   const blogDirectory = path.join(process.cwd(), "src", "app", "blog");
   const directories = fs
     .readdirSync(blogDirectory, { withFileTypes: true })
@@ -20,13 +20,15 @@ export const getAllPosts = async () => {
       metadata[match[1]] = eval(match[2]);
     }
 
-    // Hidden posts are not included in the list
-    return metadata.hidden === true
-      ? null
-      : {
-          id,
-          ...metadata,
-        };
+    // Only include posts that are not hidden and have both a title and a date
+    if (metadata.hidden === true || !metadata.title || !metadata.date) {
+      return null;
+    } else {
+      return {
+        id,
+        ...metadata,
+      };
+    }
   });
 
   const sortedData = allPostsData

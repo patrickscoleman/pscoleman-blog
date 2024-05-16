@@ -1,6 +1,6 @@
 import fs from "fs";
 import prettier from "prettier";
-import { siteMetadata } from "@/utils/metadata.mjs";
+import { siteMetadata } from "./metadata.mjs";
 
 export const generateRssFeed = async (postsList) => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
@@ -8,7 +8,7 @@ export const generateRssFeed = async (postsList) => {
   console.log("generating rss feed");
 
   const feed = `
-    <rss version="2.0">
+    <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
         <title>${siteMetadata.title}</title>
         <link href="${siteMetadata.siteUrl}" />
@@ -24,6 +24,7 @@ export const generateRssFeed = async (postsList) => {
                   <description>${post.description || ""}</description>
                   <pubDate>${new Date(post.date).toUTCString()}</pubDate>
                   <guid>${siteMetadata.siteUrl}${path}</guid>
+                  <media:content url="${siteMetadata.siteUrl}${post.previewImage}" medium="image" />
               </item>
             `;
           })
@@ -32,7 +33,7 @@ export const generateRssFeed = async (postsList) => {
     </rss>
     `;
 
-  const formatted = prettier.format(feed, {
+  const formatted = await prettier.format(feed, {
     ...prettierConfig,
     parser: "html",
   });

@@ -1,6 +1,6 @@
-import { getAllPosts } from "./getAllPosts.mjs";
-// import { generateRssFeed } from "./generateRssFeed.mjs";
+import { getAllPostsAndWriteToFile } from "./getAllPosts.mjs";
+import { generateRssFeed } from "./generateRssFeed.mjs";
 
-const postData = await getAllPosts();
+const postData = await getAllPostsAndWriteToFile();
 
-// generateRssFeed(postData);
+await generateRssFeed(postData);
