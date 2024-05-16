@@ -4,13 +4,7 @@ import prettier from "prettier";
 
 export const generateSitemap = async () => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
-  const pages = await globby([
-    "pages/*.tsx",
-    "pages/**/*.mdx",
-    "!pages/_*.tsx",
-    "!pages/api",
-    "!pages/404.tsx",
-  ]);
+  const pages = await globby(["src/app/**/page.tsx", "src/app/**/page.mdx"]);
 
   const sitemap = `
     <?xml version="1.0" encoding="UTF-8"?>
@@ -19,11 +13,9 @@ export const generateSitemap = async () => {
           .map((page) => {
             const pathSegments = page
               .split("/")
-              .filter((segment) => segment !== "pages");
-            const fileName = pathSegments.pop(); // Remove the file name
-            const parentDirectory = pathSegments.join("/"); // Get the parent directory path
-            const route =
-              parentDirectory === "app" ? "" : `/${parentDirectory}`;
+              .filter((segment) => segment !== "src" && segment !== "app");
+            pathSegments.pop(); // Remove the file name
+            const route = `/${pathSegments.join("/")}`;
 
             return `
               <url>
@@ -35,7 +27,7 @@ export const generateSitemap = async () => {
     </urlset>
     `;
 
-  const formatted = prettier.format(sitemap, {
+  const formatted = await prettier.format(sitemap, {
     ...prettierConfig,
     parser: "html",
   });
