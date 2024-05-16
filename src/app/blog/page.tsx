@@ -38,8 +38,10 @@ export default function Blog() {
                     src={post.previewImage}
                     alt={`Preview of ${post.title}`}
                     width={300}
-                    height={300}
+                    height={200}
                     layout="responsive"
+                    placeholder="empty"
+                    style={{ backgroundColor: "var(--card-foreground)" }}
                   />
                 </div>
                 <div>
