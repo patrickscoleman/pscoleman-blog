@@ -1,4 +1,4 @@
-<rss version="2.0">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Patrick Coleman</title>
     <link href="https://pscoleman.me" />
@@ -14,6 +14,10 @@
       >
       <pubDate>Tue, 14 May 2024 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/redesign</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/redesign.png"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -25,6 +29,10 @@
       >
       <pubDate>Fri, 03 May 2024 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/bakeryattack</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/bakery_attack.jpeg"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -36,6 +44,10 @@
       >
       <pubDate>Mon, 22 Apr 2024 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/translatefiction</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/translatefiction_v1.png"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -47,6 +59,10 @@
       >
       <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/yaya</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/yaya/preview.png"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -59,6 +75,10 @@
       >
       <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/yaya2</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/yaya/preview.png"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -72,6 +92,10 @@
       >
       <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/yaya3</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/yaya/preview.png"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -85,6 +109,10 @@
       >
       <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/yaya4</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/yaya/preview.png"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -96,6 +124,10 @@
       >
       <pubDate>Sun, 18 Feb 2024 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/honeymoon</guid>
+      <media:content
+        url="https://pscoleman.me/images/honeymoon/roadtrip.jpeg"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -107,6 +139,10 @@
       >
       <pubDate>Thu, 13 Apr 2023 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/axolotl</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/axolotl.jpeg"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -118,6 +154,10 @@
       >
       <pubDate>Mon, 27 Feb 2023 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/what_am_i_up_to_2023</guid>
+      <media:content
+        url="https://pscoleman.me/images/mara/mara_230227.jpeg"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -130,6 +170,10 @@
       >
       <pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/relearning-to-code</guid>
+      <media:content
+        url="https://pscoleman.me/images/mara/mara_230224.jpg"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -141,6 +185,10 @@
       >
       <pubDate>Mon, 13 Feb 2023 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/basho_haiku</guid>
+      <media:content
+        url="https://pscoleman.me/images/mara/mara_230213_preview.jpeg"
+        medium="image"
+      />
     </item>
 
     <item>
@@ -152,6 +200,10 @@
       >
       <pubDate>Sat, 11 Feb 2023 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/ai-assistive-intuition</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/ai_spinach.jpeg"
+        medium="image"
+      />
     </item>
   </channel>
 </rss>
