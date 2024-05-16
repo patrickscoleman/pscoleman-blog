@@ -2,7 +2,7 @@
   {
     "id": "redesign",
     "title": "Site Redesign",
-    "description": "A minimalistic retromodern redesign, plus a move to Next.js 14.",
+    "description": "A minimal redesign that's a bit retro, a bit modern, plus a move to Next.js 14.",
     "date": "2024-05-14",
     "previewImage": "/images/blog/redesign.png",
     "alt": "Screenshot of pscoleman.me redesign",
@@ -10,8 +10,8 @@
   },
   {
     "id": "bakeryattack",
-    "title": "The Bakery Attack Take 2",
-    "description": "Japanese-to-English translation of Haruki Murakami's 'The Second Bakery Attack' (1985) about a couple's attempt to rob a bakery.",
+    "title": "The Bakery Attack Take 2 by Haruki Murakami",
+    "description": "Translation of Haruki Murakami's The Second Bakery Attack, a Japanese short story published in 1985.",
     "date": "2024-05-03",
     "previewImage": "/images/blog/bakery_attack.jpeg",
     "alt": "Illustration of a masked couple robbing a McDonalds in Japan",
@@ -19,8 +19,8 @@
   },
   {
     "id": "translatefiction",
-    "title": "Building an app to translate fiction with ChatGPT",
-    "description": "I wanted to translate some more short stories so I built a small app with the ChatGPT API.",
+    "title": "Building TranslateFiction",
+    "description": "I built a small app in a weekend with the OpenAI API to help me translate short fiction.",
     "date": "2024-04-22",
     "previewImage": "/images/blog/translatefiction_v1.png",
     "alt": "Screenshot of the Translate Fiction app v1",
@@ -28,8 +28,8 @@
   },
   {
     "id": "yaya",
-    "title": "What I learned building an AI language learning app",
-    "description": "Reflections on building Yaya v1.0, which never quite took off, with a friend in 2023 H1",
+    "title": "Building Yaya 1/4: Intro",
+    "description": "Reflections on learning to code and building an AI language learning app, which never took off.",
     "date": "2024-03-18",
     "previewImage": "/images/blog/yaya/preview.png",
     "alt": "Screenshot of the Yaya homepage with a picture of Patrick",
@@ -37,7 +37,7 @@
   },
   {
     "id": "yaya2",
-    "title": "What I learned building an AI language learning app (part 2/4)",
+    "title": "Building Yaya 2/4: Lessons Learned",
     "description": "A deeper dive on the lessons learned while building Yaya",
     "date": "2024-03-18",
     "previewImage": "/images/blog/yaya/preview.png",
@@ -46,8 +46,8 @@
   },
   {
     "id": "yaya3",
-    "title": "What I learned building an AI language learning app (part 3/4)",
-    "description": "The backstory: how I got to Yaya, what I did, and our early iterations",
+    "title": "Building Yaya 3/4: Backstory",
+    "description": "How I got to Yaya, what I did, and our early iterations",
     "date": "2024-03-18",
     "previewImage": "/images/blog/yaya/preview.png",
     "alt": "Screenshot of the Yaya homepage with a picture of Patrick",
@@ -55,8 +55,8 @@
   },
   {
     "id": "yaya4",
-    "title": "What I learned building an AI language learning app (part 4/4)",
-    "description": "Tools: key tools (ChatGPT, Next.js, Firebase) and basics for beginners",
+    "title": "Building Yaya 4/4: Tools",
+    "description": "Key tools (ChatGPT, Next.js, Firebase) and basics for beginners",
     "date": "2024-03-18",
     "previewImage": "/images/blog/yaya/preview.png",
     "alt": "Screenshot of the Yaya homepage with a picture of Patrick",
@@ -64,8 +64,8 @@
   },
   {
     "id": "honeymoon",
-    "title": "A Seven-month-long Honeymoon",
-    "description": "Courtney's and Patrick's postnuptial adventures in Asia, South America, and around the US of A.",
+    "title": "A 7-month Honeymoon",
+    "description": "Courtney's and Patrick's postnuptial adventures in Asia, South America, and the US.",
     "date": "2024-02-18",
     "previewImage": "/images/honeymoon/roadtrip.jpeg",
     "alt": "Patrick and Courtney with Mara in the car",
@@ -74,7 +74,7 @@
   {
     "id": "axolotl",
     "title": "Axolotl by Julio Cortázar",
-    "description": "Spanish-to-English translation of Axolotl, short story by Julio Cortázar (1956).",
+    "description": "Translation of Julio Cortázar's Axolotl, a Spanish short story published in 1956.",
     "date": "2023-04-13",
     "previewImage": "/images/blog/axolotl.jpeg",
     "alt": "Axolotl",
@@ -83,7 +83,7 @@
   {
     "id": "what_am_i_up_to_2023",
     "title": "What am I up to in 2023?",
-    "description": "This year I'm getting married, learning to code, working on a language learning app, and traveling to Europe and Asia.",
+    "description": "I'm getting married, learning to code, working on a language learning app, and traveling to Asia.",
     "date": "2023-02-27",
     "previewImage": "/images/mara/mara_230227.jpeg",
     "alt": "Mara the dog, wearing a 'my humans are getting married' bandana",
@@ -91,8 +91,8 @@
   },
   {
     "id": "relearning-to-code",
-    "title": "On Relearning to Code as an Adult",
-    "description": "A first-person report from a 30-something (re)learning to code after years of false starts. Plus some of the things that helped me along the way.",
+    "title": "Relearning to Code as an Adult",
+    "description": "My journey from years of false starts to coding again, plus some lessons learned.",
     "date": "2023-02-24",
     "previewImage": "/images/mara/mara_230224.jpg",
     "alt": "Mara the dog, eating pinecone",
@@ -100,8 +100,8 @@
   },
   {
     "id": "basho_haiku",
-    "title": "Basho Haiku Translations",
-    "description": "Japanese-to-English translations of a handful of haiku by Matsuo Basho (1644-1694).",
+    "title": "Bashō Haiku",
+    "description": "Translations of a few Japanese haiku by Matsuo Bashō (1644-1694).",
     "date": "2023-02-13",
     "previewImage": "/images/mara/mara_230213_preview.jpeg",
     "alt": "Mara the dog, walking into the fog",
@@ -109,9 +109,9 @@
   },
   {
     "id": "ai-assistive-intuition",
-    "title": "A.I. Assistive Intuition",
+    "title": "Early thoughts on AI",
     "date": "2023-02-11",
-    "description": "Initial impressions of various AI tools as I'm starting to learn.",
+    "description": "Initial impressions of various AI tools that I've been trying.",
     "previewImage": "/images/blog/ai_spinach.jpeg",
     "alt": "Child from the movie AI eating spinach",
     "hidden": false
