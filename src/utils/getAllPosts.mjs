@@ -1,11 +1,5 @@
 import fs from "fs";
-import matter from "gray-matter";
 import path from "path";
-
-const postsDirectory = path.join(process.cwd(), "pages", "posts");
-const postsListFile = "./data/postsList.json";
-// Posts data
-// { id, date, title, description?, hidden? }
 
 export const getAllPosts = async () => {
   const blogDirectory = path.join(process.cwd(), "src", "app", "blog");
@@ -18,15 +12,20 @@ export const getAllPosts = async () => {
     const postPath = path.join(blogDirectory, id, "page.mdx");
     const fileContents = fs.readFileSync(postPath, "utf8");
 
-    // Parse the post metadata section
-    const matterResult = matter(fileContents);
+    // Extract metadata from the file
+    const metadata = {};
+    const metadataRegex = /export const (\w+) =\n?\s*(.*);/g;
+    let match;
+    while ((match = metadataRegex.exec(fileContents)) !== null) {
+      metadata[match[1]] = eval(match[2]);
+    }
 
     // Hidden posts are not included in the list
-    return matterResult.data?.hidden === true
+    return metadata.hidden === true
       ? null
       : {
           id,
-          ...matterResult.data,
+          ...metadata,
         };
   });
 
@@ -43,6 +42,13 @@ export const getAllPosts = async () => {
         return a.title.localeCompare(b.title);
       }
     });
+
+  const postsListFile = path.join(
+    process.cwd(),
+    "src",
+    "data",
+    "postsList.json"
+  );
 
   fs.writeFileSync(postsListFile, JSON.stringify(sortedData, null, 2));
 
