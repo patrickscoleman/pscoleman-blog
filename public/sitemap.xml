@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pscoleman.me</loc>
-  </url>
-  
-  <url>
-    <loc>https://pscoleman.me/work</loc>
+    <loc>https://pscoleman.me/</loc>
   </url>
 
   <url>
@@ -13,10 +9,70 @@
   </url>
 
   <url>
+    <loc>https://pscoleman.me/work</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/ai-assistive-intuition</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/axolotl</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/bakeryattack</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/basho_haiku</loc>
+  </url>
+
+  <url>
     <loc>https://pscoleman.me/blog/first-thoughts</loc>
   </url>
 
   <url>
+    <loc>https://pscoleman.me/blog/genjo_koan</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/honeymoon</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/redesign</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/relearning-to-code</loc>
+  </url>
+
+  <url>
     <loc>https://pscoleman.me/blog/second-thoughts</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/translatefiction</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/what_am_i_up_to_2023</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/yaya</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/yaya2</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/yaya3</loc>
+  </url>
+
+  <url>
+    <loc>https://pscoleman.me/blog/yaya4</loc>
   </url>
 </urlset>

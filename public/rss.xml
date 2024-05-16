@@ -1,4 +1,4 @@
-<rss version="2.0">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Patrick Coleman</title>
     <link href="https://pscoleman.me" />
@@ -6,143 +6,196 @@
     <language>en</language>
 
     <item>
-      <title>The Bakery Attack Take 2</title>
-      <link href="https://pscoleman.me/blog/bakeryattack" />
+      <title>Site Redesign</title>
+      <link href="https://pscoleman.me/posts/redesign" />
       <description
-        >Japanese-to-English translation of Haruki Murakami's 'The Second Bakery
-        Attack' (1985) about a couple's attempt to rob a bakery.</description
+        >A minimal redesign that's a bit retro, a bit modern, plus a move to
+        Next.js 14.</description
+      >
+      <pubDate>Tue, 14 May 2024 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/redesign</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/redesign.png"
+        medium="image"
+      />
+    </item>
+
+    <item>
+      <title>The Bakery Attack Take 2 by Haruki Murakami</title>
+      <link href="https://pscoleman.me/posts/bakeryattack" />
+      <description
+        >Translation of Haruki Murakami's The Second Bakery Attack, a Japanese
+        short story published in 1985.</description
       >
       <pubDate>Fri, 03 May 2024 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/bakeryattack</guid>
+      <guid>https://pscoleman.me/posts/bakeryattack</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/bakery_attack.jpeg"
+        medium="image"
+      />
     </item>
 
     <item>
-      <title>Building an app to translate fiction with ChatGPT</title>
-      <link href="https://pscoleman.me/blog/translatefiction" />
+      <title>Building TranslateFiction</title>
+      <link href="https://pscoleman.me/posts/translatefiction" />
       <description
-        >I wanted to translate some more short stories so I built a small app
-        with the ChatGPT API.</description
+        >I built a small app in a weekend with the OpenAI API to help me
+        translate short fiction.</description
       >
       <pubDate>Mon, 22 Apr 2024 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/translatefiction</guid>
+      <guid>https://pscoleman.me/posts/translatefiction</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/translatefiction_v1.png"
+        medium="image"
+      />
     </item>
 
     <item>
-      <title>
-        What I learned building an AI language learning app (part 1/4)
-      </title>
-      <link href="https://pscoleman.me/blog/yaya" />
+      <title>Building Yaya 1/4: Intro</title>
+      <link href="https://pscoleman.me/posts/yaya" />
       <description
-        >Reflections on building Yaya v1.0, which never quite took off, with a
-        friend in 2023 H1</description
+        >Reflections on learning to code and building an AI language learning
+        app, which never took off.</description
       >
       <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/yaya</guid>
+      <guid>https://pscoleman.me/posts/yaya</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/yaya/preview.png"
+        medium="image"
+      />
     </item>
 
     <item>
-      <title>
-        What I learned building an AI language learning app (part 2/4)
-      </title>
-      <link href="https://pscoleman.me/blog/yaya2" />
+      <title>Building Yaya 2/4: Lessons Learned</title>
+      <link href="https://pscoleman.me/posts/yaya2" />
       <description
         >A deeper dive on the lessons learned while building Yaya</description
       >
       <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/yaya2</guid>
+      <guid>https://pscoleman.me/posts/yaya2</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/yaya/preview.png"
+        medium="image"
+      />
     </item>
 
     <item>
-      <title>
-        What I learned building an AI language learning app (part 3/4)
-      </title>
-      <link href="https://pscoleman.me/blog/yaya3" />
+      <title>Building Yaya 3/4: Backstory</title>
+      <link href="https://pscoleman.me/posts/yaya3" />
       <description
-        >The backstory: how I got to Yaya, what I did, and our early
-        iterations</description
+        >How I got to Yaya, what I did, and our early iterations</description
       >
       <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/yaya3</guid>
+      <guid>https://pscoleman.me/posts/yaya3</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/yaya/preview.png"
+        medium="image"
+      />
     </item>
 
     <item>
-      <title>
-        What I learned building an AI language learning app (part 4/4)
-      </title>
-      <link href="https://pscoleman.me/blog/yaya4" />
+      <title>Building Yaya 4/4: Tools</title>
+      <link href="https://pscoleman.me/posts/yaya4" />
       <description
-        >Tools: key tools (ChatGPT, Next.js, Firebase) and basics for
+        >Key tools (ChatGPT, Next.js, Firebase) and basics for
         beginners</description
       >
       <pubDate>Mon, 18 Mar 2024 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/yaya4</guid>
+      <guid>https://pscoleman.me/posts/yaya4</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/yaya/preview.png"
+        medium="image"
+      />
     </item>
 
     <item>
-      <title>A Seven-month-long Honeymoon</title>
-      <link href="https://pscoleman.me/blog/honeymoon" />
+      <title>A 7-month Honeymoon</title>
+      <link href="https://pscoleman.me/posts/honeymoon" />
       <description
         >Courtney's and Patrick's postnuptial adventures in Asia, South America,
-        and around the US of A.</description
+        and the US.</description
       >
       <pubDate>Sun, 18 Feb 2024 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/honeymoon</guid>
+      <guid>https://pscoleman.me/posts/honeymoon</guid>
+      <media:content
+        url="https://pscoleman.me/images/honeymoon/roadtrip.jpeg"
+        medium="image"
+      />
     </item>
 
     <item>
       <title>Axolotl by Julio Cortázar</title>
-      <link href="https://pscoleman.me/blog/axolotl" />
+      <link href="https://pscoleman.me/posts/axolotl" />
       <description
-        >Spanish-to-English translation of Axolotl, short story by Julio
-        Cortázar (1956).</description
+        >Translation of Julio Cortázar's Axolotl, a Spanish short story
+        published in 1956.</description
       >
       <pubDate>Thu, 13 Apr 2023 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/axolotl</guid>
+      <guid>https://pscoleman.me/posts/axolotl</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/axolotl.jpeg"
+        medium="image"
+      />
     </item>
 
     <item>
       <title>What am I up to in 2023?</title>
-      <link href="https://pscoleman.me/blog/what_am_i_up_to_2023" />
+      <link href="https://pscoleman.me/posts/what_am_i_up_to_2023" />
       <description
-        >This year I'm getting married, learning to code, working on a language
-        learning app, and traveling to Europe and Asia.</description
+        >I'm getting married, learning to code, working on a language learning
+        app, and traveling to Asia.</description
       >
       <pubDate>Mon, 27 Feb 2023 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/what_am_i_up_to_2023</guid>
+      <guid>https://pscoleman.me/posts/what_am_i_up_to_2023</guid>
+      <media:content
+        url="https://pscoleman.me/images/mara/mara_230227.jpeg"
+        medium="image"
+      />
     </item>
 
     <item>
-      <title>On Relearning to Code as an Adult</title>
-      <link href="https://pscoleman.me/blog/relearning-to-code" />
+      <title>Relearning to Code as an Adult</title>
+      <link href="https://pscoleman.me/posts/relearning-to-code" />
       <description
-        >A first-person report from a 30-something (re)learning to code after
-        years of false starts. Plus some of the things that helped me along the
-        way.</description
+        >My journey from years of false starts to coding again, plus some
+        lessons learned.</description
       >
       <pubDate>Fri, 24 Feb 2023 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/relearning-to-code</guid>
+      <guid>https://pscoleman.me/posts/relearning-to-code</guid>
+      <media:content
+        url="https://pscoleman.me/images/mara/mara_230224.jpg"
+        medium="image"
+      />
     </item>
 
     <item>
-      <title>Haiku by Basho</title>
-      <link href="https://pscoleman.me/blog/basho_haiku" />
+      <title>Bashō Haiku</title>
+      <link href="https://pscoleman.me/posts/basho_haiku" />
       <description
-        >Japanese-to-English translations of a handful of haiku by Matsuo Basho
+        >Translations of a few Japanese haiku by Matsuo Bashō
         (1644-1694).</description
       >
       <pubDate>Mon, 13 Feb 2023 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/basho_haiku</guid>
+      <guid>https://pscoleman.me/posts/basho_haiku</guid>
+      <media:content
+        url="https://pscoleman.me/images/mara/mara_230213_preview.jpeg"
+        medium="image"
+      />
     </item>
 
     <item>
-      <title>A.I. Assistive Intuition</title>
-      <link href="https://pscoleman.me/blog/ai-assistive-intuition" />
+      <title>Early thoughts on AI</title>
+      <link href="https://pscoleman.me/posts/ai-assistive-intuition" />
       <description
-        >Some measured but sweeping generalizations on AI from a non-expert
-        who's been having fun with some tools.</description
+        >Initial impressions of various AI tools that I've been
+        trying.</description
       >
       <pubDate>Sat, 11 Feb 2023 00:00:00 GMT</pubDate>
-      <guid>https://pscoleman.me/blog/ai-assistive-intuition</guid>
+      <guid>https://pscoleman.me/posts/ai-assistive-intuition</guid>
+      <media:content
+        url="https://pscoleman.me/images/blog/ai_spinach.jpeg"
+        medium="image"
+      />
     </item>
   </channel>
 </rss>

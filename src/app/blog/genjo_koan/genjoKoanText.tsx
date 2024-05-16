@@ -4,8 +4,8 @@ import { useState } from "react";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 export const GenjoKoanText = () => {
-  const [jpn, setJpn] = useState(false);
-  const [eng, setEng] = useState(false);
+  const [jpn, setJpn] = useState(true);
+  const [eng, setEng] = useState(true);
   return (
     <>
       <style>

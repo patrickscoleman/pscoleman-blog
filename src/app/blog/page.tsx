@@ -36,10 +36,12 @@ export default function Blog() {
                   <Image
                     className="max-w-[300px] mx-auto"
                     src={post.previewImage}
-                    alt={`Preview of ${post.title}`}
+                    alt={post.alt}
                     width={300}
-                    height={300}
+                    height={200}
                     layout="responsive"
+                    placeholder="empty"
+                    style={{ backgroundColor: "var(--card-foreground)" }}
                   />
                 </div>
                 <div>
