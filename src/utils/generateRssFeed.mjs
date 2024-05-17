@@ -13,6 +13,11 @@ export const generateRssFeed = async (postsList) => {
         <title>${siteMetadata.title}</title>
         <link href="${siteMetadata.siteUrl}" />
         <description>${siteMetadata.description}</description>
+        <image>
+          <url>${siteMetadata.siteUrl}${siteMetadata.previewImage}</url>
+          <title>${siteMetadata.title}</title>
+          <link>${siteMetadata.siteUrl}</link>
+          </image>
         <language>en</language>
         ${postsList
           .map((post) => {
