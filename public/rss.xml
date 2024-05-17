@@ -4,6 +4,11 @@
     <link href="https://pscoleman.me" />
     <description>Patrick Coleman's personal site and blog</description>
     <language>en</language>
+    <image>
+      <url>https://pscoleman.me/images/preview.png</url>
+      <title>Patrick Coleman</title>
+      <link href="https://pscoleman.me" />
+    </image>
 
     <item>
       <title>Site Redesign</title>
