@@ -45,10 +45,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             href={props.href!}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center"
           >
             {props.children}
-            <ExternalLink className="ml-1 inline" size="1rem" />
+            <ExternalLink className="ml-1 inline mb-1" size="1rem" />
           </Link>
         )}
       </>

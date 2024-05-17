@@ -4,6 +4,11 @@
     <link href="https://pscoleman.me" />
     <description>Patrick Coleman's personal site and blog</description>
     <language>en</language>
+    <image>
+      <url>https://pscoleman.me/images/preview.png</url>
+      <title>Patrick Coleman</title>
+      <link href="https://pscoleman.me" />
+    </image>
 
     <item>
       <title>Site Redesign</title>
@@ -113,7 +118,7 @@
       <link href="https://pscoleman.me/posts/honeymoon" />
       <description
         >Courtney's and Patrick's postnuptial adventures in Asia, South America,
-        and the US.</description
+        and around the US.</description
       >
       <pubDate>Sun, 18 Feb 2024 00:00:00 GMT</pubDate>
       <guid>https://pscoleman.me/posts/honeymoon</guid>

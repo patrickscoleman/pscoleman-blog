@@ -14,6 +14,11 @@ export const generateRssFeed = async (postsList) => {
         <link href="${siteMetadata.siteUrl}" />
         <description>${siteMetadata.description}</description>
         <language>en</language>
+        <image>
+          <url>${siteMetadata.siteUrl}/images/preview.png</url>
+          <title>${siteMetadata.title}</title>
+          <link href="${siteMetadata.siteUrl}" />
+        </image>
         ${postsList
           .map((post) => {
             const path = `/posts/${post.id}`;
