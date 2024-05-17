@@ -1,13 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Search as SearchIcon } from "lucide-react";
 
@@ -30,15 +22,17 @@ export function Search() {
             </Button>
           </div>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[425px]">
-          <DialogHeader>
-            <DialogTitle>Search</DialogTitle>
-            <DialogDescription>Search</DialogDescription>
-          </DialogHeader>
-          <p>Results</p>
-          <DialogFooter>
-            <Button type="submit">Save changes</Button>
-          </DialogFooter>
+        <DialogContent className="max-w-[350px] sm:max-w-[425px]">
+          <div className="mb-4 flex items-center relative">
+            <Input
+              className="w-full rounded-md border-none outline-none focus:outline-none pl-2 pr-8"
+              placeholder="Search..."
+              type="search"
+            />
+            <SearchIcon className="absolute right-2 h-5 w-5" />
+          </div>
+          <hr />
+          <p>Results...</p>
         </DialogContent>
       </Dialog>
     </div>
