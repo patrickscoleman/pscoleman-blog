@@ -53,7 +53,7 @@ export const Header = (props: { className?: string }) => {
         )}
       </div>
       <div className="flex items-center gap-2">
-        <Search />
+        {/* <Search /> */}
         <ModeToggle />
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
