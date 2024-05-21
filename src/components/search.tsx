@@ -1,9 +1,22 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 import { Search as SearchIcon } from "lucide-react";
+import algoliasearch from "algoliasearch";
+import { SearchResults } from "@/components/searchResults";
+import { SearchBox } from "react-instantsearch";
+import { InstantSearchNext } from "react-instantsearch-nextjs";
+import Link from "next/link";
 
-export function Search() {
+const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID;
+const apiKey = process.env.NEXT_PUBLIC_ALGOLIA_API_KEY;
+if (!appId || !apiKey) {
+  throw new Error("Algolia App ID and API Key must be defined");
+}
+const searchClient = algoliasearch(appId, apiKey);
+
+export const Search = () => {
   return (
     <div>
       <Dialog>
@@ -22,19 +35,39 @@ export function Search() {
             </Button>
           </div>
         </DialogTrigger>
-        <DialogContent className="max-w-[350px] sm:max-w-[425px]">
-          <div className="mb-4 flex items-center relative">
-            <Input
-              className="w-full rounded-md border-none outline-none focus:outline-none pl-2 pr-8"
+        <DialogContent className="max-w-[350px] sm:max-w-[425px] h-[500px] flex flex-col">
+          <InstantSearchNext searchClient={searchClient} indexName="blogposts">
+            <SearchBox
+              className="flex-grow-0"
+              searchAsYouType={true}
+              autoFocus={true}
+              submitIconComponent={() => <></>}
+              resetIconComponent={() => <></>}
+              loadingIconComponent={() => <></>}
               placeholder="Search..."
-              type="search"
+              classNames={{
+                input: "w-full px-2 rounded h-10 bg-input",
+              }}
             />
-            <SearchIcon className="absolute right-2 h-5 w-5" />
-          </div>
-          <hr />
-          <p>Results...</p>
+            <hr className="my-0" />
+            <div className="flex-grow overflow-auto">
+              <SearchResults />
+            </div>
+            <hr className="my-0" />
+            <div className="flex-grow-0 muted">
+              Powered by{" "}
+              <Link
+                className="muted no-underline font-normal"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.algolia.com/?utm_source=react-instantsearch&utm_medium=website&utm_content=localhost&utm_campaign=poweredby"
+              >
+                Algolia
+              </Link>
+            </div>
+          </InstantSearchNext>
         </DialogContent>
       </Dialog>
     </div>
   );
-}
+};

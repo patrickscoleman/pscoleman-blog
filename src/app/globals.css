@@ -149,4 +149,7 @@
   .muted {
     @apply text-sm text-muted-foreground;
   }
+  mark {
+    @apply text-foreground bg-input font-semibold;
+  }
 }
