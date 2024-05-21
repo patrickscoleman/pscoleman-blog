@@ -14,6 +14,8 @@ export const SearchResultItem = (props: any) => {
   const hit = props?.hit;
   const hlResult = hit?._highlightResult;
   const metadata = hit?.metadata;
+  const title = metadata?.title;
+  let titleWithMark = title;
 
   const matchedContent = hlResult.content
     .map((c: any) => {
@@ -26,9 +28,14 @@ export const SearchResultItem = (props: any) => {
 
       if (
         c.heading?.matchLevel !== "none" &&
-        headingWithoutHighlight !== metadata?.title
+        headingWithoutHighlight !== title
       ) {
         result.push(heading);
+      } else if (
+        c.heading?.matchLevel !== "none" &&
+        headingWithoutHighlight === title
+      ) {
+        titleWithMark = heading;
       }
 
       if (c.text?.matchLevel !== "none") {
@@ -66,7 +73,7 @@ export const SearchResultItem = (props: any) => {
   const displayResult =
     dedupedMatchedContent.length > 0
       ? {
-          title: metadata?.title,
+          title: titleWithMark,
           matchedContent: dedupedMatchedContent,
         }
       : null;
