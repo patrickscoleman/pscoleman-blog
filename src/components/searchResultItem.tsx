@@ -59,7 +59,7 @@ export const SearchResultItem = (props: any) => {
 
   return hit ? (
     <div className="mt-0 mb-4">
-      <Link href={props.hit.path} passHref className="my-0" onClick={onClick}>
+      <Link href={hit.path} passHref className="my-0" onClick={onClick}>
         <div
           dangerouslySetInnerHTML={{
             __html: displayResult.title ?? "Untitled",
