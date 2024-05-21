@@ -8,5 +8,3 @@ await generateSitemap();
 const postsData = await getAllPostsAndWriteToFile();
 
 await generateRssFeed(postsData);
-
-await indexPostsForSearch(postsData);

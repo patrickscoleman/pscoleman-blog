@@ -13,7 +13,10 @@ const searchClient = algoliasearch(
   process.env.ALGOLIA_ADMIN_API_KEY
 );
 
-export const indexPostsForSearch = async (postsList) => {
+export const indexPostsForSearch = async () => {
+  const [postsListFile] = await globby(["src/data/postsList.json"]);
+  const postsList = JSON.parse(fs.readFileSync(postsListFile, "utf8"));
+
   const blogDirectory = "src/app/blog";
   const directories = await globby([`${blogDirectory}/*/page.mdx`]);
 
