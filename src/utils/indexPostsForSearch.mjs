@@ -31,7 +31,7 @@ export const indexPostsForSearch = async (postsList) => {
 
       const metadata = postsList.find((post) => post.id === id);
 
-      if (metadata && metadata.hidden === true) {
+      if (metadata?.hidden === true) {
         return null;
       } else {
         return {

@@ -81,6 +81,15 @@
     "hidden": false
   },
   {
+    "id": "genjo_koan",
+    "title": "Genjō Kōan by Dogen",
+    "description": "Translation of Dogen's Genjō Kōan, a Japanese Buddhist poem from 1233.",
+    "date": "2023-03-29",
+    "previewImage": "/images/mara/mara_230329.jpeg",
+    "alt": "Mara the dog, riding on a boat",
+    "hidden": true
+  },
+  {
     "id": "what_am_i_up_to_2023",
     "title": "What am I up to in 2023?",
     "description": "I'm getting married, learning to code, working on a language learning app, and traveling to Asia.",
@@ -115,5 +124,23 @@
     "previewImage": "/images/blog/ai_spinach.jpeg",
     "alt": "Child from the movie AI eating spinach",
     "hidden": false
+  },
+  {
+    "id": "second-thoughts",
+    "title": "Second Thoughts",
+    "description": "Patrick's second blog post, in which he revisits his first blog post and has some second thoughts.",
+    "date": "2023-02-07",
+    "previewImage": "/images/mara/mara_230207.jpeg",
+    "alt": "Mara the dog, curled up sleeping",
+    "hidden": true
+  },
+  {
+    "id": "first-thoughts",
+    "title": "First Thoughts",
+    "description": "Patrick's first blog post, in which he decides to write a blog.",
+    "date": "2022-12-19",
+    "previewImage": "/images/mara/mara_221219.jpeg",
+    "alt": "Mara the dog, reposing on couch",
+    "hidden": true
   }
 ]

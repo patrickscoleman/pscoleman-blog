@@ -11,12 +11,8 @@ export const SearchResultItem = (props: any) => {
     document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
   }
 
-  const hlResult = props?.hit?._highlightResult;
-
-  const matchedDescription =
-    hlResult.metadata?.description?.matchLevel !== "none"
-      ? hlResult.metadata?.description?.value
-      : null;
+  const hit = props?.hit;
+  const hlResult = hit?._highlightResult;
 
   const matchedContent = hlResult.content
     .map((c: any) => {
@@ -24,10 +20,7 @@ export const SearchResultItem = (props: any) => {
       const text = c.text?.value ?? "";
       const result = [];
 
-      if (
-        c.heading?.matchLevel !== "none" &&
-        heading !== hlResult.metadata?.title?.value
-      ) {
+      if (c.heading?.matchLevel !== "none" && heading !== hit.metadata?.title) {
         result.push(heading);
       }
 
@@ -60,12 +53,11 @@ export const SearchResultItem = (props: any) => {
   const dedupedMatchedContent = [...new Set(matchedContent)] as string[];
 
   const displayResult = {
-    title: hlResult.metadata?.title?.value,
-    matchedDescription: matchedDescription,
+    title: hit.metadata?.title,
     matchedContent: dedupedMatchedContent,
   };
 
-  return props?.hit ? (
+  return hit ? (
     <div className="mt-0 mb-4">
       <Link href={props.hit.path} passHref className="my-0" onClick={onClick}>
         <div
@@ -75,14 +67,6 @@ export const SearchResultItem = (props: any) => {
           className="mt-0 mb-2"
         />
       </Link>
-      {displayResult.matchedDescription && (
-        <div
-          dangerouslySetInnerHTML={{
-            __html: displayResult.matchedDescription,
-          }}
-          className="mt-0 mb-2"
-        />
-      )}
       {/* Only display the first 3 results within a blogpost */}
       {displayResult.matchedContent.slice(0, 3).map((result, key) => {
         return (
