@@ -13,14 +13,21 @@ export const SearchResultItem = (props: any) => {
 
   const hit = props?.hit;
   const hlResult = hit?._highlightResult;
+  const metadata = hit?.metadata;
 
   const matchedContent = hlResult.content
     .map((c: any) => {
       const heading = c.heading?.value ?? "";
+      const headingWithoutHighlight = heading
+        .replace(/<mark>/g, "")
+        .replace(/<\/mark>/g, "");
       const text = c.text?.value ?? "";
       const result = [];
 
-      if (c.heading?.matchLevel !== "none" && heading !== hit.metadata?.title) {
+      if (
+        c.heading?.matchLevel !== "none" &&
+        headingWithoutHighlight !== metadata?.title
+      ) {
         result.push(heading);
       }
 
@@ -59,7 +66,7 @@ export const SearchResultItem = (props: any) => {
   const displayResult =
     dedupedMatchedContent.length > 0
       ? {
-          title: hit.metadata?.title,
+          title: metadata?.title,
           matchedContent: dedupedMatchedContent,
         }
       : null;
