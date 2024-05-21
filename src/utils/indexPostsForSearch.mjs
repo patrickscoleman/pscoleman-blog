@@ -2,7 +2,6 @@ import algoliasearch from "algoliasearch";
 import * as dotenv from "dotenv";
 import fs from "fs";
 import { globby } from "globby";
-import matter from "gray-matter";
 import { remark } from "remark";
 import remarkMdx from "remark-mdx";
 import remarkMdxSearchable from "remark-mdx-searchable";
@@ -14,35 +13,36 @@ const searchClient = algoliasearch(
   process.env.ALGOLIA_ADMIN_API_KEY
 );
 
-export const indexPostsForSearch = async () => {
+export const indexPostsForSearch = async (postsList) => {
   const blogDirectory = "src/app/blog";
   const directories = await globby([`${blogDirectory}/*/page.mdx`]);
 
   const postObjects = await Promise.all(
-    directories.map(async (post) => {
-      const fileContents = fs.readFileSync(post, "utf8");
-      const { data, content } = matter(fileContents);
-
-      if (data.hidden === true) {
-        return null;
-      }
+    directories.map(async (file) => {
+      const fileContents = fs.readFileSync(file, "utf8");
 
       const searchableContent = remark()
         .use(remarkMdx)
         .use(remarkMdxSearchable)
-        .processSync(content).data;
+        .processSync(fileContents).data;
 
-      const id = post.split("/").slice(-2, -1)[0]; // Get the directory name as ID
+      const id = file.split("/").slice(-2, -1)[0]; // Get the directory name as ID
       const path = `/blog/${id}`;
 
-      return {
-        objectID: id,
-        path,
-        content: searchableContent,
-        frontmatter: {
-          ...data,
-        },
-      };
+      const metadata = postsList.find((post) => post.id === id);
+
+      if (metadata && metadata.hidden === true) {
+        return null;
+      } else {
+        return {
+          objectID: id,
+          path,
+          content: searchableContent,
+          metadata: {
+            ...metadata,
+          },
+        };
+      }
     })
   );
 
