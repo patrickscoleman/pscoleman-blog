@@ -104,6 +104,9 @@
   a {
     @apply font-semibold underline underline-offset-4 transition-all decoration-1 hover:decoration-2 decoration-blue-500 dark:decoration-blue-400 hover:text-blue-500 dark:hover:text-blue-400;
   }
+  hr {
+    @apply my-6;
+  }
   blockquote {
     @apply mt-6 border-l-2 pl-6 italic;
   }
@@ -141,9 +144,12 @@
     @apply my-4;
   }
   figcaption {
-    @apply text-sm text-muted-foreground;
+    @apply mt-2 text-sm text-muted-foreground;
   }
   .muted {
     @apply text-sm text-muted-foreground;
+  }
+  mark {
+    @apply text-foreground bg-input font-semibold;
   }
 }
