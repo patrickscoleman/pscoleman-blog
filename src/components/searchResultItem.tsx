@@ -11,22 +11,22 @@ export const SearchResultItem = (props: any) => {
     document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape" }));
   }
 
-  const hlResult = props?.hit?._highlightResult;
-
-  const matchedDescription =
-    hlResult.frontmatter.description.matchLevel !== "none"
-      ? hlResult.frontmatter.description.value
-      : null;
+  const hit = props?.hit;
+  const hlResult = hit?._highlightResult;
+  const metadata = hit?.metadata;
 
   const matchedContent = hlResult.content
     .map((c: any) => {
       const heading = c.heading?.value ?? "";
+      const headingWithoutHighlight = heading
+        .replace(/<mark>/g, "")
+        .replace(/<\/mark>/g, "");
       const text = c.text?.value ?? "";
       const result = [];
 
       if (
         c.heading?.matchLevel !== "none" &&
-        heading !== hlResult.frontmatter.title.value
+        headingWithoutHighlight !== metadata?.title
       ) {
         result.push(heading);
       }
@@ -57,45 +57,50 @@ export const SearchResultItem = (props: any) => {
     })
     .flat();
 
-  const dedupedMatchedContent = [...new Set(matchedContent)] as string[];
+  const dedupedMatchedContent = matchedContent
+    .filter(
+      (item: string, index: number) => matchedContent.indexOf(item) === index
+    )
+    .filter((item: string) => item !== null) as string[];
 
-  const displayResult = {
-    title: hlResult.frontmatter.title.value,
-    matchedDescription: matchedDescription,
-    matchedContent: dedupedMatchedContent,
-  };
+  const displayResult =
+    dedupedMatchedContent.length > 0
+      ? {
+          title: metadata?.title,
+          matchedContent: dedupedMatchedContent,
+        }
+      : null;
 
-  return props?.hit ? (
-    <div className="mt-0 mb-4">
-      <Link href={props.hit.path} passHref className="my-0" onClick={onClick}>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: displayResult.title ?? "Untitled",
-          }}
-          className="mt-0 mb-2"
-        />
-      </Link>
-      {displayResult.matchedDescription && (
-        <div
-          dangerouslySetInnerHTML={{
-            __html: displayResult.matchedDescription,
-          }}
-          className="mt-0 mb-2"
-        />
-      )}
-      {/* Only display the first 3 results within a blogpost */}
-      {displayResult.matchedContent.slice(0, 3).map((result, key) => {
-        return (
+  return hit ? (
+    displayResult ? (
+      <div className="mt-0 mb-4">
+        <Link href={hit.path} passHref className="my-0" onClick={onClick}>
           <div
-            key={key}
             dangerouslySetInnerHTML={{
-              __html: result,
+              __html: displayResult.title ?? "Untitled",
             }}
             className="mt-0 mb-2"
           />
-        );
-      })}
-    </div>
+        </Link>
+        {/* Only display the first 3 results within a blogpost */}
+        {displayResult.matchedContent.slice(0, 3).map((result, key) => {
+          return (
+            <div
+              key={key}
+              dangerouslySetInnerHTML={{
+                __html: result,
+              }}
+              className="mt-0 mb-2"
+            />
+          );
+        })}
+        {displayResult.matchedContent.length > 3 && (
+          <div className="mt-0 mb-2">...</div>
+        )}
+      </div>
+    ) : (
+      <></>
+    )
   ) : (
     <div>{NO_RESULTS_MESSAGE}</div>
   );

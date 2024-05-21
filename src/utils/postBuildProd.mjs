@@ -1,3 +1,3 @@
-// import { indexPostsForSearch } from "./indexPostsForSearch.mjs";
+import { indexPostsForSearch } from "./indexPostsForSearch.mjs";
 
-// indexPostsForSearch();
+await indexPostsForSearch();

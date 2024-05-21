@@ -17,7 +17,7 @@ export const metadata = generatePostMetadata({
   alt,
 });
 
-# Building an app to translate fiction with ChatGPT
+# Building an app to translate fiction with the OpenAI API
 
 <time dateTime={date} className="muted italic">
   April 22nd, 2024
@@ -53,15 +53,15 @@ Recently I'd been wanting to take a stab at translating some more short stories,
 
 I started out with an [online dictionary](https://jisho.org/). Then I figured why not use [ChatGPT's consumer app](https://chat.openai.com/) to speed things up a bit? It was still pretty slow going though.
 
-Then I had a thought. Why not build a little app with the [ChatGPT API](https://platform.openai.com/) to save time copy/pasting unfamiliar or ambiguous words and phrases, making edits to improve the "literary quality," etc.?
+Then I had a thought. Why not build a little app with the [OpenAI API](https://platform.openai.com/) to save time copy/pasting unfamiliar or ambiguous words and phrases, making edits to improve the "literary quality," etc.?
 
 When I was working on [Yaya](/posts/yaya), my co-founder David did all of the work with the APIs, and I focused on UI/UX and prompt engineering. So this time, I was looking for a simple project to work with the API code myself. This was small enough that I could do it all.
 
 ## How?
 
-I'd never built anything with the ChatGPT API, so I pulled up a [YouTube tutorial](https://www.youtube.com/watch?v=KiWClrSVgfU) and started a new [Next.js](https://nextjs.org/) project.
+I'd never built anything with the OpenAI API, so I pulled up a [YouTube tutorial](https://www.youtube.com/watch?v=KiWClrSVgfU) and started a new [Next.js](https://nextjs.org/) project.
 
-I used [Cursor](https://cursor.sh/) as my IDE and used the AI-powered ⌘K and chat liberally. First I had Cursor generate a simple UI and made some tweaks. Then I followed along with the video to set up an API endpoint to handle requests to the ChatGPT API for the translation. Once I got that working, I added the highlight/explain feature and added functionality to handle different types of messages going to ChatGPT. Then I finished things up by adding keyboard shortcuts (Mac only, sorry) and doing a tiny bit of polish.
+I used [Cursor](https://cursor.sh/) as my IDE and used the AI-powered ⌘K and chat liberally. First I had Cursor generate a simple UI and made some tweaks. Then I followed along with the video to set up an API endpoint to handle requests to the OpenAI API for the translation. Once I got that working, I added the highlight/explain feature and added functionality to handle different types of messages going to the OpenAI API. Then I finished things up by adding keyboard shortcuts (Mac only, sorry) and doing a tiny bit of polish.
 
 Some ideas if I keep working on this:
 

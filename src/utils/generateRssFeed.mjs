@@ -5,8 +5,6 @@ import { siteMetadata } from "./metadata.mjs";
 export const generateRssFeed = async (postsList) => {
   const prettierConfig = await prettier.resolveConfig("./.prettierrc.js");
 
-  console.log("generating rss feed");
-
   const feed = `
     <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
     <channel>

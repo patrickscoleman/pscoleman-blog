@@ -20,8 +20,8 @@ export const getAllPostsAndWriteToFile = async () => {
       metadata[match[1]] = eval(match[2]);
     }
 
-    // Only include posts that are not hidden and have both a title and a date
-    if (metadata.hidden === true || !metadata.title || !metadata.date) {
+    // Only include posts that have both a title and a date
+    if (!metadata.title || !metadata.date) {
       return null;
     } else {
       return {

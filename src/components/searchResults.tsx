@@ -12,7 +12,7 @@ export const SearchResults = () => {
     return (
       <Hits
         hitComponent={SearchResultItem}
-        classNames={{ list: "list-none ml-0", item: "mt-0" }}
+        classNames={{ list: "list-none ml-0 mt-0", item: "mt-0" }}
       />
     );
   } else if (indexUiState.query && !results.nbHits) {

@@ -144,6 +144,21 @@
     </item>
 
     <item>
+      <title>Genjō Kōan by Dogen</title>
+      <link href="https://pscoleman.me/posts/genjo_koan" />
+      <description
+        >Translation of Dogen's Genjō Kōan, a Japanese Buddhist poem from
+        1233.</description
+      >
+      <pubDate>Wed, 29 Mar 2023 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/genjo_koan</guid>
+      <media:content
+        url="https://pscoleman.me/images/mara/mara_230329.jpeg"
+        medium="image"
+      />
+    </item>
+
+    <item>
       <title>What am I up to in 2023?</title>
       <link href="https://pscoleman.me/posts/what_am_i_up_to_2023" />
       <description
@@ -199,6 +214,36 @@
       <guid>https://pscoleman.me/posts/ai-assistive-intuition</guid>
       <media:content
         url="https://pscoleman.me/images/blog/ai_spinach.jpeg"
+        medium="image"
+      />
+    </item>
+
+    <item>
+      <title>Second Thoughts</title>
+      <link href="https://pscoleman.me/posts/second-thoughts" />
+      <description
+        >Patrick's second blog post, in which he revisits his first blog post
+        and has some second thoughts.</description
+      >
+      <pubDate>Tue, 07 Feb 2023 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/second-thoughts</guid>
+      <media:content
+        url="https://pscoleman.me/images/mara/mara_230207.jpeg"
+        medium="image"
+      />
+    </item>
+
+    <item>
+      <title>First Thoughts</title>
+      <link href="https://pscoleman.me/posts/first-thoughts" />
+      <description
+        >Patrick's first blog post, in which he decides to write a
+        blog.</description
+      >
+      <pubDate>Mon, 19 Dec 2022 00:00:00 GMT</pubDate>
+      <guid>https://pscoleman.me/posts/first-thoughts</guid>
+      <media:content
+        url="https://pscoleman.me/images/mara/mara_221219.jpeg"
         medium="image"
       />
     </item>
