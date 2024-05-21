@@ -14,8 +14,8 @@ export const SearchResultItem = (props: any) => {
   const hlResult = props?.hit?._highlightResult;
 
   const matchedDescription =
-    hlResult.frontmatter.description.matchLevel !== "none"
-      ? hlResult.frontmatter.description.value
+    hlResult.metadata?.description?.matchLevel !== "none"
+      ? hlResult.metadata?.description?.value
       : null;
 
   const matchedContent = hlResult.content
@@ -26,7 +26,7 @@ export const SearchResultItem = (props: any) => {
 
       if (
         c.heading?.matchLevel !== "none" &&
-        heading !== hlResult.frontmatter.title.value
+        heading !== hlResult.metadata?.title?.value
       ) {
         result.push(heading);
       }
@@ -60,7 +60,7 @@ export const SearchResultItem = (props: any) => {
   const dedupedMatchedContent = [...new Set(matchedContent)] as string[];
 
   const displayResult = {
-    title: hlResult.frontmatter.title.value,
+    title: hlResult.metadata?.title?.value,
     matchedDescription: matchedDescription,
     matchedContent: dedupedMatchedContent,
   };

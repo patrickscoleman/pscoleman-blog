@@ -5,8 +5,8 @@ import { indexPostsForSearch } from "./indexPostsForSearch.mjs";
 
 await generateSitemap();
 
-const postData = await getAllPostsAndWriteToFile();
+const postsData = await getAllPostsAndWriteToFile();
 
-await generateRssFeed(postData);
+await generateRssFeed(postsData);
 
-await indexPostsForSearch(postData);
+await indexPostsForSearch(postsData);
