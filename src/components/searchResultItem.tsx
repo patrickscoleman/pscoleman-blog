@@ -50,7 +50,9 @@ export const SearchResultItem = (props: any) => {
     })
     .flat();
 
-  const dedupedMatchedContent = [...new Set(matchedContent)] as string[];
+  const dedupedMatchedContent = matchedContent.filter(
+    (item: string, index: number) => matchedContent.indexOf(item) === index
+  ) as string[];
 
   const displayResult = {
     title: hit.metadata?.title,
@@ -79,6 +81,9 @@ export const SearchResultItem = (props: any) => {
           />
         );
       })}
+      {displayResult.matchedContent.length > 3 && (
+        <div className="mt-0 mb-2">...</div>
+      )}
     </div>
   ) : (
     <div>{NO_RESULTS_MESSAGE}</div>
