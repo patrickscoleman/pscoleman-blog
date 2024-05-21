@@ -70,8 +70,8 @@ export const BackgroundGrid = (props: { className?: string }) => {
               r={radius * 0.5} // 50% of the radius for gradient effect
               gradientUnits="userSpaceOnUse"
             >
-              <stop offset="50%" stop-color="white" stop-opacity="1" />
-              <stop offset="100%" stop-color="white" stop-opacity="0" />
+              <stop offset="50%" stopColor="white" stopOpacity="1" />
+              <stop offset="100%" stopColor="white" stopOpacity="0" />
             </radialGradient>
             <circle
               cx={mousePosition.x}
@@ -89,10 +89,10 @@ export const BackgroundGrid = (props: { className?: string }) => {
               y2="0%"
               spreadMethod="pad"
             >
-              <stop offset="0%" stop-color="white" stop-opacity="1" />
-              <stop offset="25%" stop-color="white" stop-opacity="0" />
-              <stop offset="75%" stop-color="white" stop-opacity="0" />
-              <stop offset="100%" stop-color="white" stop-opacity="1" />
+              <stop offset="0%" stopColor="white" stopOpacity="1" />
+              <stop offset="25%" stopColor="white" stopOpacity="0" />
+              <stop offset="75%" stopColor="white" stopOpacity="0" />
+              <stop offset="100%" stopColor="white" stopOpacity="1" />
             </linearGradient>
             <rect
               x="0"
