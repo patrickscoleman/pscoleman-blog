@@ -32,7 +32,7 @@ export default function Blog() {
               className="w-full md:w-auto no-underline"
               passHref
             >
-              <Card className="mb-4 cursor-pointer group hover:bg-gray-100 dark:hover:bg-gray-800 transition-all max-w-[350px] h-full flex flex-col">
+              <Card className="mb-4 cursor-pointer group hover:bg-gray-100 dark:hover:bg-gray-800 transition-all max-w-[350px] h-[450px] flex flex-col">
                 <CardContent className="flex flex-col h-full justify-between">
                   <div className="flex flex-col flex-grow justify-center py-2">
                     <Image
