@@ -59,8 +59,9 @@ export default function Home() {
         </p>
         <p>I&apos;m currently looking to join a new team.</p>
         <p>
-          Personally, I&apos;m a husband and dog dad. I enjoy studying languages
-          (español, 日本語, 한국어), reading, traveling, and being outdoors.
+          Personally, I&apos;m a husband and dog dad. I speak a few languages
+          (best to worst: English, español, 日本語, 한국어). And I love to read,
+          travel, and go outdoors.
         </p>
         <div className="flex justify-center gap-4 py-4">
           <Link href="/work" className="no-underline flex-1" passHref>
