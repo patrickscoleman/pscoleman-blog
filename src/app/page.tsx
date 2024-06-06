@@ -135,7 +135,7 @@ export default function Home() {
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
-          <TooltipProvider>
+          {/* <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Link
@@ -157,7 +157,7 @@ export default function Home() {
                 <p>Twitter/X</p>
               </TooltipContent>
             </Tooltip>
-          </TooltipProvider>
+          </TooltipProvider> */}
         </div>
       </div>
       <div className="hidden md:block md:order-last md:col-span-2">
