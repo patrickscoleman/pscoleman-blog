@@ -27,10 +27,11 @@ export default function Home() {
       </div>
       <div className="space-y-4 md:col-span-3">
         <h1>Patrick Coleman</h1>
-        <p className="large">Startup operations leader who codes</p>
+        <p className="large">Business operations leader who codes</p>
         <p>
-          Hi, I&apos;m Patrick! Professionally, I help early stage companies
-          grow. Most recently I co-founded{" "}
+          Hi, I&apos;m Patrick! Professionally, I help companies grow. I&apos;m
+          a generalist with a background in finance, go-to-market, strategy, and
+          operations. Most recently I co-founded{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
