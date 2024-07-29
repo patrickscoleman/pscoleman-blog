@@ -27,11 +27,22 @@ export default function Home() {
       </div>
       <div className="space-y-4 md:col-span-3">
         <h1>Patrick Coleman</h1>
-        <p className="large">Business operations leader who codes</p>
+        <p className="large">Startup business guy</p>
         <p>
-          Hi, I&apos;m Patrick! Professionally, I help companies grow. I&apos;m
+          Hi, I&apos;m Patrick. Professionally, I help companies grow. I&apos;m
           a generalist with a background in finance, go-to-market, strategy, and
-          operations. Most recently I co-founded{" "}
+          operations.
+        </p>
+        <p>
+          I&apos;m currently leading ops & growth at{" "}
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.create.xyz/"
+          >
+            Create
+          </Link>
+          . Before that I co-founded{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
@@ -39,8 +50,7 @@ export default function Home() {
           >
             Yaya
           </Link>
-          , an AI foreign language learning app. Before that I was an early ops
-          leader at{" "}
+          , an AI foreign language learning app, and was an early ops leader at{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
@@ -56,15 +66,23 @@ export default function Home() {
           >
             PeopleGrove
           </Link>
+          . I started my career in investment banking at{" "}
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://business.bofa.com/en-us/content/global-corporate-investment-banking.html"
+          >
+            Bank of America
+          </Link>
           .
         </p>
-        <p>I&apos;m currently looking to join a new team.</p>
+        {/* <p>I&apos;m currently looking to join a new team.</p> */}
         <p>
           Personally, I&apos;m a husband and dog dad. I speak a few languages
           (best to worst: English, español, 日本語, 한국어). And I love to read,
           travel, and go outdoors.
         </p>
-        <div className="flex justify-center gap-4 py-4">
+        {/* <div className="flex justify-center gap-4 py-4">
           <Link href="/work" className="no-underline flex-1" passHref>
             <Button
               variant="outline"
@@ -89,7 +107,7 @@ export default function Home() {
               <ArrowRight className="h-6 w-6 transition-transform transform group-hover:translate-x-1" />
             </Button>
           </Link>
-        </div>
+        </div> */}
         <h3>Get in touch</h3>
         <div className="flex justify-center gap-4 py-4">
           <Link

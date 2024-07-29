@@ -53,9 +53,9 @@ export const Header = (props: { className?: string }) => {
         )}
       </div>
       <div className="flex items-center gap-2">
-        <Search />
+        {/* <Search /> */}
         <ModeToggle />
-        <DropdownMenu>
+        {/* <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button size="icon" variant="outline">
               <Menu className="h-6 w-6" />
@@ -93,7 +93,7 @@ export const Header = (props: { className?: string }) => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </nav>
-        </DropdownMenu>
+        </DropdownMenu> */}
       </div>
     </header>
   );
