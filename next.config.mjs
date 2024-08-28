@@ -18,7 +18,7 @@ const nextConfig = {
       },
       {
         source: "/hireme",
-        destination: "/work",
+        destination: "/",
         permanent: true,
       },
       {
