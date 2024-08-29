@@ -113,14 +113,24 @@ export const BackgroundGrid = (props: { className?: string }) => {
             mask="url(#circleMask)"
           />
         )}
-        <rect
-          x="0"
-          y="0"
-          width="100%"
-          height="100%"
-          fill="url(#gridPattern)"
-          mask="url(#edgeMask)"
-        />
+        {pathname === "/test" ? (
+          <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            fill="url(#gridPattern)"
+          />
+        ) : (
+          <rect
+            x="0"
+            y="0"
+            width="100%"
+            height="100%"
+            fill="url(#gridPattern)"
+            mask="url(#edgeMask)"
+          />
+        )}
       </svg>
     </div>
   );
