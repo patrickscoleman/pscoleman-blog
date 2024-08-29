@@ -96,7 +96,7 @@
     @apply font-mono scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-4;
   }
   h2 {
-    @apply font-mono scroll-m-20 w-full border-b pb-2 text-3xl font-semibold tracking-tight mt-12 mb-4;
+    @apply font-mono scroll-m-20 w-full border-b border-gray-400 pb-2 text-3xl font-semibold tracking-tight mt-12 mb-4;
   }
   h3 {
     @apply font-mono scroll-m-20 text-2xl font-semibold tracking-tight mt-4;
@@ -117,10 +117,10 @@
     @apply font-semibold underline underline-offset-4 transition-all decoration-1 hover:decoration-2 decoration-blue-500 dark:decoration-blue-400 hover:text-blue-500 dark:hover:text-blue-400;
   }
   hr {
-    @apply my-6;
+    @apply my-6 border-t border-gray-400;
   }
   blockquote {
-    @apply mt-6 border-l-2 pl-6 italic;
+    @apply mt-6 border-l-2 pl-6 italic border-gray-400;
   }
   table {
     @apply w-full;
