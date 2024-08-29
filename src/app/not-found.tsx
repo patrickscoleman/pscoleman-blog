@@ -13,14 +13,14 @@ export default function NotFound() {
             View all <Link href="/blog">blog posts</Link>
           </p>
           <p>
-            Return to the <Link href="/">homepage</Link>
+            Return <Link href="/">home</Link>
           </p>
         </>
       ) : (
         <>
           <h1>Page not found</h1>
           <p>
-            Return to the <Link href="/">homepage</Link>
+            Return <Link href="/">home</Link>
           </p>
         </>
       )}

@@ -19,7 +19,7 @@ export default function Home() {
         <Image
           alt="Patrick Coleman"
           className="mx-auto rounded-full object-cover mt-0 mb-8"
-          style={{ boxShadow: `0 0px 20px var(--grid)` }}
+          style={{ boxShadow: `0 0px 3px var(--grid)` }}
           src="/images/patrick.png"
           width={150}
           height={150}
@@ -161,7 +161,7 @@ export default function Home() {
         <Image
           alt="Patrick Coleman"
           className="mx-auto rounded-full object-cover"
-          style={{ boxShadow: `0 0px 30px var(--grid)` }}
+          style={{ boxShadow: `0 0px 3px var(--grid)` }}
           src="/images/patrick.png"
           width={400}
           height={400}
