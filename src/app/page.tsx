@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Laptop, FileText, ArrowRight } from "lucide-react";
+import { FileText, ArrowRight } from "lucide-react";
 import { Mail, LinkedIn, X } from "@/components/icons";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,7 +19,7 @@ export default function Home() {
         <Image
           alt="Patrick Coleman"
           className="mx-auto rounded-full object-cover mt-0 mb-8"
-          style={{ boxShadow: `0 0px 10px var(--grid)` }}
+          style={{ boxShadow: `0 0px 20px var(--grid)` }}
           src="/images/patrick.png"
           width={150}
           height={150}
@@ -27,22 +27,9 @@ export default function Home() {
       </div>
       <div className="space-y-4 md:col-span-3">
         <h1>Patrick Coleman</h1>
-        <p className="large">Startup business guy</p>
+        <p className="large">Hello, I&apos;m Patrick 👋 </p>
         <p>
-          Hi, I&apos;m Patrick. Professionally, I help companies grow. I&apos;m
-          a generalist with a background in finance, go-to-market, strategy, and
-          operations.
-        </p>
-        <p>
-          I&apos;m currently leading ops & growth at{" "}
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.create.xyz/"
-          >
-            Create
-          </Link>
-          . Before that I co-founded{" "}
+          I&apos;m currently working on something. Before that I co-founded{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
@@ -76,25 +63,16 @@ export default function Home() {
           </Link>
           .
         </p>
-        {/* <p>I&apos;m currently looking to join a new team.</p> */}
+        <p>
+          Professionally, I help companies grow. I&apos;m a generalist with a
+          background in finance, go-to-market, strategy, and operations.
+        </p>
         <p>
           Personally, I&apos;m a husband and dog dad. I speak a few languages
           (best to worst: English, español, 日本語, 한국어). And I love to read,
           travel, and go outdoors.
         </p>
-        {/* <div className="flex justify-center gap-4 py-4">
-          <Link href="/work" className="no-underline flex-1" passHref>
-            <Button
-              variant="outline"
-              className="h-14 w-full p-2 flex items-center justify-between px-4 group"
-            >
-              <div className="flex items-center gap-2">
-                <Laptop className="h-6 w-6" />
-                <span className="font-bold">Work</span>
-              </div>
-              <ArrowRight className="h-6 w-6 transition-transform transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
+        <div className="flex justify-center gap-4 py-4">
           <Link href="/blog" className="no-underline flex-1" passHref>
             <Button
               variant="outline"
@@ -107,7 +85,7 @@ export default function Home() {
               <ArrowRight className="h-6 w-6 transition-transform transform group-hover:translate-x-1" />
             </Button>
           </Link>
-        </div> */}
+        </div>
         <h3>Get in touch</h3>
         <div className="flex justify-center gap-4 py-4">
           <Link
@@ -183,7 +161,7 @@ export default function Home() {
         <Image
           alt="Patrick Coleman"
           className="mx-auto rounded-full object-cover"
-          style={{ boxShadow: `0 0px 10px var(--grid)` }}
+          style={{ boxShadow: `0 0px 30px var(--grid)` }}
           src="/images/patrick.png"
           width={400}
           height={400}

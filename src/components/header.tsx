@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Menu, Home, Laptop, FileText } from "lucide-react";
+import { Menu, Home, FileText } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -24,7 +24,7 @@ export const Header = (props: { className?: string }) => {
 
   return (
     <header
-      className={`flex h-16 w-full items-center justify-between bg-background border-b border-gray-200 px-6 dark:border-gray-800 ${props.className}`}
+      className={`flex h-16 w-full items-center justify-between bg-none px-6 ${props.className}`}
     >
       <div className="flex items-center gap-4">
         {pathname === "/" ? (
@@ -53,9 +53,9 @@ export const Header = (props: { className?: string }) => {
         )}
       </div>
       <div className="flex items-center gap-2">
-        {/* <Search /> */}
+        <Search />
         <ModeToggle />
-        {/* <DropdownMenu>
+        <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button size="icon" variant="outline">
               <Menu className="h-6 w-6" />
@@ -76,15 +76,6 @@ export const Header = (props: { className?: string }) => {
               <DropdownMenuItem onClick={onClick}>
                 <Link
                   className="flex items-center gap-2 no-underline w-full h-full"
-                  href="/hireme"
-                >
-                  <Laptop className="h-4 w-4" />
-                  Work
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={onClick}>
-                <Link
-                  className="flex items-center gap-2 no-underline w-full h-full"
                   href="/posts"
                 >
                   <FileText className="h-4 w-4" />
@@ -93,7 +84,7 @@ export const Header = (props: { className?: string }) => {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </nav>
-        </DropdownMenu> */}
+        </DropdownMenu>
       </div>
     </header>
   );

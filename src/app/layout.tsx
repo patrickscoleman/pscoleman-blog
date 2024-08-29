@@ -66,16 +66,17 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col bg-background relative">
-            <BackgroundGrid className="z-0" />
-            <Header className="z-10" />
-            <main className="z-10 flex-1 px-6 py-12 md:px-12 lg:px-24 w-full h-full relative">
+          <div className="bg-background h-screen fixed inset-0 z-0" />
+          <div className="flex min-h-screen flex-col relative">
+            <BackgroundGrid className="z-10" />
+            <Header className="z-20" />
+            <main className="z-20 flex-1 px-6 py-12 md:px-12 lg:px-24 w-full h-full relative">
               <div className="mx-auto max-w-3xl">
                 {children}
                 <PostNavigation />
               </div>
             </main>
-            <Footer className="z-10" />
+            <Footer className="z-20" />
           </div>
         </ThemeProvider>
       </body>
