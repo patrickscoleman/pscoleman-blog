@@ -27,9 +27,14 @@ export default function Home() {
       </div>
       <div className="space-y-4 md:col-span-3">
         <h1>Patrick Coleman</h1>
-        <p className="large">Hello, I&apos;m Patrick 👋 </p>
+        <p className="large">Hello out there 👋 </p>
         <p>
-          I&apos;m currently working on something. Before that I co-founded{" "}
+          I&apos;m currently thinking through my next move. Professionally,
+          I&apos;m a generalist with a background in finance, go-to-market,
+          strategy, and operations, mostly at startups.
+        </p>
+        <p>
+          Recently I co-founded{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
@@ -53,24 +58,19 @@ export default function Home() {
           >
             PeopleGrove
           </Link>
-          . I started my career in investment banking at{" "}
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://business.bofa.com/en-us/content/global-corporate-investment-banking.html"
-          >
-            Bank of America
-          </Link>
-          .
-        </p>
-        <p>
-          Professionally, I help companies grow. I&apos;m a generalist with a
-          background in finance, go-to-market, strategy, and operations.
+          . I started my career in investment banking.
         </p>
         <p>
           Personally, I&apos;m a husband and dog dad. I speak a few languages
-          (best to worst: English, español, 日本語, 한국어). And I love to read,
-          travel, and go outdoors.
+          (best to worst: English, español, 日本語, 한국어). I{" "}
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/patrickscoleman"
+          >
+            code
+          </Link>
+          . And I love to read, travel, and go outdoors.
         </p>
         <div className="flex justify-center gap-4 py-4">
           <Link href="/blog" className="no-underline flex-1" passHref>
