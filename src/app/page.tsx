@@ -27,7 +27,7 @@ export default function Home() {
       </div>
       <div className="space-y-4 md:col-span-3">
         <h1>Patrick Coleman</h1>
-        <p className="large">Hello out there 👋 </p>
+        <p className="large">Hello there 👋 </p>
         <p>
           I&apos;m currently thinking through my next move. Professionally,
           I&apos;m a generalist with a background in finance, go-to-market,
