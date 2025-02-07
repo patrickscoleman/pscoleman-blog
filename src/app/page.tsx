@@ -36,7 +36,7 @@ export default function Home() {
             rel="noopener noreferrer"
             href="https://github.com/patrickscoleman"
           >
-            coding
+            eng
           </Link>, mostly for startups.</p>
         <p>
           I currently lead growth at{" "}
