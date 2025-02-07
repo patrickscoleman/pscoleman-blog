@@ -46,7 +46,7 @@ export default function Home() {
             href="https://rime.ai/"
           >
             Rime
-          </Link>. We're building voice AI foundational models. 
+          </Link>. We&apos;re building voice AI foundational models. 
         </p>
         <p>
           Before that, I co-founded{" "}
