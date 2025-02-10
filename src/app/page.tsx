@@ -27,17 +27,17 @@ export default function Home() {
       </div>
       <div className="space-y-4 md:col-span-3">
         <h1>Patrick Coleman</h1>
-        <p className="large">hello out there 👋 </p>
-        <p>I&apos;m a generalist. Professionally,
-          I do everything from sales and marketing to 
-          finance and ops (plus a bit of product and{" "}
+        <p className="large">I&apos;m a generalist 👋 </p>
+        <p>Professionally,
+          I help startups with everything from sales and marketing to 
+          finance and ops, plus a bit of product and{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/patrickscoleman"
           >
             eng
-          </Link>) for startups.</p>
+          </Link>.</p>
         <p>
           I currently lead growth at{" "}
           <Link
@@ -57,7 +57,7 @@ export default function Home() {
           >
             Yaya
           </Link>
-          , a language learning app, and was an early growth and ops leader at{" "}
+          , a language learning app, and was an early leader at{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
@@ -78,7 +78,7 @@ export default function Home() {
         <p>
           Personally, I&apos;m a husband and dog dad. I speak a few languages
           (best to worst: English, español, 日本語, 한국어). 
-          Some things I love: reading, meditating, traveling, climbing, and getting outside.
+          Some things I love: reading, meditating, traveling, camping, climbing, and going down rabbit holes.
         </p>
         {/* <div className="flex justify-center gap-4 py-4">
           <Link href="/blog" className="no-underline flex-1" passHref>
