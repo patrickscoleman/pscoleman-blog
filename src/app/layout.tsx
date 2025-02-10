@@ -12,6 +12,7 @@ import { Footer } from "@/components/footer";
 import { BackgroundGrid } from "@/components/backgroundGrid";
 import { siteMetadata } from "@/utils/metadata.mjs";
 import { PostNavigation } from "@/components/postNavigation";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const source_code_pro = Source_Code_Pro({
   subsets: ["latin"],
@@ -60,6 +61,7 @@ export default function RootLayout({
       <body
         className={`overscroll-x-none ${source_code_pro.variable} ${noto_sans.variable} ${noto_sans_jp.variable} ${noto_sans_kr.variable}`}
       >
+        <SpeedInsights/>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
