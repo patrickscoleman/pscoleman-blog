@@ -30,14 +30,14 @@ export default function Home() {
         <p className="large">hello out there 👋 </p>
         <p>I&apos;m a generalist. Professionally,
           I do everything from sales and marketing to 
-          finance and ops, plus a bit of product and{" "}
+          finance and ops (plus a bit of product and{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/patrickscoleman"
           >
             eng
-          </Link>, mostly for startups.</p>
+          </Link>) for startups.</p>
         <p>
           I currently lead growth at{" "}
           <Link
@@ -46,7 +46,7 @@ export default function Home() {
             href="https://rime.ai/"
           >
             Rime
-          </Link>. We&apos;re building voice AI foundational models. 
+          </Link>. We&apos;re building voice AI foundation models. 
         </p>
         <p>
           Before that, I co-founded{" "}
@@ -57,7 +57,7 @@ export default function Home() {
           >
             Yaya
           </Link>
-          , an AI foreign language learning app, and was an early growth and ops leader at{" "}
+          , a language learning app, and was an early growth and ops leader at{" "}
           <Link
             target="_blank"
             rel="noopener noreferrer"
@@ -78,7 +78,7 @@ export default function Home() {
         <p>
           Personally, I&apos;m a husband and dog dad. I speak a few languages
           (best to worst: English, español, 日本語, 한국어). 
-          Some things I love: fiction, comics, music, meditation, travel, tattoos, climbing, biking, and just being outside.
+          Some things I love: reading, meditating, traveling, climbing, and getting outside.
         </p>
         <div className="flex justify-center gap-4 py-4">
           <Link href="/blog" className="no-underline flex-1" passHref>
