@@ -80,7 +80,7 @@ export default function Home() {
           (best to worst: English, español, 日本語, 한국어). 
           Some things I love: reading, meditating, traveling, climbing, and getting outside.
         </p>
-        <div className="flex justify-center gap-4 py-4">
+        {/* <div className="flex justify-center gap-4 py-4">
           <Link href="/blog" className="no-underline flex-1" passHref>
             <Button
               variant="outline"
@@ -93,8 +93,8 @@ export default function Home() {
               <ArrowRight className="h-6 w-6 transition-transform transform group-hover:translate-x-1" />
             </Button>
           </Link>
-        </div>
-        <h3>Get in touch</h3>
+        </div> */}
+        {/* <h3>Get in touch</h3> */}
         <div className="flex justify-center gap-4 py-4">
           <Link
             className="no-underline flex-1"
