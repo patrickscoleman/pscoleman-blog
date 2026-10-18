@@ -1,34 +1,33 @@
-import Link from "next/link";
+import { ExternalLink } from './external-link';
+import { LANGUAGE_LEVELS_OVERVIEW_URL } from '@/lib/language-levels-model';
 
-export const Footer = (props: { className?: string }) => {
+export function Footer() {
   return (
-    <footer
-      className={`flex h-16 w-full items-center justify-between bg-none px-6 ${props.className}`}
-    >
-      <div className="muted flex flex-col sm:flex-row items-start sm:items-center">
-        <span>© 2022-{new Date().getFullYear()} by</span>
-        <Link className="no-underline font-normal ml-0 sm:ml-1" href="/">
-          Patrick Coleman
-        </Link>
-      </div>
-      <div className="flex flex-col sm:flex-row items-end sm:items-center gap-0 sm:gap-4 text-sm font-medium">
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          className="no-underline"
-          href="https://github.com/patrickscoleman/pscoleman-blog"
+    <footer className="site-footer">
+      <p
+        className="footer-footnote"
+        id="language-levels-note"
+        role="doc-footnote"
+        tabIndex={-1}
+      >
+        <a
+          href="/#language-levels-ref"
+          role="doc-backlink"
+          aria-label="Back to Languages, footnote 1"
         >
+          1.
+        </a>
+        <ExternalLink href={LANGUAGE_LEVELS_OVERVIEW_URL}>
+          Alloglot levels
+        </ExternalLink>
+      </p>
+      <span>© {new Date().getFullYear()} Patrick Coleman</span>
+      <nav className="footer-links" aria-label="Site information">
+        <a href="/feed.xml">RSS</a>
+        <ExternalLink href="https://github.com/patrickscoleman/pscoleman-blog">
           Source
-        </Link>
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          className="no-underline"
-          href="http://creativecommons.org/licenses/by/4.0/"
-        >
-          License (CC BY 4.0)
-        </Link>
-      </div>
+        </ExternalLink>
+      </nav>
     </footer>
   );
-};
+}

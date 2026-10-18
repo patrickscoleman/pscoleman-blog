@@ -12,6 +12,7 @@
 # next.js
 /.next/
 /out/
+/artifacts/
 
 # production
 /build
@@ -40,3 +41,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Offline font-authoring dependencies
+/tools/handwriting/node_modules

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "harfbuzzjs": "^1.6.3",
+    "opentype.js": "^2.0.0",
+    "potrace": "^2.1.8",
+    "svgpath": "^2.6.0",
+    "wawoff2": "^2.0.1"
+  }
+}
