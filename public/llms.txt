@@ -1,0 +1,18 @@
+# Patrick Coleman
+
+> Personal site of Patrick Coleman, a generalist who builds products, helps companies grow, and is working on Alloglot, a language learning app.
+
+## About
+- [Patrick Coleman](https://pscoleman.me/): Biography, interests, languages, and social/contact links.
+
+## Translations
+- [Translation index](https://pscoleman.me/translations): Literary translations from Spanish and Japanese into English, with author and source attribution.
+- [Axolotl](https://pscoleman.me/translations/axolotl): Julio Cortázar, translated from Spanish.
+- [The Bakery Attack Take 2](https://pscoleman.me/translations/bakery-attack): Haruki Murakami, translated from Japanese.
+- [Haiku](https://pscoleman.me/translations/basho-haiku): Ten poems by Matsuo Bashō, with Japanese originals.
+- [Genjō Kōan](https://pscoleman.me/translations/genjo-koan): Dōgen, with Japanese original text.
+
+## Updates
+- [RSS feed](https://pscoleman.me/feed.xml): Translation titles, dates, summaries, and canonical links.
+
+Patrick Coleman is the translator of these works; the original authors are credited separately. Alloglot is currently at https://aloglot.com.

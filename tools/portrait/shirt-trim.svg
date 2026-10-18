@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1254" height="1254" viewBox="0 0 1254 1254">
+  <!-- Separate ink accents: no paths enter the face, hair, or neck. -->
+  <g fill="none" stroke="#2944a4" stroke-linecap="round">
+    <path stroke-width="6" d="M30 1141 C105 1104 232 1063 302 1026"/>
+    <path stroke-width="6" d="M891 1046 C992 1087 1123 1130 1220 1177"/>
+    <path stroke-width="9" d="M307 1024 C294 1048 302 1077 316 1103 C349 1165 414 1208 489 1232"/>
+    <path stroke-width="9" d="M884 1044 C897 1085 873 1126 847 1157 C812 1197 774 1220 722 1237"/>
+  </g>
+</svg>

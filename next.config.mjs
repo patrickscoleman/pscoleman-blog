@@ -1,57 +1,36 @@
-import createMDX from "@next/mdx";
-import rehypeHighlight from "rehype-highlight";
-import remarkFrontmatter from "remark-frontmatter";
-import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure `pageExtensions` to include markdown and MDX files
-  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-
-  async redirects() {
+  poweredByHeader: false,
+  images: {
+    // Fill the gap between 256 and 384 so phone screens fetch less excess detail.
+    imageSizes: [32, 48, 64, 96, 128, 256, 320, 384],
+  },
+  async headers() {
     return [
-      // Basic redirects
       {
-        source: "/about",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/hireme",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/work",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/posts",
-        destination: "/blog",
-        permanent: true,
-      },
-      // Wildcard path matching for blog posts
-      {
-        source: "/posts/:slug",
-        destination: "/blog/:slug",
-        permanent: true,
+        source: '/:path*',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          {
+            key: 'Permissions-Policy',
+            value:
+              'camera=(), microphone=(), geolocation=(), payment=(), usb=()',
+          },
+          {
+            key: 'Content-Security-Policy',
+            // Static Next.js hydration uses inline scripts. This policy limits
+            // resource origins; it is not a nonce-based XSS defence.
+            value: `default-src 'self'; script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === 'development' ? " 'unsafe-eval'" : ''}; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'`,
+          },
+        ],
       },
     ];
   },
-
-  // Optionally, add any other Next.js config below
-};
-
-const withMDX = createMDX({
-  // .md and .mdx files
-  extension: /\.mdx?$/,
-  // Add markdown plugins here, as desired
-  options: {
-    remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
-    rehypePlugins: [rehypeHighlight],
+  // Historical content is never part of a deployed route.
+  outputFileTracingExcludes: {
+    '/*': ['./archive/**/*', './tools/handwriting/**/*'],
   },
-});
-
-// Merge MDX config with Next.js config
-export default withMDX(nextConfig);
+};
+export default nextConfig;

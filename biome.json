@@ -1,0 +1,20 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
+  "files": { "includes": ["src/**", "scripts/**"] },
+  "formatter": { "enabled": false },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+      "style": { "noDescendingSpecificity": "off" }
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["src/app/translations/**"],
+      "linter": {
+        "rules": { "security": { "noDangerouslySetInnerHtml": "off" } }
+      }
+    }
+  ]
+}
