@@ -128,7 +128,7 @@ export default async function Home() {
           <div className="interest-item interest-ideas">
             <h3>Down some rabbit holes</h3>
             <p>
-              Embodied cognition, postbiotic consciousness, relational quantum
+              Embodied cognition, postbiotic intelligence, relational quantum
               mechanics, and computer history.
             </p>
           </div>
