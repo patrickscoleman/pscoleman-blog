@@ -99,7 +99,7 @@ export default async function Home() {
       </div>
       <section className="interests" aria-labelledby="interests-heading">
         <div className="interests-heading">
-          <h2 id="interests-heading">Off the clock</h2>
+          <h2 id="interests-heading">Current curiosities</h2>
         </div>
         <div className="interest-copy">
           <div className="interest-item interest-languages">
