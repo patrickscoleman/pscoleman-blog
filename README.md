@@ -1,6 +1,6 @@
 # Patrick Coleman's personal site
 
-A concise personal homepage and four literary translations at
+A concise personal homepage and three literary translations at
 [pscoleman.me](https://pscoleman.me), built with Next.js 16 and React 19 on Vercel.
 The light-only design draws on notebook ruling, dotted vertical guides, and
 teletype typography. Section dividers use two tiny SVG ink silhouettes with tapered ends and
@@ -9,7 +9,7 @@ separators; neither uses filters, animation, or JavaScript. Fonts are served loc
 
 Headings and navigation outside the homepage name use the system monospace stack.
 The retired Special Elite typeface is removed. Source Serif 4 loads only on the
-four reading routes, keeping literary prose comfortable without adding a font
+three reading routes, keeping literary prose comfortable without adding a font
 request to the index or 404. Original-text controls use the same bracketed,
 44 px interaction style as the portrait controls. The language-level footnote
 is shown only on the homepage, where its reference appears.
@@ -104,12 +104,11 @@ install, route types, TypeScript, Biome, content integrity, formatting, and buil
 Active works live in `src/content/translations/*.md`. Their YAML metadata is
 validated with Zod; Markdown is rendered at build time. Only checked-in content
 is accepted. There is no search service, theme switcher, CMS, or build-time
-network indexing. The four reading pages are generated statically.
+network indexing. The three reading pages are generated statically.
 
 Keep authorship, translator credit, source citations, paragraph breaks, and poem
-line breaks. The haiku collection includes all ten poems. Genjō Kōan preserves
-both Japanese and English; an English line embedded in a Japanese paragraph in
-the original component is now correctly included with the English text.
+line breaks. The haiku collection includes all ten poems. Genjō Kōan is retired from the
+active site; its original source remains in the immutable archive and Git history.
 
 The complete previous site is preserved in
 `archive/site-before-refresh-2026-10-13/`, with a checksum manifest and restoration

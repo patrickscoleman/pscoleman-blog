@@ -26,7 +26,7 @@ assert.equal(
   manifest['public/images/patrick.png'],
   'The portrait must stay unchanged',
 );
-const expected = ['axolotl', 'bakery-attack', 'basho-haiku', 'genjo-koan'];
+const expected = ['axolotl', 'bakery-attack', 'basho-haiku'];
 const files = fs
   .readdirSync(contentDirectory)
   .filter((file) => file.endsWith('.md'));
@@ -94,41 +94,6 @@ const decode = (text) =>
     )
     .replace(/\s+/g, ' ')
     .trim();
-const sourceGenjo = fs.readFileSync(
-  path.join(originalDirectory, 'genjo_koan/genjoKoanText.tsx'),
-  'utf8',
-);
-const originalParagraphs = [
-  ...sourceGenjo.matchAll(/<p id="(jpn|eng)"[^>]*>([\s\S]*?)<\/p>/g),
-];
-const originalEnglish = [],
-  originalJapanese = [];
-for (const [, language, raw] of originalParagraphs) {
-  const text = decode(raw);
-  if (language === 'eng') originalEnglish.push(text);
-  else {
-    originalJapanese.push(text.replace('The monk bowed.', '').trim());
-    if (text.includes('The monk bowed.'))
-      originalEnglish.push('The monk bowed.');
-  }
-}
-const migratedParagraphs = [
-  ...work['genjo-koan'].body.matchAll(/<p([^>]*)>([\s\S]*?)<\/p>/g),
-];
-assert.deepEqual(
-  migratedParagraphs
-    .filter(([, attrs]) => !attrs.includes('lang="ja"'))
-    .map(([, , raw]) => decode(raw)),
-  originalEnglish,
-  'Genjō Kōan English changed',
-);
-assert.deepEqual(
-  migratedParagraphs
-    .filter(([, attrs]) => attrs.includes('lang="ja"'))
-    .map(([, , raw]) => decode(raw)),
-  originalJapanese,
-  'Genjō Kōan Japanese changed',
-);
 const haiku = original('basho_haiku');
 const poemText =
   haiku.split('</time>')[1].split('## Sources')[0] +
@@ -155,7 +120,7 @@ assert.deepEqual(
   ),
   'Haiku text or line breaks changed',
 );
-assert.equal(work['genjo-koan'].metadata.bilingual, true);
+assert.ok(!work['genjo-koan'], 'Genjō Kōan must remain retired');
 assert.ok(!fs.existsSync('src/app/blog'), 'Old blog routes are still present');
 assert.ok(!fs.existsSync('src/app/test'), 'Old test route is still present');
 assert.ok(
@@ -169,9 +134,5 @@ assert.ok(
 console.log(
   'Content verified: ' +
     Object.keys(manifest).length +
-    ` archived originals, unchanged portrait, ${files.length} works, 10 haiku, ` +
-    originalEnglish.length +
-    ' English / ' +
-    originalJapanese.length +
-    ' Japanese Genjō Kōan paragraphs.',
+    ` archived originals, unchanged portrait, ${files.length} works, 10 haiku.`,
 );
