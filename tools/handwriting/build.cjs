@@ -24,7 +24,7 @@ const words = [
     cuts: [0, 240, 420, 605, 875, 1105, 1305, 1495],
   },
 ];
-async function trace(box, baseline) {
+async function trace(box, baseline, inset = 8, turdSize = 45) {
   const bitmap = await sharp(path.join(__dirname, 'source.png'))
     .extract(box)
     .greyscale()
@@ -34,7 +34,7 @@ async function trace(box, baseline) {
   const svg = await new Promise((resolve, reject) =>
     potrace.trace(
       bitmap,
-      { threshold: 128, turdSize: 45, optTolerance: 0.35 },
+      { threshold: 128, turdSize, optTolerance: 0.35 },
       (err, result) => (err ? reject(err) : resolve(result)),
     ),
   );
@@ -46,7 +46,7 @@ async function trace(box, baseline) {
     .unarc()
     .iterate((segment) => {
       const [op, ...n] = segment;
-      const X = (v) => Math.round((v + 8) * SCALE),
+      const X = (v) => Math.round((v + inset) * SCALE),
         Y = (v) => Math.round((baseline - v) * SCALE);
       if (op === 'M') outline.moveTo(X(n[0]), Y(n[1]));
       else if (op === 'L') outline.lineTo(X(n[0]), Y(n[1]));
@@ -74,23 +74,26 @@ async function trace(box, baseline) {
     }),
   ];
   const charIndices = new Map(),
-    ligatures = [];
+    wordGlyphs = new Map();
+  let surnameA;
   for (const word of words) {
     for (let i = 0; i < word.text.length; i++) {
       const c = word.text[i];
-      if (charIndices.has(c)) continue;
+      const alternate = charIndices.has(c);
+      if (alternate && c !== 'a') throw new Error('Unexpected repeated letter');
       const box = {
         ...word.box,
         left: word.box.left + word.cuts[i],
         width: word.cuts[i + 1] - word.cuts[i],
       };
-      charIndices.set(c, glyphs.length);
+      if (alternate) surnameA = glyphs.length;
+      else charIndices.set(c, glyphs.length);
       glyphs.push(
         new opentype.Glyph({
-          name: 'char' + c.codePointAt(0),
-          unicode: c.codePointAt(0),
-          advanceWidth: Math.round((box.width + 8) * SCALE),
-          path: await trace(box, word.baseline),
+          name: 'char' + c.codePointAt(0) + (alternate ? '.surname' : ''),
+          unicode: alternate ? undefined : c.codePointAt(0),
+          advanceWidth: Math.round((box.width + (i === 0 ? 8 : 0) + (i === word.text.length - 1 ? 8 : 0)) * SCALE),
+          path: await trace(box, word.baseline, i === 0 ? 8 : 0, 0),
         }),
       );
     }
@@ -102,10 +105,7 @@ async function trace(box, baseline) {
         path: await trace(word.box, word.baseline),
       }),
     );
-    ligatures.push({
-      sub: [...word.text].map((c) => charIndices.get(c)),
-      by: index,
-    });
+    wordGlyphs.set(word.text, index);
   }
   const font = new opentype.Font({
     familyName: 'Patrick Sharpie',
@@ -119,12 +119,13 @@ async function trace(box, baseline) {
     designer: 'Patrick Coleman',
     copyright: 'Copyright 2026 Patrick Coleman. Original handwriting.',
   });
-  for (const ligature of ligatures)
-    font.substitution.addLigature('liga', ligature);
+  // Preserve the distinct handwritten a in Coleman without merging character clusters.
+  font.substitution.add('ss01', { sub: charIndices.get('a'), by: surnameA });
   const otf = Buffer.from(font.toArrayBuffer());
   fs.writeFileSync(path.join(__dirname, 'patrick-sharpie.otf'), otf);
+  const serialized = opentype.parse(otf.buffer.slice(otf.byteOffset, otf.byteOffset + otf.byteLength));
   const outlines = Object.fromEntries(words.map(({ text }) => {
-    const glyph = font.stringToGlyphs(text)[0];
+    const glyph = serialized.glyphs.get(wordGlyphs.get(text));
     return [text, { width: glyph.advanceWidth, path: glyph.path.toPathData({ flipY: false, optimize: false }) }];
   }));
   fs.writeFileSync(path.join(root, 'src/generated/handwriting-outlines.json'), JSON.stringify(outlines, null, 2) + '\n');
@@ -141,7 +142,8 @@ async function trace(box, baseline) {
         woff2Sha256: crypto.createHash('sha256').update(woff).digest('hex'),
         bytes: woff.length,
         characters: [...charIndices.keys()].join(''),
-        ligatures: words.map((w) => w.text),
+        ligatures: [],
+        surnameFeature: 'ss01',
         unitsPerEm: 1000,
         ascender: 820,
         descender: -220,

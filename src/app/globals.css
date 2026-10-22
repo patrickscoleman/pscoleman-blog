@@ -305,6 +305,9 @@ a:is(:focus-visible, :active) .arrow-external {
   overflow-wrap: anywhere;
   position: relative;
 }
+.name-line:last-child {
+  font-feature-settings: 'ss01';
+}
 .home-intro h1 {
   grid-area: heading;
   min-width: 0;
@@ -312,7 +315,7 @@ a:is(:focus-visible, :active) .arrow-external {
     400 clamp(72px, 7.8vw, 94px)/1.04 var(--font-handwriting),
     var(--mono);
   letter-spacing: 0;
-  font-variant-ligatures: common-ligatures;
+  font-variant-ligatures: none;
   font-synthesis: none;
   margin: 0;
 }

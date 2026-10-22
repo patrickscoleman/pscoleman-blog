@@ -1,12 +1,10 @@
 {
   "sourceSha256": "c760c400673ba81ad7ff831edcc7f5d3a69e0c54e31a185e76f810aa2d0549fa",
-  "woff2Sha256": "8e301c5baa89c8ea18f58ee620252c223f251eb0f48a703abf97d18ad4bd495c",
-  "bytes": 4684,
+  "woff2Sha256": "ef81b05a4180b3a61cc633588f8e2a9d8859fed608e7176ec2e6632d04b33888",
+  "bytes": 5580,
   "characters": "PatrickColemn",
-  "ligatures": [
-    "Patrick",
-    "Coleman"
-  ],
+  "ligatures": [],
+  "surnameFeature": "ss01",
   "unitsPerEm": 1000,
   "ascender": 820,
   "descender": -220

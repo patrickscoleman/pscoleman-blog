@@ -22,10 +22,21 @@ export const metadata: Metadata = {
 };
 
 const socials = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/patrickscoleman' },
-  { label: 'X', href: 'https://x.com/patrickscoleman' },
-  { label: 'GitHub', href: 'https://github.com/patrickscoleman' },
+  {
+    label: 'Bluesky',
+    href: 'https://bsky.app/profile/patrickscoleman.bsky.social',
+  },
   { label: 'Email', href: 'mailto:patrick@pscoleman.me' },
+  { label: 'Facebook', href: 'https://www.facebook.com/patrickscoleman' },
+  { label: 'GitHub', href: 'https://github.com/patrickscoleman' },
+  {
+    label: 'Hacker News',
+    href: 'https://news.ycombinator.com/user?id=patrickscoleman',
+  },
+  { label: 'Instagram', href: 'https://www.instagram.com/patrickscoleman/' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/patrickscoleman' },
+  { label: 'Mastodon', href: 'https://mstdn.social/@patrickscoleman' },
+  { label: 'X', href: 'https://x.com/patrickscoleman' },
 ];
 
 const profile = {
