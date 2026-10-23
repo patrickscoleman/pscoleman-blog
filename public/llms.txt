@@ -10,7 +10,6 @@
 - [Axolotl](https://pscoleman.me/translations/axolotl): Julio Cortázar, translated from Spanish.
 - [The Bakery Attack Take 2](https://pscoleman.me/translations/bakery-attack): Haruki Murakami, translated from Japanese.
 - [Haiku](https://pscoleman.me/translations/basho-haiku): Ten poems by Matsuo Bashō, with Japanese originals.
-- [Genjō Kōan](https://pscoleman.me/translations/genjo-koan): Dōgen, with Japanese original text.
 
 ## Updates
 - [RSS feed](https://pscoleman.me/feed.xml): Translation titles, dates, summaries, and canonical links.
