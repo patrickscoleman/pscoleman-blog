@@ -21,11 +21,25 @@ export const metadata: Metadata = {
   alternates: pageAlternates('/'),
 };
 
-const socials = [
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/patrickscoleman' },
-  { label: 'X', href: 'https://x.com/patrickscoleman' },
-  { label: 'GitHub', href: 'https://github.com/patrickscoleman' },
+const contactLinks = [
   { label: 'Email', href: 'mailto:patrick@pscoleman.me' },
+  { label: 'GitHub', href: 'https://github.com/patrickscoleman' },
+];
+
+const socials = [
+  {
+    label: 'Bluesky',
+    href: 'https://bsky.app/profile/patrickscoleman.bsky.social',
+  },
+  { label: 'Facebook', href: 'https://www.facebook.com/patrickscoleman' },
+  {
+    label: 'Hacker News',
+    href: 'https://news.ycombinator.com/user?id=patrickscoleman',
+  },
+  { label: 'Instagram', href: 'https://www.instagram.com/patrickscoleman/' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/patrickscoleman' },
+  { label: 'Mastodon', href: 'https://mstdn.social/@patrickscoleman' },
+  { label: 'X', href: 'https://x.com/patrickscoleman' },
 ];
 
 const profile = {
@@ -38,7 +52,7 @@ const profile = {
     name: 'Patrick Coleman',
     url: 'https://pscoleman.me',
     image: 'https://pscoleman.me/images/patrick.png',
-    sameAs: socials
+    sameAs: [...contactLinks, ...socials]
       .filter(({ href }) => !href.startsWith('mailto:'))
       .map(({ href }) => href),
   },
@@ -142,8 +156,8 @@ export default async function Home() {
         </div>
       </section>
       <div className="contact-row">
-        <nav className="social-links" aria-label="Social and contact links">
-          {socials.map((social) =>
+        <nav className="social-links" aria-label="Contact links">
+          {contactLinks.map((social) =>
             social.href.startsWith('mailto:') ? (
               <a key={social.label} href={social.href}>
                 {social.label}
@@ -157,6 +171,22 @@ export default async function Home() {
             ),
           )}
         </nav>
+        <section aria-labelledby="social-networks-heading">
+          <h2 id="social-networks-heading" className="social-heading">
+            Social networks
+          </h2>
+          <nav
+            className="social-links"
+            aria-labelledby="social-networks-heading"
+          >
+            {socials.map((social) => (
+              <ExternalLink key={social.label} href={social.href}>
+                {social.label}
+                <Arrow external />
+              </ExternalLink>
+            ))}
+          </nav>
+        </section>
       </div>
     </main>
   );

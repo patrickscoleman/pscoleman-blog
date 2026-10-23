@@ -14,18 +14,22 @@ const blob = new hb.Blob(
 );
 const font = new hb.Font(new hb.Face(blob));
 for (const [text, count] of [
-  ['Patrick', 1],
-  ['Coleman', 1],
-  ['Patrick Coleman', 3],
+  ['Patrick', 7],
+  ['Coleman', 7],
+  ['Patrick Coleman', 15],
 ]) {
   const buffer = new hb.Buffer();
   buffer.addText(text);
   buffer.guessSegmentProperties();
-  hb.shape(font, buffer);
+  hb.shape(font, buffer, text === 'Coleman' ? [new hb.Feature('ss01', 1)] : []);
   const glyphs = buffer.getGlyphInfos();
   assert.equal(glyphs.length, count);
   assert(glyphs.every((g) => g.codepoint > 0));
-  console.log(text, glyphs, buffer.getGlyphPositions());
+  assert.deepEqual(glyphs.map(g => g.cluster), [...text].map((_, i) => i), `${text}: one cluster per selectable letter`);
+  const total = buffer.getGlyphPositions().reduce((sum, p) => sum + p.xAdvance, 0);
+  if (text === 'Patrick') assert.equal(total, 3686);
+  if (text === 'Coleman') assert.equal(total, 3626);
+  console.log(`${text}: ${glyphs.length} distinct selection clusters; advance ${total}`);
 }
 
 // Check the actual shipped font, not only the tracing input. SVG even-odd
@@ -46,10 +50,12 @@ const parsed = opentype.parse(
 for (const [text, x, y] of [
   ['Patrick', 2050, 400],
   ['Coleman', 775, 250],
-  ['r', 178, 400],
-  ['o', 199, 250],
+  ['r', 159, 400],
+  ['o', 180, 250],
 ]) {
-  const glyph = parsed.stringToGlyphs(text)[0];
+  const glyph = text.length > 1
+    ? [...Array(parsed.glyphs.length).keys()].map(i => parsed.glyphs.get(i)).find(g => g.name === `${text}.signature`)
+    : parsed.charToGlyph(text);
   const width = Math.ceil(glyph.advanceWidth);
   const d = glyph.path.toPathData({ flipY: false, optimize: false });
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="1100"><path fill-rule="nonzero" transform="translate(0 820) scale(1 -1)" d="${d}"/></svg>`;
@@ -67,5 +73,5 @@ for (const [text, x, y] of [
     }
 }
 console.log(
-  'Shipped WOFF2: R/O counters remain open in word ligatures and individual-letter fallback.',
+  'Shipped WOFF2: R/O counters remain open in sharing-card outlines and selectable letters.',
 );

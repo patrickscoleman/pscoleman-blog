@@ -14,9 +14,10 @@ request to the index or 404. Original-text controls use the same bracketed,
 44 px interaction style as the portrait controls. The language-level footnote
 is shown only on the homepage, where its reference appears.
 
-The homepage name uses a 5 KB self-hosted WOFF2 traced from Patrick's original
+The homepage name uses a 6 KB self-hosted WOFF2 traced from Patrick's original
 Sharpie handwriting. It remains the ordinary text “Patrick Coleman” in an H1;
-word ligatures preserve the photographed joins. `next/font/local` preloads it on
+Individual letter metrics align selection with the ink; the surname uses the
+`ss01` alternate for its distinct handwritten “a”. `next/font/local` preloads it on
 the homepage with `font-display: swap`; Courier New/monospace is the immediate
 fallback. Fixed line heights keep font loading from moving surrounding content.
 The original photo, editable OTF, provenance and offline generator are in
