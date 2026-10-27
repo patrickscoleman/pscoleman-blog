@@ -1,0 +1,111 @@
+{
+  "date": "Tuesday, October 27, 2026",
+  "sections": [
+    {
+      "id": "world",
+      "title": "US & world",
+      "items": [
+        {
+          "title": "A plain headline about an important development",
+          "bullets": [
+            "One sentence explaining what happened, with a named source.",
+            "One sentence of context. Disputed claims stay attributed."
+          ],
+          "links": [
+            { "label": "Source example", "url": "https://www.bbc.com/news" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "title": "Business & technology",
+      "items": [
+        {
+          "title": "The useful detail, without the reaction cycle",
+          "bullets": [
+            "A short factual update; no prediction presented as a fact.",
+            "Original reporting opens separately from any community discussion."
+          ],
+          "links": [
+            {
+              "label": "Reporting example",
+              "url": "https://www.bbc.com/news/business"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "culture",
+      "title": "Books & culture",
+      "items": [
+        {
+          "title": "An occasional discovery, when there is something new",
+          "bullets": [
+            "New releases and substantial essays share the same finite reading budget."
+          ],
+          "links": [
+            {
+              "label": "Publication example",
+              "url": "https://www.bbc.com/culture"
+            }
+          ],
+          "access": "Access not checked"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "date": "Example · date to be confirmed",
+      "title": "A local screening or community event",
+      "place": "Date, venue, and booking status belong here.",
+      "links": []
+    }
+  ],
+  "sources": [
+    {
+      "id": "daily.example.org",
+      "name": "Example Daily",
+      "category": "US & world",
+      "status": "enabled",
+      "kind": "RSS",
+      "detail": "Example source"
+    },
+    {
+      "id": "arts.example.org",
+      "name": "Example Arts Letter",
+      "category": "Culture",
+      "status": "paused",
+      "kind": "Newsletter",
+      "detail": "Example source · email subscription continues"
+    }
+  ],
+  "incomingSample": {
+    "verifiedIngress": true,
+    "dedicatedRecipient": true,
+    "authenticatedSender": true,
+    "isNewsletter": true,
+    "listId": "<events.example.org>",
+    "name": "Example Community Newsletter",
+    "category": "Local events"
+  },
+  "publicItems": [
+    {
+      "label": "World headlines",
+      "url": "https://www.bbc.com/news/world",
+      "source": "General-news example"
+    },
+    {
+      "label": "US headlines",
+      "url": "https://www.bbc.com/news/us-canada",
+      "source": "General-news example"
+    },
+    {
+      "label": "Business headlines",
+      "url": "https://www.bbc.com/news/business",
+      "source": "General-news example"
+    }
+  ]
+}

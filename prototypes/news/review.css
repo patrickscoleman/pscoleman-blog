@@ -1,0 +1,12 @@
+html {
+  background: #e8e9e4;
+}
+body {
+  margin: 20px;
+}
+iframe {
+  display: block;
+  border: 0;
+  height: 1000px;
+  background: #faf9f6;
+}
