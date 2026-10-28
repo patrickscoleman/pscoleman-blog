@@ -25,11 +25,19 @@ for (const [text, count] of [
   const glyphs = buffer.getGlyphInfos();
   assert.equal(glyphs.length, count);
   assert(glyphs.every((g) => g.codepoint > 0));
-  assert.deepEqual(glyphs.map(g => g.cluster), [...text].map((_, i) => i), `${text}: one cluster per selectable letter`);
-  const total = buffer.getGlyphPositions().reduce((sum, p) => sum + p.xAdvance, 0);
+  assert.deepEqual(
+    glyphs.map((g) => g.cluster),
+    [...text].map((_, i) => i),
+    `${text}: one cluster per selectable letter`,
+  );
+  const total = buffer
+    .getGlyphPositions()
+    .reduce((sum, p) => sum + p.xAdvance, 0);
   if (text === 'Patrick') assert.equal(total, 3686);
   if (text === 'Coleman') assert.equal(total, 3626);
-  console.log(`${text}: ${glyphs.length} distinct selection clusters; advance ${total}`);
+  console.log(
+    `${text}: ${glyphs.length} distinct selection clusters; advance ${total}`,
+  );
 }
 
 // Check the actual shipped font, not only the tracing input. SVG even-odd
@@ -47,15 +55,36 @@ const parsed = opentype.parse(
     shipped.byteOffset + shipped.byteLength,
   ),
 );
+for (const name of ['char110', 'char97', 'char97.surname']) {
+  const glyph = [...Array(parsed.glyphs.length).keys()]
+    .map((i) => parsed.glyphs.get(i))
+    .find((g) => g.name === name);
+  assert.ok(glyph, `${name}: glyph exists`);
+  const contours = [];
+  for (const command of glyph.path.commands) {
+    if (command.type === 'M') contours.push(new opentype.Path());
+    contours.at(-1).commands.push(command);
+  }
+  for (const contour of contours) {
+    const b = contour.getBoundingBox();
+    assert.ok(
+      (b.x2 - b.x1) * (b.y2 - b.y1) > 100,
+      `${name}: no isolated paper specks`,
+    );
+  }
+}
 for (const [text, x, y] of [
   ['Patrick', 2050, 400],
   ['Coleman', 775, 250],
   ['r', 159, 400],
   ['o', 180, 250],
 ]) {
-  const glyph = text.length > 1
-    ? [...Array(parsed.glyphs.length).keys()].map(i => parsed.glyphs.get(i)).find(g => g.name === `${text}.signature`)
-    : parsed.charToGlyph(text);
+  const glyph =
+    text.length > 1
+      ? [...Array(parsed.glyphs.length).keys()]
+          .map((i) => parsed.glyphs.get(i))
+          .find((g) => g.name === `${text}.signature`)
+      : parsed.charToGlyph(text);
   const width = Math.ceil(glyph.advanceWidth);
   const d = glyph.path.toPathData({ flipY: false, optimize: false });
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="1100"><path fill-rule="nonzero" transform="translate(0 820) scale(1 -1)" d="${d}"/></svg>`;

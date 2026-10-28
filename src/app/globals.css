@@ -308,6 +308,12 @@ a:is(:focus-visible, :active) .arrow-external {
 .name-line:last-child {
   font-feature-settings: 'ss01';
 }
+.name-period {
+  color: var(--blue);
+  font: 700 0.6em/0 var(--mono);
+  margin-left: -0.1em;
+  vertical-align: 0.25em;
+}
 .home-intro h1 {
   grid-area: heading;
   min-width: 0;

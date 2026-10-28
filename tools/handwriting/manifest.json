@@ -1,10 +1,11 @@
 {
   "sourceSha256": "c760c400673ba81ad7ff831edcc7f5d3a69e0c54e31a185e76f810aa2d0549fa",
-  "woff2Sha256": "ef81b05a4180b3a61cc633588f8e2a9d8859fed608e7176ec2e6632d04b33888",
-  "bytes": 5580,
+  "woff2Sha256": "8e689d038353bb629f2f2b7c8a6a1455b74ed582ebbf87b8b249ae39d6a6c9c8",
+  "bytes": 5288,
   "characters": "PatrickColemn",
   "ligatures": [],
   "surnameFeature": "ss01",
+  "isolatedComponentThresholdPixels": 45,
   "unitsPerEm": 1000,
   "ascender": 820,
   "descender": -220

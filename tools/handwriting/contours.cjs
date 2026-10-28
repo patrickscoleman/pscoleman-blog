@@ -99,4 +99,21 @@ function normalizeWinding(commands) {
   });
 }
 
-module.exports = { normalizeWinding };
+function largestInkComponent(commands) {
+  const contours = splitContours(commands);
+  const polygons = contours.map(flatten);
+  const areas = polygons.map((points) =>
+    Math.abs(
+      points.reduce((sum, a, i) => {
+        const b = points[(i + 1) % points.length];
+        return sum + a.x * b.y - b.x * a.y;
+      }, 0),
+    ),
+  );
+  const largest = areas.indexOf(Math.max(...areas));
+  return contours.flatMap((contour, i) =>
+    i === largest || contains(polygons[largest], polygons[i][0]) ? contour : [],
+  );
+}
+
+module.exports = { normalizeWinding, largestInkComponent };
