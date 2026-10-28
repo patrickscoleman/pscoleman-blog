@@ -85,7 +85,12 @@ export default async function Home() {
         <div className="home-intro">
           <h1>
             <span className="name-line">Patrick</span>{' '}
-            <span className="name-line">Coleman</span>
+            <span className="name-line">
+              Coleman
+              <span className="name-period" aria-hidden="true">
+                .
+              </span>
+            </span>
           </h1>
           <div className="bio">
             <p>

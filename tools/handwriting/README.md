@@ -23,6 +23,9 @@ node tools/handwriting/check.mjs
 
 The offline tools trace dark ink, discard paper rules and isolated specks, create
 Bezier outlines, retain separate character clusters, and compress to WOFF2.
+Selectable letters and whole-word outlines use the same 45-pixel isolated-component
+threshold; original glyph spacing and photographed joins stay unchanged. The same
+clean P outline generates the SVG favicon and Apple touch icon, with a blue period.
 They are not application dependencies and are never needed for a site build.
 The tracer's even-odd SVG contours are normalized to nonzero font winding so
 letter counters stay open. The check rasterizes the shipped WOFF2 and verifies

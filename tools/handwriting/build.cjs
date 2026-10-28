@@ -8,6 +8,7 @@ const potrace = require('potrace');
 const svgpath = require('svgpath');
 const wawoff2 = require('wawoff2');
 const { normalizeWinding } = require('./contours.cjs');
+const initialIcon = require('./favicon.cjs');
 const root = path.resolve(__dirname, '../..');
 const SCALE = 2.4;
 const words = [
@@ -92,8 +93,13 @@ async function trace(box, baseline, inset = 8, turdSize = 45) {
         new opentype.Glyph({
           name: 'char' + c.codePointAt(0) + (alternate ? '.surname' : ''),
           unicode: alternate ? undefined : c.codePointAt(0),
-          advanceWidth: Math.round((box.width + (i === 0 ? 8 : 0) + (i === word.text.length - 1 ? 8 : 0)) * SCALE),
-          path: await trace(box, word.baseline, i === 0 ? 8 : 0, 0),
+          advanceWidth: Math.round(
+            (box.width +
+              (i === 0 ? 8 : 0) +
+              (i === word.text.length - 1 ? 8 : 0)) *
+              SCALE,
+          ),
+          path: await trace(box, word.baseline, i === 0 ? 8 : 0, 45),
         }),
       );
     }
@@ -123,14 +129,33 @@ async function trace(box, baseline, inset = 8, turdSize = 45) {
   font.substitution.add('ss01', { sub: charIndices.get('a'), by: surnameA });
   const otf = Buffer.from(font.toArrayBuffer());
   fs.writeFileSync(path.join(__dirname, 'patrick-sharpie.otf'), otf);
-  const serialized = opentype.parse(otf.buffer.slice(otf.byteOffset, otf.byteOffset + otf.byteLength));
-  const outlines = Object.fromEntries(words.map(({ text }) => {
-    const glyph = serialized.glyphs.get(wordGlyphs.get(text));
-    return [text, { width: glyph.advanceWidth, path: glyph.path.toPathData({ flipY: false, optimize: false }) }];
-  }));
-  fs.writeFileSync(path.join(root, 'src/generated/handwriting-outlines.json'), JSON.stringify(outlines, null, 2) + '\n');
+  const serialized = opentype.parse(
+    otf.buffer.slice(otf.byteOffset, otf.byteOffset + otf.byteLength),
+  );
+  const outlines = Object.fromEntries(
+    words.map(({ text }) => {
+      const glyph = serialized.glyphs.get(wordGlyphs.get(text));
+      return [
+        text,
+        {
+          width: glyph.advanceWidth,
+          path: glyph.path.toPathData({ flipY: false, optimize: false }),
+        },
+      ];
+    }),
+  );
+  fs.writeFileSync(
+    path.join(root, 'src/generated/handwriting-outlines.json'),
+    JSON.stringify(outlines, null, 2) + '\n',
+  );
   const woff = Buffer.from(await wawoff2.compress(otf));
   fs.writeFileSync(path.join(root, 'src/fonts/patrick-sharpie.woff2'), woff);
+  const initial = initialIcon(font, 'P');
+  fs.writeFileSync(path.join(root, 'public/favicon.svg'), initial.svg + '\n');
+  fs.writeFileSync(
+    path.join(root, 'src/generated/handwriting-initial.json'),
+    JSON.stringify({ path: initial.path, dot: initial.dot }, null, 2) + '\n',
+  );
   fs.writeFileSync(
     path.join(__dirname, 'manifest.json'),
     JSON.stringify(
@@ -144,6 +169,7 @@ async function trace(box, baseline, inset = 8, turdSize = 45) {
         characters: [...charIndices.keys()].join(''),
         ligatures: [],
         surnameFeature: 'ss01',
+        isolatedComponentThresholdPixels: 45,
         unitsPerEm: 1000,
         ascender: 820,
         descender: -220,
