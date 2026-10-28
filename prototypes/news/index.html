@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="color-scheme" content="light" />
+    <title>News · daily edition preview</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script type="module" src="/app.mjs"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to edition</a>
+    <div class="preview-note">Preview · email not connected</div>
+    <div class="frame">
+      <header class="masthead">
+        <a class="wordmark" href="#today">news<span class="blue">.</span></a>
+        <nav aria-label="Main navigation">
+          <a href="#today">Edition</a>
+          <a href="#sources">Sources</a>
+          <a href="#public">Public view</a>
+        </nav>
+        <span class="private-label">[ private edition ]</span>
+      </header>
+      <main id="main" tabindex="-1"></main>
+    </div>
+    <p id="notice" class="notice" role="status" aria-live="polite"></p>
+    <noscript
+      >This interactive design preview needs JavaScript. Production editions
+      will render on the server.</noscript
+    >
+  </body>
+</html>
