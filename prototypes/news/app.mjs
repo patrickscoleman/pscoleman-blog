@@ -60,15 +60,12 @@ function persist() {
     say('Browser storage unavailable. Changes last for this visit.');
   }
 }
-function header(title, text) {
-  return `<div class="edition-head"><div class="eyebrow">${esc(data.date)} · design sample</div><h1>${esc(title)}</h1><p class="intro">${esc(text)}</p></div>`;
-}
 function edition() {
-  return `<div class="edition-head"><div class="eyebrow">${esc(data.date)}</div><h1>Today’s edition.</h1><div class="meta"><span>${data.sections.reduce((n, section) => n + section.items.length, 0)} short reads</span><span>${data.events.length} coming up</span><span>Sample format · not a complete daily briefing</span></div></div>
+  return `<h1 class="sr-only">Daily news</h1><p class="edition-date">${esc(data.date)}</p>
     <nav class="jump" aria-label="Edition sections">${data.sections.map((section) => `<a href="#section-${esc(section.id)}">${esc(section.title)}</a>`).join('')}<a href="#coming-up">Coming up</a></nav>
     <div class="layout"><div class="briefing">${data.sections.map((section, index) => `<section class="section" id="section-${esc(section.id)}"><h2 class="section-label"><span class="number">${String(index + 1).padStart(2, '0')}</span>${esc(section.title)}</h2>${section.items.map((item) => `<article class="story"><h3>${esc(item.title)}</h3><ul>${item.bullets.map((bullet) => `<li>${esc(bullet)}</li>`).join('')}</ul><div class="source-links">${item.links.map(link).join('')}${item.access ? `<span class="chip">${esc(item.access)}</span>` : ''}</div></article>`).join('')}</section>`).join('')}</div>
-    <aside class="sidebar" id="coming-up"><h2>Coming up</h2><p class="sidebar-intro">A few things to step outside for.</p>${data.events.map((event) => `<article class="event"><time class="event-date">${esc(event.date)}</time><h3>${esc(event.title)}</h3><p>${esc(event.place)}</p><div class="source-links">${event.links.map(link).join('')}</div></article>`).join('')}<div class="quiet"><h2>A quiet corner</h2><ul><li>No need to cover every topic every day.</li><li>New editions arrive once a day.</li><li>Your follows stay private.</li></ul></div></aside></div>
-    <div class="end"><strong>That’s the edition.</strong><p>You’re done. The links can wait.</p></div>`;
+    <aside class="sidebar" id="coming-up"><h2>Coming up</h2>${data.events.map((event) => `<article class="event"><time class="event-date">${esc(event.date)}</time><h3>${esc(event.title)}</h3><p>${esc(event.place)}</p><div class="source-links">${event.links.map(link).join('')}</div></article>`).join('')}</aside></div>
+    <div class="end">End of edition.</div>`;
 }
 function sourceRows() {
   const visible = sources.filter(
@@ -82,13 +79,13 @@ function sourceRows() {
     ? visible
         .map(
           (source) =>
-            `<article class="source-row ${source.status === 'paused' ? 'paused' : ''}" data-id="${esc(source.id)}"><div><h2>${esc(source.name)} ${source.status === 'paused' ? '<span class="chip">paused</span>' : ''}</h2><p>${esc(source.kind)} · ${esc(source.detail)}</p></div><select aria-label="Category for ${esc(source.name)}" data-category="${esc(source.id)}">${categories.map((category) => `<option ${source.category === category ? 'selected' : ''}>${esc(category)}</option>`).join('')}</select><div class="source-actions"><button data-toggle="${esc(source.id)}">${source.status === 'enabled' ? 'Pause' : 'Resume'}<span class="sr-only"> ${esc(source.name)}</span></button>${source.status === 'removed' ? '' : `<button class="remove" data-remove="${esc(source.id)}">Remove<span class="sr-only"> ${esc(source.name)}</span></button>`}</div></article>`,
+            `<article class="source-row ${source.status === 'paused' ? 'paused' : ''}" data-id="${esc(source.id)}"><div><h2>${esc(source.name)} ${source.status === 'paused' ? '<span class="chip">paused</span>' : ''}</h2><p>${esc(source.kind)}</p></div><select aria-label="Category for ${esc(source.name)}" data-category="${esc(source.id)}">${categories.map((category) => `<option ${source.category === category ? 'selected' : ''}>${esc(category)}</option>`).join('')}</select><div class="source-actions"><button data-toggle="${esc(source.id)}">${source.status === 'enabled' ? 'Pause' : 'Resume'}<span class="sr-only"> ${esc(source.name)}</span></button>${source.status === 'removed' ? '' : `<button class="remove" data-remove="${esc(source.id)}">Remove<span class="sr-only"> ${esc(source.name)}</span></button>`}</div></article>`,
         )
         .join('')
     : '<p class="empty">No sources here.</p>';
 }
 function sourcePage() {
-  return `${header('Your sources, your pace.', 'Pause a source whenever you like. Your email subscription keeps going.')}<details class="source-help"><summary>New newsletters find their way here</summary><ul><li>Recognized newsletters are added and categorized automatically.</li><li>Change a category once; your choice sticks.</li><li>Pausing stops future digest items. Resuming starts with fresh mail.</li><li>Confirmation emails and uncertain senders wait for review.</li></ul><button id="try-newsletter">Try a sample incoming newsletter</button><p class="small">Demonstration only. No mail is sent or received.</p></details><div class="source-controls"><input type="search" aria-label="Search sources" placeholder="Find a source…" value="${esc(query)}" /><div class="filters" aria-label="Filter sources">${[
+  return `<h1 class="sr-only">Sources</h1><div class="source-controls"><input type="search" aria-label="Search sources" placeholder="Find a source…" value="${esc(query)}" /><div class="filters" aria-label="Filter sources">${[
     ['all', 'All'],
     ['enabled', 'Active'],
     ['paused', 'Paused'],
@@ -100,10 +97,10 @@ function sourcePage() {
     )
     .join(
       '',
-    )}</div></div><div id="source-list">${sourceRows()}</div><p class="small">Preview changes stay in this browser. Removing a source keeps it in Removed so it won’t silently return.</p>`;
+    )}</div></div><div id="source-list">${sourceRows()}</div><details class="source-help"><summary>Source controls</summary><p>Pause keeps email delivery on. Resume includes fresh items.</p><button id="try-newsletter">Try sample newsletter</button></details>`;
 }
 function publicPage() {
-  return `<div class="public">${header('The daily headlines.', 'A small general-news edition.')}<ul>${data.publicItems.map((item) => `<li>${link(item)}<small>${esc(item.source)}</small></li>`).join('')}</ul><p class="small">Public-design sample. Production headlines use a separate source list and selection process.</p></div>`;
+  return `<div class="public"><h1 class="sr-only">Headlines</h1><p class="edition-date">${esc(data.date)}</p><ul>${data.publicItems.map((item) => `<li>${link(item)}<small>${esc(item.source)}</small></li>`).join('')}</ul></div>`;
 }
 function render() {
   const view =

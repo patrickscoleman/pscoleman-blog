@@ -508,3 +508,35 @@ footer {
     scroll-behavior: smooth;
   }
 }
+
+.edition-date {
+  margin: 14px 0 10px;
+  color: var(--muted);
+  font: 0.75rem/1.5 var(--mono);
+}
+.masthead {
+  padding-block: 12px;
+}
+.jump {
+  padding-block: 3px 8px;
+  border-top: 0;
+}
+.section {
+  margin-top: 20px;
+}
+.source-controls {
+  padding-block: 12px;
+}
+.source-row {
+  padding-block: 14px;
+}
+.source-help {
+  margin: 14px 0;
+  padding: 0;
+  border: 0;
+}
+.end {
+  padding-block: 15px;
+  font: 0.75rem/1.5 var(--mono);
+  color: var(--muted);
+}
