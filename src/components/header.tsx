@@ -31,6 +31,7 @@ export function Header() {
         >
           Translations
         </Link>
+        <a href="https://news.pscoleman.me/headlines">News</a>
         <ExternalLink href="https://aloglot.com">
           Alloglot <Arrow external />
         </ExternalLink>

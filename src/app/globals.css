@@ -906,7 +906,9 @@ body:has(.reader-main) {
     gap: 30px;
   }
   .site-header nav a {
+    min-width: 44px;
     min-height: 44px;
+    justify-content: center;
   }
   .home-main {
     padding-block: 42px 48px;
@@ -1043,10 +1045,10 @@ body:has(.reader-main) {
   .site-header {
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 6px;
   }
   .site-header nav {
-    gap: 20px;
+    gap: 8px;
   }
 }
 @media (max-width: 359px) {
