@@ -24,6 +24,8 @@ export const metadata: Metadata = {
 const contactLinks = [
   { label: 'Email', href: 'mailto:patrick@pscoleman.me' },
   { label: 'GitHub', href: 'https://github.com/patrickscoleman' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/patrickscoleman' },
+  { label: 'X', href: 'https://x.com/patrickscoleman' },
 ];
 
 const socials = [
@@ -37,9 +39,7 @@ const socials = [
     href: 'https://news.ycombinator.com/user?id=patrickscoleman',
   },
   { label: 'Instagram', href: 'https://www.instagram.com/patrickscoleman/' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/patrickscoleman' },
   { label: 'Mastodon', href: 'https://mstdn.social/@patrickscoleman' },
-  { label: 'X', href: 'https://x.com/patrickscoleman' },
 ];
 
 const profile = {
@@ -178,7 +178,7 @@ export default async function Home() {
         </nav>
         <section aria-labelledby="social-networks-heading">
           <h2 id="social-networks-heading" className="social-heading">
-            Social networks
+            More
           </h2>
           <nav
             className="social-links"
